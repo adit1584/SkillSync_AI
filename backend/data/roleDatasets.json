@@ -1,0 +1,93 @@
+{
+  "Frontend Developer": {
+    "required_skills": [
+      "React", "JavaScript", "HTML", "CSS", "REST APIs", "Git", "TypeScript", "Next.js", "Redux", "Webpack"
+    ],
+    "nice_to_have": [
+      "GraphQL", "Jest", "Cypress", "Storybook", "Docker", "CI/CD", "Figma", "Tailwind CSS", "Vue.js", "Angular"
+    ],
+    "avg_salary_lpa": { "fresher": "4-8", "junior": "8-15", "mid": "15-30", "senior": "30-60" },
+    "avg_salary_usd": { "fresher": "50k-75k", "junior": "75k-100k", "mid": "100k-140k", "senior": "140k-200k" },
+    "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+    "top_companies": ["Google", "Microsoft", "Flipkart", "Swiggy", "Razorpay", "Atlassian"],
+    "interview_topics": ["JavaScript fundamentals", "React lifecycle", "CSS layout", "Performance optimization", "Browser APIs"]
+  },
+  "Backend Engineer": {
+    "required_skills": [
+      "Node.js", "Python", "SQL", "MongoDB", "PostgreSQL", "REST APIs", "Git", "Docker", "Express.js", "Redis"
+    ],
+    "nice_to_have": [
+      "Kubernetes", "GraphQL", "gRPC", "AWS", "CI/CD", "TypeScript", "Kafka", "Elasticsearch", "Microservices", "Security"
+    ],
+    "avg_salary_lpa": { "fresher": "5-9", "junior": "9-16", "mid": "16-32", "senior": "32-65" },
+    "avg_salary_usd": { "fresher": "55k-80k", "junior": "80k-110k", "mid": "110k-150k", "senior": "150k-220k" },
+    "description": "Designs and builds backend services, databases, and APIs for secure, scalable applications",
+    "top_companies": ["Amazon", "Uber", "Netflix", "Razorpay", "Postman", "Paytm"],
+    "interview_topics": ["Database design & optimization", "System design", "Concurrency & Multithreading", "REST vs GraphQL", "Caching strategies"]
+  },
+  "Fullstack Developer": {
+    "required_skills": [
+      "React", "Node.js", "JavaScript", "HTML", "CSS", "SQL", "MongoDB", "REST APIs", "Git", "TypeScript"
+    ],
+    "nice_to_have": [
+      "Next.js", "Docker", "AWS", "GraphQL", "Tailwind CSS", "CI/CD", "Redux", "PostgreSQL", "Python", "Sass"
+    ],
+    "avg_salary_lpa": { "fresher": "5-10", "junior": "10-18", "mid": "18-35", "senior": "35-70" },
+    "avg_salary_usd": { "fresher": "60k-85k", "junior": "85k-115k", "mid": "115k-155k", "senior": "155k-230k" },
+    "description": "Handles both client-side and server-side development to build end-to-end web applications",
+    "top_companies": ["Meta", "Microsoft", "Stripe", "Atlassian", "Flipkart", "Cred"],
+    "interview_topics": ["Full-stack architecture", "State management", "Database scaling", "Authentication & Security", "Web performance"]
+  },
+  "AI Engineer": {
+    "required_skills": [
+      "Python", "Machine Learning", "PyTorch", "TensorFlow", "LLMs", "LangChain", "NumPy", "Pandas", "Transformers", "FastAPI"
+    ],
+    "nice_to_have": [
+      "Docker", "Kubernetes", "MLflow", "Hugging Face", "RAG", "Vector Databases", "CUDA", "OpenCV", "Spark", "AWS SageMaker"
+    ],
+    "avg_salary_lpa": { "fresher": "6-12", "junior": "12-20", "mid": "20-40", "senior": "40-80" },
+    "avg_salary_usd": { "fresher": "70k-100k", "junior": "100k-140k", "mid": "140k-180k", "senior": "180k-280k" },
+    "description": "Builds and deploys AI/ML systems, fine-tunes LLMs, and creates intelligent applications",
+    "top_companies": ["OpenAI", "Google DeepMind", "Microsoft", "Anthropic", "Cohere", "Sarvam AI"],
+    "interview_topics": ["Model architecture", "Training pipelines", "Prompt engineering", "RAG systems", "MLOps"]
+  },
+  "Data Analyst": {
+    "required_skills": [
+      "SQL", "Python", "Statistics", "Excel", "Tableau", "Power BI", "Pandas", "NumPy", "Data Visualization", "ETL"
+    ],
+    "nice_to_have": [
+      "R", "Apache Spark", "BigQuery", "Snowflake", "dbt", "Airflow", "Looker", "Matplotlib", "Seaborn", "A/B Testing"
+    ],
+    "avg_salary_lpa": { "fresher": "3-7", "junior": "7-14", "mid": "14-25", "senior": "25-50" },
+    "avg_salary_usd": { "fresher": "45k-65k", "junior": "65k-90k", "mid": "90k-120k", "senior": "120k-170k" },
+    "description": "Extracts insights from data to drive business decisions using SQL, Python, and BI tools",
+    "top_companies": ["Amazon", "Walmart", "Razorpay", "PhonePe", "Zomato", "HDFC Bank"],
+    "interview_topics": ["SQL queries", "Statistical analysis", "Dashboard design", "Data cleaning", "Business metrics"]
+  },
+  "Cloud Engineer": {
+    "required_skills": [
+      "AWS", "GCP", "Docker", "Kubernetes", "Terraform", "Linux", "CI/CD", "Networking", "Azure", "Ansible"
+    ],
+    "nice_to_have": [
+      "Helm", "Prometheus", "Grafana", "Jenkins", "GitOps", "Service Mesh", "Serverless", "CDK", "Pulumi", "Vault"
+    ],
+    "avg_salary_lpa": { "fresher": "5-10", "junior": "10-18", "mid": "18-35", "senior": "35-70" },
+    "avg_salary_usd": { "fresher": "60k-90k", "junior": "90k-120k", "mid": "120k-160k", "senior": "160k-220k" },
+    "description": "Designs, builds, and maintains cloud infrastructure for scalable and reliable systems",
+    "top_companies": ["Amazon", "Google", "Microsoft", "Infosys", "TCS", "Deloitte"],
+    "interview_topics": ["Cloud architecture", "Container orchestration", "IaC", "Security", "Cost optimization"]
+  },
+  "DevOps Engineer": {
+    "required_skills": [
+      "Linux", "Docker", "Kubernetes", "CI/CD", "AWS", "Git", "Shell Scripting", "Terraform", "Ansible", "Jenkins"
+    ],
+    "nice_to_have": [
+      "Prometheus", "Grafana", "Python", "GCP", "Azure", "GitOps", "ArgoCD", "ELK Stack", "Nginx", "Network Security"
+    ],
+    "avg_salary_lpa": { "fresher": "5-10", "junior": "10-18", "mid": "18-35", "senior": "35-70" },
+    "avg_salary_usd": { "fresher": "60k-90k", "junior": "90k-120k", "mid": "120k-160k", "senior": "160k-220k" },
+    "description": "Automates infrastructure, deployments, and operations for continuous integration and delivery",
+    "top_companies": ["Amazon", "Google", "Red Hat", "HashiCorp", "Netflix", "Atlassian"],
+    "interview_topics": ["CI/CD pipelines", "Infrastructure as Code", "Container orchestration", "Monitoring & Logging", "Linux internals"]
+  }
+}
