@@ -5,7 +5,7 @@ import {
   BarChart3, Rocket, BookOpen, CheckCircle, XCircle,
   Loader2, RefreshCw, Target, TrendingUp, Award,
   Home, AlertCircle, Terminal, Sparkles, Download, Zap, GraduationCap,
-  Calendar, FileText, UserCheck
+  Calendar, FileText, UserCheck, Briefcase
 } from 'lucide-react';
 import SkillRadarChart from '../components/SkillRadarChart';
 import CareerDashboard from '../components/CareerDashboard';
@@ -14,13 +14,15 @@ import InterviewSimulator from '../components/InterviewSimulator';
 import ATSResumeOptimizer from '../components/ATSResumeOptimizer';
 import CourseRecommendations from '../components/CourseRecommendations';
 import ATSJobMatcher from '../components/ATSJobMatcher';
-import { simulateCareer, generateRoadmap, recommendCourses } from '../lib/api';
+import LiveJobBoard from '../components/LiveJobBoard';
+import { simulateCareer, generateRoadmap, recommendCourses, selectRole, scanJobDescription } from '../lib/api';
 import { useApp } from '../context/AppContext';
 import { useTheme } from '../context/ThemeContext';
 import gsap from 'gsap';
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: BarChart3 },
+  { id: 'livejobs', label: 'Live Jobs', icon: Briefcase },
   { id: 'jobmatch', label: 'Job Match Scanner', icon: Target },
   { id: 'simulation', label: 'Career Paths', icon: Rocket },
   { id: 'roadmap', label: 'Learning Roadmap', icon: BookOpen },
@@ -37,7 +39,9 @@ export default function ResultsPage() {
     targetRole, simulations, setSimulations,
     roadmap, setRoadmap, courses, setCourses,
     quizSkipped, setQuizSkipped, interviewSkipped, setInterviewSkipped,
-    interviewScore, setInterviewScore, saveActiveState
+    interviewScore, setInterviewScore, saveActiveState,
+    customRole, setCustomRole, jobDescription, setJobDescription,
+    targetOpportunityOption, setTargetOpportunityOption, setGapAnalysis, setTargetRole
   } = useApp();
 
   const [activeTab, setActiveTab] = useState('overview');
@@ -45,6 +49,115 @@ export default function ResultsPage() {
   const [loadingRoadmap, setLoadingRoadmap] = useState(false);
   const [loadingCourses, setLoadingCourses] = useState(false);
   const [error, setError] = useState('');
+
+  // Target Opportunity Configuration states
+  const [configOption, setConfigOption] = useState(targetOpportunityOption || 'continue_selected');
+  const [customRoleInput, setCustomRoleInput] = useState(customRole || '');
+  const [customRoleError, setCustomRoleError] = useState('');
+  const [jdTextInput, setJdTextInput] = useState(jobDescription || '');
+  const [jdError, setJdError] = useState('');
+  const [jdResults, setJdResults] = useState(null);
+  const [loadingJdScan, setLoadingJdScan] = useState(false);
+
+  // Sync state if it updates in context
+  useEffect(() => {
+    if (targetOpportunityOption) {
+      setConfigOption(targetOpportunityOption);
+    }
+  }, [targetOpportunityOption]);
+
+  useEffect(() => {
+    if (jobDescription) {
+      setJdTextInput(jobDescription);
+    }
+  }, [jobDescription]);
+
+  // Run job description scan immediately if jobDescription is active
+  useEffect(() => {
+    if (jobDescription && targetOpportunityOption === 'paste_jd') {
+      runJdAnalysis(jobDescription);
+    }
+  }, [jobDescription, targetOpportunityOption]);
+
+  const runJdAnalysis = async (jdText) => {
+    setLoadingJdScan(true);
+    setJdError('');
+    try {
+      const data = await scanJobDescription(jdText, null, targetRole, customRole);
+      if (data.success) {
+        setJdResults(data);
+      } else {
+        setJdError(data.error || 'Failed to scan job description.');
+      }
+    } catch (err) {
+      setJdError(err.response?.data?.error || err.message || 'Job description analysis failed.');
+    } finally {
+      setLoadingJdScan(false);
+    }
+  };
+
+  const handleConfirmCustomRole = async (e) => {
+    e.preventDefault();
+    const val = customRoleInput.trim();
+    if (val.length < 2 || val.length > 100) {
+      setCustomRoleError('Custom role must be between 2 and 100 characters.');
+      return;
+    }
+    setCustomRoleError('');
+    setLoadingSimulation(true);
+    
+    try {
+      const res = await selectRole(sessionId, val, val);
+      if (res.success) {
+        setTargetRole(val);
+        setCustomRole(val);
+        setGapAnalysis(res.gap_analysis);
+        setTargetOpportunityOption('custom_role');
+        
+        // Refresh career trajectory simulations on role change
+        const simData = await simulateCareer(sessionId);
+        setSimulations(simData.simulations);
+        
+        setTimeout(() => saveActiveState(true), 200);
+      }
+    } catch (err) {
+      setCustomRoleError(err.response?.data?.error || err.message || 'Failed to select custom role.');
+    } finally {
+      setLoadingSimulation(false);
+    }
+  };
+
+  const handleConfirmJdAnalysis = async (e) => {
+    e.preventDefault();
+    const val = jdTextInput.trim();
+    if (!val) {
+      setJdError('Please paste a job description first.');
+      return;
+    }
+    setJdError('');
+    setJobDescription(val);
+    setTargetOpportunityOption('paste_jd');
+    
+    await runJdAnalysis(val);
+    setTimeout(() => saveActiveState(true), 200);
+  };
+
+  const handleOptionChange = async (opt) => {
+    setConfigOption(opt);
+    setTargetOpportunityOption(opt);
+    if (opt === 'continue_selected') {
+      setCustomRole(null);
+      try {
+        const res = await selectRole(sessionId, targetRole);
+        if (res.success) {
+          setGapAnalysis(res.gap_analysis);
+        }
+      } catch (err) {
+        console.warn('Revert standard role failed:', err.message);
+      }
+    }
+    setTimeout(() => saveActiveState(true), 200);
+  };
 
   // Redirect if no session
   useEffect(() => {
@@ -375,6 +488,225 @@ export default function ResultsPage() {
             className="print-show-block"
             style={{ display: activeTab === 'overview' ? 'grid' : 'none', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}
           >
+            {/* Target Opportunity Configuration */}
+            <div className="card results-card-anim" style={{ gridColumn: '1 / -1', padding: '24px', background: 'var(--bg-secondary)', border: '1.5px solid var(--border)' }}>
+              <h3 style={{ fontFamily: 'Syne', fontSize: '1.15rem', color: 'var(--text-primary)', margin: '0 0 8px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                <Target size={18} color="var(--indigo)" />
+                Target Opportunity Configuration
+              </h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: 20 }}>
+                Align your career analysis diagnostics against a specific role or an active job opening description.
+              </p>
+
+              {/* Option Selectors */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12, marginBottom: 20 }}>
+                <div 
+                  onClick={() => handleOptionChange('continue_selected')}
+                  style={{
+                    padding: '16px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: `2px solid ${configOption === 'continue_selected' ? 'var(--indigo)' : 'var(--border)'}`,
+                    background: configOption === 'continue_selected' ? 'rgba(163,82,0,0.02)' : 'var(--bg-primary)',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <input type="radio" checked={configOption === 'continue_selected'} readOnly />
+                    <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Standard Role</span>
+                  </div>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', margin: '8px 0 0', paddingLeft: 24 }}>
+                    Continue with: {targetRole && !customRole ? targetRole : 'Select standard path'}
+                  </p>
+                </div>
+
+                <div 
+                  onClick={() => handleOptionChange('custom_role')}
+                  style={{
+                    padding: '16px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: `2px solid ${configOption === 'custom_role' ? 'var(--indigo)' : 'var(--border)'}`,
+                    background: configOption === 'custom_role' ? 'rgba(163,82,0,0.02)' : 'var(--bg-primary)',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <input type="radio" checked={configOption === 'custom_role'} readOnly />
+                    <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Custom Role</span>
+                  </div>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', margin: '8px 0 0', paddingLeft: 24 }}>
+                    Target custom profile: {customRole ? customRole : 'Not configured'}
+                  </p>
+                </div>
+
+                <div 
+                  onClick={() => handleOptionChange('paste_jd')}
+                  style={{
+                    padding: '16px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: `2px solid ${configOption === 'paste_jd' ? 'var(--indigo)' : 'var(--border)'}`,
+                    background: configOption === 'paste_jd' ? 'rgba(163,82,0,0.02)' : 'var(--bg-primary)',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <input type="radio" checked={configOption === 'paste_jd'} readOnly />
+                    <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Paste Job Description</span>
+                  </div>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', margin: '8px 0 0', paddingLeft: 24 }}>
+                    Match resume directly with a specific job posting
+                  </p>
+                </div>
+              </div>
+
+              {/* Option Subpanels */}
+              <AnimatePresence mode="wait">
+                {configOption === 'custom_role' && (
+                  <motion.form 
+                    key="custom_role_panel"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    onSubmit={handleConfirmCustomRole}
+                    style={{ padding: '16px', background: 'var(--bg-primary)', border: '1px solid var(--border)', borderRadius: 8 }}
+                  >
+                    <label style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: 8 }}>
+                      Enter Target Custom Role (2-100 characters)
+                    </label>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                      <input 
+                        type="text"
+                        placeholder="e.g. AI Engineer, DevOps Engineer, Cloud Architect, Quant Developer..."
+                        value={customRoleInput}
+                        onChange={(e) => setCustomRoleInput(e.target.value)}
+                        style={{
+                          flex: 1,
+                          padding: '10px 14px',
+                          borderRadius: 'var(--radius-sm)',
+                          border: '1.5px solid var(--border)',
+                          background: 'var(--bg-secondary)',
+                          color: 'var(--text-primary)',
+                          fontSize: '0.88rem',
+                          outline: 'none'
+                        }}
+                      />
+                      <button type="submit" className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.85rem' }}>
+                        Confirm Target Role
+                      </button>
+                    </div>
+                    {customRoleError && (
+                      <p style={{ color: 'var(--rose)', fontSize: '0.8rem', marginTop: 8, margin: 0, fontWeight: 600 }}>{customRoleError}</p>
+                    )}
+                  </motion.form>
+                )}
+
+                {configOption === 'paste_jd' && (
+                  <motion.form 
+                    key="paste_jd_panel"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    onSubmit={handleConfirmJdAnalysis}
+                    style={{ padding: '16px', background: 'var(--bg-primary)', border: '1px solid var(--border)', borderRadius: 8, display: 'grid', gap: 12 }}
+                  >
+                    <div>
+                      <label style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: 8 }}>
+                        Paste Job Description
+                      </label>
+                      <textarea
+                        placeholder="Paste the complete job description text here..."
+                        value={jdTextInput}
+                        onChange={(e) => setJdTextInput(e.target.value)}
+                        rows={6}
+                        style={{
+                          width: '100%',
+                          padding: '12px',
+                          borderRadius: 'var(--radius-sm)',
+                          border: '1.5px solid var(--border)',
+                          background: 'var(--bg-secondary)',
+                          color: 'var(--text-primary)',
+                          fontSize: '0.88rem',
+                          fontFamily: 'inherit',
+                          outline: 'none',
+                          resize: 'vertical'
+                        }}
+                      />
+                    </div>
+                    
+                    <button type="submit" disabled={loadingJdScan} className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.85rem', width: 'fit-content' }}>
+                      {loadingJdScan ? 'Running Comparison...' : 'Analyze Job Description'}
+                    </button>
+
+                    {jdError && (
+                      <p style={{ color: 'var(--rose)', fontSize: '0.8rem', margin: 0, fontWeight: 600 }}>{jdError}</p>
+                    )}
+
+                    {/* JD Analysis Results Output */}
+                    {jdResults && !loadingJdScan && (
+                      <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px dashed var(--border)', display: 'grid', gap: 16 }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
+                          <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)', padding: 14, borderRadius: 6, textAlign: 'center' }}>
+                            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>Resume Match Score</div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: jdResults.match_score >= 75 ? 'var(--emerald)' : 'var(--indigo)', fontFamily: 'Space Grotesk' }}>{jdResults.match_score}%</div>
+                          </div>
+                          <div style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border)', padding: 14, borderRadius: 6, textAlign: 'center' }}>
+                            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', marginBottom: 4 }}>ATS Fit Index</div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, color: jdResults.ats_score >= 75 ? 'var(--emerald)' : 'var(--indigo)', fontFamily: 'Space Grotesk' }}>{jdResults.ats_score}%</div>
+                          </div>
+                        </div>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                          <div>
+                            <h5 style={{ fontSize: '0.85rem', color: 'var(--text-primary)', margin: '0 0 6px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                              <CheckCircle size={14} color="var(--emerald)" />
+                              Matching Keywords ({jdResults.matching_skills.length})
+                            </h5>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                              {jdResults.matching_skills.slice(0, 10).map((s, idx) => (
+                                <span key={idx} style={{ fontSize: '0.7rem', background: 'rgba(16,185,129,0.04)', color: 'var(--emerald)', border: '1px solid rgba(16,185,129,0.12)', padding: '2px 6px', borderRadius: 4 }}>{s}</span>
+                              ))}
+                              {jdResults.matching_skills.length > 10 && <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', alignSelf: 'center' }}>+{jdResults.matching_skills.length - 10} more</span>}
+                            </div>
+                          </div>
+
+                          <div>
+                            <h5 style={{ fontSize: '0.85rem', color: 'var(--text-primary)', margin: '0 0 6px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                              <XCircle size={14} color="var(--rose)" />
+                              Missing Keywords ({jdResults.missing_keywords.length})
+                            </h5>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                              {jdResults.missing_keywords.slice(0, 8).map((s, idx) => (
+                                <span key={idx} style={{ fontSize: '0.7rem', background: 'rgba(244,63,94,0.04)', color: 'var(--rose)', border: '1px solid rgba(244,63,94,0.12)', padding: '2px 6px', borderRadius: 4 }}>{s}</span>
+                              ))}
+                              {jdResults.missing_keywords.length > 8 && <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', alignSelf: 'center' }}>+{jdResults.missing_keywords.length - 8} more</span>}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, borderTop: '1px dashed var(--border)', paddingTop: 12 }}>
+                          <div>
+                            <h5 style={{ fontSize: '0.82rem', color: 'var(--text-primary)', margin: '0 0 4px' }}>Experience & Certification Gaps</h5>
+                            <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', margin: '0 0 4px' }}><strong>Required Experience:</strong> {jdResults.experience_gap || 'Not specified'}</p>
+                            <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', margin: 0 }}>
+                              <strong>Certification Gaps:</strong> {jdResults.certification_gap.length > 0 ? jdResults.certification_gap.join(', ') : 'None detected'}
+                            </p>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '0.82rem', color: 'var(--text-primary)', margin: '0 0 4px' }}>Recommendations</h5>
+                            <ul style={{ margin: 0, paddingLeft: 16, fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
+                              {jdResults.suggestions.slice(0, 3).map((s, idx) => <li key={idx}>{s}</li>)}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </motion.form>
+                )}
+              </AnimatePresence>
+            </div>
+
             {/* Assessment Center Prompt Cards */}
             {(!hasQuiz || !hasInterview) && (
               <div className="card results-card-anim" style={{ gridColumn: '1 / -1', padding: '24px', background: 'var(--bg-secondary)', border: '1.5px solid var(--border)' }}>
@@ -508,6 +840,11 @@ export default function ResultsPage() {
               )}
             </div>
           </div>
+
+          {/* LIVE JOBS BOARD */}
+          {activeTab === 'livejobs' && (
+            <LiveJobBoard />
+          )}
 
           {/* JOB MATCH SCANNER */}
           {activeTab === 'jobmatch' && (

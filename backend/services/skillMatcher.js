@@ -56,9 +56,28 @@ function skillMatches(userSkill, requiredSkill) {
  * @returns {Object} Gap analysis result
  */
 function analyzeSkillGap(userSkills, targetRole) {
-  const roleData = roleDatasets[targetRole];
+  let roleData = roleDatasets[targetRole];
+  
+  if (!roleData && targetRole) {
+    const normalized = targetRole.toLowerCase();
+    for (const key of Object.keys(roleDatasets)) {
+      if (normalized.includes(key.toLowerCase()) || key.toLowerCase().includes(normalized)) {
+        roleData = roleDatasets[key];
+        break;
+      }
+    }
+  }
+
   if (!roleData) {
-    throw new Error(`Unknown target role: ${targetRole}`);
+    roleData = {
+      required_skills: ['Problem Solving', 'Git', 'System Design', 'Communication', 'Agile', 'APIs'],
+      nice_to_have: ['Docker', 'CI/CD', 'Cloud Platforms', 'Unit Testing'],
+      description: `Professional focused on ${targetRole || 'Target Role'} technologies.`,
+      avg_salary_lpa: { fresher: '5-9', junior: '9-16', mid: '16-32', senior: '32-65' },
+      avg_salary_usd: { fresher: '55k-80k', junior: '80k-110k', mid: '110k-150k', senior: '150k-220k' },
+      top_companies: ['Google', 'Amazon', 'Microsoft', 'Atlassian'],
+      interview_topics: ['Architecture', 'Design', 'Collaboration', 'Testing']
+    };
   }
 
   const required = roleData.required_skills;

@@ -1,7 +1,9 @@
 const { verifyToken } = require('../middleware/authMiddleware');
 const Resume = require('../models/Resume');
 const JobScan = require('../models/JobScan');
-const { isDbConnected } = require('../services/dbHelper');
+const JobDescriptionAnalysis = require('../models/JobDescriptionAnalysis');
+const { isDbConnected, updateSession } = require('../services/dbHelper');
+const { rateLimiter } = require('../middleware/rateLimitMiddleware');
 const { normalizeSkill } = require('../services/skillMatcher');
 const roleDatasets = require('../data/roleDatasets.json');
 const { generateOptimizeSuggestions } = require('../services/aiService');
@@ -25,7 +27,11 @@ async function handleJobMatch(req, res) {
   const userId = verifyToken(req, res);
   if (!userId) return;
 
-  const { job_description, manual_requirements } = req.body;
+  // Rate Limiting
+  const allowed = await rateLimiter(req, res, 'ats');
+  if (!allowed) return;
+
+  const { job_description, manual_requirements, target_role, custom_role } = req.body;
 
   try {
     // 1. Fetch user's latest resume
@@ -191,6 +197,33 @@ async function handleJobMatch(req, res) {
 
     if (isDbConnected()) {
       await JobScan.create(scanData);
+      
+      if (job_description) {
+        await JobDescriptionAnalysis.create({
+          userId,
+          jobDescription: job_description,
+          targetRole: target_role || 'Pasted Job Description',
+          customRole: custom_role || null,
+          atsScore,
+          matchScore,
+          missingSkills,
+          missingKeywords,
+          certificationGap: missingCerts,
+          experienceGap: requiredExp,
+          recommendations: suggestions,
+          strengths: matchingSkills.map(s => `Proficiency in ${s}`),
+          improvements: missingSkills.map(s => `Develop skills in ${s}`)
+        });
+      }
+    }
+
+    if (job_description) {
+      await updateSession(userId, {
+        job_description: job_description,
+        target_opportunity_option: 'paste_jd',
+        custom_role: custom_role || null,
+        selected_role: target_role || null
+      });
     }
 
     res.json({

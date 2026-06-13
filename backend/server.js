@@ -1,3 +1,4 @@
+require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 require('dotenv').config();
 const http = require('http');
 const mongoose = require('mongoose');
@@ -15,9 +16,10 @@ const { handleSignup, handleLogin, handleRefresh, handleLogout, handleForgotPass
 const { handleGetState, handleSaveState } = require('./routes/sessionState');
 const { handleJobMatch } = require('./routes/jobscan');
 const { handleGetHistory } = require('./routes/history');
+const { handleJobSearch, handleSaveJob, handleGetSavedJobs, handleGetSearchHistory } = require('./routes/jobs');
+const { rateLimiter } = require('./middleware/rateLimitMiddleware');
 
 const PORT = process.env.PORT || 5000;
-require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 // Helper to parse JSON body
 function parseJsonBody(req) {
   return new Promise((resolve) => {
@@ -192,21 +194,27 @@ const server = http.createServer(async (req, res) => {
         db: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
       });
     } else if (path === '/api/upload' && method === 'POST') {
-      await handleUpload(req, res);
+      const allowed = await rateLimiter(req, res, 'upload');
+      if (allowed) await handleUpload(req, res);
     } else if (path === '/api/recommend' && method === 'POST') {
-      await handleRecommend(req, res);
+      const allowed = await rateLimiter(req, res, 'recommend');
+      if (allowed) await handleRecommend(req, res);
     } else if (path === '/api/select-role' && method === 'POST') {
-      await handleSelectRole(req, res);
+      const allowed = await rateLimiter(req, res, 'analysis');
+      if (allowed) await handleSelectRole(req, res);
     } else if (path === '/api/quiz/generate' && method === 'POST') {
-      await handleQuizGenerate(req, res);
+      const allowed = await rateLimiter(req, res, 'quiz');
+      if (allowed) await handleQuizGenerate(req, res);
     } else if (path === '/api/quiz/submit' && method === 'POST') {
       await handleQuizSubmit(req, res);
     } else if (path === '/api/simulate' && method === 'POST') {
-      await handleSimulate(req, res);
+      const allowed = await rateLimiter(req, res, 'simulate');
+      if (allowed) await handleSimulate(req, res);
     } else if (path === '/api/roadmap' && method === 'POST') {
       await handleRoadmap(req, res);
     } else if (path === '/api/interview/start' && method === 'POST') {
-      await handleInterviewStart(req, res);
+      const allowed = await rateLimiter(req, res, 'interview');
+      if (allowed) await handleInterviewStart(req, res);
     } else if (path === '/api/interview/chat' && method === 'POST') {
       await handleInterviewChat(req, res);
     } else if (path === '/api/optimize' && method === 'POST') {
@@ -214,15 +222,18 @@ const server = http.createServer(async (req, res) => {
     } else if (path === '/api/courses' && method === 'POST') {
       await handleCourses(req, res);
     } else if (path === '/api/auth/signup' && method === 'POST') {
-      await handleSignup(req, res);
+      const allowed = await rateLimiter(req, res, 'signup');
+      if (allowed) await handleSignup(req, res);
     } else if (path === '/api/auth/login' && method === 'POST') {
-      await handleLogin(req, res);
+      const allowed = await rateLimiter(req, res, 'login');
+      if (allowed) await handleLogin(req, res);
     } else if (path === '/api/auth/refresh' && method === 'POST') {
       await handleRefresh(req, res);
     } else if (path === '/api/auth/logout' && method === 'POST') {
       await handleLogout(req, res);
     } else if (path === '/api/auth/forgot-password' && method === 'POST') {
-      await handleForgotPassword(req, res);
+      const allowed = await rateLimiter(req, res, 'forgotPassword');
+      if (allowed) await handleForgotPassword(req, res);
     } else if (path === '/api/auth/me' && method === 'GET') {
       await handleMe(req, res);
     } else if (path === '/api/session/state' && method === 'GET') {
@@ -233,6 +244,14 @@ const server = http.createServer(async (req, res) => {
       await handleJobMatch(req, res);
     } else if (path === '/api/history' && method === 'GET') {
       await handleGetHistory(req, res);
+    } else if (path === '/api/jobs/search' && method === 'POST') {
+      await handleJobSearch(req, res);
+    } else if (path === '/api/jobs/save' && method === 'POST') {
+      await handleSaveJob(req, res);
+    } else if (path === '/api/jobs/saved' && method === 'GET') {
+      await handleGetSavedJobs(req, res);
+    } else if (path === '/api/jobs/history' && method === 'GET') {
+      await handleGetSearchHistory(req, res);
     } else {
       res.status(404).json({ error: 'Route not found' });
     }

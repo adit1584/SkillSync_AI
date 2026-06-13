@@ -40,6 +40,9 @@ async function getSession(sessionId) {
           session_id: sessionId,
           target_role: state?.selected_role || null,
           selected_role: state?.selected_role || null,
+          custom_role: state?.custom_role || null,
+          job_description: state?.job_description || null,
+          target_opportunity_option: state?.target_opportunity_option || null,
           mode: state?.mode || null,
           quiz_answers: state?.quiz_answers || [],
           current_quiz_idx: state?.current_quiz_idx || 0,
@@ -113,6 +116,9 @@ async function createSession(sessionId, data) {
         user_id: sessionId,
         mode: data.mode || null,
         selected_role: data.selected_role || data.target_role || null,
+        custom_role: data.custom_role || null,
+        job_description: data.job_description || null,
+        target_opportunity_option: data.target_opportunity_option || null,
         quiz_answers: data.quiz_answers || [],
         current_quiz_idx: data.current_quiz_idx || 0,
         interview_history: data.interview_history || [],
@@ -167,6 +173,9 @@ async function updateSession(sessionId, updates) {
       const stateFields = {};
       if (updates.selected_role !== undefined) stateFields.selected_role = updates.selected_role;
       if (updates.target_role !== undefined) stateFields.selected_role = updates.target_role;
+      if (updates.custom_role !== undefined) stateFields.custom_role = updates.custom_role;
+      if (updates.job_description !== undefined) stateFields.job_description = updates.job_description;
+      if (updates.target_opportunity_option !== undefined) stateFields.target_opportunity_option = updates.target_opportunity_option;
       if (updates.mode !== undefined) stateFields.mode = updates.mode;
       if (updates.quiz_answers !== undefined) stateFields.quiz_answers = updates.quiz_answers;
       if (updates.current_quiz_idx !== undefined) stateFields.current_quiz_idx = updates.current_quiz_idx;

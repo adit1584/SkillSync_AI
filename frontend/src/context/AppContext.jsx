@@ -15,6 +15,9 @@ export function AppProvider({ children }) {
   const [resumeData, setResumeData] = useState(null);
   const [recommendedRoles, setRecommendedRoles] = useState(null);
   const [targetRole, setTargetRole] = useState(null);
+  const [customRole, setCustomRole] = useState(null);
+  const [jobDescription, setJobDescription] = useState(null);
+  const [targetOpportunityOption, setTargetOpportunityOption] = useState(null);
   const [gapAnalysis, setGapAnalysis] = useState(null);
   const [compressedProfile, setCompressedProfile] = useState(null);
   
@@ -50,12 +53,16 @@ export function AppProvider({ children }) {
     setResumeData(null);
     setRecommendedRoles(null);
     setTargetRole(null);
+    setCustomRole(null);
+    setJobDescription(null);
+    setTargetOpportunityOption(null);
     setGapAnalysis(null);
     setCompressedProfile(null);
     setQuizData(null);
     setQuizResults(null);
     setQuizAnswers([]);
     setCurrentQuizIdx(0);
+    setQuizSkipped(false);
     setQuizSkipped(false);
     setInterviewSkipped(false);
     setInterviewHistory([]);
@@ -82,6 +89,9 @@ export function AppProvider({ children }) {
         if (state) {
           setMode(state.mode || null);
           setTargetRole(state.selected_role || null);
+          setCustomRole(state.custom_role || null);
+          setJobDescription(state.job_description || null);
+          setTargetOpportunityOption(state.target_opportunity_option || null);
           setQuizAnswers(state.quiz_answers || []);
           setCurrentQuizIdx(state.current_quiz_idx || 0);
           setQuizSkipped(state.quiz_skipped || false);
@@ -190,6 +200,9 @@ export function AppProvider({ children }) {
     const currentSaveData = JSON.stringify({
       mode,
       selected_role: targetRole,
+      custom_role: customRole,
+      job_description: jobDescription,
+      target_opportunity_option: targetOpportunityOption,
       quiz_answers: quizAnswers,
       current_quiz_idx: currentQuizIdx,
       quiz_skipped: quizSkipped,
@@ -208,6 +221,9 @@ export function AppProvider({ children }) {
       const stateData = {
         mode,
         selected_role: targetRole,
+        custom_role: customRole,
+        job_description: jobDescription,
+        target_opportunity_option: targetOpportunityOption,
         quiz_answers: quizAnswers,
         current_quiz_idx: currentQuizIdx,
         quiz_skipped: quizSkipped,
@@ -233,7 +249,7 @@ export function AppProvider({ children }) {
       console.warn('[autosave] Failed to auto-save state:', err.message);
       setSaveStatus('Error saving');
     }
-  }, [token, user, mode, targetRole, quizAnswers, currentQuizIdx, quizSkipped, interviewSkipped, interviewHistory, interviewConcluded]);
+  }, [token, user, mode, targetRole, customRole, jobDescription, targetOpportunityOption, quizAnswers, currentQuizIdx, quizSkipped, interviewSkipped, interviewHistory, interviewConcluded]);
 
   // 30-Second Auto Save Interval
   useEffect(() => {
@@ -261,6 +277,9 @@ export function AppProvider({ children }) {
       resumeData, setResumeData,
       recommendedRoles, setRecommendedRoles,
       targetRole, setTargetRole,
+      customRole, setCustomRole,
+      jobDescription, setJobDescription,
+      targetOpportunityOption, setTargetOpportunityOption,
       gapAnalysis, setGapAnalysis,
       compressedProfile, setCompressedProfile,
       

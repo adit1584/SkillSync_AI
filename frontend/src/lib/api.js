@@ -119,8 +119,12 @@ export async function recommendRoles(sessionId) {
 }
 
 // ── Select Role (triggers local skill gap) ────────────────────────
-export async function selectRole(sessionId, selectedRole) {
-  const res = await api.post('/select-role', { session_id: sessionId, selected_role: selectedRole });
+export async function selectRole(sessionId, selectedRole, customRole) {
+  const res = await api.post('/select-role', { 
+    session_id: sessionId, 
+    selected_role: selectedRole, 
+    custom_role: customRole 
+  });
   return res.data;
 }
 
@@ -180,10 +184,12 @@ export async function recommendCourses(sessionId) {
 }
 
 // ── Job Description Scan (ATS Match) ──────────────────────────────────
-export async function scanJobDescription(jobDescText, manualReqs = null) {
+export async function scanJobDescription(jobDescText, manualReqs = null, targetRole = null, customRole = null) {
   const res = await api.post('/jobmatch', {
     job_description: jobDescText,
-    manual_requirements: manualReqs
+    manual_requirements: manualReqs,
+    target_role: targetRole,
+    custom_role: customRole
   });
   return res.data;
 }
@@ -191,6 +197,27 @@ export async function scanJobDescription(jobDescText, manualReqs = null) {
 // ── History Retrieval ─────────────────────────────────────────────
 export async function getHistory() {
   const res = await api.get('/history');
+  return res.data;
+}
+
+// ── Job Opportunities (Live Search & Saves) ─────────────────────────
+export async function searchLiveJobs(filters) {
+  const res = await api.post('/jobs/search', filters);
+  return res.data;
+}
+
+export async function saveJob(job) {
+  const res = await api.post('/jobs/save', { job });
+  return res.data;
+}
+
+export async function getSavedJobs() {
+  const res = await api.get('/jobs/saved');
+  return res.data;
+}
+
+export async function getJobSearchHistory() {
+  const res = await api.get('/jobs/history');
   return res.data;
 }
 

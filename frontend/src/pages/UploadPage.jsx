@@ -75,7 +75,7 @@ export default function UploadPage() {
   const { theme } = useTheme();
   const {
     sessionId, setSessionId, setResumeData, setGapAnalysis,
-    setTargetRole, setCompressedProfile, setRecommendedRoles,
+    setTargetRole, setCustomRole, setCompressedProfile, setRecommendedRoles,
     mode, setMode, saveActiveState
   } = useApp();
 
@@ -89,6 +89,8 @@ export default function UploadPage() {
   const [error, setError] = useState('');
   const [recommendations, setRecommendations] = useState([]);
   const [selectedRoleLocal, setSelectedRoleLocal] = useState(null);
+  const [customRoleInput, setCustomRoleInput] = useState('');
+  const [customRoleError, setCustomRoleError] = useState('');
 
   const scannerSvgRef = useRef(null);
 
@@ -122,7 +124,27 @@ export default function UploadPage() {
 
   const handleRoleSelectA = (role) => {
     setSelectedRoleA(role);
+    setCustomRole(null);
     setInternalPhase('path_a_upload');
+  };
+
+  const handleCustomRoleSubmit = (e) => {
+    e.preventDefault();
+    const val = customRoleInput.trim();
+    if (val.length < 2 || val.length > 100) {
+      setCustomRoleError('Custom role must be between 2 and 100 characters.');
+      return;
+    }
+    setCustomRoleError('');
+    setCustomRoleInput('');
+
+    if (internalPhase === 'path_a_select_role') {
+      setSelectedRoleA(val);
+      setCustomRole(val);
+      setInternalPhase('path_a_upload');
+    } else if (internalPhase === 'path_b_recommendations') {
+      handleSelectRecommendedRole(val, true);
+    }
   };
 
   // Perform PDF parsing & API uploads
@@ -146,9 +168,10 @@ export default function UploadPage() {
       setResumeData(data.resume);
 
       if (mode === 'path_a') {
-        // Path A: We already know the target role. Select it and proceed immediately to results/quiz
-        const selRes = await selectRole(data.session_id, selectedRoleA);
+        const isCustom = !ROLE_OPTIONS.includes(selectedRoleA);
+        const selRes = await selectRole(data.session_id, selectedRoleA, isCustom ? selectedRoleA : undefined);
         setTargetRole(selectedRoleA);
+        if (isCustom) setCustomRole(selectedRoleA);
         setGapAnalysis(selRes.gap_analysis);
         setCompressedProfile(selRes.compressed_profile);
         setLoading(false);
@@ -195,15 +218,17 @@ export default function UploadPage() {
   };
 
   // Select recommended role in Path B
-  const handleSelectRecommendedRole = async (role) => {
+  const handleSelectRecommendedRole = async (role, isCustom = false) => {
     if (selectedRoleLocal === role) return;
     setSelectedRoleLocal(role);
     setLoading(true);
     setError('');
 
     try {
-      const data = await selectRole(sessionId, role);
+      const data = await selectRole(sessionId, role, isCustom ? role : undefined);
       setTargetRole(role);
+      if (isCustom) setCustomRole(role);
+      else setCustomRole(null);
       setGapAnalysis(data.gap_analysis);
       setCompressedProfile(data.compressed_profile);
       await new Promise(r => setTimeout(r, 400));
@@ -369,6 +394,54 @@ export default function UploadPage() {
                 );
               })}
             </div>
+
+            {/* Custom Role Input */}
+            <div style={{
+              marginTop: '32px',
+              padding: '24px',
+              background: 'var(--bg-secondary)',
+              border: '1.5px dashed var(--border)',
+              borderRadius: 'var(--radius-md)',
+              textAlign: 'center'
+            }}>
+              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)', marginBottom: '12px' }}>
+                Can't find your role? Enter a Custom Role
+              </h3>
+              <form onSubmit={handleCustomRoleSubmit} style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center', maxWidth: 500, margin: '0 auto' }}>
+                <input
+                  type="text"
+                  placeholder="e.g., AI Architect, SRE, Quant Developer..."
+                  value={customRoleInput}
+                  onChange={(e) => {
+                    setCustomRoleInput(e.target.value);
+                    if (customRoleError) setCustomRoleError('');
+                  }}
+                  style={{
+                    flex: '1 1 280px',
+                    padding: '12px 16px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1.5px solid var(--border)',
+                    background: 'var(--bg-primary)',
+                    color: 'var(--text-primary)',
+                    fontSize: '0.9rem',
+                    outline: 'none',
+                    transition: 'border-color 0.2s'
+                  }}
+                />
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ padding: '12px 24px', whiteSpace: 'nowrap' }}
+                >
+                  Confirm Custom Role
+                </button>
+              </form>
+              {customRoleError && (
+                <p style={{ color: 'var(--rose)', fontSize: '0.82rem', marginTop: '10px', fontWeight: 600 }}>
+                  {customRoleError}
+                </p>
+              )}
+            </div>
           </motion.div>
         )}
 
@@ -508,6 +581,54 @@ export default function UploadPage() {
                   </motion.div>
                 );
               })}
+            </div>
+
+            {/* Custom Role Input */}
+            <div style={{
+              marginTop: '32px',
+              padding: '24px',
+              background: 'var(--bg-secondary)',
+              border: '1.5px dashed var(--border)',
+              borderRadius: 'var(--radius-md)',
+              textAlign: 'center'
+            }}>
+              <h3 style={{ fontFamily: 'Space Grotesk', fontWeight: 700, fontSize: '1.05rem', color: 'var(--text-primary)', marginBottom: '12px' }}>
+                Not matching your preference? Enter a Custom Role
+              </h3>
+              <form onSubmit={handleCustomRoleSubmit} style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center', maxWidth: 500, margin: '0 auto' }}>
+                <input
+                  type="text"
+                  placeholder="e.g., Platform Engineer, Security Researcher..."
+                  value={customRoleInput}
+                  onChange={(e) => {
+                    setCustomRoleInput(e.target.value);
+                    if (customRoleError) setCustomRoleError('');
+                  }}
+                  style={{
+                    flex: '1 1 280px',
+                    padding: '12px 16px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1.5px solid var(--border)',
+                    background: 'var(--bg-primary)',
+                    color: 'var(--text-primary)',
+                    fontSize: '0.9rem',
+                    outline: 'none',
+                    transition: 'border-color 0.2s'
+                  }}
+                />
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ padding: '12px 24px', whiteSpace: 'nowrap' }}
+                >
+                  Confirm Custom Role
+                </button>
+              </form>
+              {customRoleError && (
+                <p style={{ color: 'var(--rose)', fontSize: '0.82rem', marginTop: '10px', fontWeight: 600 }}>
+                  {customRoleError}
+                </p>
+              )}
             </div>
           </motion.div>
         )}

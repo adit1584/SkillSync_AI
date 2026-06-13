@@ -44,6 +44,9 @@ async function handleGetState(req, res) {
       state: state || {
         mode: null,
         selected_role: null,
+        custom_role: null,
+        job_description: null,
+        target_opportunity_option: null,
         quiz_answers: [],
         current_quiz_idx: 0,
         quiz_skipped: false,
@@ -70,6 +73,9 @@ async function handleSaveState(req, res) {
   const {
     mode,
     selected_role,
+    custom_role,
+    job_description,
+    target_opportunity_option,
     quiz_answers,
     current_quiz_idx,
     quiz_skipped,
@@ -82,6 +88,9 @@ async function handleSaveState(req, res) {
     const updates = {
       mode,
       selected_role,
+      custom_role,
+      job_description,
+      target_opportunity_option,
       quiz_answers,
       current_quiz_idx,
       quiz_skipped,

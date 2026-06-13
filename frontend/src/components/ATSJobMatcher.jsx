@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { scanJobDescription } from '../lib/api';
-import { FileSearch, Sparkles, CheckCircle, XCircle, AlertCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { FileSearch, Sparkles, CheckCircle, XCircle, AlertCircle, AlertTriangle, ArrowRight, Award } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useApp } from '../context/AppContext';
 
 export default function ATSJobMatcher() {
+  const { jobDescription: contextJd, targetRole, customRole } = useApp();
   const [scanType, setScanType] = useState('jd'); // 'jd' | 'manual'
-  const [jobDescription, setJobDescription] = useState('');
+  const [jobDescription, setJobDescription] = useState(contextJd || '');
   
   // Manual fields
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState(customRole || targetRole || '');
   const [skills, setSkills] = useState('');
   const [experience, setExperience] = useState('');
   const [certifications, setCertifications] = useState('');
@@ -16,6 +18,30 @@ export default function ATSJobMatcher() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [results, setResults] = useState(null);
+
+  useEffect(() => {
+    if (contextJd) {
+      setJobDescription(contextJd);
+      triggerScan(contextJd);
+    }
+  }, [contextJd]);
+
+  const triggerScan = async (jdText) => {
+    setError('');
+    setLoading(true);
+    try {
+      const data = await scanJobDescription(jdText, null, targetRole, customRole);
+      if (data.success) {
+        setResults(data);
+      } else {
+        setError(data.error || 'Failed to scan job requirements.');
+      }
+    } catch (err) {
+      setError(err.response?.data?.error || 'An error occurred during scanning.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleScan = async (e) => {
     e.preventDefault();
@@ -31,7 +57,7 @@ export default function ATSJobMatcher() {
           setLoading(false);
           return;
         }
-        data = await scanJobDescription(jobDescription, null);
+        data = await scanJobDescription(jobDescription, null, targetRole, customRole);
       } else {
         if (!role.trim() || !skills.trim()) {
           setError('Please fill in at least the target role and key skills.');
@@ -43,7 +69,7 @@ export default function ATSJobMatcher() {
           skills,
           experience,
           certifications
-        });
+        }, targetRole, customRole);
       }
 
       if (data.success) {
