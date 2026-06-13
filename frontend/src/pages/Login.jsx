@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { login } from '../lib/api';
-import { Mail, Lock, Eye, EyeOff, Key, AlertCircle, ArrowRight } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, AlertCircle, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Login() {
@@ -41,201 +41,200 @@ export default function Login() {
   };
 
   return (
-    <div style={{
-      minHeight: 'calc(100vh - 70px)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '40px 20px',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
-      {/* Background Decorative Blobs */}
-      <div style={{
-        position: 'absolute', top: '15%', left: '10%',
-        width: 300, height: 300, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(163, 82, 0, 0.08) 0%, transparent 75%)',
-        filter: 'blur(40px)', zIndex: 0
-      }} />
-      <div style={{
-        position: 'absolute', bottom: '15%', right: '10%',
-        width: 350, height: 350, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(97, 46, 2, 0.06) 0%, transparent 75%)',
-        filter: 'blur(50px)', zIndex: 0
-      }} />
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        style={{
-          width: '100%',
-          maxWidth: 440,
-          background: 'var(--bg-secondary)',
-          border: '1.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)',
-          padding: '40px',
-          boxShadow: 'var(--shadow-lg)',
-          zIndex: 1,
-          backdropFilter: 'blur(10px)',
-        }}
-      >
-        <div style={{ textAlign: 'center', marginBottom: 30 }}>
-          <h2 style={{
+    <div className="auth-split-container">
+      {/* Left Brand Panel */}
+      <div className="auth-split-left">
+        <div>
+          <h1 style={{
             fontFamily: 'Syne',
-            fontSize: '1.8rem',
+            fontSize: '2rem',
             fontWeight: 800,
-            color: 'var(--text-primary)',
-            marginBottom: 8
+            letterSpacing: '-0.02em',
+            color: '#FAFAFA',
+            marginBottom: '8px'
           }}>
-            Welcome Back
-          </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-            Log in to manage your AI Career Intelligence profile.
+            SkillSync AI
+          </h1>
+          <p style={{ color: '#A1A1AA', fontSize: '0.95rem' }}>
+            The Professional Career Intelligence Platform
           </p>
         </div>
 
-        <AnimatePresence>
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              style={{
-                display: 'flex',
-                gap: 10,
-                alignItems: 'center',
-                padding: '12px 16px',
-                background: 'rgba(185, 28, 28, 0.05)',
-                border: '1px solid rgba(185, 28, 28, 0.25)',
-                borderRadius: 'var(--radius-sm)',
-                color: 'var(--rose)',
-                fontSize: '0.82rem',
-                marginBottom: 20
-              }}
-            >
-              <AlertCircle size={16} style={{ flexShrink: 0 }} />
-              <span>{error}</span>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div style={{ display: 'grid', gap: '30px', margin: '40px 0' }}>
+          <div style={{ borderLeft: '2px solid #FAFAFA', paddingLeft: '20px' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#FAFAFA', marginBottom: '4px' }}>
+              Linear Career Checkpoints
+            </h3>
+            <p style={{ color: '#A1A1AA', fontSize: '0.88rem' }}>
+              Navigate step-by-step from resume uploading and skills assessment to career simulations.
+            </p>
+          </div>
+          <div style={{ borderLeft: '2px solid #27272A', paddingLeft: '20px' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#FAFAFA', marginBottom: '4px' }}>
+              Interactive Assessment Console
+            </h3>
+            <p style={{ color: '#A1A1AA', fontSize: '0.88rem' }}>
+              Simulate interviews and skill checks directly inside a clean, distraction-free environment.
+            </p>
+          </div>
+          <div style={{ borderLeft: '2px solid #27272A', paddingLeft: '20px' }}>
+            <h3 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#FAFAFA', marginBottom: '4px' }}>
+              Gap Bridging & Timeline Roadmap
+            </h3>
+            <p style={{ color: '#A1A1AA', fontSize: '0.88rem' }}>
+              Map your technical and interview prep through a structured 30-day dashboard.
+            </p>
+          </div>
+        </div>
 
-        <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 20 }}>
-          {/* Email field */}
-          <div style={{ display: 'grid', gap: 6 }}>
-            <label style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
-              Email Address
-            </label>
-            <div style={{ position: 'relative' }}>
-              <Mail size={18} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                required
-                style={{
-                  width: '100%',
-                  padding: '12px 14px 12px 42px',
-                  background: 'var(--bg-primary)',
-                  border: '1.5px solid var(--border)',
-                  borderRadius: 'var(--radius-sm)',
-                  fontSize: '0.9rem',
-                  color: 'var(--text-primary)',
-                  outline: 'none',
-                  transition: 'var(--transition)'
-                }}
-                onFocus={(e) => e.target.style.borderColor = 'var(--indigo)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-              />
-            </div>
+        <div style={{ fontSize: '0.8rem', color: '#71717A' }}>
+          &copy; {new Date().getFullYear()} SkillSync AI. Premium Career Intelligence.
+        </div>
+      </div>
+
+      {/* Right Form Panel */}
+      <div className="auth-split-right">
+        <div style={{ width: '100%', maxWidth: '400px', margin: '0 auto' }}>
+          <div style={{ marginBottom: 30 }}>
+            <h2 style={{
+              fontFamily: 'Syne',
+              fontSize: '1.8rem',
+              fontWeight: 800,
+              color: 'var(--text-primary)',
+              marginBottom: 8
+            }}>
+              Welcome Back
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
+              Log in to manage your AI Career Intelligence profile.
+            </p>
           </div>
 
-          {/* Password field */}
-          <div style={{ display: 'grid', gap: 6 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
-                Password
-              </label>
-              <Link to="/forgot-password" style={{ fontSize: '0.78rem', color: 'var(--indigo)', fontWeight: 600, textDecoration: 'none' }}>
-                Forgot Password?
-              </Link>
-            </div>
-            <div style={{ position: 'relative' }}>
-              <Lock size={18} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
-              <input
-                type={showPassword ? 'text' : 'password'}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                required
+          <AnimatePresence>
+            {error && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
                 style={{
-                  width: '100%',
-                  padding: '12px 42px 12px 42px',
-                  background: 'var(--bg-primary)',
-                  border: '1.5px solid var(--border)',
+                  display: 'flex',
+                  gap: 10,
+                  alignItems: 'center',
+                  padding: '12px 16px',
+                  background: 'var(--error-bg)',
+                  border: '1px solid var(--error-border)',
                   borderRadius: 'var(--radius-sm)',
-                  fontSize: '0.9rem',
-                  color: 'var(--text-primary)',
-                  outline: 'none',
-                  transition: 'var(--transition)'
-                }}
-                onFocus={(e) => e.target.style.borderColor = 'var(--indigo)'}
-                onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                style={{
-                  position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)',
-                  background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)'
+                  color: 'var(--error)',
+                  fontSize: '0.82rem',
+                  marginBottom: 20
                 }}
               >
-                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-              </button>
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            disabled={loading}
-            style={{
-              width: '100%',
-              padding: '14px',
-              background: 'var(--indigo)',
-              color: '#ffffff',
-              border: 'none',
-              borderRadius: 'var(--radius-sm)',
-              fontSize: '0.95rem',
-              fontWeight: 700,
-              cursor: loading ? 'not-allowed' : 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 8,
-              transition: 'var(--transition)',
-              marginTop: 10
-            }}
-            onMouseOver={(e) => !loading && (e.currentTarget.style.background = 'var(--indigo-light)')}
-            onMouseOut={(e) => !loading && (e.currentTarget.style.background = 'var(--indigo)')}
-          >
-            {loading ? (
-              <div style={{ width: 20, height: 20, borderRadius: '50%', border: '2.5px solid rgba(255,255,255,0.3)', borderTopColor: '#fff', animation: 'spin 0.8s linear infinite' }} />
-            ) : (
-              <>
-                Log In <ArrowRight size={16} />
-              </>
+                <AlertCircle size={16} style={{ flexShrink: 0 }} />
+                <span>{error}</span>
+              </motion.div>
             )}
-          </button>
-        </form>
+          </AnimatePresence>
 
-        <div style={{ textAlign: 'center', marginTop: 28, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-          Don't have an account?{' '}
-          <Link to="/signup" style={{ color: 'var(--indigo)', fontWeight: 700, textDecoration: 'none' }}>
-            Sign Up
-          </Link>
+          <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 20 }}>
+            {/* Email field */}
+            <div style={{ display: 'grid', gap: 6 }}>
+              <label style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                Email Address
+              </label>
+              <div style={{ position: 'relative' }}>
+                <Mail size={18} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="you@example.com"
+                  required
+                  className="input"
+                  style={{
+                    paddingLeft: '42px',
+                    borderRadius: 'var(--radius-sm)'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Password field */}
+            <div style={{ display: 'grid', gap: 6 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <label style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                  Password
+                </label>
+                <Link to="/forgot-password" style={{ fontSize: '0.78rem', color: 'var(--text-primary)', fontWeight: 600, textDecoration: 'underline' }}>
+                  Forgot Password?
+                </Link>
+              </div>
+              <div style={{ position: 'relative' }}>
+                <Lock size={18} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                  className="input"
+                  style={{
+                    paddingLeft: '42px',
+                    paddingRight: '42px',
+                    borderRadius: 'var(--radius-sm)'
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  style={{
+                    position: 'absolute',
+                    right: 14,
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    color: 'var(--text-muted)',
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn btn-primary"
+              style={{
+                width: '100%',
+                padding: '14px',
+                borderRadius: 'var(--radius-sm)',
+                fontSize: '0.95rem',
+                fontWeight: 700,
+                marginTop: 10
+              }}
+            >
+              {loading ? (
+                <div className="spinner" style={{ width: 20, height: 20 }} />
+              ) : (
+                <>
+                  Log In <ArrowRight size={16} />
+                </>
+              )}
+            </button>
+          </form>
+
+          <div style={{ textAlign: 'center', marginTop: 28, fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            Don't have an account?{' '}
+            <Link to="/signup" style={{ color: 'var(--text-primary)', fontWeight: 700, textDecoration: 'underline' }}>
+              Sign Up
+            </Link>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

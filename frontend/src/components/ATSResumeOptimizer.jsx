@@ -53,13 +53,13 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
         <div style={{
           display: 'flex', gap: 12, alignItems: 'center',
           padding: '16px 24px',
-          background: 'rgba(225, 29, 72, 0.05)',
-          border: '1.5px solid rgba(225, 29, 72, 0.25)',
-          borderRadius: 'var(--radius-lg)',
-          color: 'var(--rose)',
+          background: 'var(--error-bg)',
+          border: '1px solid var(--error-border)',
+          borderRadius: 'var(--radius-sm)',
+          color: 'var(--error)',
           fontWeight: 600,
         }}>
-          <AlertCircle size={20} />
+          <AlertCircle size={18} />
           <span>{error}</span>
         </div>
         <button className="btn btn-secondary" onClick={loadSuggestions}>
@@ -76,13 +76,13 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
         textAlign: 'center',
         padding: '40px 24px',
         background: 'var(--bg-secondary)',
-        border: '1.5px dashed var(--border)',
-        borderRadius: 'var(--radius-lg)',
+        border: '1px dashed var(--border)',
+        borderRadius: 'var(--radius-sm)',
         color: 'var(--text-secondary)'
       }}>
-        <FileText size={48} color="var(--emerald)" style={{ marginBottom: 16, opacity: 0.7 }} />
-        <h3 style={{ fontSize: '1.15rem', marginBottom: 8, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Resume fully optimized!</h3>
-        <p style={{ fontSize: '0.88rem', maxWidth: 440, margin: '0 auto' }}>
+        <FileText size={40} style={{ marginBottom: 16, opacity: 0.7 }} />
+        <h3 style={{ fontSize: '1.05rem', marginBottom: 8, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Resume fully optimized!</h3>
+        <p style={{ fontSize: '0.84rem', maxWidth: 440, margin: '0 auto' }}>
           Your profile matches all required core tech skills for this target role. No additional keyword additions are recommended.
         </p>
       </div>
@@ -96,28 +96,28 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
       <div style={{
         padding: '20px',
         background: 'var(--bg-secondary)',
-        border: '1.5px solid var(--border)',
-        borderRadius: 'var(--radius-lg)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--radius-sm)',
         display: 'flex',
         gap: 16,
         alignItems: 'center',
         boxShadow: 'var(--shadow-sm)'
       }}>
         <div style={{
-          width: 44, height: 44,
-          borderRadius: 'var(--radius-md)',
-          background: 'rgba(163, 82, 0, 0.08)',
-          border: '1.5px solid rgba(163, 82, 0, 0.18)',
+          width: 40, height: 40,
+          borderRadius: 'var(--radius-sm)',
+          background: 'var(--bg-accent-light)',
+          border: '1px solid var(--border)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           flexShrink: 0
         }}>
-          <Sparkles size={20} color="var(--indigo)" />
+          <Sparkles size={18} color="var(--text-primary)" />
         </div>
         <div>
-          <h4 style={{ fontSize: '1rem', color: 'var(--text-primary)', marginBottom: 4, margin: 0, fontFamily: 'Space Grotesk' }}>
+          <h4 style={{ fontSize: '0.95rem', color: 'var(--text-primary)', marginBottom: 4, margin: 0, fontFamily: 'Space Grotesk' }}>
             Tailored Resume Bullet Suggestions
           </h4>
-          <p style={{ fontSize: '0.84rem', color: 'var(--text-secondary)', lineHeight: 1.4, margin: 0 }}>
+          <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.4, margin: 0 }}>
             Insert these high-impact keywords and descriptions into your resume's Projects or Experience section to boost your ATS match score.
           </p>
         </div>
@@ -134,8 +134,8 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
             className="card"
             style={{
               background: 'var(--bg-secondary)',
-              border: '1.5px solid var(--border)',
-              borderRadius: 'var(--radius-lg)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-sm)',
               padding: '24px',
               display: 'flex',
               flexDirection: 'column',
@@ -147,20 +147,11 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
           >
             {/* Skill badge */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
-              <span style={{
-                padding: '4px 12px',
-                borderRadius: 'var(--radius-full)',
-                fontSize: '0.74rem',
-                fontWeight: 700,
-                background: 'rgba(163, 82, 0, 0.08)',
-                color: 'var(--indigo)',
-                border: '1.5px solid rgba(163, 82, 0, 0.18)',
-                fontFamily: 'Space Grotesk'
-              }}>
+              <span className="badge badge-indigo" style={{ fontSize: '0.7rem' }}>
                 {s.skill}
               </span>
               {s.impact_metric && (
-                <span style={{ fontSize: '0.82rem', color: 'var(--emerald)', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
+                <span style={{ fontSize: '0.78rem', color: 'var(--success)', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
                   Suggested Impact: {s.impact_metric}
                 </span>
               )}
@@ -168,35 +159,35 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
 
             {/* Comparison view */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
-              {/* Original (Generic suggestion) */}
+              {/* Original */}
               <div style={{
-                padding: '14px 18px',
+                padding: '12px 16px',
                 background: 'var(--bg-primary)',
-                border: '1.5px dashed var(--border)',
-                borderRadius: 'var(--radius-md)',
+                border: '1px dashed var(--border)',
+                borderRadius: 'var(--radius-sm)',
                 display: 'flex', flexDirection: 'column', gap: 4
               }}>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', fontFamily: 'Space Grotesk' }}>
+                <span style={{ fontSize: '0.65rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', fontFamily: 'Space Grotesk' }}>
                   Original / Weak Phrase
                 </span>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', fontStyle: 'italic', margin: 0 }}>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', fontStyle: 'italic', margin: 0 }}>
                   "{s.original_bullet_suggestion || `Worked with ${s.skill}`}"
                 </p>
               </div>
 
               {/* Optimized suggestion */}
               <div style={{
-                padding: '14px 18px',
-                background: 'rgba(163, 82, 0, 0.04)',
-                border: '1.5px solid rgba(163, 82, 0, 0.18)',
-                borderRadius: 'var(--radius-md)',
+                padding: '12px 16px',
+                background: 'var(--bg-primary)',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--radius-sm)',
                 display: 'flex', flexDirection: 'column', gap: 4,
                 position: 'relative'
               }}>
-                <span style={{ fontSize: '0.7rem', color: 'var(--indigo)', fontWeight: 700, textTransform: 'uppercase', fontFamily: 'Space Grotesk' }}>
+                <span style={{ fontSize: '0.65rem', color: 'var(--text-primary)', fontWeight: 700, textTransform: 'uppercase', fontFamily: 'Space Grotesk' }}>
                   ATS-Optimized Bullet Point
                 </span>
-                <p style={{ fontSize: '0.88rem', color: 'var(--text-primary)', fontWeight: 600, paddingRight: 32, lineHeight: 1.5, margin: 0 }}>
+                <p style={{ fontSize: '0.82rem', color: 'var(--text-primary)', fontWeight: 600, paddingRight: 32, lineHeight: 1.5, margin: 0 }}>
                   "{s.optimized_bullet_suggestion}"
                 </p>
                 {/* Copy overlay button */}
@@ -204,20 +195,20 @@ export default function ATSResumeOptimizer({ sessionId, missingSkills }) {
                   onClick={() => handleCopy(s.optimized_bullet_suggestion, idx)}
                   style={{
                     position: 'absolute',
-                    top: 14, right: 14,
-                    width: 28, height: 28,
+                    top: 12, right: 12,
+                    width: 24, height: 24,
                     borderRadius: '50%',
-                    background: copiedId === idx ? 'rgba(5, 150, 105, 0.15)' : 'var(--bg-secondary)',
-                    border: '1.5px solid',
-                    borderColor: copiedId === idx ? 'var(--emerald)' : 'var(--border)',
+                    background: copiedId === idx ? 'var(--success-bg)' : 'var(--bg-secondary)',
+                    border: '1px solid',
+                    borderColor: copiedId === idx ? 'var(--success)' : 'var(--border)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     cursor: 'pointer',
-                    color: copiedId === idx ? 'var(--emerald)' : 'var(--text-secondary)',
-                    transition: 'all 0.2s',
+                    color: copiedId === idx ? 'var(--success)' : 'var(--text-secondary)',
+                    transition: 'all 0.15s',
                   }}
                   title="Copy bullet suggestion"
                 >
-                  {copiedId === idx ? <Check size={12} /> : <Copy size={12} />}
+                  {copiedId === idx ? <Check size={11} /> : <Copy size={11} />}
                 </button>
               </div>
             </div>

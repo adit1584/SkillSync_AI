@@ -48,13 +48,13 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
             exit={{ opacity: 0, scale: 0.96 }}
             {...getRootProps()}
             style={{
-              border: `2px dashed ${isDragActive ? 'var(--indigo)' : 'var(--border)'}`,
-              borderRadius: 'var(--radius-xl)',
+              border: `2px dashed ${isDragActive ? 'var(--border-active)' : 'var(--border)'}`,
+              borderRadius: 'var(--radius-md)',
               padding: '48px 32px',
               textAlign: 'center',
               cursor: 'pointer',
               background: isDragActive
-                ? 'rgba(163, 82, 0, 0.05)'
+                ? 'var(--bg-card-hover)'
                 : 'var(--bg-secondary)',
               transition: 'var(--transition)',
               position: 'relative',
@@ -64,61 +64,50 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
           >
             <input {...getInputProps()} id="resume-file-input" />
 
-            {/* Glow on drag */}
-            {isDragActive && (
-              <div style={{
-                position: 'absolute', inset: 0,
-                background: 'radial-gradient(ellipse at center, rgba(163, 82, 0, 0.1) 0%, transparent 70%)',
-                pointerEvents: 'none',
-              }} />
-            )}
-
             <motion.div
-              animate={isDragActive ? { scale: 1.1, y: -4 } : { scale: 1, y: 0 }}
+              animate={isDragActive ? { scale: 1.05, y: -2 } : { scale: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 300 }}
               style={{
-                width: 72, height: 72,
-                background: isDragActive
-                  ? 'var(--grad-hero)'
-                  : 'rgba(163, 82, 0, 0.08)',
-                borderRadius: '20px',
+                width: 56, height: 56,
+                background: 'var(--bg-accent-light)',
+                borderRadius: 'var(--radius-sm)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 margin: '0 auto 20px',
-                border: '1.5px solid rgba(163, 82, 0, 0.2)',
+                border: '1px solid var(--border)',
               }}
             >
               <Upload
-                size={30}
-                color={isDragActive ? 'white' : 'var(--indigo)'}
+                size={24}
+                color="var(--text-primary)"
                 strokeWidth={1.8}
               />
             </motion.div>
 
             <h3 style={{
-              fontSize: '1.25rem',
+              fontSize: '1.15rem',
               fontWeight: 700,
               color: 'var(--text-primary)',
               marginBottom: 8,
               fontFamily: 'Space Grotesk, sans-serif',
             }}>
-              {isDragActive ? 'Drop your resume here!' : 'Upload Your Resume'}
+              {isDragActive ? 'Drop your resume here' : 'Upload Your Resume'}
             </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', marginBottom: 16 }}>
-              Drag & drop your PDF resume, or{' '}
-              <span style={{ color: 'var(--indigo)', fontWeight: 700 }}>browse files</span>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginBottom: 16 }}>
+              Drag and drop your PDF resume, or{' '}
+              <span style={{ textDecoration: 'underline', fontWeight: 700 }}>browse files</span>
             </p>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 8,
               background: 'var(--bg-primary)',
               border: '1px solid var(--border)',
-              borderRadius: 'var(--radius-full)',
-              padding: '6px 18px',
-              fontSize: '0.8rem',
+              borderRadius: 'var(--radius-sm)',
+              padding: '6px 14px',
+              fontSize: '0.75rem',
               fontWeight: 600,
               fontFamily: 'Space Grotesk, sans-serif',
               color: 'var(--text-muted)',
             }}>
-              <FileText size={13} />
+              <FileText size={12} />
               PDF only · Max 10MB
             </div>
           </motion.div>
@@ -132,28 +121,29 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
               display: 'flex',
               alignItems: 'center',
               gap: 16,
-              padding: '22px 26px',
-              background: 'rgba(5, 150, 105, 0.05)',
-              border: '1.5px solid rgba(5, 150, 105, 0.2)',
-              borderRadius: 'var(--radius-lg)',
+              padding: '18px 22px',
+              background: 'var(--success-bg)',
+              border: '1px solid var(--success-border)',
+              borderRadius: 'var(--radius-md)',
               boxShadow: 'var(--shadow-sm)',
             }}
           >
             <div style={{
-              width: 50, height: 50,
-              background: 'rgba(5, 150, 105, 0.12)',
-              borderRadius: 12,
+              width: 44, height: 44,
+              background: 'var(--success-bg)',
+              borderRadius: 'var(--radius-sm)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               flexShrink: 0,
+              border: '1px solid var(--success-border)'
             }}>
-              <FileText size={22} color="var(--emerald)" />
+              <FileText size={20} color="var(--success)" />
             </div>
 
             <div style={{ flex: 1, overflow: 'hidden' }}>
               <p style={{
                 fontWeight: 700,
                 color: 'var(--text-primary)',
-                fontSize: '0.98rem',
+                fontSize: '0.92rem',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 whiteSpace: 'nowrap',
@@ -161,12 +151,12 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
               }}>
                 {selectedFile.name}
               </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: 2 }}>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: 2 }}>
                 {formatSize(selectedFile.size)} · PDF
               </p>
             </div>
 
-            <CheckCircle size={20} color="var(--emerald)" style={{ flexShrink: 0 }} />
+            <CheckCircle size={18} color="var(--success)" style={{ flexShrink: 0 }} />
 
             <button
               onClick={(e) => { e.stopPropagation(); onClear(); }}
@@ -182,7 +172,7 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
               title="Remove file"
               className="btn-ghost"
             >
-              <X size={18} />
+              <X size={16} />
             </button>
           </motion.div>
         )}
@@ -198,16 +188,16 @@ export default function ResumeUploader({ onFileSelect, selectedFile, onClear }) 
             style={{
               display: 'flex', alignItems: 'center', gap: 10,
               marginTop: 14,
-              padding: '12px 18px',
-              background: 'rgba(225, 29, 72, 0.05)',
-              border: '1.5px solid rgba(225, 29, 72, 0.2)',
-              borderRadius: 'var(--radius-md)',
-              color: 'var(--rose)',
-              fontSize: '0.88rem',
+              padding: '12px 16px',
+              background: 'var(--error-bg)',
+              border: '1px solid var(--error-border)',
+              borderRadius: 'var(--radius-sm)',
+              color: 'var(--error)',
+              fontSize: '0.82rem',
               fontWeight: 600,
             }}
           >
-            <AlertCircle size={16} />
+            <AlertCircle size={14} />
             {error}
           </motion.div>
         )}

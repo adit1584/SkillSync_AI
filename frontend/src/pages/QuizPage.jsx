@@ -127,12 +127,12 @@ export default function QuizPage() {
           >
             <div style={{
               width: 80, height: 80,
-              background: 'linear-gradient(135deg, rgba(163, 82, 0, 0.1), rgba(97, 46, 2, 0.08))',
-              border: '1.5px solid rgba(163, 82, 0, 0.25)',
+              background: 'var(--bg-accent-light)',
+              border: '1.5px solid var(--border)',
               borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               margin: '0 auto 20px',
-              boxShadow: 'var(--shadow-glow)',
+              boxShadow: 'var(--shadow-sm)',
             }}>
               <Trophy size={36} color="var(--indigo)" />
             </div>

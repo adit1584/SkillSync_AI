@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   BookOpen, Code, ExternalLink, ChevronDown, ChevronUp,
-  Target, Play, CheckSquare, Calendar, Square, CheckSquare as CheckedBox, Award
+  Target, Play, CheckSquare, Calendar, Square, Award
 } from 'lucide-react';
 
 const RESOURCE_ICONS = {
@@ -13,10 +13,10 @@ const RESOURCE_ICONS = {
 };
 
 const RESOURCE_COLORS = {
-  course: { color: 'var(--indigo)', bg: 'rgba(163, 82, 0, 0.06)' },
-  video: { color: 'var(--violet)', bg: 'rgba(97, 46, 2, 0.06)' },
-  doc: { color: 'var(--emerald)', bg: 'rgba(133, 77, 14, 0.06)' },
-  practice: { color: 'var(--amber)', bg: 'rgba(163, 82, 0, 0.06)' },
+  course: { color: 'var(--text-primary)', bg: 'var(--bg-accent-light)' },
+  video: { color: 'var(--text-primary)', bg: 'var(--bg-accent-light)' },
+  doc: { color: 'var(--text-primary)', bg: 'var(--bg-accent-light)' },
+  practice: { color: 'var(--text-primary)', bg: 'var(--bg-accent-light)' },
 };
 
 function WeekCard({ week, index, progressState, toggleTask }) {
@@ -55,32 +55,25 @@ function WeekCard({ week, index, progressState, toggleTask }) {
         flexShrink: 0,
       }}>
         <div style={{
-          width: 36, height: 36,
-          borderRadius: '50%',
+          width: 32, height: 32,
+          borderRadius: 'var(--radius-sm)',
           background: isWeekCompleted
-            ? 'linear-gradient(135deg, var(--emerald), #10b981)'
+            ? 'var(--success)'
             : open
-              ? 'var(--grad-hero)'
+              ? 'var(--primary)'
               : 'var(--bg-secondary)',
-          border: isWeekCompleted
-            ? '1.8px solid rgba(5, 150, 105, 0.35)'
-            : open
-              ? '1.8px solid rgba(163, 82, 0, 0.35)'
-              : '1.8px solid var(--border)',
+          border: '1px solid var(--border)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           fontFamily: 'Space Grotesk',
           fontWeight: 700,
           fontSize: '0.82rem',
-          color: open || isWeekCompleted ? '#ffffff' : 'var(--text-secondary)',
+          color: open || isWeekCompleted ? 'var(--bg-secondary)' : 'var(--text-secondary)',
           transition: 'var(--transition)',
-          boxShadow: isWeekCompleted
-            ? '0 0 15px rgba(5, 150, 105, 0.2)'
-            : open ? '0 0 15px rgba(163, 82, 0, 0.2)' : 'var(--shadow-sm)',
           zIndex: 1,
         }}>
-          {isWeekCompleted ? <CheckedBox size={14} /> : week.week}
+          {isWeekCompleted ? '✓' : week.week}
         </div>
         {/* Vertical line */}
         <div style={{
@@ -97,22 +90,22 @@ function WeekCard({ week, index, progressState, toggleTask }) {
       <div style={{
         flex: 1,
         background: isWeekCompleted
-          ? 'rgba(5, 150, 105, 0.02)'
+          ? 'var(--success-bg)'
           : open
-            ? 'rgba(163, 82, 0, 0.03)'
+            ? 'var(--bg-card-hover)'
             : 'var(--bg-secondary)',
-        border: `1.5px solid ${
+        border: `1px solid ${
           isWeekCompleted
-            ? 'rgba(5, 150, 105, 0.2)'
+            ? 'var(--success-border)'
             : open
-              ? 'rgba(163, 82, 0, 0.2)'
+              ? 'var(--border-active)'
               : 'var(--border)'
         }`,
-        borderRadius: 'var(--radius-lg)',
+        borderRadius: 'var(--radius-sm)',
         marginBottom: 16,
         overflow: 'hidden',
         transition: 'var(--transition)',
-        boxShadow: open ? 'var(--shadow-md)' : 'var(--shadow-sm)',
+        boxShadow: 'var(--shadow-sm)',
       }}>
         {/* Week Header */}
         <button
@@ -131,19 +124,19 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                 fontWeight: 800,
                 textTransform: 'uppercase',
                 letterSpacing: '0.07em',
-                color: isWeekCompleted ? 'var(--emerald)' : 'var(--indigo)',
+                color: isWeekCompleted ? 'var(--success)' : 'var(--text-primary)',
                 fontFamily: 'Space Grotesk',
               }}>
                 Week {week.week} {isWeekCompleted && '— Complete'}
               </span>
               <span style={{
-                padding: '3px 12px',
-                borderRadius: 'var(--radius-full)',
+                padding: '3px 10px',
+                borderRadius: 'var(--radius-sm)',
                 fontSize: '0.72rem',
                 fontWeight: 700,
-                background: isWeekCompleted ? 'rgba(5, 150, 105, 0.08)' : 'rgba(163, 82, 0, 0.08)',
-                color: isWeekCompleted ? 'var(--emerald)' : 'var(--indigo)',
-                border: `1px solid ${isWeekCompleted ? 'rgba(5, 150, 105, 0.18)' : 'rgba(163, 82, 0, 0.18)'}`,
+                background: 'var(--bg-accent-light)',
+                color: 'var(--text-primary)',
+                border: '1px solid var(--border)',
                 fontFamily: 'Space Grotesk',
               }}>
                 {week.focus_skill}
@@ -154,7 +147,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
             </div>
             <p style={{
               fontWeight: 700,
-              fontSize: '1rem',
+              fontSize: '0.95rem',
               color: 'var(--text-primary)',
               textDecoration: isWeekCompleted ? 'line-through' : 'none',
               opacity: isWeekCompleted ? 0.65 : 1,
@@ -183,14 +176,14 @@ function WeekCard({ week, index, progressState, toggleTask }) {
               {/* Daily Tasks */}
               <div>
                 <p style={{
-                  fontSize: '0.73rem', fontWeight: 700,
+                  fontSize: '0.7rem', fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.06em',
                   color: 'var(--text-muted)', marginBottom: 10,
                   fontFamily: 'Space Grotesk',
                 }}>
-                  Daily Target checklist
+                  Daily Target Checklist
                 </p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {tasks.map((task, i) => {
                     const taskKey = `w${week.week}_t${i}`;
                     const isChecked = !!progressState[taskKey];
@@ -205,15 +198,28 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                           cursor: 'pointer',
                           padding: '6px 8px',
                           borderRadius: 'var(--radius-sm)',
-                          background: isChecked ? 'rgba(5, 150, 105, 0.03)' : 'transparent',
+                          background: isChecked ? 'var(--success-bg)' : 'transparent',
                           transition: 'var(--transition)',
                         }}
                       >
-                        <div style={{ color: isChecked ? 'var(--emerald)' : 'var(--text-muted)', marginTop: 2, flexShrink: 0 }}>
-                          {isChecked ? <CheckedBox size={14} /> : <Square size={14} />}
+                        <div style={{
+                          width: 14,
+                          height: 14,
+                          border: '1px solid var(--border)',
+                          borderRadius: '3px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontSize: '0.65rem',
+                          background: isChecked ? 'var(--border-active)' : 'transparent',
+                          color: isChecked ? 'var(--bg-secondary)' : 'transparent',
+                          marginTop: 2,
+                          flexShrink: 0
+                        }}>
+                          {isChecked && '✓'}
                         </div>
                         <span style={{
-                          fontSize: '0.84rem',
+                          fontSize: '0.82rem',
                           color: isChecked ? 'var(--text-muted)' : 'var(--text-secondary)',
                           lineHeight: 1.5,
                           textDecoration: isChecked ? 'line-through' : 'none'
@@ -230,7 +236,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
               {week.checkpoint_project && (
                 <div>
                   <p style={{
-                    fontSize: '0.73rem', fontWeight: 700,
+                    fontSize: '0.7rem', fontWeight: 700,
                     textTransform: 'uppercase', letterSpacing: '0.06em',
                     color: 'var(--text-muted)', marginBottom: 10,
                     fontFamily: 'Space Grotesk',
@@ -245,21 +251,34 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                         onClick={() => toggleTask(projKey)}
                         style={{
                           padding: '16px',
-                          background: isChecked ? 'rgba(5, 150, 105, 0.02)' : 'rgba(5, 150, 105, 0.05)',
-                          border: `1.5px solid ${isChecked ? 'rgba(5, 150, 105, 0.15)' : 'rgba(5, 150, 105, 0.25)'}`,
-                          borderRadius: 'var(--radius-md)',
+                          background: isChecked ? 'var(--success-bg)' : 'var(--bg-accent-light)',
+                          border: `1px solid ${isChecked ? 'var(--success-border)' : 'var(--border)'}`,
+                          borderRadius: 'var(--radius-sm)',
                           cursor: 'pointer',
                           position: 'relative',
                         }}
                       >
                         <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 6 }}>
-                          <div style={{ color: isChecked ? 'var(--emerald)' : 'var(--emerald)', marginTop: 2, flexShrink: 0 }}>
-                            {isChecked ? <CheckedBox size={14} /> : <Square size={14} />}
+                          <div style={{
+                            width: 14,
+                            height: 14,
+                            border: '1px solid var(--border)',
+                            borderRadius: '3px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '0.65rem',
+                            background: isChecked ? 'var(--border-active)' : 'transparent',
+                            color: isChecked ? 'var(--bg-secondary)' : 'transparent',
+                            marginTop: 2,
+                            flexShrink: 0
+                          }}>
+                            {isChecked && '✓'}
                           </div>
                           <p style={{
                             fontWeight: 700,
-                            fontSize: '0.9rem',
-                            color: isChecked ? 'var(--text-secondary)' : 'var(--emerald)',
+                            fontSize: '0.88rem',
+                            color: isChecked ? 'var(--text-secondary)' : 'var(--text-primary)',
                             textDecoration: isChecked ? 'line-through' : 'none',
                             margin: 0,
                             fontFamily: 'Space Grotesk'
@@ -268,7 +287,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                           </p>
                         </div>
                         <p style={{
-                          fontSize: '0.8rem',
+                          fontSize: '0.78rem',
                           color: 'var(--text-secondary)',
                           marginBottom: 10,
                           marginTop: 0,
@@ -279,13 +298,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                         </p>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, opacity: isChecked ? 0.6 : 1 }}>
                           {(week.checkpoint_project.tech_used || []).map((t, i) => (
-                            <span key={i} style={{
-                              padding: '2px 8px', borderRadius: 'var(--radius-full)',
-                              fontSize: '0.68rem', background: 'rgba(5, 150, 105, 0.08)',
-                              color: 'var(--emerald)', border: '1px solid rgba(5, 150, 105, 0.15)',
-                              fontWeight: 600,
-                              fontFamily: 'Space Grotesk'
-                            }}>
+                            <span key={i} className="skill-tag skill-tag-neutral" style={{ fontSize: '0.68rem' }}>
                               {t}
                             </span>
                           ))}
@@ -301,12 +314,12 @@ function WeekCard({ week, index, progressState, toggleTask }) {
             {week.resources?.length > 0 && (
               <div>
                 <p style={{
-                  fontSize: '0.73rem', fontWeight: 700,
+                  fontSize: '0.7rem', fontWeight: 700,
                   textTransform: 'uppercase', letterSpacing: '0.06em',
                   color: 'var(--text-muted)', marginBottom: 10,
                   fontFamily: 'Space Grotesk',
                 }}>
-                  Structured resource index
+                  Structured Resource Index
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 8 }}>
                   {week.resources.map((r, i) => {
@@ -317,22 +330,22 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                         display: 'flex', alignItems: 'center', gap: 10,
                         padding: '10px 14px',
                         background: 'var(--bg-secondary)',
-                        border: '1.5px solid var(--border)',
-                        borderRadius: 'var(--radius-md)',
+                        border: '1px solid var(--border)',
+                        borderRadius: 'var(--radius-sm)',
                       }}>
                         <div style={{
                           width: 32, height: 32,
                           background: clr.bg,
-                          borderRadius: 8,
+                          borderRadius: 'var(--radius-sm)',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           flexShrink: 0,
-                          border: `1px solid ${clr.color}18`,
+                          border: '1px solid var(--border)',
                         }}>
-                          <ResIcon size={13} color={clr.color} />
+                          <ResIcon size={14} color="var(--text-primary)" />
                         </div>
                         <div style={{ flex: 1, overflow: 'hidden' }}>
                           <p style={{
-                            fontSize: '0.83rem', fontWeight: 700,
+                            fontSize: '0.82rem', fontWeight: 700,
                             color: 'var(--text-primary)',
                             overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                             margin: 0,
@@ -340,7 +353,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                           }}>
                             {r.name}
                           </p>
-                          <p style={{ fontSize: '0.73rem', color: 'var(--text-muted)', margin: 0, fontWeight: 500 }}>
+                          <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', margin: 0, fontWeight: 500 }}>
                             {r.platform}
                           </p>
                         </div>
@@ -352,7 +365,7 @@ function WeekCard({ week, index, progressState, toggleTask }) {
                             style={{ color: 'var(--text-muted)', flexShrink: 0, padding: 4 }}
                             className="btn-ghost"
                           >
-                            <ExternalLink size={13} />
+                            <ExternalLink size={12} />
                           </a>
                         )}
                       </div>
@@ -417,8 +430,8 @@ export default function RoadmapTimeline({ roadmap, sessionId }) {
       {/* Roadmap Meta + Progress bar */}
       <div style={{
         background: 'var(--bg-secondary)',
-        border: '1.5px solid var(--border)',
-        borderRadius: 'var(--radius-lg)',
+        border: '1px solid var(--border)',
+        borderRadius: 'var(--radius-sm)',
         padding: '20px 24px',
         display: 'flex',
         flexDirection: 'column',
@@ -431,31 +444,31 @@ export default function RoadmapTimeline({ roadmap, sessionId }) {
           {/* Metadata chips */}
           <div style={{ display: 'flex', gap: 10 }}>
             <div style={{
-              display: 'flex', alignItems: 'center', gap: 8,
-              padding: '6px 16px',
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '6px 14px',
               background: 'var(--bg-primary)',
-              border: '1.5px solid var(--border)',
-              borderRadius: 'var(--radius-full)',
-              fontSize: '0.85rem',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-sm)',
+              fontSize: '0.8rem',
               fontWeight: 600,
               fontFamily: 'Space Grotesk'
             }}>
-              <Calendar size={14} color="var(--indigo)" />
+              <Calendar size={13} color="var(--text-primary)" />
               <span style={{ color: 'var(--text-secondary)' }}>
                 <strong style={{ color: 'var(--text-primary)' }}>{roadmap.weeks.length}</strong> Weeks
               </span>
             </div>
             <div style={{
-              display: 'flex', alignItems: 'center', gap: 8,
-              padding: '6px 16px',
+              display: 'flex', alignItems: 'center', gap: 6,
+              padding: '6px 14px',
               background: 'var(--bg-primary)',
-              border: '1.5px solid var(--border)',
-              borderRadius: 'var(--radius-full)',
-              fontSize: '0.85rem',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-sm)',
+              fontSize: '0.8rem',
               fontWeight: 600,
               fontFamily: 'Space Grotesk'
             }}>
-              <Target size={14} color="var(--indigo)" />
+              <Target size={13} color="var(--text-primary)" />
               <span style={{ color: 'var(--text-secondary)' }}>
                 <strong style={{ color: 'var(--text-primary)' }}>{roadmap.weekly_hours}h</strong> / week
               </span>
@@ -463,18 +476,17 @@ export default function RoadmapTimeline({ roadmap, sessionId }) {
           </div>
 
           {/* Completion label */}
-          <span style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>
-            Completion Ratio: <strong style={{ color: 'var(--emerald)', fontSize: '1.05rem' }}>{completionPercent}%</strong>
+          <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>
+            Completion: <strong style={{ color: 'var(--success)' }}>{completionPercent}%</strong>
           </span>
         </div>
 
         {/* Global Progress Track */}
-        <div className="progress-track" style={{ height: 8 }}>
+        <div className="progress-track" style={{ height: 6 }}>
           <motion.div
             className="progress-fill"
             animate={{ width: `${completionPercent}%` }}
             transition={{ duration: 0.5 }}
-            style={{ background: 'linear-gradient(90deg, var(--indigo) 0%, var(--emerald) 100%)' }}
           />
         </div>
       </div>

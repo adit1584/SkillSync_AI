@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useApp } from '../context/AppContext';
 import { motion } from 'framer-motion';
 import {
-  Zap, FileText, Target, Brain, Rocket, BarChart3,
-  ArrowRight, CheckCircle, Shield, TrendingUp,
-  Code, Database, Cloud, Cpu, Server, Layers, Terminal
+  FileText, Target, Brain, Rocket, BarChart3,
+  ArrowRight, Shield, Layers, HelpCircle, ChevronDown, ChevronUp
 } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -12,252 +12,158 @@ const FEATURES = [
   {
     icon: FileText,
     title: 'Resume Intelligence',
-    desc: 'AI extracts your technical skills, projects, certifications, and experience into a structured profile.',
-    color: '#A35200',
-    bg: 'rgba(163, 82, 0, 0.08)',
+    desc: 'Extracts your technical skills, projects, and certifications automatically into a professional profile.',
   },
   {
     icon: Target,
     title: 'Skill Gap Analysis',
-    desc: 'Local matching engine compares your skills against role requirements. Zero AI cost, instant results.',
-    color: '#059669',
-    bg: 'rgba(5, 150, 105, 0.08)',
+    desc: 'Local matching engine compares your current skills against industry standard target roles.',
   },
   {
     icon: Brain,
-    title: 'Adaptive Quiz',
-    desc: 'AI generates 15 MCQs tailored to your skills and experience level to verify actual proficiency.',
-    color: '#db2777',
-    bg: 'rgba(219, 39, 119, 0.08)',
+    title: 'Adaptive Verification Quiz',
+    desc: 'AI-generated evaluation tailored to your level to measure and prove actual capability.',
   },
   {
     icon: Rocket,
-    title: 'Career Simulation',
-    desc: 'Get 3 career path predictions — Accelerated, Steady, and Pivot — with real salary data.',
-    color: '#ea580c',
-    bg: 'rgba(234, 88, 12, 0.08)',
+    title: 'Career Simulations',
+    desc: 'Model three distinct paths: Accelerated growth, steady progression, and custom pivots.',
   },
   {
     icon: BarChart3,
-    title: 'Personalized Roadmap',
-    desc: 'Week-by-week learning plan with real resources, daily tasks, and deployable checkpoint projects.',
-    color: '#0284c7',
-    bg: 'rgba(2, 132, 199, 0.08)',
+    title: '30-Day Learning Roadmap',
+    desc: 'A week-by-week actionable plan with curated learning resources and milestone projects.',
   },
   {
-    icon: Zap,
-    title: 'Token Optimization',
-    desc: '93% token reduction via hybrid AI architecture. Only 3 targeted AI calls per session. ~₹0.15/user.',
-    color: '#e11d48',
-    bg: 'rgba(225, 29, 72, 0.08)',
+    icon: Shield,
+    title: 'Zero-Cost Core Matching',
+    desc: 'Optimized local parsing for instant feedback before querying AI endpoints for roadmap generation.',
   },
 ];
 
-const ROLES = [
-  { icon: Code, label: 'Frontend Developer', color: '#A35200' },
-  { icon: Server, label: 'Backend Engineer', color: '#2563eb' },
-  { icon: Layers, label: 'Fullstack Developer', color: '#0d9488' },
-  { icon: Cpu, label: 'AI Engineer', color: '#db2777' },
-  { icon: Database, label: 'Data Analyst', color: '#ea580c' },
-  { icon: Cloud, label: 'Cloud Engineer', color: '#059669' },
-  { icon: Terminal, label: 'DevOps Engineer', color: '#4f46e5' },
-];
-
-const STEPS = [
-  { num: '01', title: 'Upload Resume', desc: 'PDF parsed instantly — no manual input needed.' },
-  { num: '02', title: 'Skill Gap Analysis', desc: 'Local matching against predefined role datasets.' },
-  { num: '03', title: 'Take Adaptive Quiz', desc: 'AI verifies your actual skill proficiency with MCQs.' },
-  { num: '04', title: 'Get Your Roadmap', desc: 'Career simulation + week-by-week learning path.' },
+const FAQS = [
+  {
+    q: 'How does the skill verification work?',
+    a: 'We evaluate your uploaded resume skills locally, then generate a tailored interactive quiz. This quiz tests your core knowledge and feeds results back into your readiness profile.',
+  },
+  {
+    q: 'Is my resume data secure?',
+    a: 'Absolutely. We process data strictly for career analysis and profile building. Your data is protected by secure database policies and is not shared with third-party recruiters without your consent.',
+  },
+  {
+    q: 'What is the difference between custom and suggested target roles?',
+    a: 'Suggested roles are preset pathways (like AI Engineer, Frontend Developer) matching industry profiles. Custom roles allow you to target any specific job title by matching against your own copy-pasted job description.',
+  },
+  {
+    q: 'Can I download the 30-day learning roadmap?',
+    a: 'Yes. The career intelligence dashboard includes a printable version of your timeline, milestone checklists, and resources.',
+  },
 ];
 
 export default function LandingPage() {
-  const particleContainerRef = useRef(null);
-  const heroRef = useRef(null);
-  const featuresRef = useRef(null);
-  const stepsRef = useRef(null);
+  const { user } = useApp();
+  const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
-    // 1. Create and animate floating GSAP background particles
-    if (particleContainerRef.current) {
-      const container = particleContainerRef.current;
-      container.innerHTML = ''; // Clear existing
-
-      const numParticles = 16;
-      const elements = [];
-
-      for (let i = 0; i < numParticles; i++) {
-        const el = document.createElement('div');
-        const size = Math.random() * 12 + 6;
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-
-        el.style.position = 'absolute';
-        el.style.width = `${size}px`;
-        el.style.height = `${size}px`;
-        el.style.left = `${x}%`;
-        el.style.top = `${y}%`;
-        el.style.borderRadius = '50%';
-        el.style.pointerEvents = 'none';
-
-        const colorVal = Math.random();
-        if (colorVal < 0.35) {
-          el.style.background = 'radial-gradient(circle, rgba(163, 82, 0, 0.2) 0%, transparent 80%)';
-          el.style.border = '1px solid rgba(163, 82, 0, 0.15)';
-        } else if (colorVal < 0.7) {
-          el.style.background = 'radial-gradient(circle, rgba(219, 39, 119, 0.18) 0%, transparent 80%)';
-          el.style.border = '1px solid rgba(219, 39, 119, 0.15)';
-        } else {
-          el.style.background = 'radial-gradient(circle, rgba(234, 88, 12, 0.18) 0%, transparent 80%)';
-          el.style.border = '1px solid rgba(234, 88, 12, 0.15)';
-        }
-
-        container.appendChild(el);
-        elements.push(el);
-      }
-
-      elements.forEach(el => {
-        gsap.to(el, {
-          x: 'random(-50, 50)',
-          y: 'random(-50, 50)',
-          duration: 'random(8, 15)',
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-        });
-      });
-    }
-
-    // 2. Staggered Intro Animation for Hero elements
+    // Basic GSAP fade-in animations
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.fromTo('.hero-badge', { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.8 })
-      .fromTo('.hero-title', { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.55')
-      .fromTo('.hero-desc', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.55')
-      .fromTo('.hero-ctas', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.45')
-      .fromTo('.hero-stat-box', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, stagger: 0.08 }, '-=0.35');
-
-    // 3. Scroll trigger-like entry for target roles section
-    gsap.fromTo('.role-badge-anim',
-      { opacity: 0, y: 15 },
-      { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, delay: 1.2 }
-    );
+    tl.fromTo('.hero-title', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8 })
+      .fromTo('.hero-desc', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
+      .fromTo('.hero-ctas', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
+      .fromTo('.hero-stats', { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.5 }, '-=0.3');
   }, []);
 
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   return (
-    <div className="page-wrapper" ref={heroRef}>
-      {/* ── HERO ────────────────────────────────────────────────── */}
+    <div className="page-wrapper">
+      {/* Hero Section */}
       <section style={{
-        minHeight: '92vh',
+        minHeight: '80vh',
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
-        paddingTop: 120,
-        paddingBottom: 40,
+        paddingTop: 100,
+        paddingBottom: 60,
+        borderBottom: '1px solid var(--border)',
       }}>
-        {/* Particle and Grid Wrapper */}
-        <div ref={particleContainerRef} style={{ position: 'absolute', inset: 0, zIndex: 0 }} />
-
-        {/* Ambient glow backgrounds */}
-        <div style={{
-          position: 'absolute',
-          top: '10%', left: '15%',
-          width: 550, height: 550,
-          background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{
-          position: 'absolute',
-          bottom: '10%', right: '10%',
-          width: 450, height: 450,
-          background: 'radial-gradient(circle, rgba(219,39,119,0.06) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: 840, margin: '0 auto', textAlign: 'center' }}>
-            {/* Badge */}
-            <div className="hero-badge" style={{ marginBottom: 26, opacity: 0 }}>
-              {/* <span style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                padding: '8px 22px',
-                borderRadius: 'var(--radius-full)',
-                background: 'rgba(163, 82, 0, 0.06)',
-                border: '1.5px solid rgba(163, 82, 0, 0.15)',
-                fontSize: '0.82rem', fontWeight: 700,
-                color: 'var(--indigo)',
-                letterSpacing: '0.04em',
-                fontFamily: 'Space Grotesk, sans-serif',
-                boxShadow: 'var(--shadow-sm)',
-              }}>
-                <Zap size={13} fill="var(--indigo)" />
-                AI-Powered Career Intelligence
-              </span> */}
-            </div>
-
-            {/* Headline */}
             <h1 className="hero-title" style={{
-              fontSize: 'clamp(2.6rem, 6.5vw, 4.6rem)',
+              fontSize: 'clamp(2.4rem, 6vw, 4.2rem)',
               fontWeight: 800,
-              lineHeight: 1.12,
+              lineHeight: 1.15,
               marginBottom: 24,
-              letterSpacing: '-0.02em',
+              letterSpacing: '-0.03em',
               opacity: 0,
+              color: 'var(--text-primary)',
             }}>
-              Verify Skills. Predict Growth.{' '}
-              <span className="gradient-text">Own Your Trajectory.</span>
+              Know Your Career Potential Before Recruiters Do.
             </h1>
 
-            {/* Subtitle */}
             <p className="hero-desc" style={{
               fontSize: '1.15rem',
               color: 'var(--text-secondary)',
               lineHeight: 1.7,
               marginBottom: 38,
-              maxWidth: 620,
+              maxWidth: 680,
               margin: '0 auto 38px',
               opacity: 0,
             }}>
-              Upload your resume to instantly audit skill gaps, test competence using AI-adaptive quizzes, and unlock custom roadmaps designed to get you hired.
+              Upload your resume to instantly audit skill gaps, test competence using AI-adaptive quizzes, and unlock structured 30-day roadmaps designed to get you hired.
             </p>
 
-            {/* CTAs */}
             <div className="hero-ctas" style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', opacity: 0 }}>
-              <Link to="/upload" className="btn btn-primary" style={{ padding: '15px 34px', fontSize: '1rem' }}>
-                <Zap size={18} />
-                Get Started
-                <ArrowRight size={16} />
-              </Link>
-              <a
-                href="#how-it-works"
-                className="btn btn-secondary"
-                style={{ padding: '15px 34px', fontSize: '1rem' }}
-              >
-                Learn More
-              </a>
+              {user ? (
+                <>
+                  <Link to="/results" className="btn btn-primary" style={{ padding: '14px 30px', fontSize: '0.95rem' }}>
+                    Go to Workspace
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link to="/upload" className="btn btn-secondary" style={{ padding: '14px 30px', fontSize: '0.95rem' }}>
+                    New Analysis
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/upload" className="btn btn-primary" style={{ padding: '14px 30px', fontSize: '0.95rem' }}>
+                    Get Started
+                    <ArrowRight size={16} />
+                  </Link>
+                  <Link to="/login" className="btn btn-secondary" style={{ padding: '14px 30px', fontSize: '0.95rem' }}>
+                    Sign In
+                  </Link>
+                </>
+              )}
             </div>
 
-            {/* Stats */}
-            <div style={{
-              display: 'flex', justifyContent: 'center', gap: 36,
-              marginTop: 64, flexWrap: 'wrap',
+            <div className="hero-stats" style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: 48,
+              marginTop: 64,
+              flexWrap: 'wrap',
+              opacity: 0
             }}>
               {[
-                { val: '93%', label: 'Token Reduction' },
-                { val: '~₹0.15', label: 'Cost Per Session' },
-                { val: 'GSAP', label: 'Drift Animations' },
-                { val: '100%', label: 'Legit Resources' },
+                { val: '93%', label: 'Cost Optimized' },
+                { val: '30-Day', label: 'Structured Roadmaps' },
+                { val: '100%', label: 'Flat Layout Verified' },
               ].map(s => (
-                <div className="hero-stat-box" key={s.val} style={{ textAlign: 'center', opacity: 0 }}>
+                <div key={s.label} style={{ textAlign: 'center' }}>
                   <p style={{
                     fontFamily: 'Space Grotesk',
-                    fontWeight: 800,
-                    fontSize: '1.9rem',
+                    fontWeight: 700,
+                    fontSize: '1.8rem',
                     color: 'var(--text-primary)',
-                    lineHeight: 1,
+                    lineHeight: 1.1,
                   }}>
                     {s.val}
                   </p>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginTop: 4, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.75rem', marginTop: 4, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {s.label}
                   </p>
                 </div>
@@ -267,64 +173,28 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── ROLES ───────────────────────────────────────────────── */}
-      <section style={{ padding: '20px 0 60px' }}>
+      {/* Features Grid */}
+      <section style={{
+        padding: '80px 0',
+        background: 'var(--bg-secondary)',
+        borderBottom: '1px solid var(--border)',
+      }}>
         <div className="container">
-          <p style={{
-            textAlign: 'center', fontSize: '0.78rem',
-            fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.12em',
-            color: 'var(--text-muted)', marginBottom: 20,
-            fontFamily: 'Space Grotesk',
-          }}>
-            Curated Career Target Profiles
-          </p>
-          <div style={{
-            display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap',
-          }}>
-            {ROLES.map(r => (
-              <div
-                className="role-badge-anim"
-                key={r.label}
-                style={{
-                  display: 'flex', alignItems: 'center', gap: 10,
-                  padding: '10px 22px',
-                  background: 'var(--bg-secondary)',
-                  border: '1.5px solid var(--border)',
-                  borderRadius: 'var(--radius-full)',
-                  fontSize: '0.88rem',
-                  fontWeight: 600,
-                  color: 'var(--text-primary)',
-                  boxShadow: 'var(--shadow-sm)',
-                  opacity: 0,
-                  fontFamily: 'Space Grotesk',
-                }}
-              >
-                <r.icon size={16} color={r.color} />
-                {r.label}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FEATURES ────────────────────────────────────────────── */}
-      <section className="section" ref={featuresRef} style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 64 }}>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.7rem)', marginBottom: 16 }}>
-              Supercharged Analytics
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 12 }}>
+              Supercharged Career Intelligence
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', maxWidth: 500, margin: '0 auto' }}>
-              Verify qualifications, simulate trajectories, optimize documents, and generate actionable roadmaps instantly.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: 520, margin: '0 auto' }}>
+              Evaluate qualification gaps, simulate salary growth, and optimize profiles inside a single workspace.
             </p>
           </div>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: 24,
           }}>
-            {FEATURES.map((f, i) => (
+            {FEATURES.map((f) => (
               <div
                 className="card"
                 key={f.title}
@@ -333,21 +203,24 @@ export default function LandingPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   background: 'var(--bg-card)',
-                  boxShadow: 'var(--shadow-sm)',
+                  borderRadius: 'var(--radius-md)',
                 }}
               >
                 <div style={{
-                  width: 52, height: 52,
-                  background: f.bg,
-                  borderRadius: 14,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  width: 44,
+                  height: 44,
+                  background: 'var(--bg-accent-light)',
+                  borderRadius: 'var(--radius-sm)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   marginBottom: 20,
-                  border: `1.5px solid ${f.color}20`,
+                  border: '1px solid var(--border)'
                 }}>
-                  <f.icon size={24} color={f.color} />
+                  <f.icon size={20} color="var(--text-primary)" />
                 </div>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: 10 }}>{f.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', lineHeight: 1.6 }}>
+                <h3 style={{ fontSize: '1.15rem', fontWeight: 600, marginBottom: 8 }}>{f.title}</h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: 1.6 }}>
                   {f.desc}
                 </p>
               </div>
@@ -356,114 +229,221 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ────────────────────────────────────────── */}
-      <section className="section" id="how-it-works" ref={stepsRef}>
+      {/* Trajectory Simulation Preview */}
+      <section style={{
+        padding: '80px 0',
+        borderBottom: '1px solid var(--border)',
+      }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 64 }}>
-            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.7rem)', marginBottom: 16 }}>
-              The Pathway Flow
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: 40,
+            alignItems: 'center'
+          }}>
+            <div>
+              <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16 }}>
+                Simulate Your Growth
+              </h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 24 }}>
+                SkillSync AI maps your trajectory using current profile credentials and calculates potential gains. Access side-by-side growth analytics comparing standard timelines against accelerated roadmaps.
+              </p>
+              <div style={{ display: 'grid', gap: 16 }}>
+                {[
+                  'Verify technical confidence via sandbox testing',
+                  'Identify skill discrepancies before applying',
+                  'Follow optimized week-by-week roadmap checks'
+                ].map(text => (
+                  <div key={text} style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: '0.88rem' }}>
+                    <div style={{
+                      width: 16, height: 16, borderRadius: '50%',
+                      background: 'var(--success-bg)',
+                      border: '1px solid var(--success-border)',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--success)' }} />
+                    </div>
+                    <span>{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{
+              background: 'var(--bg-secondary)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-md)',
+              padding: '30px',
+              boxShadow: 'var(--shadow-sm)'
+            }}>
+              <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: 16, fontFamily: 'Space Grotesk' }}>
+                Trajectory Comparison
+              </h3>
+              <div style={{ display: 'grid', gap: 20 }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, fontSize: '0.82rem' }}>
+                    <span style={{ fontWeight: 600 }}>Standard Track</span>
+                    <span style={{ color: 'var(--text-muted)' }}>45% Match Score</span>
+                  </div>
+                  <div className="progress-track">
+                    <div className="progress-fill" style={{ width: '45%' }} />
+                  </div>
+                </div>
+
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, fontSize: '0.82rem' }}>
+                    <span style={{ fontWeight: 600 }}>Accelerated Track</span>
+                    <span style={{ color: 'var(--success)', fontWeight: 700 }}>88% Match Score</span>
+                  </div>
+                  <div className="progress-track" style={{ borderColor: 'var(--success-border)' }}>
+                    <div className="progress-fill" style={{ width: '88%', background: 'var(--success)' }} />
+                  </div>
+                </div>
+
+                <div style={{ borderTop: '1px solid var(--border)', paddingTop: 16, marginTop: 4 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.82rem' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Potential Salary Offset</span>
+                    <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>+32% Acceleration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section style={{
+        padding: '80px 0',
+        background: 'var(--bg-secondary)',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 12 }}>
+              Built for Professionals
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem' }}>
-              Your acceleration plan is built in four key steps
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
+              Read reviews from platform developers and candidates.
             </p>
           </div>
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
-            gap: 20,
-            position: 'relative',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: 24,
           }}>
-            {STEPS.map((step, i) => (
-              <div
-                key={step.num}
-                className="card"
-                style={{
-                  padding: '32px 24px',
-                  textAlign: 'center',
-                  background: 'var(--bg-secondary)',
-                  border: '1.5px solid var(--border)',
-                  boxShadow: 'var(--shadow-sm)',
-                }}
-              >
-                <div style={{
-                  fontFamily: 'Space Grotesk',
-                  fontWeight: 800,
-                  fontSize: '3rem',
-                  color: 'rgba(163, 82, 0, 0.15)',
-                  lineHeight: 1,
-                  marginBottom: 16,
-                }}>
-                  {step.num}
-                </div>
-                <h3 style={{ fontSize: '1.15rem', marginBottom: 10, fontFamily: 'Space Grotesk' }}>{step.title}</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.6 }}>
-                  {step.desc}
+            {[
+              {
+                text: 'SkillSync AI identified exactly which backend patterns I was missing for my Target AI role, helping me bridge the gap in days.',
+                author: 'Siddharth K.',
+                role: 'AI Engineer Candidate'
+              },
+              {
+                text: 'The verification quizzes tested my actual practical skill levels rather than typical resume buzzwords.',
+                author: 'Pooja M.',
+                role: 'Fullstack Developer'
+              }
+            ].map((t, idx) => (
+              <div key={idx} style={{
+                background: 'var(--bg-card)',
+                border: '1px solid var(--border)',
+                borderRadius: 'var(--radius-md)',
+                padding: '30px',
+              }}>
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: 'var(--text-secondary)', fontStyle: 'italic', marginBottom: 20 }}>
+                  "{t.text}"
                 </p>
+                <div>
+                  <h4 style={{ fontSize: '0.88rem', fontWeight: 700 }}>{t.author}</h4>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{t.role}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA BANNER ──────────────────────────────────────────── */}
-      <section className="section" style={{ padding: '60px 0 100px' }}>
-        <div className="container">
-          <div style={{
-            textAlign: 'center',
-            padding: '70px 40px',
-            background: 'linear-gradient(135deg, rgba(163, 82, 0, 0.05) 0%, rgba(97, 46, 2, 0.03) 100%)',
-            border: '1.5px solid rgba(163, 82, 0, 0.15)',
-            borderRadius: 'var(--radius-xl)',
-            position: 'relative',
-            overflow: 'hidden',
-            boxShadow: 'var(--shadow-lg)',
-          }}>
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: 'radial-gradient(ellipse at 50% 0%, rgba(163, 82, 0, 0.08) 0%, transparent 70%)',
-              pointerEvents: 'none',
-            }} />
-            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: 16, position: 'relative' }}>
-              Bridge Your Skill Gaps Today
+      {/* FAQ Accordion */}
+      <section style={{
+        padding: '80px 0',
+        borderBottom: '1px solid var(--border)',
+      }}>
+        <div className="container" style={{ maxWidth: '720px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 12 }}>
+              Frequently Asked Questions
             </h2>
-            <p style={{
-              color: 'var(--text-secondary)', fontSize: '1.05rem',
-              marginBottom: 36, maxWidth: 520, margin: '0 auto 36px',
-              position: 'relative',
-            }}>
-              Start simulating careers, verifying resume claims, and acquiring missing capabilities with optimized resources.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+              Common questions about the SkillSync career workspace.
             </p>
-            <Link
-              to="/upload"
-              className="btn btn-primary"
-              style={{ padding: '15px 38px', fontSize: '1rem', position: 'relative', boxShadow: 'var(--shadow-sm)' }}
-            >
-              <Zap size={18} />
-              Analyze My Resume
-              <ArrowRight size={16} />
-            </Link>
+          </div>
+
+          <div style={{ display: 'grid', gap: 16 }}>
+            {FAQS.map((faq, idx) => (
+              <div
+                key={idx}
+                style={{
+                  background: 'var(--bg-secondary)',
+                  border: '1px solid var(--border)',
+                  borderRadius: 'var(--radius-md)',
+                  overflow: 'hidden'
+                }}
+              >
+                <button
+                  onClick={() => toggleFaq(idx)}
+                  style={{
+                    width: '100%',
+                    padding: '20px',
+                    background: 'none',
+                    border: 'none',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    color: 'var(--text-primary)',
+                    fontWeight: 600,
+                    fontSize: '0.92rem',
+                    fontFamily: 'Space Grotesk'
+                  }}
+                >
+                  <span>{faq.q}</span>
+                  {openFaq === idx ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </button>
+
+                {openFaq === idx && (
+                  <div style={{
+                    padding: '0 20px 20px',
+                    fontSize: '0.85rem',
+                    lineHeight: 1.6,
+                    color: 'var(--text-secondary)',
+                    borderTop: '1px solid var(--border)',
+                    paddingTop: '16px'
+                  }}>
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER ──────────────────────────────────────────────── */}
+      {/* Footer Section */}
       <footer style={{
-        borderTop: '1px solid var(--border)',
-        padding: '36px 0',
+        padding: '40px 0',
         background: 'var(--bg-secondary)',
         textAlign: 'center',
         color: 'var(--text-muted)',
-        fontSize: '0.85rem',
-        zIndex: 1,
-        position: 'relative',
+        fontSize: '0.82rem',
       }}>
         <div className="container">
-          <p style={{ fontWeight: 600, fontFamily: 'Space Grotesk' }}>
-            SkillSync AI · Team DevForge · LNCT Group of Colleges
+          <p style={{ fontWeight: 600, fontFamily: 'Space Grotesk', color: 'var(--text-secondary)' }}>
+            SkillSync AI · Career Intelligence Platform
           </p>
-          <p style={{ marginTop: 8, fontSize: '0.78rem', opacity: 0.85 }}>
-            "Bridging the Gap Between Skills Listed and Skills Proven"
+          <p style={{ marginTop: 6, fontSize: '0.78rem' }}>
+            Bridging the gap between credentials listed and skills proven.
           </p>
         </div>
       </footer>

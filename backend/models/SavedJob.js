@@ -12,6 +12,7 @@ const savedJobSchema = new mongoose.Schema({
   postedDate: { type: String },
   requiredSkills: [String],
   applicationSource: { type: String },
+  url: { type: String },
   savedAt: { type: Date, default: Date.now }
 });
 
