@@ -16231,5 +16231,2488 @@
         }
       ]
     }
+  },
+  "3f40f716-08ec-4cd9-8159-e0fcae252f78": {
+    "session_id": "3f40f716-08ec-4cd9-8159-e0fcae252f78",
+    "resume_data": {
+      "name": "Shlok Naidu",
+      "email": "shlok16naidu@gmail.com",
+      "phone": "+91 6268642098",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "B.Tech in Computer Science",
+          "institution": "Medicaps University, Indore",
+          "year": "Expected 2027"
+        }
+      ],
+      "experience": [],
+      "technical_skills": [
+        "JavaScript (ES6+)",
+        "Node.js",
+        "Express.js",
+        "REST API Development",
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "React.js (Hooks, Context API)",
+        "HTML5",
+        "Tailwind CSS",
+        "MongoDB Atlas",
+        "Atlas Vector Search",
+        "Microservices Architecture",
+        "Real-Time Systems",
+        "WebSockets",
+        "Rule Engines",
+        "RAG"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [
+        "Docker (Basics)",
+        "AWS (EC2, S3 basics)",
+        "Vercel",
+        "Render",
+        "Git",
+        "GitHub",
+        "Postman"
+      ],
+      "projects": [
+        {
+          "name": "Helix — Pharmacogenomic Decision Engine",
+          "tech_stack": [
+            "Node.js",
+            "Express",
+            "MongoDB"
+          ],
+          "description": "Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query"
+        },
+        {
+          "name": "EyeOnSite — Real-Time Safety Monitoring System",
+          "tech_stack": [
+            "FastAPI",
+            "Node.js",
+            "React",
+            "YOLO",
+            "ByteTrack"
+          ],
+          "description": "Developed a 15 FPS computer vision pipeline for PPE violation + intrusion detection"
+        },
+        {
+          "name": "GyaanSetu – AI-powered personalized learning platform with RAG",
+          "tech_stack": [
+            "Hugging Face embeddings",
+            "MongoDB Atlas Vector Search"
+          ],
+          "description": "Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive quizzes"
+        }
+      ],
+      "certifications": [],
+      "domains": []
+    },
+    "target_role": "DevOps Engineer",
+    "selected_role": "DevOps Engineer",
+    "recommended_roles": [
+      {
+        "role": "Fullstack Developer",
+        "match_score": 92,
+        "confidence_score": 95,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "React.js",
+          "Node.js",
+          "Express.js"
+        ],
+        "missing_skills": [
+          "TypeScript",
+          "GraphQL"
+        ]
+      },
+      {
+        "role": "Backend Engineer",
+        "match_score": 89,
+        "confidence_score": 92,
+        "strengths": [
+          "Node.js",
+          "Express.js",
+          "REST API Development",
+          "MongoDB Atlas"
+        ],
+        "missing_skills": [
+          "gRPC",
+          "Kafka"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "match_score": 85,
+        "confidence_score": 88,
+        "strengths": [
+          "React.js",
+          "HTML5",
+          "Tailwind CSS"
+        ],
+        "missing_skills": [
+          "Angular",
+          "Vue.js"
+        ]
+      },
+      {
+        "role": "Cloud Engineer",
+        "match_score": 78,
+        "confidence_score": 81,
+        "strengths": [
+          "AWS (EC2, S3 basics)",
+          "Docker (Basics)"
+        ],
+        "missing_skills": [
+          "Kubernetes",
+          "Terraform"
+        ]
+      },
+      {
+        "role": "DevOps Engineer",
+        "match_score": 75,
+        "confidence_score": 78,
+        "strengths": [
+          "Docker (Basics)",
+          "Git",
+          "GitHub"
+        ],
+        "missing_skills": [
+          "Jenkins",
+          "CircleCI"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "DevOps Engineer",
+      "match_score": 30,
+      "ats_score": 24,
+      "matched_skills": [
+        "Docker",
+        "AWS",
+        "Git"
+      ],
+      "missing_skills": [
+        "Linux",
+        "Kubernetes",
+        "CI/CD",
+        "Shell Scripting",
+        "Terraform",
+        "Ansible",
+        "Jenkins"
+      ],
+      "nice_to_have_gaps": [
+        "Prometheus",
+        "Grafana",
+        "Python",
+        "GCP",
+        "Azure",
+        "ArgoCD",
+        "ELK Stack",
+        "Nginx",
+        "Network Security"
+      ],
+      "nice_to_have_matched": [
+        "GitOps"
+      ],
+      "total_required": 10,
+      "readiness_level": "Very Low",
+      "role_info": {
+        "description": "Automates infrastructure, deployments, and operations for continuous integration and delivery",
+        "top_companies": [
+          "Amazon",
+          "Google",
+          "Red Hat",
+          "HashiCorp",
+          "Netflix",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "CI/CD pipelines",
+          "Infrastructure as Code",
+          "Container orchestration",
+          "Monitoring & Logging",
+          "Linux internals"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "5-10",
+          "junior": "10-18",
+          "mid": "18-35",
+          "senior": "35-70"
+        },
+        "avg_salary_usd": {
+          "fresher": "60k-90k",
+          "junior": "90k-120k",
+          "mid": "120k-160k",
+          "senior": "160k-220k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T07:26:15.859Z",
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "topic": "Containerization",
+        "question": "What is the primary purpose of using a Docker volume?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To persist data even after a container is deleted",
+          "B": "To increase the memory allocated to a container",
+          "C": "To improve the security of a container",
+          "D": "To reduce the size of a Docker image"
+        },
+        "correct": "A",
+        "explanation": "Docker volumes are used to persist data even after a container is deleted. This is because containers are ephemeral by nature, and any data written to the container's filesystem is lost when the container is deleted. Volumes provide a way to persist data across container restarts and deletions."
+      },
+      {
+        "id": 2,
+        "skill": "Docker",
+        "difficulty": "hard",
+        "topic": "Containerization",
+        "question": "What happens when a Docker container is run with the --net=host flag?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "The container uses the host's network stack, but has its own IP address",
+          "B": "The container uses its own network stack, but shares the host's IP address",
+          "C": "The container uses the host's network stack and shares the host's IP address",
+          "D": "The container is unable to access the host's network"
+        },
+        "correct": "C",
+        "explanation": "When a Docker container is run with the --net=host flag, it uses the host's network stack and shares the host's IP address. This means that the container will have the same IP address as the host, and will be able to access the host's network interfaces."
+      },
+      {
+        "id": 3,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "topic": "Containerization",
+        "question": "How do you configure a Docker container to restart automatically when it exits?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "Using the --restart flag when running the container",
+          "B": "Using the --restart policy in the Docker Compose file",
+          "C": "Using the --restart flag in the Dockerfile",
+          "D": "Using the --restart policy in the container's configuration file"
+        },
+        "correct": "A",
+        "explanation": "You can configure a Docker container to restart automatically when it exits by using the --restart flag when running the container. For example, you can use the command `docker run -d --restart=always my_image` to run a container that will restart automatically when it exits."
+      },
+      {
+        "id": 4,
+        "skill": "Docker",
+        "difficulty": "hard",
+        "topic": "Containerization",
+        "question": "What is the difference between a Docker image and a Docker container?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A Docker image is a running instance of a Docker container",
+          "B": "A Docker container is a running instance of a Docker image",
+          "C": "A Docker image is a template for creating Docker containers, while a Docker container is a running instance of a Docker image",
+          "D": "A Docker container is a template for creating Docker images"
+        },
+        "correct": "C",
+        "explanation": "A Docker image is a template for creating Docker containers, while a Docker container is a running instance of a Docker image. A Docker image is a read-only template that contains the code, libraries, and settings required to run an application, while a Docker container is a writable instance of a Docker image that can be started, stopped, and deleted."
+      },
+      {
+        "id": 5,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "topic": "Containerization",
+        "question": "What is the purpose of the Dockerfile?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To define the configuration of a Docker container",
+          "B": "To define the build process for a Docker image",
+          "C": "To define the runtime environment for a Docker container",
+          "D": "To define the network settings for a Docker container"
+        },
+        "correct": "B",
+        "explanation": "The Dockerfile is used to define the build process for a Docker image. It contains a series of instructions that are used to build the image, such as copying files, installing dependencies, and setting environment variables."
+      },
+      {
+        "id": 6,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "topic": "Cloud Computing",
+        "question": "What is the primary purpose of Amazon Elastic Block Store (EBS)?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To provide persistent block-level storage for EC2 instances",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The primary purpose of Amazon Elastic Block Store (EBS) is to provide persistent block-level storage for EC2 instances. EBS volumes are used to store data that requires low latency and high throughput, such as database files and file systems."
+      },
+      {
+        "id": 7,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "topic": "Cloud Computing",
+        "question": "What is the difference between Amazon S3 and Amazon EBS?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "Amazon S3 is used for block-level storage, while Amazon EBS is used for object storage",
+          "B": "Amazon S3 is used for object storage, while Amazon EBS is used for block-level storage",
+          "C": "Amazon S3 is used for relational databases, while Amazon EBS is used for NoSQL databases",
+          "D": "Amazon S3 is used for load balancing, while Amazon EBS is used for caching"
+        },
+        "correct": "B",
+        "explanation": "Amazon S3 is used for object storage, while Amazon EBS is used for block-level storage. Amazon S3 is a scalable object storage service that is used to store and serve large amounts of data, while Amazon EBS is a block-level storage service that is used to provide persistent storage for EC2 instances."
+      },
+      {
+        "id": 8,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "topic": "Cloud Computing",
+        "question": "What is the purpose of an Amazon VPC?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To provide a virtual private network in the cloud",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The purpose of an Amazon VPC is to provide a virtual private network in the cloud. A VPC is a virtual network that is logically isolated from other virtual networks in the AWS cloud, and is used to launch AWS resources, such as EC2 instances, in a virtual network."
+      },
+      {
+        "id": 9,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "topic": "Cloud Computing",
+        "question": "What is the difference between an Amazon EC2 instance and an Amazon Lambda function?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "An EC2 instance is a serverless compute service, while a Lambda function is a virtual server",
+          "B": "An EC2 instance is a virtual server, while a Lambda function is a serverless compute service",
+          "C": "An EC2 instance is used for relational databases, while a Lambda function is used for NoSQL databases",
+          "D": "An EC2 instance is used for load balancing, while a Lambda function is used for caching"
+        },
+        "correct": "B",
+        "explanation": "An EC2 instance is a virtual server, while a Lambda function is a serverless compute service. An EC2 instance is a virtual machine that runs an operating system and applications, while a Lambda function is a small piece of code that runs in response to an event, without the need to provision or manage servers."
+      },
+      {
+        "id": 10,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "topic": "Cloud Computing",
+        "question": "What is the purpose of Amazon CloudWatch?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To monitor and troubleshoot AWS resources",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The purpose of Amazon CloudWatch is to monitor and troubleshoot AWS resources. CloudWatch provides metrics and logs for AWS resources, such as EC2 instances and Lambda functions, and allows users to set alarms and notifications based on these metrics."
+      },
+      {
+        "id": 11,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "topic": "Cloud Computing",
+        "question": "What is the difference between Amazon CloudFormation and AWS CLI?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "CloudFormation is used to manage AWS resources, while AWS CLI is used to provision AWS resources",
+          "B": "CloudFormation is used to provision AWS resources, while AWS CLI is used to manage AWS resources",
+          "C": "CloudFormation is used for relational databases, while AWS CLI is used for NoSQL databases",
+          "D": "CloudFormation is used for load balancing, while AWS CLI is used for caching"
+        },
+        "correct": "B",
+        "explanation": "CloudFormation is used to provision AWS resources, while AWS CLI is used to manage AWS resources. CloudFormation is a service that allows users to create and manage AWS resources using templates, while AWS CLI is a command-line tool that allows users to manage AWS resources from the command line."
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Async Programming",
+        "question": "What is the purpose of the async/await syntax in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To improve the performance of synchronous code",
+          "B": "To simplify the writing of asynchronous code",
+          "C": "To increase the complexity of asynchronous code",
+          "D": "To reduce the readability of asynchronous code"
+        },
+        "correct": "B",
+        "explanation": "The purpose of the async/await syntax in JavaScript is to simplify the writing of asynchronous code. Async/await allows developers to write asynchronous code that is easier to read and maintain, by using a syntax that is similar to synchronous code."
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Async Programming",
+        "question": "What is the difference between a Promise and an Observable in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A Promise is used for single-value asynchronous operations, while an Observable is used for multi-value asynchronous operations",
+          "B": "A Promise is used for multi-value asynchronous operations, while an Observable is used for single-value asynchronous operations",
+          "C": "A Promise is used for synchronous operations, while an Observable is used for asynchronous operations",
+          "D": "A Promise is used for asynchronous operations, while an Observable is used for synchronous operations"
+        },
+        "correct": "A",
+        "explanation": "A Promise is used for single-value asynchronous operations, while an Observable is used for multi-value asynchronous operations. A Promise represents a single value that is returned asynchronously, while an Observable represents a stream of values that are returned asynchronously."
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Error Handling",
+        "question": "What is the purpose of a try-catch block in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To improve the performance of code",
+          "B": "To simplify the writing of code",
+          "C": "To handle runtime errors and exceptions",
+          "D": "To reduce the readability of code"
+        },
+        "correct": "C",
+        "explanation": "The purpose of a try-catch block in JavaScript is to handle runtime errors and exceptions. A try-catch block allows developers to catch and handle errors that occur during the execution of code, and to provide a way to recover from those errors."
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Memory Leaks",
+        "question": "What is the purpose of the garbage collector in JavaScript?",
+        "has_code": true,
+        "code_snippet": "let obj = { foo: 'bar' };\nlet arr = [obj];\nobj = null;\nconsole.log(arr[0]);",
+        "options": {
+          "A": "To free up memory occupied by unused objects",
+          "B": "To allocate memory for new objects",
+          "C": "To improve the performance of code",
+          "D": "To reduce the readability of code"
+        },
+        "correct": "A",
+        "explanation": "The purpose of the garbage collector in JavaScript is to free up memory occupied by unused objects. The garbage collector periodically scans the memory for objects that are no longer referenced and frees up the memory occupied by those objects. In the provided code snippet, the object `obj` is still referenced by the array `arr`, even after `obj` is set to `null`, so the garbage collector will not free up the memory occupied by the object."
+      }
+    ],
+    "quiz_id": "ca843388-cd05-4216-b2d3-e7bf515bf6df",
+    "quiz_per_skill_scores": [
+      {
+        "skill": "Docker",
+        "score": 60,
+        "correct": 3,
+        "total": 5,
+        "proficiency": "Proficient"
+      },
+      {
+        "skill": "AWS",
+        "score": 50,
+        "correct": 3,
+        "total": 6,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "JavaScript",
+        "score": 50,
+        "correct": 2,
+        "total": 4,
+        "proficiency": "Beginner"
+      }
+    ],
+    "quiz_overall_score": 53,
+    "quiz_review": [
+      {
+        "id": 1,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "question": "What is the primary purpose of using a Docker volume?",
+        "options": {
+          "A": "To persist data even after a container is deleted",
+          "B": "To increase the memory allocated to a container",
+          "C": "To improve the security of a container",
+          "D": "To reduce the size of a Docker image"
+        },
+        "correct": "A",
+        "explanation": "Docker volumes are used to persist data even after a container is deleted. This is because containers are ephemeral by nature, and any data written to the container's filesystem is lost when the container is deleted. Volumes provide a way to persist data across container restarts and deletions.",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 2,
+        "skill": "Docker",
+        "difficulty": "hard",
+        "question": "What happens when a Docker container is run with the --net=host flag?",
+        "options": {
+          "A": "The container uses the host's network stack, but has its own IP address",
+          "B": "The container uses its own network stack, but shares the host's IP address",
+          "C": "The container uses the host's network stack and shares the host's IP address",
+          "D": "The container is unable to access the host's network"
+        },
+        "correct": "C",
+        "explanation": "When a Docker container is run with the --net=host flag, it uses the host's network stack and shares the host's IP address. This means that the container will have the same IP address as the host, and will be able to access the host's network interfaces.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 3,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "question": "How do you configure a Docker container to restart automatically when it exits?",
+        "options": {
+          "A": "Using the --restart flag when running the container",
+          "B": "Using the --restart policy in the Docker Compose file",
+          "C": "Using the --restart flag in the Dockerfile",
+          "D": "Using the --restart policy in the container's configuration file"
+        },
+        "correct": "A",
+        "explanation": "You can configure a Docker container to restart automatically when it exits by using the --restart flag when running the container. For example, you can use the command `docker run -d --restart=always my_image` to run a container that will restart automatically when it exits.",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 4,
+        "skill": "Docker",
+        "difficulty": "hard",
+        "question": "What is the difference between a Docker image and a Docker container?",
+        "options": {
+          "A": "A Docker image is a running instance of a Docker container",
+          "B": "A Docker container is a running instance of a Docker image",
+          "C": "A Docker image is a template for creating Docker containers, while a Docker container is a running instance of a Docker image",
+          "D": "A Docker container is a template for creating Docker images"
+        },
+        "correct": "C",
+        "explanation": "A Docker image is a template for creating Docker containers, while a Docker container is a running instance of a Docker image. A Docker image is a read-only template that contains the code, libraries, and settings required to run an application, while a Docker container is a writable instance of a Docker image that can be started, stopped, and deleted.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 5,
+        "skill": "Docker",
+        "difficulty": "medium",
+        "question": "What is the purpose of the Dockerfile?",
+        "options": {
+          "A": "To define the configuration of a Docker container",
+          "B": "To define the build process for a Docker image",
+          "C": "To define the runtime environment for a Docker container",
+          "D": "To define the network settings for a Docker container"
+        },
+        "correct": "B",
+        "explanation": "The Dockerfile is used to define the build process for a Docker image. It contains a series of instructions that are used to build the image, such as copying files, installing dependencies, and setting environment variables.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 6,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "question": "What is the primary purpose of Amazon Elastic Block Store (EBS)?",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To provide persistent block-level storage for EC2 instances",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The primary purpose of Amazon Elastic Block Store (EBS) is to provide persistent block-level storage for EC2 instances. EBS volumes are used to store data that requires low latency and high throughput, such as database files and file systems.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 7,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "question": "What is the difference between Amazon S3 and Amazon EBS?",
+        "options": {
+          "A": "Amazon S3 is used for block-level storage, while Amazon EBS is used for object storage",
+          "B": "Amazon S3 is used for object storage, while Amazon EBS is used for block-level storage",
+          "C": "Amazon S3 is used for relational databases, while Amazon EBS is used for NoSQL databases",
+          "D": "Amazon S3 is used for load balancing, while Amazon EBS is used for caching"
+        },
+        "correct": "B",
+        "explanation": "Amazon S3 is used for object storage, while Amazon EBS is used for block-level storage. Amazon S3 is a scalable object storage service that is used to store and serve large amounts of data, while Amazon EBS is a block-level storage service that is used to provide persistent storage for EC2 instances.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 8,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "question": "What is the purpose of an Amazon VPC?",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To provide a virtual private network in the cloud",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The purpose of an Amazon VPC is to provide a virtual private network in the cloud. A VPC is a virtual network that is logically isolated from other virtual networks in the AWS cloud, and is used to launch AWS resources, such as EC2 instances, in a virtual network.",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 9,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "question": "What is the difference between an Amazon EC2 instance and an Amazon Lambda function?",
+        "options": {
+          "A": "An EC2 instance is a serverless compute service, while a Lambda function is a virtual server",
+          "B": "An EC2 instance is a virtual server, while a Lambda function is a serverless compute service",
+          "C": "An EC2 instance is used for relational databases, while a Lambda function is used for NoSQL databases",
+          "D": "An EC2 instance is used for load balancing, while a Lambda function is used for caching"
+        },
+        "correct": "B",
+        "explanation": "An EC2 instance is a virtual server, while a Lambda function is a serverless compute service. An EC2 instance is a virtual machine that runs an operating system and applications, while a Lambda function is a small piece of code that runs in response to an event, without the need to provision or manage servers.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 10,
+        "skill": "AWS",
+        "difficulty": "medium",
+        "question": "What is the purpose of Amazon CloudWatch?",
+        "options": {
+          "A": "To provide a managed relational database service",
+          "B": "To provide a scalable object storage service",
+          "C": "To monitor and troubleshoot AWS resources",
+          "D": "To provide a load balancing service"
+        },
+        "correct": "C",
+        "explanation": "The purpose of Amazon CloudWatch is to monitor and troubleshoot AWS resources. CloudWatch provides metrics and logs for AWS resources, such as EC2 instances and Lambda functions, and allows users to set alarms and notifications based on these metrics.",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 11,
+        "skill": "AWS",
+        "difficulty": "hard",
+        "question": "What is the difference between Amazon CloudFormation and AWS CLI?",
+        "options": {
+          "A": "CloudFormation is used to manage AWS resources, while AWS CLI is used to provision AWS resources",
+          "B": "CloudFormation is used to provision AWS resources, while AWS CLI is used to manage AWS resources",
+          "C": "CloudFormation is used for relational databases, while AWS CLI is used for NoSQL databases",
+          "D": "CloudFormation is used for load balancing, while AWS CLI is used for caching"
+        },
+        "correct": "B",
+        "explanation": "CloudFormation is used to provision AWS resources, while AWS CLI is used to manage AWS resources. CloudFormation is a service that allows users to create and manage AWS resources using templates, while AWS CLI is a command-line tool that allows users to manage AWS resources from the command line.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of the async/await syntax in JavaScript?",
+        "options": {
+          "A": "To improve the performance of synchronous code",
+          "B": "To simplify the writing of asynchronous code",
+          "C": "To increase the complexity of asynchronous code",
+          "D": "To reduce the readability of asynchronous code"
+        },
+        "correct": "B",
+        "explanation": "The purpose of the async/await syntax in JavaScript is to simplify the writing of asynchronous code. Async/await allows developers to write asynchronous code that is easier to read and maintain, by using a syntax that is similar to synchronous code.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the difference between a Promise and an Observable in JavaScript?",
+        "options": {
+          "A": "A Promise is used for single-value asynchronous operations, while an Observable is used for multi-value asynchronous operations",
+          "B": "A Promise is used for multi-value asynchronous operations, while an Observable is used for single-value asynchronous operations",
+          "C": "A Promise is used for synchronous operations, while an Observable is used for asynchronous operations",
+          "D": "A Promise is used for asynchronous operations, while an Observable is used for synchronous operations"
+        },
+        "correct": "A",
+        "explanation": "A Promise is used for single-value asynchronous operations, while an Observable is used for multi-value asynchronous operations. A Promise represents a single value that is returned asynchronously, while an Observable represents a stream of values that are returned asynchronously.",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of a try-catch block in JavaScript?",
+        "options": {
+          "A": "To improve the performance of code",
+          "B": "To simplify the writing of code",
+          "C": "To handle runtime errors and exceptions",
+          "D": "To reduce the readability of code"
+        },
+        "correct": "C",
+        "explanation": "The purpose of a try-catch block in JavaScript is to handle runtime errors and exceptions. A try-catch block allows developers to catch and handle errors that occur during the execution of code, and to provide a way to recover from those errors.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the purpose of the garbage collector in JavaScript?",
+        "options": {
+          "A": "To free up memory occupied by unused objects",
+          "B": "To allocate memory for new objects",
+          "C": "To improve the performance of code",
+          "D": "To reduce the readability of code"
+        },
+        "correct": "A",
+        "explanation": "The purpose of the garbage collector in JavaScript is to free up memory occupied by unused objects. The garbage collector periodically scans the memory for objects that are no longer referenced and frees up the memory occupied by those objects. In the provided code snippet, the object `obj` is still referenced by the array `arr`, even after `obj` is set to `null`, so the garbage collector will not free up the memory occupied by the object.",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": true,
+        "code_snippet": "let obj = { foo: 'bar' };\nlet arr = [obj];\nobj = null;\nconsole.log(arr[0]);"
+      }
+    ],
+    "quiz_score": 53,
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, I'm SkillSync AI, a DevOps Engineer interviewer at a tier-1 tech company. I'll be assessing your technical skills today. Let's get started with a question: How would you implement a secure authentication mechanism using JWT and Role-Based Access Control in a Node.js application with an Express.js framework, considering scalability and performance?"
+        },
+        {
+          "role": "user",
+          "content": "idk"
+        },
+        {
+          "role": "assistant",
+          "content": "It seems like you might need a bit more time to think about authentication mechanisms. Let's break it down: JWT (JSON Web Tokens) can be used for authentication, and Role-Based Access Control (RBAC) can be used for authorization. For a Node.js application with Express.js, you would typically use a library like express-jwt and implement middleware to verify tokens on each request. Considering scalability and performance, you might want to look into using a load balancer and a distributed database. Let's move on to another question: What is your understanding of containerization using Docker, and how does it improve the development and deployment process?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "Linux",
+          "original_bullet_suggestion": "Installed and configured software",
+          "optimized_bullet_suggestion": "Deployed and managed scalable Linux environments, ensuring 99.99% uptime and reducing deployment time by 50%",
+          "impact_metric": "50% deployment time reduction"
+        },
+        {
+          "skill": "Kubernetes",
+          "original_bullet_suggestion": "Managed containerized applications",
+          "optimized_bullet_suggestion": "Designed and implemented Kubernetes clusters, automating deployment and scaling of microservices, resulting in 30% reduced resource utilization",
+          "impact_metric": "30% resource utilization reduction"
+        },
+        {
+          "skill": "CI/CD",
+          "original_bullet_suggestion": "Implemented automated testing",
+          "optimized_bullet_suggestion": "Developed and integrated CI/CD pipelines using Jenkins, reducing build and deployment time by 40% and increasing code quality through automated testing",
+          "impact_metric": "40% build and deployment time reduction"
+        },
+        {
+          "skill": "Shell Scripting",
+          "original_bullet_suggestion": "Automated tasks using scripts",
+          "optimized_bullet_suggestion": "Created and maintained efficient shell scripts for automation, streamlining workflows and reducing manual errors by 25%",
+          "impact_metric": "25% manual error reduction"
+        },
+        {
+          "skill": "Terraform",
+          "original_bullet_suggestion": "Configured infrastructure",
+          "optimized_bullet_suggestion": "Designed and implemented scalable infrastructure using Terraform, reducing provisioning time by 60% and improving resource utilization by 20%",
+          "impact_metric": "20% resource utilization improvement"
+        },
+        {
+          "skill": "Ansible",
+          "original_bullet_suggestion": "Configured and deployed applications",
+          "optimized_bullet_suggestion": "Developed and implemented Ansible playbooks, automating deployment and configuration of applications, resulting in 35% reduced deployment time",
+          "impact_metric": "35% deployment time reduction"
+        },
+        {
+          "skill": "Jenkins",
+          "original_bullet_suggestion": "Managed continuous integration",
+          "optimized_bullet_suggestion": "Designed and integrated Jenkins pipelines, automating testing and deployment, reducing build and deployment time by 45% and improving code quality",
+          "impact_metric": "45% build and deployment time reduction"
+        }
+      ]
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Aggressive upskilling to become a DevOps Engineer",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete Docker, Kubernetes, and Linux certifications within 3 months",
+            "Gain hands-on experience with CI/CD tools like Jenkins and Terraform within 6 months",
+            "Develop a personal project showcasing DevOps skills within 9 months"
+          ],
+          "immediate_actions": [
+            "Enroll in online courses for Docker, Kubernetes, and Linux",
+            "Join online communities like GitHub and Stack Overflow to network with professionals"
+          ],
+          "target_roles": [
+            "DevOps Engineer",
+            "Cloud Engineer"
+          ],
+          "skills_to_acquire": [
+            "Kubernetes",
+            "Linux",
+            "CI/CD",
+            "Terraform"
+          ],
+          "salary_range": {
+            "india_lpa": "8-12",
+            "global_usd": "50,000-70,000"
+          },
+          "interview_readiness_score": 70,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth to become a DevOps Engineer",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Complete online courses for Docker, AWS, and JavaScript within 6 months",
+            "Participate in open-source projects on GitHub to gain experience within 1 year",
+            "Develop a personal project showcasing DevOps skills within 18 months"
+          ],
+          "immediate_actions": [
+            "Enroll in online courses for Docker, AWS, and JavaScript",
+            "Join online communities like GitHub and Stack Overflow to network with professionals"
+          ],
+          "target_roles": [
+            "Junior DevOps Engineer",
+            "Cloud Support Engineer"
+          ],
+          "skills_to_acquire": [
+            "Linux",
+            "Kubernetes",
+            "CI/CD"
+          ],
+          "salary_range": {
+            "india_lpa": "5-8",
+            "global_usd": "30,000-50,000"
+          },
+          "interview_readiness_score": 50,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leveraging existing strengths to become a Cloud Support Engineer",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete AWS certification within 3 months",
+            "Gain hands-on experience with cloud support tools within 6 months",
+            "Develop a personal project showcasing cloud support skills within 9 months"
+          ],
+          "immediate_actions": [
+            "Enroll in online courses for AWS and cloud support",
+            "Join online communities like GitHub and Stack Overflow to network with professionals"
+          ],
+          "target_roles": [
+            "Cloud Support Engineer",
+            "Technical Support Engineer"
+          ],
+          "skills_to_acquire": [
+            "AWS",
+            "Cloud Support",
+            "Troubleshooting"
+          ],
+          "salary_range": {
+            "india_lpa": "4-6",
+            "global_usd": "25,000-40,000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "ca03c1d6e7be1471a264559ea4782a98",
+      "target_role": "DevOps Engineer",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "Linux",
+          "goal": "Understand Linux fundamentals and basic commands",
+          "daily_tasks": [
+            "Mon: Complete Linux basics module in Linux Essentials course",
+            "Tue: Practice basic Linux commands in a virtual machine",
+            "Wed: Learn about file systems and permissions",
+            "Thu: Understand user management and groups",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Linux Essentials",
+              "platform": "edX",
+              "url": "https://www.edx.org/search?q=Linux%20Essentials",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Linux Configuration",
+            "description": "Configure a Linux virtual machine with a user, groups, and file system permissions",
+            "tech_used": [
+              "Linux",
+              "VirtualBox"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "Kubernetes",
+          "goal": "Understand Kubernetes basics and deploy a simple application",
+          "daily_tasks": [
+            "Mon: Complete Kubernetes basics module in Kubernetes Fundamentals course",
+            "Tue: Learn about pods, services, and deployments",
+            "Wed: Practice deploying a simple application using Kubernetes",
+            "Thu: Understand Kubernetes networking and security",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Kubernetes Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=Kubernetes%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Kubernetes Deployment",
+            "description": "Deploy a simple web application using Kubernetes",
+            "tech_used": [
+              "Kubernetes",
+              "Docker"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "CI/CD",
+          "goal": "Understand CI/CD pipelines and automate a simple application build",
+          "daily_tasks": [
+            "Mon: Learn about CI/CD basics and pipelines",
+            "Tue: Understand Jenkins and its role in CI/CD",
+            "Wed: Practice creating a simple CI/CD pipeline using Jenkins",
+            "Thu: Learn about automated testing and deployment",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Jenkins Essentials",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=Jenkins%20Essentials",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "CI/CD Pipeline",
+            "description": "Create a CI/CD pipeline for a simple web application using Jenkins",
+            "tech_used": [
+              "Jenkins",
+              "Docker"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "Shell Scripting",
+          "goal": "Learn shell scripting basics and automate tasks",
+          "daily_tasks": [
+            "Mon: Learn about shell scripting basics and variables",
+            "Tue: Practice writing simple shell scripts",
+            "Wed: Learn about control structures and functions",
+            "Thu: Understand file input/output and redirection",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Shell Scripting Tutorial",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=Shell%20Scripting%20Tutorial%20FreeCodeCamp%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Automated Backup",
+            "description": "Create a shell script to automate backups of important files",
+            "tech_used": [
+              "Bash",
+              "Linux"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Terraform",
+          "goal": "Learn Terraform basics and deploy infrastructure",
+          "daily_tasks": [
+            "Mon: Learn about Terraform basics and configuration files",
+            "Tue: Practice writing Terraform configuration files",
+            "Wed: Learn about Terraform providers and modules",
+            "Thu: Understand Terraform state and backend",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Terraform Fundamentals",
+              "platform": "HashiCorp",
+              "url": "https://www.google.com/search?q=Terraform%20Fundamentals%20HashiCorp%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Infrastructure Deployment",
+            "description": "Deploy a simple web server infrastructure using Terraform",
+            "tech_used": [
+              "Terraform",
+              "AWS"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "Ansible",
+          "goal": "Learn Ansible basics and automate configuration management",
+          "daily_tasks": [
+            "Mon: Learn about Ansible basics and playbooks",
+            "Tue: Practice writing Ansible playbooks",
+            "Wed: Learn about Ansible modules and roles",
+            "Thu: Understand Ansible inventory and variables",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Ansible Essentials",
+              "platform": "Red Hat",
+              "url": "https://www.google.com/search?q=Ansible%20Essentials%20Red%20Hat%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Configuration Management",
+            "description": "Create an Ansible playbook to automate configuration management of a web server",
+            "tech_used": [
+              "Ansible",
+              "Linux"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "Jenkins",
+          "goal": "Learn Jenkins advanced concepts and integrate with other tools",
+          "daily_tasks": [
+            "Mon: Learn about Jenkins advanced concepts and plugins",
+            "Tue: Practice integrating Jenkins with other tools like Docker and Kubernetes",
+            "Wed: Learn about Jenkins security and best practices",
+            "Thu: Understand Jenkins pipeline as code",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "Jenkins Advanced",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=Jenkins%20Advanced",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Jenkins Integration",
+            "description": "Integrate Jenkins with Docker and Kubernetes to automate a CI/CD pipeline",
+            "tech_used": [
+              "Jenkins",
+              "Docker",
+              "Kubernetes"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "DevOps Engineer",
+          "goal": "Practice and review all concepts learned so far",
+          "daily_tasks": [
+            "Mon: Review Linux and shell scripting concepts",
+            "Tue: Practice deploying a simple application using Kubernetes",
+            "Wed: Review CI/CD pipeline concepts and automate a simple application build",
+            "Thu: Practice Terraform and Ansible to deploy and configure infrastructure",
+            "Fri: Review and practice all concepts learned so far"
+          ],
+          "resources": [
+            {
+              "name": "DevOps Engineer Tutorial",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=DevOps%20Engineer%20Tutorial%20FreeCodeCamp%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "DevOps Project",
+            "description": "Create a complete DevOps pipeline for a simple web application using all tools learned so far",
+            "tech_used": [
+              "Linux",
+              "Kubernetes",
+              "Jenkins",
+              "Terraform",
+              "Ansible",
+              "Docker"
+            ]
+          }
+        }
+      ]
+    },
+    "courses": {
+      "recommendations": [
+        {
+          "skill": "Linux",
+          "reason": "missing",
+          "course_title": "Linux Mastery",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Linux%20Mastery",
+          "duration": "20 hours",
+          "level": "Beginner to Intermediate",
+          "description": "Learn Linux fundamentals, including command line, file system, and system administration."
+        },
+        {
+          "skill": "Kubernetes",
+          "reason": "missing",
+          "course_title": "Kubernetes Fundamentals",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=Kubernetes%20Fundamentals",
+          "duration": "12 hours",
+          "level": "Intermediate",
+          "description": "Understand Kubernetes architecture, pods, deployments, and services."
+        },
+        {
+          "skill": "CI/CD",
+          "reason": "missing",
+          "course_title": "Continuous Integration and Continuous Deployment",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=Continuous%20Integration%20and%20Continuous%20Deployment",
+          "duration": "16 hours",
+          "level": "Intermediate",
+          "description": "Learn CI/CD principles, including automated testing, building, and deployment."
+        },
+        {
+          "skill": "Shell Scripting",
+          "reason": "missing",
+          "course_title": "Shell Scripting Mastery",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Shell%20Scripting%20Mastery",
+          "duration": "10 hours",
+          "level": "Beginner",
+          "description": "Master shell scripting, including variables, loops, and functions."
+        },
+        {
+          "skill": "Terraform",
+          "reason": "missing",
+          "course_title": "Terraform Fundamentals",
+          "platform": "HashiCorp Learn",
+          "url": "https://www.google.com/search?q=Terraform%20Fundamentals%20HashiCorp%20Learn%20course",
+          "duration": "8 hours",
+          "level": "Beginner",
+          "description": "Learn Terraform basics, including infrastructure as code and state management."
+        },
+        {
+          "skill": "Ansible",
+          "reason": "missing",
+          "course_title": "Ansible Essentials",
+          "platform": "Red Hat Learning Subscription",
+          "url": "https://www.google.com/search?q=Ansible%20Essentials%20Red%20Hat%20Learning%20Subscription%20course",
+          "duration": "12 hours",
+          "level": "Intermediate",
+          "description": "Understand Ansible fundamentals, including playbooks, roles, and modules."
+        },
+        {
+          "skill": "Jenkins",
+          "reason": "missing",
+          "course_title": "Jenkins Fundamentals",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=Jenkins%20Fundamentals",
+          "duration": "10 hours",
+          "level": "Beginner",
+          "description": "Learn Jenkins basics, including pipeline creation and automation."
+        }
+      ]
+    }
+  },
+  "37e3cc29-23bd-49a4-9d7b-2362113b2b2a": {
+    "session_id": "37e3cc29-23bd-49a4-9d7b-2362113b2b2a",
+    "resume_data": {
+      "name": "Shlok Naidu",
+      "email": "shlok16naidu@gmail.com",
+      "phone": "+91 6268642098",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "B.Tech in Computer Science",
+          "institution": "Medicaps University, Indore",
+          "year": "Expected 2027"
+        }
+      ],
+      "experience": [
+        {
+          "role": "SOFTWARE ENGINEERING INTERN | BACKEND / FULL-STACK (NODE.JS, REACT)",
+          "company": "",
+          "duration": "",
+          "description": "Backend-focused software engineering student with experience building scalable APIs, real-time systems, and AI-powered applications using Node.js, Express, React, and MongoDB."
+        }
+      ],
+      "technical_skills": [
+        "JavaScript (ES6+)",
+        "Node.js",
+        "Express.js",
+        "REST API Development",
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "React.js (Hooks, Context API)",
+        "HTML5",
+        "Tailwind CSS",
+        "MongoDB Atlas",
+        "Atlas Vector Search",
+        "Microservices Architecture",
+        "Real-Time Systems",
+        "WebSockets",
+        "Rule Engines",
+        "RAG",
+        "Docker (Basics)",
+        "AWS (EC2, S3 basics)",
+        "Vercel",
+        "Render",
+        "Git",
+        "GitHub",
+        "Postman"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Helix — Pharmacogenomic Decision Engine",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query Designed a reproducible pipeline with confidence scoring + validated fallback logic (eliminating inconsistent outputs) Implemented audit logging across decision nodes for full traceability Developed backend APIs using Node.js + Express for rule execution and data handling"
+        },
+        {
+          "name": "EyeOnSite — Real-Time Safety Monitoring System",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "React",
+            "WebSockets",
+            "Computer Vision",
+            "YOLO",
+            "ByteTrack"
+          ],
+          "description": "Developed a 15 FPS computer vision pipeline (YOLO + ByteTrack) for PPE violation + intrusion detection Reduced false positives using debouncing, time thresholds, and motion filtering Built microservices architecture (FastAPI + Node.js + React) with WebSocket-based real-time alerts Implemented WebSocket-based real-time alerting system and live MJPEG streaming"
+        },
+        {
+          "name": "GyaanSetu – AI-powered personalized learning platform with RAG",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "React",
+            "MongoDB",
+            "RAG",
+            "Hugging Face",
+            "IndexedDB"
+          ],
+          "description": "Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive quizzes Developed a RAG-based tutoring system using Hugging Face embeddings and MongoDB Atlas Vector Search Implemented offline-first support using IndexedDB with automatic synchronization Added multilingual support, gamification, and career guidance features"
+        }
+      ],
+      "certifications": [],
+      "domains": []
+    },
+    "target_role": "Frontend Developer",
+    "selected_role": "Frontend Developer",
+    "recommended_roles": [
+      {
+        "role": "Frontend Developer",
+        "match_score": 93,
+        "confidence_score": 95,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "React.js (Hooks, Context API)",
+          "HTML5",
+          "Tailwind CSS"
+        ],
+        "missing_skills": [
+          "Angular",
+          "Vue.js"
+        ]
+      },
+      {
+        "role": "Backend Engineer",
+        "match_score": 92,
+        "confidence_score": 94,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "REST API Development",
+          "JWT Authentication",
+          "Role-Based Access Control (RBAC)"
+        ],
+        "missing_skills": [
+          "Go",
+          "Rust"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "match_score": 91,
+        "confidence_score": 93,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "React.js (Hooks, Context API)",
+          "HTML5",
+          "Tailwind CSS"
+        ],
+        "missing_skills": [
+          "Django",
+          "Flask"
+        ]
+      },
+      {
+        "role": "Cloud Engineer",
+        "match_score": 88,
+        "confidence_score": 90,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "MongoDB Atlas",
+          "Atlas Vector Search"
+        ],
+        "missing_skills": [
+          "AWS",
+          "Azure",
+          "Google Cloud"
+        ]
+      },
+      {
+        "role": "DevOps Engineer",
+        "match_score": 86,
+        "confidence_score": 88,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "Microservices Architecture"
+        ],
+        "missing_skills": [
+          "Docker",
+          "Kubernetes"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "Frontend Developer",
+      "match_score": 50,
+      "ats_score": 41,
+      "matched_skills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "missing_skills": [
+        "REST APIs",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Webpack"
+      ],
+      "nice_to_have_gaps": [
+        "GraphQL",
+        "Jest",
+        "Cypress",
+        "Storybook",
+        "CI/CD",
+        "Figma",
+        "Vue.js",
+        "Angular"
+      ],
+      "nice_to_have_matched": [
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+        "top_companies": [
+          "Google",
+          "Microsoft",
+          "Flipkart",
+          "Swiggy",
+          "Razorpay",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "JavaScript fundamentals",
+          "React lifecycle",
+          "CSS layout",
+          "Performance optimization",
+          "Browser APIs"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "4-8",
+          "junior": "8-15",
+          "mid": "15-30",
+          "senior": "30-60"
+        },
+        "avg_salary_usd": {
+          "fresher": "50k-75k",
+          "junior": "75k-100k",
+          "mid": "100k-140k",
+          "senior": "140k-200k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T07:37:49.664Z",
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Aggressive upskilling to become a proficient Frontend Developer",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete online courses in REST APIs, TypeScript, and Next.js within 3 months",
+            "Build 2-3 personal projects showcasing proficiency in React, JavaScript, and modern frontend technologies",
+            "Network with professionals in the industry to learn about new trends and best practices"
+          ],
+          "immediate_actions": [
+            "Enroll in online courses to learn missing skills",
+            "Start building personal projects to demonstrate skills"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "UI/UX Developer"
+          ],
+          "skills_to_acquire": [
+            "REST APIs",
+            "TypeScript",
+            "Next.js"
+          ],
+          "salary_range": {
+            "india_lpa": "6-10",
+            "global_usd": "12000-20000"
+          },
+          "interview_readiness_score": 70,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth through continuous learning and experience",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Complete online courses in JavaScript (ES6+) and React within 6 months",
+            "Take on additional responsibilities in current role to demonstrate capabilities",
+            "Participate in coding challenges and hackathons to improve skills and network"
+          ],
+          "immediate_actions": [
+            "Create a personalized learning plan to improve existing skills",
+            "Volunteer for new projects and tasks at work"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "Full Stack Developer"
+          ],
+          "skills_to_acquire": [
+            "Redux",
+            "Webpack"
+          ],
+          "salary_range": {
+            "india_lpa": "5-8",
+            "global_usd": "10000-16000"
+          },
+          "interview_readiness_score": 50,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leveraging existing strengths in JavaScript to transition into a related role",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Explore adjacent roles such as Backend Developer or DevOps Engineer",
+            "Develop skills in Node.js and Express.js to complement existing JavaScript knowledge",
+            "Network with professionals in the desired field to learn about new opportunities"
+          ],
+          "immediate_actions": [
+            "Research and explore adjacent roles and their requirements",
+            "Start learning Node.js and Express.js through online courses and tutorials"
+          ],
+          "target_roles": [
+            "Backend Developer",
+            "DevOps Engineer"
+          ],
+          "skills_to_acquire": [
+            "Node.js",
+            "Express.js"
+          ],
+          "salary_range": {
+            "india_lpa": "7-12",
+            "global_usd": "14000-24000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "f51144937116e1a4214874b0f7298ef3",
+      "target_role": "Frontend Developer",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "REST APIs",
+          "goal": "Understand REST API concepts and create a simple API",
+          "daily_tasks": [
+            "Mon: Learn REST API basics (Udemy - REST API Design Patterns)",
+            "Tue: Learn HTTP methods (MDN Web Docs - HTTP methods)",
+            "Wed: Learn API design principles (FreeCodeCamp - API Design)",
+            "Thu: Implement a simple REST API using Node.js (Node.js API Tutorial)",
+            "Fri: Test and deploy the API (Udemy - Deploying Node.js Applications)"
+          ],
+          "resources": [
+            {
+              "name": "REST API Design Patterns",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=REST%20API%20Design%20Patterns",
+              "type": "course"
+            },
+            {
+              "name": "HTTP methods",
+              "platform": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/search?q=HTTP%20methods",
+              "type": "doc"
+            },
+            {
+              "name": "API Design",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=API%20Design%20FreeCodeCamp%20course",
+              "type": "article"
+            },
+            {
+              "name": "Node.js API Tutorial",
+              "platform": "Node.js",
+              "url": "https://www.google.com/search?q=Node.js%20API%20Tutorial%20Node.js%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Deploying Node.js Applications",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=Deploying%20Node.js%20Applications",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple REST API",
+            "description": "Create a simple REST API using Node.js",
+            "tech_used": [
+              "Node.js",
+              "Express.js"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "TypeScript",
+          "goal": "Understand TypeScript basics and create a simple TypeScript project",
+          "daily_tasks": [
+            "Mon: Learn TypeScript basics (TypeScript Official Tutorial)",
+            "Tue: Learn TypeScript type system (TypeScript Official Tutorial)",
+            "Wed: Implement a simple TypeScript project (TypeScript Official Tutorial)",
+            "Thu: Learn TypeScript best practices (TypeScript Official Tutorial)",
+            "Fri: Test and deploy the project (TypeScript Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "TypeScript Official Tutorial",
+              "platform": "TypeScript",
+              "url": "https://www.google.com/search?q=TypeScript%20Official%20Tutorial%20TypeScript%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple TypeScript Project",
+            "description": "Create a simple TypeScript project",
+            "tech_used": [
+              "TypeScript",
+              "Node.js"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "Next.js",
+          "goal": "Understand Next.js basics and create a simple Next.js project",
+          "daily_tasks": [
+            "Mon: Learn Next.js basics (Next.js Official Tutorial)",
+            "Tue: Learn Next.js routing (Next.js Official Tutorial)",
+            "Wed: Implement a simple Next.js project (Next.js Official Tutorial)",
+            "Thu: Learn Next.js best practices (Next.js Official Tutorial)",
+            "Fri: Test and deploy the project (Next.js Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "Next.js Official Tutorial",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20Official%20Tutorial%20Next.js%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple Next.js Project",
+            "description": "Create a simple Next.js project",
+            "tech_used": [
+              "Next.js",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "Redux",
+          "goal": "Understand Redux basics and create a simple Redux project",
+          "daily_tasks": [
+            "Mon: Learn Redux basics (Redux Official Tutorial)",
+            "Tue: Learn Redux state management (Redux Official Tutorial)",
+            "Wed: Implement a simple Redux project (Redux Official Tutorial)",
+            "Thu: Learn Redux best practices (Redux Official Tutorial)",
+            "Fri: Test and deploy the project (Redux Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "Redux Official Tutorial",
+              "platform": "Redux",
+              "url": "https://www.google.com/search?q=Redux%20Official%20Tutorial%20Redux%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple Redux Project",
+            "description": "Create a simple Redux project",
+            "tech_used": [
+              "Redux",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Webpack",
+          "goal": "Understand Webpack basics and configure Webpack for a project",
+          "daily_tasks": [
+            "Mon: Learn Webpack basics (Webpack Official Tutorial)",
+            "Tue: Learn Webpack configuration (Webpack Official Tutorial)",
+            "Wed: Configure Webpack for a project (Webpack Official Tutorial)",
+            "Thu: Learn Webpack best practices (Webpack Official Tutorial)",
+            "Fri: Test and deploy the project (Webpack Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "Webpack Official Tutorial",
+              "platform": "Webpack",
+              "url": "https://www.google.com/search?q=Webpack%20Official%20Tutorial%20Webpack%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Webpack Configuration",
+            "description": "Configure Webpack for a project",
+            "tech_used": [
+              "Webpack",
+              "Node.js"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "TypeScript",
+          "goal": "Advanced TypeScript concepts and project implementation",
+          "daily_tasks": [
+            "Mon: Learn advanced TypeScript concepts (TypeScript Official Tutorial)",
+            "Tue: Implement a project using advanced TypeScript concepts (TypeScript Official Tutorial)",
+            "Wed: Learn TypeScript best practices (TypeScript Official Tutorial)",
+            "Thu: Test and deploy the project (TypeScript Official Tutorial)",
+            "Fri: Review and refine the project (TypeScript Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "TypeScript Official Tutorial",
+              "platform": "TypeScript",
+              "url": "https://www.google.com/search?q=TypeScript%20Official%20Tutorial%20TypeScript%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Advanced TypeScript Project",
+            "description": "Implement a project using advanced TypeScript concepts",
+            "tech_used": [
+              "TypeScript",
+              "Node.js"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "Next.js",
+          "goal": "Advanced Next.js concepts and project implementation",
+          "daily_tasks": [
+            "Mon: Learn advanced Next.js concepts (Next.js Official Tutorial)",
+            "Tue: Implement a project using advanced Next.js concepts (Next.js Official Tutorial)",
+            "Wed: Learn Next.js best practices (Next.js Official Tutorial)",
+            "Thu: Test and deploy the project (Next.js Official Tutorial)",
+            "Fri: Review and refine the project (Next.js Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "Next.js Official Tutorial",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20Official%20Tutorial%20Next.js%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Advanced Next.js Project",
+            "description": "Implement a project using advanced Next.js concepts",
+            "tech_used": [
+              "Next.js",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "Redux",
+          "goal": "Advanced Redux concepts and project implementation",
+          "daily_tasks": [
+            "Mon: Learn advanced Redux concepts (Redux Official Tutorial)",
+            "Tue: Implement a project using advanced Redux concepts (Redux Official Tutorial)",
+            "Wed: Learn Redux best practices (Redux Official Tutorial)",
+            "Thu: Test and deploy the project (Redux Official Tutorial)",
+            "Fri: Review and refine the project (Redux Official Tutorial)"
+          ],
+          "resources": [
+            {
+              "name": "Redux Official Tutorial",
+              "platform": "Redux",
+              "url": "https://www.google.com/search?q=Redux%20Official%20Tutorial%20Redux%20course",
+              "type": "tutorial"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Advanced Redux Project",
+            "description": "Implement a project using advanced Redux concepts",
+            "tech_used": [
+              "Redux",
+              "React"
+            ]
+          }
+        }
+      ]
+    },
+    "courses": {
+      "recommendations": [
+        {
+          "skill": "REST APIs",
+          "reason": "missing",
+          "course_title": "RESTful API Design and Development",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=RESTful%20API%20Design%20and%20Development",
+          "duration": "24 hours",
+          "level": "Intermediate",
+          "description": "Learn how to design and develop RESTful APIs using Node.js and Express.js."
+        },
+        {
+          "skill": "TypeScript",
+          "reason": "missing | weak",
+          "course_title": "TypeScript Complete Guide",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=TypeScript%20Complete%20Guide",
+          "duration": "15 hours",
+          "level": "Beginner to Intermediate",
+          "description": "Master TypeScript, including compiler options, interfaces, classes, and how to use it with React."
+        },
+        {
+          "skill": "Next.js",
+          "reason": "missing",
+          "course_title": "Next.js Masterclass",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=Next.js%20Masterclass",
+          "duration": "12 weeks",
+          "level": "Intermediate",
+          "description": "Learn how to build server-side rendered and statically generated websites with Next.js."
+        },
+        {
+          "skill": "Redux",
+          "reason": "missing",
+          "course_title": "Redux Fundamentals",
+          "platform": "MDN",
+          "url": "https://developer.mozilla.org/en-US/search?q=Redux",
+          "duration": "4 hours",
+          "level": "Beginner",
+          "description": "Learn the basics of Redux, including store, actions, reducers, and dispatch."
+        },
+        {
+          "skill": "Webpack",
+          "reason": "missing",
+          "course_title": "Webpack Masterclass",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Webpack%20Masterclass",
+          "duration": "10 hours",
+          "level": "Intermediate",
+          "description": "Master Webpack, including configuration, plugins, and optimization techniques."
+        }
+      ]
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Developed backend APIs using Node.js + Express",
+          "optimized_bullet_suggestion": "Designed and implemented scalable REST APIs using Node.js and Express.js, achieving 99.99% uptime and reducing API latency by 30%",
+          "impact_metric": "30% API latency reduction"
+        },
+        {
+          "skill": "TypeScript",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Migrated legacy codebase to TypeScript, increasing code maintainability by 40% and reducing type-related errors by 25%",
+          "impact_metric": "40% code maintainability increase"
+        },
+        {
+          "skill": "Next.js",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Designed and deployed high-performance, server-side rendered web applications using Next.js, achieving 50% faster page loads and improved SEO",
+          "impact_metric": "50% page load speed improvement"
+        },
+        {
+          "skill": "Redux",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Implemented state management using Redux, improving application scalability by 20% and reducing bugs related to global state by 15%",
+          "impact_metric": "20% application scalability improvement"
+        },
+        {
+          "skill": "Webpack",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Configured and optimized Webpack for efficient code splitting, tree shaking, and minification, resulting in 35% reduction in bundle size and improved application performance",
+          "impact_metric": "35% bundle size reduction"
+        }
+      ]
+    },
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "State Management",
+        "question": "What is the primary purpose of the useState hook in React?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To manage side effects in functional components",
+          "B": "To handle user input and store it in a component's state",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useState hook is used to add state to functional components, allowing them to store and update their own state. This is useful for handling user input, among other things."
+      },
+      {
+        "id": 2,
+        "skill": "React",
+        "difficulty": "hard",
+        "topic": "Optimization",
+        "question": "What is the difference between React.memo and shouldComponentUpdate?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "React.memo is used for functional components, while shouldComponentUpdate is used for class components",
+          "B": "React.memo is used for class components, while shouldComponentUpdate is used for functional components",
+          "C": "React.memo is used to prevent unnecessary re-renders, while shouldComponentUpdate is used to optimize the rendering of a component",
+          "D": "React.memo is used to optimize the rendering of a component, while shouldComponentUpdate is used to prevent unnecessary re-renders"
+        },
+        "correct": "A",
+        "explanation": "React.memo is a higher-order component that wraps a functional component and prevents it from re-rendering if its props haven't changed. shouldComponentUpdate, on the other hand, is a method that can be used in class components to achieve the same result."
+      },
+      {
+        "id": 3,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "Lifecycle Methods",
+        "question": "What is the purpose of the componentDidMount lifecycle method?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To handle errors that occur during the rendering of a component",
+          "B": "To set up any necessary side effects, such as API calls or event listeners, after a component has been rendered",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The componentDidMount lifecycle method is called after a component has been rendered to the DOM. It is commonly used to set up any necessary side effects, such as API calls or event listeners."
+      },
+      {
+        "id": 4,
+        "skill": "React",
+        "difficulty": "hard",
+        "topic": "Context API",
+        "question": "How do you handle a situation where a context value is not available to a component?",
+        "has_code": true,
+        "code_snippet": "const MyContext = React.createContext();\nconst MyComponent = () => {\n  const contextValue = useContext(MyContext);\n  if (!contextValue) {\n    // What should be done here?\n  }\n}",
+        "options": {
+          "A": "Throw an error to indicate that the context value is not available",
+          "B": "Return a default value to use in place of the context value",
+          "C": "Use the useState hook to store the context value and update it when it becomes available",
+          "D": "Use the useEffect hook to fetch the context value from an API"
+        },
+        "correct": "B",
+        "explanation": "If a context value is not available to a component, you can return a default value to use in its place. This ensures that the component can still render and function correctly, even if the context value is not available."
+      },
+      {
+        "id": 5,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "JSX",
+        "question": "What is the purpose of the key prop in JSX?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To specify the type of a component",
+          "B": "To optimize the rendering of a component",
+          "C": "To help React keep track of the components in a list",
+          "D": "To handle errors that occur during the rendering of a component"
+        },
+        "correct": "C",
+        "explanation": "The key prop is used to help React keep track of the components in a list. When a component's key changes, React will re-render the entire list, which can help to improve performance and prevent bugs."
+      },
+      {
+        "id": 6,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Closures",
+        "question": "What is a closure in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A function that has access to its own scope and the scope of its outer functions",
+          "B": "A variable that is defined inside a function",
+          "C": "A function that is defined inside another function",
+          "D": "A loop that iterates over an array"
+        },
+        "correct": "A",
+        "explanation": "A closure is a function that has access to its own scope and the scope of its outer functions. This allows the function to use variables from its outer scope, even when the outer function has returned."
+      },
+      {
+        "id": 7,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Async/Await",
+        "question": "What is the difference between async/await and promises?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "Async/await is used for synchronous code, while promises are used for asynchronous code",
+          "B": "Async/await is used for asynchronous code, while promises are used for synchronous code",
+          "C": "Async/await is a syntax sugar on top of promises, making it easier to write asynchronous code",
+          "D": "Promises are a syntax sugar on top of async/await, making it easier to write synchronous code"
+        },
+        "correct": "C",
+        "explanation": "Async/await is a syntax sugar on top of promises, making it easier to write asynchronous code. It allows developers to write asynchronous code that is easier to read and maintain."
+      },
+      {
+        "id": 8,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "This Keyword",
+        "question": "What is the purpose of the this keyword in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To refer to the global object",
+          "B": "To refer to the current function",
+          "C": "To refer to the object that a function is called on",
+          "D": "To refer to a variable that is defined inside a function"
+        },
+        "correct": "C",
+        "explanation": "The this keyword is used to refer to the object that a function is called on. This allows the function to access the properties and methods of the object, and to use them to perform its task."
+      },
+      {
+        "id": 9,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Prototype Chain",
+        "question": "What is the purpose of the prototype chain in JavaScript?",
+        "has_code": true,
+        "code_snippet": "function Animal() {}\nfunction Dog() {}\nDog.prototype = Object.create(Animal.prototype);\nconst myDog = new Dog();\nconsole.log(myDog instanceof Animal);",
+        "options": {
+          "A": "To allow objects to inherit properties and methods from other objects",
+          "B": "To prevent objects from inheriting properties and methods from other objects",
+          "C": "To create a new object that is a copy of an existing object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "A",
+        "explanation": "The prototype chain is used to allow objects to inherit properties and methods from other objects. This is done by setting the prototype of one object to be another object, which creates a chain of prototypes that can be used to look up properties and methods."
+      },
+      {
+        "id": 10,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Type Conversion",
+        "question": "What is the difference between the == and === operators in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "The == operator checks for equality, while the === operator checks for identity",
+          "B": "The == operator checks for identity, while the === operator checks for equality",
+          "C": "The == operator performs type conversion, while the === operator does not",
+          "D": "The == operator does not perform type conversion, while the === operator does"
+        },
+        "correct": "C",
+        "explanation": "The == operator performs type conversion, which means that it will attempt to convert the operands to a common type before comparing them. The === operator, on the other hand, does not perform type conversion, and will only return true if the operands are of the same type and have the same value."
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "topic": "Destructuring",
+        "question": "What is the purpose of destructuring in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To extract values from an object or array and assign them to variables",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Destructuring is a feature in JavaScript that allows you to extract values from an object or array and assign them to variables. This can make your code more concise and easier to read."
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "topic": "Generators",
+        "question": "What is the purpose of generators in JavaScript?",
+        "has_code": true,
+        "code_snippet": "function* myGenerator() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nconst gen = myGenerator();\nconsole.log(gen.next());",
+        "options": {
+          "A": "To create a function that can be paused and resumed",
+          "B": "To create a function that can only be called once",
+          "C": "To create a function that returns a single value",
+          "D": "To create a function that returns an array of values"
+        },
+        "correct": "A",
+        "explanation": "Generators are a type of function in JavaScript that can be paused and resumed. They use the yield keyword to produce a series of values, and can be used to create iterators or to implement cooperative multitasking."
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "topic": "Modules",
+        "question": "What is the purpose of modules in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To import and export values between files",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Modules are a feature in JavaScript that allows you to import and export values between files. This makes it easier to organize and reuse code, and can help to improve the maintainability of your projects."
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "topic": "Proxies",
+        "question": "What is the purpose of proxies in JavaScript?",
+        "has_code": true,
+        "code_snippet": "const target = {\n  name: 'John'\n};\nconst handler = {\n  get: (target, prop) => {\n    return target[prop];\n  }\n};\nconst proxy = new Proxy(target, handler);\nconsole.log(proxy.name);",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To intercept and modify the behavior of an object",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Proxies are a feature in JavaScript that allows you to intercept and modify the behavior of an object. They can be used to create virtual properties, to implement logging or validation, or to create a layer of abstraction between an object and the code that uses it."
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "topic": "Classes",
+        "question": "What is the purpose of classes in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To define a blueprint for creating objects",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Classes are a feature in JavaScript that allows you to define a blueprint for creating objects. They can be used to create objects that have a specific set of properties and methods, and can help to improve the organization and maintainability of your code."
+      }
+    ],
+    "quiz_id": "d9a8d47d-0c46-4578-afcd-52054545d5d3",
+    "quiz_score": 47,
+    "quiz_overall_score": 47,
+    "quiz_review": [
+      {
+        "id": 1,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the primary purpose of the useState hook in React?",
+        "options": {
+          "A": "To manage side effects in functional components",
+          "B": "To handle user input and store it in a component's state",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useState hook is used to add state to functional components, allowing them to store and update their own state. This is useful for handling user input, among other things.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 2,
+        "skill": "React",
+        "difficulty": "hard",
+        "question": "What is the difference between React.memo and shouldComponentUpdate?",
+        "options": {
+          "A": "React.memo is used for functional components, while shouldComponentUpdate is used for class components",
+          "B": "React.memo is used for class components, while shouldComponentUpdate is used for functional components",
+          "C": "React.memo is used to prevent unnecessary re-renders, while shouldComponentUpdate is used to optimize the rendering of a component",
+          "D": "React.memo is used to optimize the rendering of a component, while shouldComponentUpdate is used to prevent unnecessary re-renders"
+        },
+        "correct": "A",
+        "explanation": "React.memo is a higher-order component that wraps a functional component and prevents it from re-rendering if its props haven't changed. shouldComponentUpdate, on the other hand, is a method that can be used in class components to achieve the same result.",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 3,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the purpose of the componentDidMount lifecycle method?",
+        "options": {
+          "A": "To handle errors that occur during the rendering of a component",
+          "B": "To set up any necessary side effects, such as API calls or event listeners, after a component has been rendered",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The componentDidMount lifecycle method is called after a component has been rendered to the DOM. It is commonly used to set up any necessary side effects, such as API calls or event listeners.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 4,
+        "skill": "React",
+        "difficulty": "hard",
+        "question": "How do you handle a situation where a context value is not available to a component?",
+        "options": {
+          "A": "Throw an error to indicate that the context value is not available",
+          "B": "Return a default value to use in place of the context value",
+          "C": "Use the useState hook to store the context value and update it when it becomes available",
+          "D": "Use the useEffect hook to fetch the context value from an API"
+        },
+        "correct": "B",
+        "explanation": "If a context value is not available to a component, you can return a default value to use in its place. This ensures that the component can still render and function correctly, even if the context value is not available.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "const MyContext = React.createContext();\nconst MyComponent = () => {\n  const contextValue = useContext(MyContext);\n  if (!contextValue) {\n    // What should be done here?\n  }\n}"
+      },
+      {
+        "id": 5,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the purpose of the key prop in JSX?",
+        "options": {
+          "A": "To specify the type of a component",
+          "B": "To optimize the rendering of a component",
+          "C": "To help React keep track of the components in a list",
+          "D": "To handle errors that occur during the rendering of a component"
+        },
+        "correct": "C",
+        "explanation": "The key prop is used to help React keep track of the components in a list. When a component's key changes, React will re-render the entire list, which can help to improve performance and prevent bugs.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 6,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is a closure in JavaScript?",
+        "options": {
+          "A": "A function that has access to its own scope and the scope of its outer functions",
+          "B": "A variable that is defined inside a function",
+          "C": "A function that is defined inside another function",
+          "D": "A loop that iterates over an array"
+        },
+        "correct": "A",
+        "explanation": "A closure is a function that has access to its own scope and the scope of its outer functions. This allows the function to use variables from its outer scope, even when the outer function has returned.",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 7,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the difference between async/await and promises?",
+        "options": {
+          "A": "Async/await is used for synchronous code, while promises are used for asynchronous code",
+          "B": "Async/await is used for asynchronous code, while promises are used for synchronous code",
+          "C": "Async/await is a syntax sugar on top of promises, making it easier to write asynchronous code",
+          "D": "Promises are a syntax sugar on top of async/await, making it easier to write synchronous code"
+        },
+        "correct": "C",
+        "explanation": "Async/await is a syntax sugar on top of promises, making it easier to write asynchronous code. It allows developers to write asynchronous code that is easier to read and maintain.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 8,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of the this keyword in JavaScript?",
+        "options": {
+          "A": "To refer to the global object",
+          "B": "To refer to the current function",
+          "C": "To refer to the object that a function is called on",
+          "D": "To refer to a variable that is defined inside a function"
+        },
+        "correct": "C",
+        "explanation": "The this keyword is used to refer to the object that a function is called on. This allows the function to access the properties and methods of the object, and to use them to perform its task.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 9,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the purpose of the prototype chain in JavaScript?",
+        "options": {
+          "A": "To allow objects to inherit properties and methods from other objects",
+          "B": "To prevent objects from inheriting properties and methods from other objects",
+          "C": "To create a new object that is a copy of an existing object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "A",
+        "explanation": "The prototype chain is used to allow objects to inherit properties and methods from other objects. This is done by setting the prototype of one object to be another object, which creates a chain of prototypes that can be used to look up properties and methods.",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "function Animal() {}\nfunction Dog() {}\nDog.prototype = Object.create(Animal.prototype);\nconst myDog = new Dog();\nconsole.log(myDog instanceof Animal);"
+      },
+      {
+        "id": 10,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the difference between the == and === operators in JavaScript?",
+        "options": {
+          "A": "The == operator checks for equality, while the === operator checks for identity",
+          "B": "The == operator checks for identity, while the === operator checks for equality",
+          "C": "The == operator performs type conversion, while the === operator does not",
+          "D": "The == operator does not perform type conversion, while the === operator does"
+        },
+        "correct": "C",
+        "explanation": "The == operator performs type conversion, which means that it will attempt to convert the operands to a common type before comparing them. The === operator, on the other hand, does not perform type conversion, and will only return true if the operands are of the same type and have the same value.",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "question": "What is the purpose of destructuring in JavaScript?",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To extract values from an object or array and assign them to variables",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Destructuring is a feature in JavaScript that allows you to extract values from an object or array and assign them to variables. This can make your code more concise and easier to read.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "question": "What is the purpose of generators in JavaScript?",
+        "options": {
+          "A": "To create a function that can be paused and resumed",
+          "B": "To create a function that can only be called once",
+          "C": "To create a function that returns a single value",
+          "D": "To create a function that returns an array of values"
+        },
+        "correct": "A",
+        "explanation": "Generators are a type of function in JavaScript that can be paused and resumed. They use the yield keyword to produce a series of values, and can be used to create iterators or to implement cooperative multitasking.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "function* myGenerator() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nconst gen = myGenerator();\nconsole.log(gen.next());"
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "question": "What is the purpose of modules in JavaScript?",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To import and export values between files",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Modules are a feature in JavaScript that allows you to import and export values between files. This makes it easier to organize and reuse code, and can help to improve the maintainability of your projects.",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "question": "What is the purpose of proxies in JavaScript?",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To intercept and modify the behavior of an object",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Proxies are a feature in JavaScript that allows you to intercept and modify the behavior of an object. They can be used to create virtual properties, to implement logging or validation, or to create a layer of abstraction between an object and the code that uses it.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": true,
+        "code_snippet": "const target = {\n  name: 'John'\n};\nconst handler = {\n  get: (target, prop) => {\n    return target[prop];\n  }\n};\nconst proxy = new Proxy(target, handler);\nconsole.log(proxy.name);"
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "question": "What is the purpose of classes in JavaScript?",
+        "options": {
+          "A": "To create a new object that is a copy of an existing object",
+          "B": "To define a blueprint for creating objects",
+          "C": "To add a new property to an object",
+          "D": "To delete a property from an object"
+        },
+        "correct": "B",
+        "explanation": "Classes are a feature in JavaScript that allows you to define a blueprint for creating objects. They can be used to create objects that have a specific set of properties and methods, and can help to improve the organization and maintainability of your code.",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      }
+    ],
+    "quiz_per_skill_scores": [
+      {
+        "skill": "React",
+        "score": 40,
+        "correct": 2,
+        "total": 5,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "JavaScript",
+        "score": 60,
+        "correct": 3,
+        "total": 5,
+        "proficiency": "Proficient"
+      },
+      {
+        "skill": "JavaScript (ES6+)",
+        "score": 40,
+        "correct": 2,
+        "total": 5,
+        "proficiency": "Beginner"
+      }
+    ],
+    "interview_score": null,
+    "career_readiness_score": null,
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, I'm SkillSync AI, a technical interviewer at a tier-1 tech company. I'll be assessing your skills for the Frontend Developer role today. Let's begin with a question: Can you explain the difference between a controlled component and an uncontrolled component in React, and provide an example of when you would use each?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    }
   }
 }

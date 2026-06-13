@@ -203,15 +203,15 @@ const server = http.createServer(async (req, res) => {
 async function startServer() {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
-    console.log('✅ MongoDB Atlas connected');
+    console.log('MongoDB Atlas connected');
   } catch (err) {
-    console.warn('⚠️  MongoDB connection failed:', err.message);
+    console.warn('MongoDB connection failed:', err.message);
     console.warn('   Running without database — caching and session persistence fallback enabled');
   }
 
   server.listen(PORT, () => {
-    console.log(`🚀 SkillSync AI Backend (Pure Node.js) running on http://localhost:${PORT}`);
-    console.log(`📋 Health check: http://localhost:${PORT}/api/health`);
+    console.log(`SkillSync AI Backend (Pure Node.js) running on http://localhost:${PORT}`);
+    console.log(`Health check: http://localhost:${PORT}/api/health`);
   });
 }
 

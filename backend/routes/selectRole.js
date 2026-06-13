@@ -59,6 +59,22 @@ async function handleSelectRole(req, res) {
       selected_role,
       target_role: selected_role,
       gap_analysis: gapAnalysis,
+      // Clear previous role-specific LLM caches to force regeneration on role change
+      career_simulation: null,
+      roadmap: null,
+      courses: null,
+      resume_optimization: null,
+      quiz_questions: null,
+      quiz_id: null,
+      quiz_score: null,
+      quiz_overall_score: null,
+      quiz_review: null,
+      quiz_per_skill_scores: null,
+      interview_score: null,
+      career_readiness_score: null,
+      'interview.history': null,
+      'interview.concluded': false,
+      'interview.scorecard': null
     });
 
     res.json({

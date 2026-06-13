@@ -13,6 +13,16 @@ async function handleSimulate(req, res) {
     const user = await getSession(session_id);
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
+    // Check cache first (0 tokens)
+    if (user.career_simulation) {
+      console.log(`[simulate] Returning cached simulations for session ${session_id}`);
+      return res.json({
+        success: true,
+        from_cache: true,
+        simulations: user.career_simulation.simulations || [],
+      });
+    }
+
     const resumeData = user.resume_data;
     const gapAnalysis = user.gap_analysis || {};
     // Support both new flat keys and legacy nested keys

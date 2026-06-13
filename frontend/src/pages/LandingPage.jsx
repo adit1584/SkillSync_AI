@@ -25,7 +25,7 @@ const FEATURES = [
   },
   {
     icon: Brain,
-    title: 'Adaptive Quiz ⭐',
+    title: 'Adaptive Quiz',
     desc: 'AI generates 15 MCQs tailored to your skills and experience level to verify actual proficiency.',
     color: '#db2777',
     bg: 'rgba(219, 39, 119, 0.08)',

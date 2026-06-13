@@ -41,6 +41,16 @@ async function handleCourses(req, res) {
     const user = await getSession(session_id);
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
+    // Check cache first (0 tokens)
+    if (user.courses && Array.isArray(user.courses.recommendations)) {
+      console.log(`[courses] Returning cached course recommendations for session ${session_id}`);
+      return res.json({
+        success: true,
+        from_cache: true,
+        courses: user.courses.recommendations
+      });
+    }
+
     const gapAnalysis = user.gap_analysis || {};
     const quizScores = user.quiz_result?.per_skill_scores || [];
 

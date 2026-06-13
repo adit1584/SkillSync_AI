@@ -87,11 +87,16 @@ function callGemini(systemPrompt, userPrompt) {
 /**
  * Core AI call with automatic multi-model Groq and Gemini API fallback
  */
-async function callGroq(systemPrompt, userPrompt, retries = 1) {
+async function callGroq(systemPrompt, userPrompt, modelOverride = null, retries = 1) {
   let lastError = null;
 
+  // Priority queue of models to try, starting with the modelOverride if provided
+  const modelsToTry = modelOverride
+    ? [modelOverride, ...GROQ_MODELS.filter(m => m !== modelOverride)]
+    : GROQ_MODELS;
+
   // 1. Try Groq Models
-  for (const model of GROQ_MODELS) {
+  for (const model of modelsToTry) {
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
         console.log(`[aiService] Calling Groq model ${model} (attempt ${attempt + 1})...`);
@@ -189,7 +194,7 @@ Extract and return ONLY this JSON structure — no explanation, no markdown:
   "domains": []
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  return callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -246,7 +251,7 @@ Return ONLY this JSON structure:
   ]
 }`;
 
-  const result = await callGroq(systemPrompt, userPrompt);
+  const result = await callGroq(systemPrompt, userPrompt, 'llama-3.3-70b-versatile');
 
   // Validate the response has actual questions
   if (!result || !Array.isArray(result.questions) || result.questions.length === 0) {
@@ -302,7 +307,7 @@ Return ONLY this JSON:
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  return callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -350,7 +355,7 @@ Return ONLY this JSON:
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  return callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -374,7 +379,7 @@ Return ONLY this JSON:
   ]
 }`;
 
-  const response = await callGroq(systemPrompt, userPrompt);
+  const response = await callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
   if (!response) {
     throw new Error('AI service returned an empty response');
   }
@@ -414,9 +419,19 @@ Return ONLY this JSON:
   "concluded": true | false
 }`;
 
+  // Keep the greeting (first message) + last 5 intermediate messages to keep context window small
+  let truncatedHistory = [];
+  if (history.length > 0) {
+    truncatedHistory.push(history[0]); // Always preserve initial greeting and setup question
+    
+    // Add the most recent messages, avoiding double-adding the first message
+    const recent = history.slice(1).slice(-5);
+    truncatedHistory.push(...recent);
+  }
+
   // Build the message history structure for the AI
   const formattedHistory = [
-    ...history,
+    ...truncatedHistory,
     { role: 'user', content: userMessage }
   ];
 
@@ -427,7 +442,7 @@ Return ONLY this JSON:
     targetRole,
     experienceLevel,
     history: formattedHistory
-  }));
+  }), 'llama-3.1-8b-instant');
 
   if (!response) {
     throw new Error('AI service returned an empty response');
@@ -470,7 +485,7 @@ Return ONLY this JSON:
   "feedback_summary": "Overall constructive review of the candidate's performance."
 }`;
 
-  const response = await callGroq(systemPrompt, userPrompt);
+  const response = await callGroq(systemPrompt, userPrompt, 'llama-3.3-70b-versatile');
   if (!response) {
     throw new Error('AI service returned an empty scorecard response');
   }
@@ -510,7 +525,7 @@ Return ONLY this JSON:
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  return callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -543,7 +558,7 @@ Return ONLY this JSON structure:
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  return callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -587,7 +602,7 @@ Return ONLY this JSON:
 
 IMPORTANT: Return exactly 5 recommendations ordered by match_score descending.`;
 
-  const response = await callGroq(systemPrompt, userPrompt);
+  const response = await callGroq(systemPrompt, userPrompt, 'llama-3.1-8b-instant');
   if (!response || !Array.isArray(response.recommendations)) {
     throw new Error('AI failed to return valid career recommendations');
   }

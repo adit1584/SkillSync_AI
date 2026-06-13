@@ -51,6 +51,16 @@ async function handleRoadmap(req, res) {
     const user = await getSession(session_id);
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
+    // Check cache first (0 tokens)
+    if (user.roadmap) {
+      console.log(`[roadmap] Returning cached roadmap for session ${session_id}`);
+      return res.json({
+        success: true,
+        from_cache: true,
+        roadmap: user.roadmap,
+      });
+    }
+
     const gapAnalysis = user.gap_analysis || {};
     // Support both new flat keys and legacy nested keys
     const quizScores = user.quiz_per_skill_scores || user.quiz_result?.per_skill_scores || [];
