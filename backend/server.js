@@ -7,7 +7,7 @@ const { handleUpload } = require('./routes/upload');
 const { handleQuizGenerate, handleQuizSubmit } = require('./routes/quiz');
 const { handleSimulate } = require('./routes/simulate');
 const { handleRoadmap } = require('./routes/roadmap');
-const { handleInterviewStart, handleInterviewChat } = require('./routes/interview');
+const { handleInterviewStart, handleInterviewChat, handleSaveInterviewAnalytics, handleGetLatestInterviewAnalytics } = require('./routes/interview');
 const { handleResumeOptimize } = require('./routes/optimize');
 const { handleCourses } = require('./routes/courses');
 const { handleRecommend } = require('./routes/recommend');
@@ -217,6 +217,10 @@ const server = http.createServer(async (req, res) => {
       if (allowed) await handleInterviewStart(req, res);
     } else if (path === '/api/interview/chat' && method === 'POST') {
       await handleInterviewChat(req, res);
+    } else if (path === '/api/interview/analytics/save' && method === 'POST') {
+      await handleSaveInterviewAnalytics(req, res);
+    } else if (path === '/api/interview/analytics/latest' && method === 'GET') {
+      await handleGetLatestInterviewAnalytics(req, res);
     } else if (path === '/api/optimize' && method === 'POST') {
       await handleResumeOptimize(req, res);
     } else if (path === '/api/courses' && method === 'POST') {

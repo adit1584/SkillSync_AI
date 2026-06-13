@@ -1,5 +1,7 @@
 const { startInterview, chatInterview, evaluateInterview } = require('../services/aiService');
-const { getSession, updateSession } = require('../services/dbHelper');
+const { getSession, updateSession, isDbConnected } = require('../services/dbHelper');
+const { verifyToken } = require('../middleware/authMiddleware');
+const InterviewAnalytics = require('../models/InterviewAnalytics');
 
 /**
  * Handle POST /api/interview/start
@@ -127,4 +129,106 @@ async function handleInterviewChat(req, res) {
   }
 }
 
-module.exports = { handleInterviewStart, handleInterviewChat };
+/**
+ * Handle POST /api/interview/analytics/save
+ */
+async function handleSaveInterviewAnalytics(req, res) {
+  const userId = verifyToken(req, res);
+  if (!userId) return;
+
+  const { selectedRole, attentionScore, focusScore, communicationScore, interviewReadinessScore, eventTimeline } = req.body;
+
+  if (attentionScore === undefined || focusScore === undefined || communicationScore === undefined || interviewReadinessScore === undefined) {
+    return res.status(400).json({ error: 'All scores are required.' });
+  }
+
+  try {
+    let savedAnalytics = null;
+    if (isDbConnected()) {
+      savedAnalytics = await InterviewAnalytics.create({
+        userId,
+        selectedRole: selectedRole || 'Target Role',
+        attentionScore,
+        focusScore,
+        communicationScore,
+        interviewReadinessScore,
+        eventTimeline: eventTimeline || []
+      });
+    }
+
+    // Update session state
+    const session = await getSession(userId);
+    if (session) {
+      // Recalculate composite Career Readiness Score: 40% skill match + 30% quiz + 30% interview readiness
+      const skillMatchScore = session.gap_analysis?.match_score || 0;
+      const quizScore = session.quiz_score || 0;
+      const careerReadinessScore = Math.round(
+        0.4 * skillMatchScore + 0.3 * quizScore + 0.3 * interviewReadinessScore
+      );
+
+      await updateSession(userId, {
+        interview_score: interviewReadinessScore,
+        career_readiness_score: careerReadinessScore,
+        // Also save to in-memory fallback list if DB not connected
+        ...(isDbConnected() ? {} : {
+          interview_analytics: {
+            selectedRole: selectedRole || 'Target Role',
+            attentionScore,
+            focusScore,
+            communicationScore,
+            interviewReadinessScore,
+            eventTimeline: eventTimeline || [],
+            createdAt: new Date()
+          }
+        })
+      });
+
+      return res.json({
+        success: true,
+        interview_score: interviewReadinessScore,
+        career_readiness_score: careerReadinessScore,
+        analytics: savedAnalytics || {
+          selectedRole: selectedRole || 'Target Role',
+          attentionScore,
+          focusScore,
+          communicationScore,
+          interviewReadinessScore,
+          eventTimeline: eventTimeline || []
+        }
+      });
+    } else {
+      return res.status(404).json({ error: 'Session not found.' });
+    }
+  } catch (err) {
+    console.error('[interview/analytics/save] Error:', err.message);
+    res.status(500).json({ error: err.message || 'Failed to save interview analytics' });
+  }
+}
+
+/**
+ * Handle GET /api/interview/analytics/latest
+ */
+async function handleGetLatestInterviewAnalytics(req, res) {
+  const userId = verifyToken(req, res);
+  if (!userId) return;
+
+  try {
+    if (isDbConnected()) {
+      const latest = await InterviewAnalytics.findOne({ userId }).sort({ createdAt: -1 });
+      return res.json({ success: true, analytics: latest });
+    } else {
+      const session = await getSession(userId);
+      return res.json({ success: true, analytics: session?.interview_analytics || null });
+    }
+  } catch (err) {
+    console.error('[interview/analytics/latest] Error:', err.message);
+    res.status(500).json({ error: err.message || 'Failed to fetch interview analytics' });
+  }
+}
+
+module.exports = {
+  handleInterviewStart,
+  handleInterviewChat,
+  handleSaveInterviewAnalytics,
+  handleGetLatestInterviewAnalytics
+};

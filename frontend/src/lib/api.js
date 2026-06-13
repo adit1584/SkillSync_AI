@@ -221,6 +221,17 @@ export async function getJobSearchHistory() {
   return res.data;
 }
 
+// ── Interview Analytics ──────────────────────────────────────────
+export async function saveInterviewAnalytics(payload) {
+  const res = await api.post('/interview/analytics/save', payload);
+  return res.data;
+}
+
+export async function getLatestInterviewAnalytics() {
+  const res = await api.get('/interview/analytics/latest');
+  return res.data;
+}
+
 // ── Health check ──────────────────────────────────────────────────
 export async function checkHealth() {
   const res = await api.get('/health');
