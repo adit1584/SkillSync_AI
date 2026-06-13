@@ -14998,5 +14998,1238 @@
       }
     ],
     "quiz_id": "e1562f1f-f0a0-43e3-aa4e-683c808f5f62"
+  },
+  "684d396f-504b-4722-9d15-7f0ed5a03ffa": {
+    "session_id": "684d396f-504b-4722-9d15-7f0ed5a03ffa",
+    "resume_data": {
+      "name": "Shlok Naidu",
+      "email": "shlok16naidu@gmail.com",
+      "phone": "+91 6268642098",
+      "experience_level": "junior",
+      "education": [
+        {
+          "degree": "B.Tech in Computer Science",
+          "institution": "Medicaps University, Indore",
+          "year": "Expected 2027"
+        }
+      ],
+      "experience": [
+        {
+          "role": "SOFTWARE ENGINEERING INTERN | BACKEND / FULL-STACK (NODE.JS, REACT)",
+          "company": "",
+          "duration": "",
+          "description": "Backend-focused software engineering student with experience building scalable APIs, real-time systems, and AI-powered applications using Node.js, Express, React, and MongoDB."
+        }
+      ],
+      "technical_skills": [
+        "JavaScript (ES6+)",
+        "Node.js",
+        "Express.js",
+        "REST API Development",
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "React.js (Hooks, Context API)",
+        "HTML5",
+        "Tailwind CSS",
+        "MongoDB Atlas",
+        "Atlas Vector Search",
+        "Microservices Architecture",
+        "Real-Time Systems",
+        "WebSockets",
+        "Rule Engines",
+        "RAG",
+        "Docker (Basics)",
+        "AWS (EC2, S3 basics)",
+        "Vercel",
+        "Render",
+        "Git",
+        "GitHub",
+        "Postman"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Helix — Pharmacogenomic Decision Engine",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query. Designed a reproducible pipeline with confidence scoring + validated fallback logic (eliminating inconsistent outputs). Implemented audit logging across decision nodes for full traceability. Developed backend APIs using Node.js + Express for rule execution and data handling."
+        },
+        {
+          "name": "EyeOnSite — Real-Time Safety Monitoring System",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "FastAPI",
+            "React",
+            "WebSockets",
+            "YOLO",
+            "ByteTrack"
+          ],
+          "description": "Developed a 15 FPS computer vision pipeline (YOLO + ByteTrack) for PPE violation + intrusion detection. Reduced false positives using debouncing, time thresholds, and motion filtering. Built microservices architecture (FastAPI + Node.js + React) with WebSocket-based real-time alerts. Implemented WebSocket-based real-time alerting system and live MJPEG streaming."
+        },
+        {
+          "name": "GyaanSetu – AI-powered personalized learning platform with RAG",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Hugging Face embeddings",
+            "IndexedDB",
+            "WebSockets"
+          ],
+          "description": "Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive quizzes. Developed a RAG-based tutoring system using Hugging Face embeddings and MongoDB Atlas Vector Search. Implemented offline-first support using IndexedDB with automatic synchronization. Added multilingual support, gamification, and career guidance features."
+        }
+      ],
+      "certifications": [],
+      "domains": []
+    },
+    "target_role": "Backend Engineer",
+    "selected_role": "Backend Engineer",
+    "recommended_roles": [
+      {
+        "role": "Backend Engineer",
+        "match_score": 92,
+        "confidence_score": 94,
+        "strengths": [
+          "Node.js",
+          "Express.js",
+          "REST API Development"
+        ],
+        "missing_skills": [
+          "GraphQL",
+          "Kubernetes"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "match_score": 88,
+        "confidence_score": 90,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "React.js (Hooks, Context API)",
+          "Express.js"
+        ],
+        "missing_skills": [
+          "TypeScript",
+          "Angular"
+        ]
+      },
+      {
+        "role": "Cloud Engineer",
+        "match_score": 86,
+        "confidence_score": 88,
+        "strengths": [
+          "MongoDB Atlas",
+          "Atlas Vector Search",
+          "Microservices Architecture"
+        ],
+        "missing_skills": [
+          "AWS",
+          "Azure",
+          "GCP"
+        ]
+      },
+      {
+        "role": "Platform Engineer",
+        "match_score": 84,
+        "confidence_score": 86,
+        "strengths": [
+          "Node.js",
+          "Express.js",
+          "Microservices Architecture"
+        ],
+        "missing_skills": [
+          "Kubernetes",
+          "Docker"
+        ]
+      },
+      {
+        "role": "Security Engineer",
+        "match_score": 82,
+        "confidence_score": 84,
+        "strengths": [
+          "JWT Authentication",
+          "Role-Based Access Control (RBAC)"
+        ],
+        "missing_skills": [
+          "OWASP",
+          "Penetration Testing"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "Backend Engineer",
+      "match_score": 50,
+      "ats_score": 41,
+      "matched_skills": [
+        "Node.js",
+        "MongoDB",
+        "Git",
+        "Docker",
+        "Express.js"
+      ],
+      "missing_skills": [
+        "Python",
+        "SQL",
+        "PostgreSQL",
+        "REST APIs",
+        "Redis"
+      ],
+      "nice_to_have_gaps": [
+        "Kubernetes",
+        "GraphQL",
+        "gRPC",
+        "CI/CD",
+        "TypeScript",
+        "Kafka",
+        "Elasticsearch",
+        "Security"
+      ],
+      "nice_to_have_matched": [
+        "AWS",
+        "Microservices"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Designs and builds backend services, databases, and APIs for secure, scalable applications",
+        "top_companies": [
+          "Amazon",
+          "Uber",
+          "Netflix",
+          "Razorpay",
+          "Postman",
+          "Paytm"
+        ],
+        "interview_topics": [
+          "Database design & optimization",
+          "System design",
+          "Concurrency & Multithreading",
+          "REST vs GraphQL",
+          "Caching strategies"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "5-9",
+          "junior": "9-16",
+          "mid": "16-32",
+          "senior": "32-65"
+        },
+        "avg_salary_usd": {
+          "fresher": "55k-80k",
+          "junior": "80k-110k",
+          "mid": "110k-150k",
+          "senior": "150k-220k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T07:05:38.629Z",
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "topic": "Error Handling",
+        "question": "What is the difference between try-catch and error-first callbacks in Node.js?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "try-catch is used for synchronous code, while error-first callbacks are used for asynchronous code",
+          "B": "try-catch is used for asynchronous code, while error-first callbacks are used for synchronous code",
+          "C": "try-catch and error-first callbacks are used interchangeably",
+          "D": "try-catch is used for both synchronous and asynchronous code"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 2,
+        "skill": "Node.js",
+        "difficulty": "hard",
+        "topic": "Async Programming",
+        "question": "What is the correct way to handle a promise that is rejected with an error in a try-catch block?",
+        "has_code": true,
+        "code_snippet": "const promise = new Promise((resolve, reject) => {\n  reject(new Error('Test error'))\n});\ntry {\n  promise.then(() => {}\n)\n} catch (error) {\n  console.log(error)\n}",
+        "options": {
+          "A": "try { promise.then(() => {}); } catch (error) { console.log(error); }",
+          "B": "try { promise.then(() => {}); } catch (error) { reject(error); }",
+          "C": "promise.then(() => {}).catch((error) => { console.log(error); })",
+          "D": "promise.then(() => {}).catch((error) => { reject(error); })"
+        },
+        "correct": "C"
+      },
+      {
+        "id": 3,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "topic": "Dependency Management",
+        "question": "What is the purpose of the 'dependencies' and 'devDependencies' fields in a package.json file?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "dependencies are used for production dependencies, while devDependencies are used for development dependencies",
+          "B": "dependencies are used for development dependencies, while devDependencies are used for production dependencies",
+          "C": "dependencies and devDependencies are used interchangeably",
+          "D": "dependencies are used for both production and development dependencies"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 4,
+        "skill": "Node.js",
+        "difficulty": "hard",
+        "topic": "Security",
+        "question": "What is the risk of using the 'require' function to load a module in Node.js?",
+        "has_code": true,
+        "code_snippet": "const module = require('module-name');\nmodule.someFunction();",
+        "options": {
+          "A": "The risk of a denial-of-service attack",
+          "B": "The risk of a remote code execution vulnerability",
+          "C": "The risk of a cross-site scripting attack",
+          "D": "The risk of a buffer overflow attack"
+        },
+        "correct": "B"
+      },
+      {
+        "id": 5,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "topic": "File System",
+        "question": "What is the difference between the 'fs.readFileSync' and 'fs.readFile' functions in Node.js?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "fs.readFileSync reads the file synchronously, while fs.readFile reads the file asynchronously",
+          "B": "fs.readFileSync reads the file asynchronously, while fs.readFile reads the file synchronously",
+          "C": "fs.readFileSync and fs.readFile are used interchangeably",
+          "D": "fs.readFileSync is used for synchronous code, while fs.readFile is used for asynchronous code"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 6,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "topic": "Query Optimization",
+        "question": "What is the correct way to optimize a MongoDB query that uses the '$or' operator?",
+        "has_code": true,
+        "code_snippet": "db.collection.find({ $or: [{ field1: 'value1' }, { field2: 'value2' }] })",
+        "options": {
+          "A": "Use the '$or' operator with an index on the field",
+          "B": "Use the '$or' operator with a compound index on the fields",
+          "C": "Use the '$or' operator with a single index on the fields",
+          "D": "Use the '$or' operator without an index"
+        },
+        "correct": "B"
+      },
+      {
+        "id": 7,
+        "skill": "MongoDB",
+        "difficulty": "medium",
+        "topic": "Data Modeling",
+        "question": "What is the purpose of the '$lookup' aggregation stage in MongoDB?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To join two collections based on a common field",
+          "B": "To join two collections based on a common value",
+          "C": "To merge two collections into a single collection",
+          "D": "To remove a field from a collection"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 8,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "topic": "Security",
+        "question": "What is the risk of using the 'db.collection.updateMany' method without specifying the 'multi' option?",
+        "has_code": true,
+        "code_snippet": "db.collection.updateMany({ field: 'value' }, { $set: { newField: 'newValue' } })",
+        "options": {
+          "A": "The risk of updating multiple documents",
+          "B": "The risk of updating a single document",
+          "C": "The risk of inserting a new document",
+          "D": "The risk of removing a document"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 9,
+        "skill": "MongoDB",
+        "difficulty": "medium",
+        "topic": "Data Retrieval",
+        "question": "What is the difference between the 'find' and 'findOne' methods in MongoDB?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "find returns a cursor, while findOne returns a single document",
+          "B": "find returns a single document, while findOne returns a cursor",
+          "C": "find and findOne are used interchangeably",
+          "D": "find is used for synchronous code, while findOne is used for asynchronous code"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 10,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "topic": "Indexing",
+        "question": "What is the correct way to create a compound index on multiple fields in MongoDB?",
+        "has_code": true,
+        "code_snippet": "db.collection.createIndex({ field1: 1, field2: 1 })",
+        "options": {
+          "A": "Use the 'createIndex' method with a single index on the fields",
+          "B": "Use the 'createIndex' method with a compound index on the fields",
+          "C": "Use the 'createIndex' method with a single index on the first field and a compound index on the second field",
+          "D": "Use the 'createIndex' method without specifying the fields"
+        },
+        "correct": "B"
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Object-Oriented Programming",
+        "question": "What is the difference between the 'this' keyword and the 'bind' method in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "this refers to the current object, while bind refers to the context of the function",
+          "B": "this refers to the context of the function, while bind refers to the current object",
+          "C": "this and bind are used interchangeably",
+          "D": "this is used for synchronous code, while bind is used for asynchronous code"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Async Programming",
+        "question": "What is the correct way to handle a promise that is rejected with an error in a try-catch block?",
+        "has_code": true,
+        "code_snippet": "const promise = new Promise((resolve, reject) => {\n  reject(new Error('Test error'))\n});\ntry {\n  promise.then(() => {}\n)\n} catch (error) {\n  console.log(error)\n}",
+        "options": {
+          "A": "try { promise.then(() => {}); } catch (error) { console.log(error); }",
+          "B": "try { promise.then(() => {}); } catch (error) { reject(error); }",
+          "C": "promise.then(() => {}).catch((error) => { console.log(error); })",
+          "D": "promise.then(() => {}).catch((error) => { reject(error); })"
+        },
+        "correct": "C"
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Type Checking",
+        "question": "What is the purpose of the 'typeof' operator in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To check the type of a variable",
+          "B": "To check the value of a variable",
+          "C": "To check the length of a string",
+          "D": "To check the existence of a property"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Memory Management",
+        "question": "What is the risk of using the 'var' keyword to declare a variable in JavaScript?",
+        "has_code": true,
+        "code_snippet": "var variable = 'value';",
+        "options": {
+          "A": "The risk of memory leak",
+          "B": "The risk of variable hoisting",
+          "C": "The risk of function scope",
+          "D": "The risk of block scope"
+        },
+        "correct": "A"
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Closures",
+        "question": "What is the difference between a closure and a function in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A closure is a function that has access to its own scope, while a function is a block of code that performs a specific task",
+          "B": "A closure is a block of code that performs a specific task, while a function is a function that has access to its own scope",
+          "C": "A closure and a function are used interchangeably",
+          "D": "A closure is used for synchronous code, while a function is used for asynchronous code"
+        },
+        "correct": "A"
+      }
+    ],
+    "quiz_id": "ecfa3145-cd7c-4090-9a87-7a7cf05c281e",
+    "quiz_per_skill_scores": [
+      {
+        "skill": "Node.js",
+        "score": 40,
+        "correct": 2,
+        "total": 5,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "MongoDB",
+        "score": 40,
+        "correct": 2,
+        "total": 5,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "JavaScript",
+        "score": 80,
+        "correct": 4,
+        "total": 5,
+        "proficiency": "Expert"
+      }
+    ],
+    "quiz_overall_score": 53,
+    "quiz_review": [
+      {
+        "id": 1,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "question": "What is the difference between try-catch and error-first callbacks in Node.js?",
+        "options": {
+          "A": "try-catch is used for synchronous code, while error-first callbacks are used for asynchronous code",
+          "B": "try-catch is used for asynchronous code, while error-first callbacks are used for synchronous code",
+          "C": "try-catch and error-first callbacks are used interchangeably",
+          "D": "try-catch is used for both synchronous and asynchronous code"
+        },
+        "correct": "A",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 2,
+        "skill": "Node.js",
+        "difficulty": "hard",
+        "question": "What is the correct way to handle a promise that is rejected with an error in a try-catch block?",
+        "options": {
+          "A": "try { promise.then(() => {}); } catch (error) { console.log(error); }",
+          "B": "try { promise.then(() => {}); } catch (error) { reject(error); }",
+          "C": "promise.then(() => {}).catch((error) => { console.log(error); })",
+          "D": "promise.then(() => {}).catch((error) => { reject(error); })"
+        },
+        "correct": "C",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "const promise = new Promise((resolve, reject) => {\n  reject(new Error('Test error'))\n});\ntry {\n  promise.then(() => {}\n)\n} catch (error) {\n  console.log(error)\n}"
+      },
+      {
+        "id": 3,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "question": "What is the purpose of the 'dependencies' and 'devDependencies' fields in a package.json file?",
+        "options": {
+          "A": "dependencies are used for production dependencies, while devDependencies are used for development dependencies",
+          "B": "dependencies are used for development dependencies, while devDependencies are used for production dependencies",
+          "C": "dependencies and devDependencies are used interchangeably",
+          "D": "dependencies are used for both production and development dependencies"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 4,
+        "skill": "Node.js",
+        "difficulty": "hard",
+        "question": "What is the risk of using the 'require' function to load a module in Node.js?",
+        "options": {
+          "A": "The risk of a denial-of-service attack",
+          "B": "The risk of a remote code execution vulnerability",
+          "C": "The risk of a cross-site scripting attack",
+          "D": "The risk of a buffer overflow attack"
+        },
+        "correct": "B",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "const module = require('module-name');\nmodule.someFunction();"
+      },
+      {
+        "id": 5,
+        "skill": "Node.js",
+        "difficulty": "medium",
+        "question": "What is the difference between the 'fs.readFileSync' and 'fs.readFile' functions in Node.js?",
+        "options": {
+          "A": "fs.readFileSync reads the file synchronously, while fs.readFile reads the file asynchronously",
+          "B": "fs.readFileSync reads the file asynchronously, while fs.readFile reads the file synchronously",
+          "C": "fs.readFileSync and fs.readFile are used interchangeably",
+          "D": "fs.readFileSync is used for synchronous code, while fs.readFile is used for asynchronous code"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 6,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "question": "What is the correct way to optimize a MongoDB query that uses the '$or' operator?",
+        "options": {
+          "A": "Use the '$or' operator with an index on the field",
+          "B": "Use the '$or' operator with a compound index on the fields",
+          "C": "Use the '$or' operator with a single index on the fields",
+          "D": "Use the '$or' operator without an index"
+        },
+        "correct": "B",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "db.collection.find({ $or: [{ field1: 'value1' }, { field2: 'value2' }] })"
+      },
+      {
+        "id": 7,
+        "skill": "MongoDB",
+        "difficulty": "medium",
+        "question": "What is the purpose of the '$lookup' aggregation stage in MongoDB?",
+        "options": {
+          "A": "To join two collections based on a common field",
+          "B": "To join two collections based on a common value",
+          "C": "To merge two collections into a single collection",
+          "D": "To remove a field from a collection"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 8,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "question": "What is the risk of using the 'db.collection.updateMany' method without specifying the 'multi' option?",
+        "options": {
+          "A": "The risk of updating multiple documents",
+          "B": "The risk of updating a single document",
+          "C": "The risk of inserting a new document",
+          "D": "The risk of removing a document"
+        },
+        "correct": "A",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "db.collection.updateMany({ field: 'value' }, { $set: { newField: 'newValue' } })"
+      },
+      {
+        "id": 9,
+        "skill": "MongoDB",
+        "difficulty": "medium",
+        "question": "What is the difference between the 'find' and 'findOne' methods in MongoDB?",
+        "options": {
+          "A": "find returns a cursor, while findOne returns a single document",
+          "B": "find returns a single document, while findOne returns a cursor",
+          "C": "find and findOne are used interchangeably",
+          "D": "find is used for synchronous code, while findOne is used for asynchronous code"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 10,
+        "skill": "MongoDB",
+        "difficulty": "hard",
+        "question": "What is the correct way to create a compound index on multiple fields in MongoDB?",
+        "options": {
+          "A": "Use the 'createIndex' method with a single index on the fields",
+          "B": "Use the 'createIndex' method with a compound index on the fields",
+          "C": "Use the 'createIndex' method with a single index on the first field and a compound index on the second field",
+          "D": "Use the 'createIndex' method without specifying the fields"
+        },
+        "correct": "B",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "db.collection.createIndex({ field1: 1, field2: 1 })"
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the difference between the 'this' keyword and the 'bind' method in JavaScript?",
+        "options": {
+          "A": "this refers to the current object, while bind refers to the context of the function",
+          "B": "this refers to the context of the function, while bind refers to the current object",
+          "C": "this and bind are used interchangeably",
+          "D": "this is used for synchronous code, while bind is used for asynchronous code"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the correct way to handle a promise that is rejected with an error in a try-catch block?",
+        "options": {
+          "A": "try { promise.then(() => {}); } catch (error) { console.log(error); }",
+          "B": "try { promise.then(() => {}); } catch (error) { reject(error); }",
+          "C": "promise.then(() => {}).catch((error) => { console.log(error); })",
+          "D": "promise.then(() => {}).catch((error) => { reject(error); })"
+        },
+        "correct": "C",
+        "user_selected": "C",
+        "is_correct": true,
+        "has_code": true,
+        "code_snippet": "const promise = new Promise((resolve, reject) => {\n  reject(new Error('Test error'))\n});\ntry {\n  promise.then(() => {}\n)\n} catch (error) {\n  console.log(error)\n}"
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of the 'typeof' operator in JavaScript?",
+        "options": {
+          "A": "To check the type of a variable",
+          "B": "To check the value of a variable",
+          "C": "To check the length of a string",
+          "D": "To check the existence of a property"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 14,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the risk of using the 'var' keyword to declare a variable in JavaScript?",
+        "options": {
+          "A": "The risk of memory leak",
+          "B": "The risk of variable hoisting",
+          "C": "The risk of function scope",
+          "D": "The risk of block scope"
+        },
+        "correct": "A",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "var variable = 'value';"
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the difference between a closure and a function in JavaScript?",
+        "options": {
+          "A": "A closure is a function that has access to its own scope, while a function is a block of code that performs a specific task",
+          "B": "A closure is a block of code that performs a specific task, while a function is a function that has access to its own scope",
+          "C": "A closure and a function are used interchangeably",
+          "D": "A closure is used for synchronous code, while a function is used for asynchronous code"
+        },
+        "correct": "A",
+        "user_selected": "A",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      }
+    ],
+    "quiz_score": 53,
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "Python",
+          "original_bullet_suggestion": "Built scalable APIs",
+          "optimized_bullet_suggestion": "Developed and deployed high-performance APIs using Python, leveraging asynchronous programming and concurrency to increase API throughput by 30%",
+          "impact_metric": "30% API throughput increase"
+        },
+        {
+          "skill": "SQL",
+          "original_bullet_suggestion": "Designed reproducible pipeline",
+          "optimized_bullet_suggestion": "Designed and optimized database schema using SQL, reducing query execution time by 40% and improving data consistency across systems",
+          "impact_metric": "40% query execution time reduction"
+        },
+        {
+          "skill": "PostgreSQL",
+          "original_bullet_suggestion": "Implemented audit logging",
+          "optimized_bullet_suggestion": "Configured and integrated PostgreSQL database for scalable data storage, ensuring 99.99% uptime and 50% reduction in data retrieval latency",
+          "impact_metric": "50% data retrieval latency reduction"
+        },
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Developed backend APIs",
+          "optimized_bullet_suggestion": "Designed and implemented RESTful APIs using Python and PostgreSQL, achieving 95% API success rate and 20% reduction in API latency",
+          "impact_metric": "20% API latency reduction"
+        },
+        {
+          "skill": "Redis",
+          "original_bullet_suggestion": "Built real-time systems",
+          "optimized_bullet_suggestion": "Integrated Redis in-memory data store for high-performance caching, achieving 80% reduction in database queries and 30% improvement in system responsiveness",
+          "impact_metric": "30% system responsiveness improvement"
+        }
+      ]
+    },
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "You've touched on token blacklisting, which is a good approach for revoking tokens across all tabs. However, token blacklisting can be complex to implement and maintain, especially at scale. Can you think of any potential drawbacks or edge cases with this approach, such as handling concurrent requests or dealing with expired tokens that are still in the blacklist?"
+        },
+        {
+          "role": "user",
+          "content": "token blacklisting is done when for ex we want to use the functionlity of log out from all tabs, in this we put the jwt in a blacklist in the db, the next time someone logs in the jwt doesnt match and the db has it has blacklisted and thus we are logged out"
+        },
+        {
+          "role": "user",
+          "content": "dar gaya?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Aggressive upskilling in Node.js, MongoDB, JavaScript, Python, SQL, PostgreSQL, REST APIs, and Redis to become a Backend Engineer in 6-12 months.",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete upskilling in Node.js, MongoDB, JavaScript, Python, SQL, PostgreSQL, REST APIs, and Redis",
+            "Gain 1-2 years of experience in a related role",
+            "Get 2-3 job offers as a Backend Engineer"
+          ],
+          "immediate_actions": [
+            "Take online courses to learn Python, SQL, PostgreSQL, REST APIs, and Redis",
+            "Join online communities to network with Backend Engineers"
+          ],
+          "target_roles": [
+            "Backend Engineer",
+            "Full Stack Engineer"
+          ],
+          "skills_to_acquire": [
+            "Python",
+            "SQL",
+            "PostgreSQL",
+            "REST APIs",
+            "Redis"
+          ],
+          "salary_range": {
+            "india_lpa": "40-60",
+            "global_usd": "52000-78000"
+          },
+          "interview_readiness_score": 70,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth in Node.js, MongoDB, JavaScript, and related skills to become a Backend Engineer in 1-2 years.",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Gain 1-2 years of experience in a related role",
+            "Take on additional responsibilities and projects",
+            "Get 1-2 job offers as a Backend Engineer"
+          ],
+          "immediate_actions": [
+            "Look for job openings in related roles and apply",
+            "Network with professionals in the industry"
+          ],
+          "target_roles": [
+            "Backend Engineer",
+            "DevOps Engineer"
+          ],
+          "skills_to_acquire": [
+            "Docker",
+            "Kubernetes"
+          ],
+          "salary_range": {
+            "india_lpa": "30-50",
+            "global_usd": "31000-52000"
+          },
+          "interview_readiness_score": 50,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leverage existing strengths in Node.js, MongoDB, and JavaScript to become a DevOps Engineer in 6-12 months.",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Take online courses to learn Docker and Kubernetes",
+            "Gain 1-2 years of experience in a related role",
+            "Get 1-2 job offers as a DevOps Engineer"
+          ],
+          "immediate_actions": [
+            "Take online courses to learn Docker and Kubernetes",
+            "Join online communities to network with DevOps Engineers"
+          ],
+          "target_roles": [
+            "DevOps Engineer",
+            "Cloud Engineer"
+          ],
+          "skills_to_acquire": [
+            "Docker",
+            "Kubernetes"
+          ],
+          "salary_range": {
+            "india_lpa": "40-60",
+            "global_usd": "52000-78000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "b8af252bbbf7d3e95f3349e0a19e62f3",
+      "target_role": "Backend Engineer",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "Python",
+          "goal": "Basic Python programming and data structures",
+          "daily_tasks": [
+            "Mon: Complete Python basics course on Codecademy (https://www.codecademy.com/learn/learn-python-3)",
+            "Tue: Practice Python exercises on LeetCode (https://leetcode.com/)",
+            "Wed: Learn Python data structures on Real Python (https://realpython.com/python-data-structures/)",
+            "Thu: Implement a Python script to automate a task (e.g., renaming files)",
+            "Fri: Review Python basics and data structures"
+          ],
+          "resources": [
+            {
+              "name": "Python Basics",
+              "platform": "Codecademy",
+              "url": "https://www.google.com/search?q=Python%20Basics%20Codecademy%20course",
+              "type": "course"
+            },
+            {
+              "name": "Python Exercises",
+              "platform": "LeetCode",
+              "url": "https://www.google.com/search?q=Python%20Exercises%20LeetCode%20course",
+              "type": "practice"
+            },
+            {
+              "name": "Python Data Structures",
+              "platform": "Real Python",
+              "url": "https://www.google.com/search?q=Python%20Data%20Structures%20Real%20Python%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Python Script to Automate Task",
+            "description": "Create a Python script to automate a task (e.g., renaming files)",
+            "tech_used": [
+              "Python"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "SQL",
+          "goal": "Basic SQL queries and database concepts",
+          "daily_tasks": [
+            "Mon: Complete SQL basics course on DataCamp (https://www.datacamp.com/tracks/sql-fundamentals)",
+            "Tue: Practice SQL queries on SQL Fiddle (http://sqlfiddle.com/)",
+            "Wed: Learn SQL database concepts on Tutorials Point (https://www.tutorialspoint.com/sql/index.htm)",
+            "Thu: Implement a SQL query to analyze a dataset (e.g., employee salaries)",
+            "Fri: Review SQL basics and database concepts"
+          ],
+          "resources": [
+            {
+              "name": "SQL Basics",
+              "platform": "DataCamp",
+              "url": "https://www.google.com/search?q=SQL%20Basics%20DataCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "SQL Queries",
+              "platform": "SQL Fiddle",
+              "url": "https://www.google.com/search?q=SQL%20Queries%20SQL%20Fiddle%20course",
+              "type": "practice"
+            },
+            {
+              "name": "SQL Database Concepts",
+              "platform": "Tutorials Point",
+              "url": "https://www.google.com/search?q=SQL%20Database%20Concepts%20Tutorials%20Point%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "SQL Query to Analyze Dataset",
+            "description": "Create a SQL query to analyze a dataset (e.g., employee salaries)",
+            "tech_used": [
+              "SQL"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "PostgreSQL",
+          "goal": "Basic PostgreSQL setup and queries",
+          "daily_tasks": [
+            "Mon: Set up a PostgreSQL database on a local machine (e.g., using Docker)",
+            "Tue: Learn PostgreSQL basics on PostgreSQL Tutorial (https://www.postgresqltutorial.com/)",
+            "Wed: Practice PostgreSQL queries on PostgreSQL Tutorial (https://www.postgresqltutorial.com/)",
+            "Thu: Implement a PostgreSQL database schema (e.g., for a simple blog)",
+            "Fri: Review PostgreSQL basics and queries"
+          ],
+          "resources": [
+            {
+              "name": "PostgreSQL Setup",
+              "platform": "Docker",
+              "url": "https://developer.mozilla.org/en-US/search?q=PostgreSQL%20Setup",
+              "type": "practice"
+            },
+            {
+              "name": "PostgreSQL Basics",
+              "platform": "PostgreSQL Tutorial",
+              "url": "https://www.google.com/search?q=PostgreSQL%20Basics%20PostgreSQL%20Tutorial%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "PostgreSQL Database Schema",
+            "description": "Create a PostgreSQL database schema (e.g., for a simple blog)",
+            "tech_used": [
+              "PostgreSQL"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "REST APIs",
+          "goal": "Basic REST API concepts and implementation",
+          "daily_tasks": [
+            "Mon: Learn REST API basics on RESTful API Tutorial (https://restfulapi.net/)",
+            "Tue: Implement a simple REST API using Flask (https://flask.palletsprojects.com/en/2.0.x/)",
+            "Wed: Practice REST API queries on Postman (https://www.postman.com/)",
+            "Thu: Implement a REST API endpoint to retrieve data (e.g., from a PostgreSQL database)",
+            "Fri: Review REST API basics and implementation"
+          ],
+          "resources": [
+            {
+              "name": "REST API Basics",
+              "platform": "RESTful API Tutorial",
+              "url": "https://www.google.com/search?q=REST%20API%20Basics%20RESTful%20API%20Tutorial%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Flask Tutorial",
+              "platform": "Flask Documentation",
+              "url": "https://developer.mozilla.org/en-US/search?q=Flask%20Tutorial",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple REST API",
+            "description": "Create a simple REST API using Flask",
+            "tech_used": [
+              "Flask",
+              "REST API"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Redis",
+          "goal": "Basic Redis concepts and implementation",
+          "daily_tasks": [
+            "Mon: Learn Redis basics on Redis Documentation (https://redis.io/documentation)",
+            "Tue: Implement a simple Redis cache using Flask (https://flask.palletsprojects.com/en/2.0.x/)",
+            "Wed: Practice Redis queries on Redis Desktop Manager (https://redisdesktop.com/)",
+            "Thu: Implement a Redis data structure (e.g., a set or a hash)",
+            "Fri: Review Redis basics and implementation"
+          ],
+          "resources": [
+            {
+              "name": "Redis Basics",
+              "platform": "Redis Documentation",
+              "url": "https://developer.mozilla.org/en-US/search?q=Redis%20Basics",
+              "type": "doc"
+            },
+            {
+              "name": "Flask Tutorial",
+              "platform": "Flask Documentation",
+              "url": "https://developer.mozilla.org/en-US/search?q=Flask%20Tutorial",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Simple Redis Cache",
+            "description": "Create a simple Redis cache using Flask",
+            "tech_used": [
+              "Flask",
+              "Redis"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "JavaScript",
+          "goal": "Advanced JavaScript concepts and implementation",
+          "daily_tasks": [
+            "Mon: Learn advanced JavaScript concepts on JavaScript Tutorial (https://www.w3schools.com/js/)",
+            "Tue: Implement a JavaScript module using ES6 syntax (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)",
+            "Wed: Practice JavaScript exercises on HackerRank (https://www.hackerrank.com/)",
+            "Thu: Implement a JavaScript library (e.g., Lodash)",
+            "Fri: Review advanced JavaScript concepts and implementation"
+          ],
+          "resources": [
+            {
+              "name": "JavaScript Tutorial",
+              "platform": "W3Schools",
+              "url": "https://www.google.com/search?q=JavaScript%20Tutorial%20W3Schools%20course",
+              "type": "doc"
+            },
+            {
+              "name": "ES6 Modules",
+              "platform": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/search?q=ES6%20Modules",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "JavaScript Module",
+            "description": "Create a JavaScript module using ES6 syntax",
+            "tech_used": [
+              "JavaScript",
+              "ES6"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "Python",
+          "goal": "Advanced Python concepts and implementation",
+          "daily_tasks": [
+            "Mon: Learn advanced Python concepts on Python Tutorial (https://docs.python.org/3/tutorial/index.html)",
+            "Tue: Implement a Python decorator using Python syntax (https://docs.python.org/3/glossary.html#term-decorator)",
+            "Wed: Practice Python exercises on LeetCode (https://leetcode.com/)",
+            "Thu: Implement a Python library (e.g., NumPy)",
+            "Fri: Review advanced Python concepts and implementation"
+          ],
+          "resources": [
+            {
+              "name": "Python Tutorial",
+              "platform": "Python Documentation",
+              "url": "https://developer.mozilla.org/en-US/search?q=Python%20Tutorial",
+              "type": "doc"
+            },
+            {
+              "name": "Python Decorators",
+              "platform": "Python Documentation",
+              "url": "https://developer.mozilla.org/en-US/search?q=Python%20Decorators",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Python Decorator",
+            "description": "Create a Python decorator using Python syntax",
+            "tech_used": [
+              "Python",
+              "Decorator"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "Integration",
+          "goal": "Integrate skills learned throughout the roadmap",
+          "daily_tasks": [
+            "Mon: Integrate Python, SQL, and REST API skills to create a data-driven web application",
+            "Tue: Integrate JavaScript and Redis skills to create a real-time web application",
+            "Wed: Practice integrating skills learned throughout the roadmap",
+            "Thu: Implement a final project that integrates all skills learned throughout the roadmap",
+            "Fri: Review and refine final project"
+          ],
+          "resources": [],
+          "checkpoint_project": {
+            "name": "Final Project",
+            "description": "Create a final project that integrates all skills learned throughout the roadmap",
+            "tech_used": [
+              "Python",
+              "SQL",
+              "REST API",
+              "JavaScript",
+              "Redis"
+            ]
+          }
+        }
+      ]
+    },
+    "courses": {
+      "recommendations": [
+        {
+          "skill": "Python",
+          "reason": "missing",
+          "course_title": "Python Bootcamp: Go from Beginner to Advanced",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Python%20Bootcamp%3A%20Go%20from%20Beginner%20to%20Advanced",
+          "duration": "24 hours",
+          "level": "Beginner to Intermediate",
+          "description": "Learn the basics of Python, data structures, file I/O, object-oriented programming, and more."
+        },
+        {
+          "skill": "SQL",
+          "reason": "missing",
+          "course_title": "SQL Fundamentals",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=SQL%20Fundamentals",
+          "duration": "4 months",
+          "level": "Beginner",
+          "description": "Understand the basics of SQL, including data types, queries, and database design."
+        },
+        {
+          "skill": "PostgreSQL",
+          "reason": "missing",
+          "course_title": "PostgreSQL Tutorial",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=PostgreSQL%20Tutorial%20course",
+          "duration": "10 hours",
+          "level": "Beginner",
+          "description": "Learn the basics of PostgreSQL, including installation, database design, and querying."
+        },
+        {
+          "skill": "REST APIs",
+          "reason": "missing",
+          "course_title": "RESTful API Design",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=RESTful%20API%20Design",
+          "duration": "4 weeks",
+          "level": "Intermediate",
+          "description": "Understand how to design and implement RESTful APIs, including API security and testing."
+        },
+        {
+          "skill": "Redis",
+          "reason": "missing",
+          "course_title": "Redis Essentials",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Redis%20Essentials",
+          "duration": "8 hours",
+          "level": "Beginner",
+          "description": "Learn the basics of Redis, including data types, operations, and use cases."
+        }
+      ]
+    }
   }
 }

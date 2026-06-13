@@ -414,10 +414,30 @@ export default function ResultsPage() {
           </div>
 
           {/* SIMULATION TAB */}
+          {activeTab === 'simulation' && loadingSimulation && (
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '80px 20px', gap: 18 }}>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                style={{
+                  width: 48, height: 48,
+                  border: '4px solid rgba(163, 82, 0, 0.08)',
+                  borderTopColor: 'var(--indigo)',
+                  borderRadius: '50%',
+                }}
+              />
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
+                AI is simulating your career growth trajectories...
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
+                Modeling Accelerated, Steady, and Pivot paths in Indian LPA
+              </p>
+            </div>
+          )}
           {simulations && (
             <div
               className="print-show-block"
-              style={{ display: activeTab === 'simulation' ? 'block' : 'none' }}
+              style={{ display: activeTab === 'simulation' && !loadingSimulation ? 'block' : 'none' }}
             >
               <h3 className="print-only" style={{ marginBottom: 16, fontFamily: 'Space Grotesk', fontSize: '1.3rem', color: 'var(--text-primary)', borderBottom: '2px solid var(--border)', paddingBottom: 8 }}>
                 Career Simulator Paths
@@ -427,10 +447,30 @@ export default function ResultsPage() {
           )}
 
           {/* ROADMAP TAB */}
+          {activeTab === 'roadmap' && loadingRoadmap && (
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '80px 20px', gap: 18 }}>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                style={{
+                  width: 48, height: 48,
+                  border: '4px solid rgba(163, 82, 0, 0.08)',
+                  borderTopColor: 'var(--indigo)',
+                  borderRadius: '50%',
+                }}
+              />
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
+                AI is constructing your personalized learning roadmap...
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
+                Creating week-by-week focus modules, daily tasks, and mini projects
+              </p>
+            </div>
+          )}
           {roadmap && (
             <div
               className="print-show-block"
-              style={{ display: activeTab === 'roadmap' ? 'block' : 'none' }}
+              style={{ display: activeTab === 'roadmap' && !loadingRoadmap ? 'block' : 'none' }}
             >
               <h3 className="print-only" style={{ marginBottom: 16, fontFamily: 'Space Grotesk', fontSize: '1.3rem', color: 'var(--text-primary)', borderBottom: '2px solid var(--border)', paddingBottom: 8 }}>
                 Personalized Learning Roadmap
@@ -440,10 +480,30 @@ export default function ResultsPage() {
           )}
 
           {/* COURSES TAB */}
+          {activeTab === 'courses' && loadingCourses && (
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '80px 20px', gap: 18 }}>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                style={{
+                  width: 48, height: 48,
+                  border: '4px solid rgba(163, 82, 0, 0.08)',
+                  borderTopColor: 'var(--indigo)',
+                  borderRadius: '50%',
+                }}
+              />
+              <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
+                AI is curating target course recommendations...
+              </p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
+                Finding platforms, durations, and skill alignments for your gaps
+              </p>
+            </div>
+          )}
           {courses && (
             <div
               className="print-show-block"
-              style={{ display: activeTab === 'courses' ? 'block' : 'none' }}
+              style={{ display: activeTab === 'courses' && !loadingCourses ? 'block' : 'none' }}
             >
               <h3 className="print-only" style={{ marginBottom: 16, fontFamily: 'Space Grotesk', fontSize: '1.3rem', color: 'var(--text-primary)', borderBottom: '2px solid var(--border)', paddingBottom: 8 }}>
                 Skill Gap Course Recommendations
