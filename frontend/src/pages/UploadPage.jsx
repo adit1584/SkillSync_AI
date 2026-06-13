@@ -64,7 +64,7 @@ export default function UploadPage() {
   const {
     sessionId, setSessionId, setResumeData, setGapAnalysis,
     setTargetRole, setCustomRole, setCompressedProfile, setRecommendedRoles,
-    mode, setMode, saveActiveState, resumeData
+    mode, setMode, saveActiveState, resumeData, resetAnalysis
   } = useApp();
 
   // Wizard active step: 1 (Mode), 2 (Target), 3 (Upload), 4 (Overview)
@@ -238,7 +238,7 @@ export default function UploadPage() {
   };
 
   const handleReset = () => {
-    setMode(null);
+    resetAnalysis();
     setInternalPhase('select_mode');
     setStepNumber(1);
     setSelectedFile(null);

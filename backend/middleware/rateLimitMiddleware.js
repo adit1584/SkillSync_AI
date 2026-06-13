@@ -9,7 +9,7 @@ const LIMITS = {
   recommend: { windowMs: 24 * 60 * 60 * 1000, max: 50, message: 'Career recommendation limit exceeded. Max 50 requests per day.' },
   quiz: { windowMs: 24 * 60 * 60 * 1000, max: 30, message: 'Quiz generation limit exceeded. Max 30 requests per day.' },
   interview: { windowMs: 24 * 60 * 60 * 1000, max: 30, message: 'Interview generation limit exceeded. Max 30 requests per day.' },
-  simulate: { windowMs: 24 * 60 * 60 * 1000, max: 20, message: 'Career simulation limit exceeded. Max 20 requests per day.' },
+  simulate: { windowMs: 24 * 60 * 60 * 1000, max: 2000, message: 'Career simulation limit exceeded. Max 2000 requests per day.' },
   jobsearch: { windowMs: 24 * 60 * 60 * 1000, max: 50, message: 'Live job search limit exceeded. Max 50 requests per day.' },
   ats: { windowMs: 24 * 60 * 60 * 1000, max: 100, message: 'ATS analysis limit exceeded. Max 100 requests per day.' }
 };

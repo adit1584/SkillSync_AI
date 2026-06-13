@@ -43,7 +43,7 @@ export default function Signup() {
       const res = await signup({ name, email, password, confirmPassword, phone });
       if (res.success) {
         await setAuthTokens(res.token, res.refreshToken, res.user);
-        navigate('/upload');
+        navigate('/');
       } else {
         setError(res.error || 'Registration failed.');
       }

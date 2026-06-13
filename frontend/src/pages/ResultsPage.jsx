@@ -30,7 +30,8 @@ export default function ResultsPage() {
     quizSkipped, setQuizSkipped, interviewSkipped, setInterviewSkipped,
     interviewScore, setInterviewScore, saveActiveState,
     customRole, setCustomRole, jobDescription, setJobDescription,
-    targetOpportunityOption, setTargetOpportunityOption, setGapAnalysis, setTargetRole
+    targetOpportunityOption, setTargetOpportunityOption, setGapAnalysis, setTargetRole,
+    resetAnalysis
   } = useApp();
 
   const [activeTab, setActiveTab] = useState('onboarding');
@@ -397,6 +398,7 @@ export default function ResultsPage() {
           <div style={{ marginTop: 'auto', borderTop: '1px solid var(--border)', paddingTop: 20, display: 'grid', gap: 10 }}>
             <Link
               to="/upload"
+              onClick={resetAnalysis}
               className="btn btn-ghost"
               style={{ padding: '8px 12px', fontSize: '0.8rem', justifyContent: 'center', textDecoration: 'underline' }}
             >
@@ -1004,6 +1006,7 @@ export default function ResultsPage() {
                 </button>
                 <Link
                   to="/upload"
+                  onClick={resetAnalysis}
                   className="btn btn-ghost"
                   style={{ padding: '8px 12px', fontSize: '0.8rem', justifyContent: 'center', textDecoration: 'underline' }}
                 >

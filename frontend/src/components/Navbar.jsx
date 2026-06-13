@@ -12,17 +12,17 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const hideNavbarPaths = ['/login', '/signup', '/forgot-password', '/forget-password'];
-  const currentPath = location.pathname.toLowerCase().trim().replace(/\/$/, '');
-  if (hideNavbarPaths.includes(currentPath)) {
-    return null;
-  }
-
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handler);
     return () => window.removeEventListener('scroll', handler);
   }, []);
+
+  const hideNavbarPaths = ['/login', '/signup', '/forgot-password', '/forget-password'];
+  const currentPath = location.pathname.toLowerCase().trim().replace(/\/$/, '');
+  if (hideNavbarPaths.includes(currentPath)) {
+    return null;
+  }
 
   const navLinks = [
     { label: 'Home', to: '/' },

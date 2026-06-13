@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Send, Terminal, Cpu, User, AlertCircle, RefreshCw, Award, 
@@ -17,6 +17,14 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
   const [consented, setConsented] = useState(false);
   const [cameraStream, setCameraStream] = useState(null);
   const [cameraAllowed, setCameraAllowed] = useState(false);
+  const [videoStatus, setVideoStatus] = useState({
+    hasStream: false,
+    trackState: 'unknown',
+    trackLabel: '',
+    readyState: 0,
+    paused: true,
+    playError: ''
+  });
   
   // Standard chat states
   const [loading, setLoading] = useState(false);
@@ -51,6 +59,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
   const analyserRef = useRef(null);
   const animationFrameRef = useRef(null);
   const canvasRef = useRef(null);
+  const mediaStreamRef = useRef(null);
 
   // Gaze & Presence variables (Refs to avoid React re-render lags)
   const facePresenceTime = useRef(0);
@@ -85,6 +94,100 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
       feedRef.current.scrollTop = feedRef.current.scrollHeight;
     }
   }, [messages, chatting]);
+
+  // Bind camera stream to the video element when both are ready
+  useEffect(() => {
+    const video = videoElementRef.current;
+    if (video && cameraStream) {
+      console.log('[InterviewSimulator] Attaching stream to video element');
+      // Ensure attribute configuration
+      video.setAttribute('playsinline', 'true');
+      video.setAttribute('muted', 'true');
+      video.muted = true;
+      video.playsInline = true;
+      video.srcObject = cameraStream;
+      
+      const playVideo = async () => {
+        try {
+          await video.play();
+          setVideoStatus(prev => ({ ...prev, playError: '' }));
+          console.log('[InterviewSimulator] Video started playing');
+        } catch (err) {
+          console.warn('[InterviewSimulator] Video play failed:', err.message);
+          setVideoStatus(prev => ({ ...prev, playError: err.message }));
+        }
+      };
+      playVideo();
+    }
+  }, [cameraStream]);
+
+  // Periodically check video element state and track status
+  useEffect(() => {
+    if (!consented) return;
+    const interval = setInterval(() => {
+      const video = videoElementRef.current;
+      const stream = cameraStream;
+      if (video && stream) {
+        const videoTrack = stream.getVideoTracks()[0];
+        setVideoStatus(prev => ({
+          ...prev,
+          hasStream: true,
+          trackState: videoTrack ? videoTrack.readyState : 'no-track',
+          trackLabel: videoTrack ? videoTrack.label : '',
+          readyState: video.readyState,
+          paused: video.paused
+        }));
+      } else {
+        setVideoStatus(prev => ({
+          ...prev,
+          hasStream: !!stream,
+          trackState: video ? 'no-stream' : 'no-video-element'
+        }));
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [consented, cameraStream]);
+
+  // Helper to re-request and refresh the camera feed without resetting the interview
+  const refreshCameraFeed = async () => {
+    try {
+      setVideoStatus(prev => ({ ...prev, playError: 'Refreshing hardware stream...' }));
+      
+      // Stop old tracks first
+      if (cameraStream) {
+        cameraStream.getTracks().forEach(track => track.stop());
+      }
+      if (mediaStreamRef.current) {
+        mediaStreamRef.current.getTracks().forEach(track => track.stop());
+      }
+
+      // Re-request device constraints
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { width: 320, height: 240, frameRate: 15 },
+        audio: true
+      });
+
+      setCameraStream(stream);
+      mediaStreamRef.current = stream;
+
+      // Reconnect Web Audio API source
+      if (audioContextRef.current && analyserRef.current) {
+        try {
+          const source = audioContextRef.current.createMediaStreamSource(stream);
+          source.connect(analyserRef.current);
+        } catch (audioErr) {
+          console.warn('[refresh] Audio re-link failed:', audioErr.message);
+        }
+      }
+
+      setVideoStatus(prev => ({ ...prev, playError: '' }));
+      console.log('[InterviewSimulator] Stream re-acquired successfully');
+    } catch (err) {
+      console.error('[refresh] Error refreshing camera hardware:', err.message);
+      setVideoStatus(prev => ({ ...prev, playError: `Error: ${err.message}` }));
+      setError(`Camera hardware refresh failed: ${err.message}. If another app is occupying the camera, please close it and retry.`);
+    }
+  };
 
   // Log events on the timeline
   const logEvent = (eventText) => {
@@ -132,12 +235,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
       audioContextRef.current = audioCtx;
       analyserRef.current = analyser;
 
-      // 3. Mount stream to local preview video tag
-      setTimeout(() => {
-        if (videoElementRef.current) {
-          videoElementRef.current.srcObject = stream;
-        }
-      }, 300);
+      // 3. Mount stream (will be bound via useEffect once video element renders)
 
       // 4. Load MediaPipe Face Landmarker script
       const script = document.createElement('script');
@@ -258,7 +356,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
       let faceCurrentlyVisible = true;
       let currentGaze = 'Looking At Screen';
 
-      if (mediaPipeActive && faceLandmarkerRef.current && videoElementRef.current && videoElementRef.current.readyState === 4) {
+      if (mediaPipeActive && faceLandmarkerRef.current && videoElementRef.current && videoElementRef.current.readyState >= 2) {
         try {
           const results = faceLandmarkerRef.current.detectForVideo(videoElementRef.current, Date.now());
           if (results && results.faceLandmarks && results.faceLandmarks.length > 0) {
@@ -398,20 +496,27 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
 
       // Draw standard bounding/face box or status details on preview canvas
       if (canvasRef.current && videoElementRef.current) {
-        const ctx = canvasRef.current.getContext('2d');
-        ctx.clearRect(0, 0, 120, 90);
-        ctx.drawImage(videoElementRef.current, 0, 0, 120, 90);
-        if (faceCurrentlyVisible) {
-          ctx.strokeStyle = '#006c49'; // Emerald green face box
-          ctx.lineWidth = 2;
-          ctx.strokeRect(30, 20, 60, 50);
-          ctx.fillStyle = '#006c49';
-          ctx.font = '7px monospace';
-          ctx.fillText(currentGaze, 4, 82);
-        } else {
-          ctx.fillStyle = '#ba1a1a'; // Red visibility alert
-          ctx.font = '8px monospace';
-          ctx.fillText('NO FACE DETECTED', 18, 50);
+        try {
+          const ctx = canvasRef.current.getContext('2d');
+          ctx.clearRect(0, 0, 120, 90);
+          if (videoElementRef.current.readyState < 2) {
+            ctx.fillStyle = 'var(--text-muted)';
+            ctx.font = '8px monospace';
+            ctx.fillText('CONNECTING FEED...', 18, 50);
+          } else if (faceCurrentlyVisible) {
+            ctx.strokeStyle = '#006c49'; // Emerald green face box
+            ctx.lineWidth = 2;
+            ctx.strokeRect(30, 20, 60, 50);
+            ctx.fillStyle = '#006c49';
+            ctx.font = '7px monospace';
+            ctx.fillText(currentGaze, 4, 82);
+          } else {
+            ctx.fillStyle = '#ba1a1a'; // Red visibility alert
+            ctx.font = '8px monospace';
+            ctx.fillText('NO FACE DETECTED', 18, 50);
+          }
+        } catch (err) {
+          console.warn('[InterviewSimulator] Canvas draw error:', err.message);
         }
       }
 
@@ -429,6 +534,9 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
     if (cameraStream) {
       cameraStream.getTracks().forEach(track => track.stop());
     }
+    if (mediaStreamRef.current) {
+      mediaStreamRef.current.getTracks().forEach(track => track.stop());
+    }
     if (audioContextRef.current) {
       audioContextRef.current.close().catch(() => {});
     }
@@ -442,7 +550,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
     return () => {
       stopAnalyticsTracking();
     };
-  }, [cameraStream]);
+  }, []);
 
   // Handle Conclusion and Save Analytics
   const handleConcludeInterview = async (finalScorecard) => {
@@ -515,7 +623,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
       const improvementsList = [];
 
       if (screenFocusScore >= 85) strengthsList.push('Maintained excellent screen focus.');
-      if (computedFocusScore >= 85) strengthsList.push('Minimal browser distractions or tab switches.');
+      if (focusScore >= 85) strengthsList.push('Minimal browser distractions or tab switches.');
       if (speakingRatio >= 0.4 && speakingRatio <= 0.7) strengthsList.push('Consistent engagement and balanced pauses.');
       if (facePresencePercent >= 90) strengthsList.push('Consistent screen presence during evaluations.');
 
@@ -649,6 +757,23 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
             </span>
           </div>
         </div>
+
+        {error && (
+          <div style={{ 
+            display: 'flex', 
+            gap: 8, 
+            padding: 12, 
+            background: 'var(--error-bg)', 
+            border: '1px solid var(--error-border)', 
+            borderRadius: 'var(--radius-sm)', 
+            color: 'var(--error)', 
+            fontSize: '0.78rem',
+            marginBottom: 16
+          }}>
+            <AlertCircle size={14} style={{ flexShrink: 0, marginTop: 1 }} />
+            <span>{error}</span>
+          </div>
+        )}
 
         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 12 }}>
           <button 
@@ -935,6 +1060,27 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
             lineHeight: 1.5,
           }}
         >
+          {error && (
+            <div style={{
+              background: 'rgba(186, 26, 26, 0.1)',
+              border: '1px solid rgba(186, 26, 26, 0.3)',
+              borderRadius: 'var(--radius-sm)',
+              padding: '12px',
+              color: '#ff8a8a',
+              fontFamily: 'monospace',
+              fontSize: '0.8rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              marginBottom: 8
+            }}>
+              <AlertCircle size={16} style={{ flexShrink: 0 }} />
+              <div>
+                <strong>[SYSTEM ERROR]</strong> {error}
+              </div>
+            </div>
+          )}
+
           {/* Intro logs */}
           <div style={{ color: 'var(--text-muted)' }}>
             <div>[system] Connecting to local AI agent session...</div>
@@ -1071,17 +1217,7 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
         display: 'flex',
         flexDirection: 'column',
         gap: 16,
-        height: 520
       }}>
-        {/* Hidden video element to capture stream */}
-        <video 
-          ref={videoElementRef} 
-          autoPlay 
-          playsInline 
-          muted 
-          style={{ display: 'none' }} 
-        />
-
         {/* Webcam Card */}
         <div className="card" style={{
           padding: 16,
@@ -1095,23 +1231,26 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
           position: 'relative',
           overflow: 'hidden'
         }}>
-          {/* Custom canvas to draw preview with markers */}
-          <canvas
-            ref={canvasRef}
-            width={120}
-            height={90}
+
+
+          {/* Native video element showing live camera feed directly */}
+          <video 
+            ref={videoElementRef} 
+            autoPlay 
+            playsInline 
+            muted 
             style={{
               width: '100%',
-              maxHeight: '160px',
+              height: '160px',
               borderRadius: 'var(--radius-sm)',
               background: '#0d1527',
               border: '1.5px solid var(--border)',
               objectFit: 'cover'
-            }}
+            }} 
           />
 
           {/* Active Audio amplitude meter */}
-          <div style={{ width: '100%' }}>
+          <div style={{ width: '100%', marginBottom: 4 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.74rem', color: 'var(--text-secondary)', marginBottom: 4 }}>
               <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                 <Volume2 size={12} /> Voice Amplitude
@@ -1128,6 +1267,39 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
               />
             </div>
           </div>
+
+          {/* Reset / Reconnect Camera button */}
+          <button 
+            type="button"
+            onClick={refreshCameraFeed}
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 6,
+              padding: '8px 12px',
+              fontSize: '0.78rem',
+              fontWeight: 600,
+              background: 'var(--bg-primary)',
+              border: '1px solid var(--border)',
+              borderRadius: 'var(--radius-sm)',
+              color: 'var(--text-primary)',
+              cursor: 'pointer',
+              transition: 'background 0.2s, border-color 0.2s'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = 'var(--bg-accent-light)';
+              e.currentTarget.style.borderColor = 'var(--primary)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'var(--bg-primary)';
+              e.currentTarget.style.borderColor = 'var(--border)';
+            }}
+          >
+            <RefreshCw size={12} />
+            <span>Reset / Reconnect Camera</span>
+          </button>
         </div>
 
         {/* Live Telemetry Statistics Card */}

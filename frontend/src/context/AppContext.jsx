@@ -78,6 +78,53 @@ export function AppProvider({ children }) {
     localStorage.removeItem('skillsync_refresh_token');
   }, []);
 
+  // Reset analysis related states and save cleared state to DB
+  const resetAnalysis = useCallback(async () => {
+    setMode(null);
+    setResumeData(null);
+    setRecommendedRoles(null);
+    setTargetRole(null);
+    setCustomRole(null);
+    setJobDescription(null);
+    setTargetOpportunityOption(null);
+    setGapAnalysis(null);
+    setCompressedProfile(null);
+    setQuizData(null);
+    setQuizResults(null);
+    setQuizAnswers([]);
+    setCurrentQuizIdx(0);
+    setQuizSkipped(false);
+    setInterviewSkipped(false);
+    setInterviewHistory([]);
+    setInterviewConcluded(false);
+    setInterviewScore(null);
+    setSimulations(null);
+    setRoadmap(null);
+    setCourses(null);
+    setCareerReadinessScore(null);
+
+    const activeToken = localStorage.getItem('skillsync_token');
+    if (activeToken) {
+      try {
+        await saveSessionState({
+          mode: null,
+          selected_role: null,
+          custom_role: null,
+          job_description: null,
+          target_opportunity_option: null,
+          quiz_answers: [],
+          current_quiz_idx: 0,
+          quiz_skipped: false,
+          interview_skipped: false,
+          interview_history: [],
+          interview_concluded: false
+        });
+      } catch (err) {
+        console.warn('[resetAnalysis] Failed to save cleared state:', err.message);
+      }
+    }
+  }, []);
+
   // Restore session state from DB
   const restoreSessionState = useCallback(async () => {
     try {
@@ -306,7 +353,8 @@ export function AppProvider({ children }) {
       saveActiveState,
 
       resetSession,
-      restoreSessionState
+      restoreSessionState,
+      resetAnalysis
     }}>
       {children}
     </AppContext.Provider>

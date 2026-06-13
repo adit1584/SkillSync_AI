@@ -29,7 +29,7 @@ export default function Login() {
       const res = await login({ email, password });
       if (res.success) {
         await setAuthTokens(res.token, res.refreshToken, res.user);
-        navigate('/upload');
+        navigate('/');
       } else {
         setError(res.error || 'Invalid credentials.');
       }

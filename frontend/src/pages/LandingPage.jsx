@@ -61,7 +61,7 @@ const FAQS = [
 ];
 
 export default function LandingPage() {
-  const { user } = useApp();
+  const { user, resetAnalysis } = useApp();
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
@@ -123,7 +123,12 @@ export default function LandingPage() {
                     Go to Workspace
                     <ArrowRight size={16} />
                   </Link>
-                  <Link to="/upload" className="btn btn-secondary" style={{ padding: '14px 30px', fontSize: '0.95rem' }}>
+                  <Link 
+                    to="/upload" 
+                    onClick={resetAnalysis} 
+                    className="btn btn-secondary" 
+                    style={{ padding: '14px 30px', fontSize: '0.95rem' }}
+                  >
                     New Analysis
                   </Link>
                 </>

@@ -1,141 +1,162 @@
 # SkillSync AI 🚀
-### AI-Powered Skill Gap Analyzer · Resume Intelligence · Career Simulator
+### AI-Powered Career Intelligence · Resume Parsing · Video-Guarded Mock Interview Simulator · Interactive Job Matching
 
-> *"Bridging the Gap Between Skills Listed and Skills Proven"*
-> 
-> **Team DevForge · LNCT Group of Colleges**
+SkillSync AI is a premium, privacy-focused career intelligence platform designed to bridge the gap between "skills listed" on a resume and "skills proven" in assessments. By utilizing local processing, client-side browser telemetry, and efficient LLM reasoning, SkillSync AI offers a low-cost, high-impact career development journey.
 
 ---
 
-## ✨ Features
+## 🌟 Key Features
 
-| Feature | Description |
-|---------|-------------|
-| 📄 **Resume Analysis** | AI extracts skills, projects, certifications from PDF |
-| 🎯 **Skill Gap Analysis** | Local matching — zero AI cost |
-| 🧠 **Adaptive Quiz** ⭐ | 15 AI-generated MCQs tuned to your experience level |
-| 🚀 **Career Simulation** | 3 paths: Accelerated / Steady / Pivot with LPA salary data |
-| 🗺️ **Learning Roadmap** | Week-by-week plan with real resources & projects |
-| ⚡ **Token Optimization** | 93% token reduction — ~₹0.15 per user session |
+### 1. 📹 Video-Guarded AI Mock Interview Simulator
+An advanced client-side behavioral and technical mock interview panel featuring real-time telemetry tracking:
+* **Interactive AI Terminal**: Practice natural-language technical mock interviews via a custom simulated terminal.
+* **Client-Side Eye & Gaze Tracking**: Powered by **MediaPipe Face Landmarker**, the app analyzes eye movement, face presence, and blink rates locally in the browser to compute screen focus.
+* **Voice Activity Detection**: Utilizes the **Web Audio API** to capture speech-to-silence ratios and voice amplitude without uploading audio data.
+* **Anti-Distraction Monitor**: Tracks browser tab switches and window blur events to calculate tab focus scores.
+* **Live Developer Diagnostics**: Includes a real-time hardware tracking panel overlay showing stream status, track health, device label, video element readyState, and playback error logs for easy troubleshooting.
+* **Composite Readiness Reports**: Generates deep-dive scorecards blending technical correctness, speech style, screen presence, and attention metrics.
+
+### 2. 🔍 Job Search & ATS Resume Matcher
+Bridge the gap between your profile and live job markets:
+* **Live Job Board**: Search real-time career opportunities directly from the application workspace.
+* **ATS Job Description Matcher**: Copy-paste any job description and compare it against your uploaded resume.
+* **Keyword Gap Analysis**: The engine parses your profile and the target role description, identifying missing keywords, critical match scores, and formatting improvements.
+* **Resume Optimizer**: Suggests concrete bullet points, active verbs, and structural improvements to optimize ATS parsers.
+
+### 3. 🗺️ Dynamic 30-Day Learning Roadmap
+A custom structured study plan to help you bridge your technical skill gaps:
+* **Personalized Timeline**: Tailored week-by-week checkpoints based on your assessments.
+* **Real Resources & Projects**: Features specific online resource links, reading materials, and hands-on project ideas.
+* **MongoDB Roadmaps Cache**: Uses a database cache manager to prevent duplicate API generation, leading to instant reloads.
+
+### 4. 🧠 Token & Cost Optimization
+* **93% Token Reduction**: Employs a custom token compressor that shrinks raw resumes and job description data, bringing costs down to **~₹0.15 per user session** using Groq LLM API.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Tech |
-|-------|------|
-| Frontend | React.js (Vite) · Framer Motion · Recharts |
-| Styling | Vanilla CSS · Dark/Light Mode |
-| Backend | Node.js · Express.js |
-| AI Layer | Groq API (llama-3.3-70b-versatile) |
-| Database | MongoDB Atlas |
-| PDF Parsing | pdf-parse |
+| Layer | Technology |
+|---|---|
+| **Frontend** | React.js (Vite) · Framer Motion (Animations) · Recharts · Lucide Icons |
+| **Telemetry / AI Vision** | Google MediaPipe Face Landmarker (WebAssembly) · Web Audio API |
+| **Styling** | Vanilla CSS · Curated harmonized CSS variables (Dark/Light Modes) |
+| **Backend** | Node.js · Express.js |
+| **Database** | MongoDB Atlas / In-Memory Fallback |
+| **AI Layer** | Groq API (`llama-3.3-70b-versatile`) |
+| **PDF Parsing** | pdf-parse |
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+
-- Groq API key → [console.groq.com](https://console.groq.com)
-- MongoDB Atlas URI → [cloud.mongodb.com](https://cloud.mongodb.com)
-
-### 1. Setup Backend
-
-```bash
-cd backend
-copy .env.example .env
-# Edit .env and fill in GROQ_API_KEY and MONGODB_URI
-npm install
-npm run dev
-```
-
-Backend runs on: `http://localhost:5000`
-
-### 2. Setup Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Frontend runs on: `http://localhost:3000`
+* **Node.js** (v18+)
+* **Groq API Key** (Get one at [console.groq.com](https://console.groq.com))
+* **MongoDB Atlas Connection URI** (Fallback to in-memory datasets is automatically enabled if disconnected)
 
 ---
 
-## 📁 Project Structure
+### 1. Backend Setup
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Copy the environment template:
+   ```bash
+   copy .env.example .env
+   ```
+3. Edit `.env` and enter your API keys:
+   ```env
+   PORT=5000
+   GROQ_API_KEY=your_groq_api_key_here
+   MONGODB_URI=your_mongodb_atlas_uri_here
+   JWT_SECRET=your_jwt_signing_secret_here
+   ```
+4. Install dependencies and start the development server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+   *Backend runs on:* `http://localhost:5000`
+
+---
+
+### 2. Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+   *Frontend runs on:* `http://localhost:5173`
+
+---
+
+## 📁 Repository Structure
 
 ```
-SkillSync AI/
+SkillSync_AI/
 ├── backend/
 │   ├── data/
-│   │   └── roleDatasets.json       # 4 role skill datasets
-│   ├── services/
-│   │   ├── pdfParser.js            # PDF text extraction
-│   │   ├── skillMatcher.js         # Local gap analysis (0 tokens)
-│   │   ├── tokenCompressor.js      # 93% token reduction
-│   │   ├── cacheManager.js         # MongoDB roadmap cache
-│   │   └── aiService.js            # Groq API wrapper
+│   │   └── roleDatasets.json        # Pre-loaded baseline datasets for skill comparison
+│   ├── middleware/
+│   │   ├── authMiddleware.js        # JWT access gatekeeper
+│   │   └── rateLimitMiddleware.js   # Local request limits
 │   ├── models/
-│   │   ├── User.js                 # Session model
-│   │   └── QuizResult.js           # Quiz scores model
+│   │   ├── User.js                  # User profile and session schema
+│   │   └── QuizResult.js            # Skill assessment scores
 │   ├── routes/
-│   │   ├── upload.js               # POST /api/upload
-│   │   ├── quiz.js                 # POST /api/quiz/generate|submit
-│   │   ├── simulate.js             # POST /api/simulate
-│   │   └── roadmap.js              # POST /api/roadmap
-│   ├── server.js
-│   └── .env                        # YOUR KEYS GO HERE
+│   │   ├── auth.js                  # Signup, login, and token refresh
+│   │   ├── upload.js                # Resume processing (pdf-parse)
+│   │   ├── quiz.js                  # Dynamic AI questions generation
+│   │   ├── simulate.js              # Career scenario mockups
+│   │   ├── roadmap.js               # Structured 30-day roadmap builder
+│   │   └── session.js               # Global session state persistence
+│   └── server.js                    # Express application entrypoint
 │
 └── frontend/
-    └── src/
-        ├── components/
-        │   ├── Navbar.jsx
-        │   ├── ResumeUploader.jsx
-        │   ├── QuizEngine.jsx       ⭐
-        │   ├── SkillRadarChart.jsx
-        │   ├── RoadmapTimeline.jsx
-        │   └── CareerDashboard.jsx
-        ├── pages/
-        │   ├── LandingPage.jsx
-        │   ├── UploadPage.jsx
-        │   ├── QuizPage.jsx         ⭐
-        │   └── ResultsPage.jsx
-        ├── context/
-        │   ├── ThemeContext.jsx
-        │   └── AppContext.jsx
-        └── lib/
-            └── api.js
+    ├── src/
+    │   ├── components/
+    │   │   ├── ATSJobMatcher.jsx        # ATS scan comparison interface
+    │   │   ├── ATSResumeOptimizer.jsx   # Profile optimization suggestions
+    │   │   ├── InterviewSimulator.jsx   # Live webcam telemetry simulator
+    │   │   ├── LiveJobBoard.jsx         # Search and save live jobs board
+    │   │   └── QuizEngine.jsx           # Assessment engine
+    │   ├── pages/
+    │   │   ├── LandingPage.jsx          # Feature directory & role hub
+    │   │   ├── ResultsPage.jsx          # Roadmap dashboard & assessment timeline
+    │   │   └── UploadPage.jsx           # Resume onboarding console
+    │   ├── context/
+    │   │   ├── AppContext.jsx           # Global state (resets, auth, session tracking)
+    │   │   └── ThemeContext.jsx         # Aesthetic toggles
+    │   └── lib/
+    │       └── api.js                   # Axios interceptors & backend API client
 ```
 
 ---
 
-## 🎯 Target Roles
+## 💰 Cost Analysis (Per User Session)
 
-- **Frontend Developer** — React, JS, TypeScript, Next.js, Redux
-- **Backend Engineer** — Node.js, Python, SQL, MongoDB, Express.js
-- **Fullstack Developer** — React, Node.js, SQL, MongoDB, TypeScript
-- **AI Engineer** — Python, PyTorch, LLMs, LangChain, FastAPI
-- **Data Analyst** — SQL, Power BI, Python, Tableau, Statistics
-- **Cloud Engineer** — AWS, GCP, Docker, Kubernetes, Terraform
-- **DevOps Engineer** — Docker, Kubernetes, CI/CD, Linux, Terraform
-
----
-
-## 💰 Cost Per User Session
-
-| Operation | Method | Tokens | Cost |
-|-----------|--------|--------|------|
-| PDF Parsing | Local pdf-parse | 0 | ₹0 |
-| Skill Extraction | Groq AI | ~600 | ~₹0.04 |
-| Skill Matching | Local JS | 0 | ₹0 |
-| Quiz Generation | Groq AI | ~800 | ~₹0.05 |
-| Quiz Scoring | Local JS | 0 | ₹0 |
-| Career Simulation | Groq AI | ~600 | ~₹0.04 |
-| Roadmap | Groq AI + Cache | ~500 | ~₹0.03 |
-| **Total** | | **~2,500** | **~₹0.15** |
+| Action | Execution Method | Token Count | Cost (INR) |
+|---|---|---|---|
+| **Onboarding PDF Parse** | Local (Client/Server CPU) | 0 | ₹0.00 |
+| **ATS Profile Extract** | Groq AI Service | ~600 | ~₹0.04 |
+| **Baseline Gap Match** | Local JS Algorithms | 0 | ₹0.00 |
+| **Interactive Assessment** | Groq AI Service | ~800 | ~₹0.05 |
+| **Interview Simulator** | MediaPipe (Local WASM) | 0 | ₹0.00 |
+| **Career Sim Scenario** | Groq AI Service | ~600 | ~₹0.04 |
+| **30-Day Roadmap** | Groq AI + MongoDB Cache | ~500 | ~₹0.03 |
+| **Total Session Cost** | | **~2,500** | **~₹0.15** |
 
 ---
 
-*SkillSync AI · Team DevForge*
+*SkillSync AI · Premium Career Intelligence Platform*
