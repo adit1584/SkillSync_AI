@@ -9180,5 +9180,3760 @@
         }
       ]
     }
+  },
+  "9c5a4a6e-8eae-4078-8a5c-dba73d5968e5": {
+    "session_id": "9c5a4a6e-8eae-4078-8a5c-dba73d5968e5",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Front-end Developer & Designer",
+          "company": "Metrops (Smart India Hackathon 2025)",
+          "duration": "",
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "role": "",
+          "company": "Stock Market Prediction Application",
+          "duration": "",
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java",
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Deloitte - Data Analytics Job Simulation"
+        },
+        {
+          "name": "Infosys Springboard Data Structure and Algorithms Using Java Certificate"
+        },
+        {
+          "name": "MERN Stack Development and DSA - Sheryians Coding School."
+        },
+        {
+          "name": "Introduction to Modern AI - Cisco Networking Academy"
+        },
+        {
+          "name": "Google Cloud Generative AI Certificate"
+        }
+      ],
+      "domains": [
+        "Exploring new programming languages and frameworks",
+        "MERN stack development",
+        "Artificial Intelligence and Machine learning"
+      ]
+    },
+    "target_role": "Frontend Developer",
+    "gap_analysis": {
+      "target_role": "Frontend Developer",
+      "match_score": 50,
+      "ats_score": 38,
+      "matched_skills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "missing_skills": [
+        "REST APIs",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Webpack"
+      ],
+      "nice_to_have_gaps": [
+        "GraphQL",
+        "Jest",
+        "Cypress",
+        "Storybook",
+        "Docker",
+        "CI/CD",
+        "Figma",
+        "Vue.js",
+        "Angular"
+      ],
+      "nice_to_have_matched": [
+        "Tailwind CSS"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+        "top_companies": [
+          "Google",
+          "Microsoft",
+          "Flipkart",
+          "Swiggy",
+          "Razorpay",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "JavaScript fundamentals",
+          "React lifecycle",
+          "CSS layout",
+          "Performance optimization",
+          "Browser APIs"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "4-8",
+          "junior": "8-15",
+          "mid": "15-30",
+          "senior": "30-60"
+        },
+        "avg_salary_usd": {
+          "fresher": "50k-75k",
+          "junior": "75k-100k",
+          "mid": "100k-140k",
+          "senior": "140k-200k"
+        }
+      }
+    },
+    "created_at": "2026-06-12T17:08:27.295Z",
+    "quiz_result": {
+      "questions": [
+        {
+          "id": 1,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Components",
+          "question": "What is the main difference between a functional and a class component in React?",
+          "options": {
+            "A": "Functional components are more efficient than class components.",
+            "B": "Functional components can only contain JSX, while class components can contain both JSX and JavaScript logic.",
+            "C": "Class components are more efficient than functional components.",
+            "D": "Functional components can only be used for rendering lists, while class components can be used for rendering individual elements."
+          },
+          "correct": "B",
+          "explanation": ""
+        },
+        {
+          "id": 2,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Components",
+          "question": "What is the purpose of the `key` prop in a list of components in React?",
+          "options": {
+            "A": "To specify the order of the components in the list.",
+            "B": "To specify the color of the components in the list.",
+            "C": "To help React keep track of the components in the list and optimize rendering.",
+            "D": "To specify the font size of the components in the list."
+          },
+          "correct": "C",
+          "explanation": ""
+        },
+        {
+          "id": 3,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "State and Props",
+          "question": "What is the difference between `state` and `props` in a React component?",
+          "options": {
+            "A": "State is used to store data that changes over time, while props are used to store data that does not change.",
+            "B": "State is used to store data that does not change over time, while props are used to store data that changes.",
+            "C": "State is used to store data that is passed from a parent component, while props are used to store data that is stored locally.",
+            "D": "State is used to store data that is stored locally, while props are used to store data that is passed from a parent component."
+          },
+          "correct": "D",
+          "explanation": ""
+        },
+        {
+          "id": 4,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Lifecycle Methods",
+          "question": "What is the purpose of the `componentDidMount` lifecycle method in React?",
+          "options": {
+            "A": "To handle user input.",
+            "B": "To render the component for the first time.",
+            "C": "To handle data fetching and API calls.",
+            "D": "To handle component updates."
+          },
+          "correct": "C",
+          "explanation": ""
+        },
+        {
+          "id": 5,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Hooks",
+          "question": "What is the purpose of the `useState` hook in React?",
+          "options": {
+            "A": "To handle user input.",
+            "B": "To render the component for the first time.",
+            "C": "To store and update state in a functional component.",
+            "D": "To handle component updates."
+          },
+          "correct": "C",
+          "explanation": ""
+        },
+        {
+          "id": 6,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Variables and Data Types",
+          "question": "What is the difference between `let` and `const` in JavaScript?",
+          "options": {
+            "A": "Let is used to declare a variable that can be reassigned, while const is used to declare a variable that cannot be reassigned.",
+            "B": "Let is used to declare a variable that cannot be reassigned, while const is used to declare a variable that can be reassigned.",
+            "C": "Let is used to declare a variable that can be reassigned, while const is used to declare a variable that can be reassigned.",
+            "D": "Let is used to declare a variable that cannot be reassigned, while const is used to declare a variable that cannot be reassigned."
+          },
+          "correct": "D",
+          "explanation": ""
+        },
+        {
+          "id": 7,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Variables and Data Types",
+          "question": "What is the purpose of the `typeof` operator in JavaScript?",
+          "options": {
+            "A": "To check the data type of a variable.",
+            "B": "To check the value of a variable.",
+            "C": "To declare a variable.",
+            "D": "To assign a value to a variable."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 8,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the difference between an arrow function and a regular function in JavaScript?",
+          "options": {
+            "A": "Arrow functions are more efficient than regular functions.",
+            "B": "Arrow functions can only be used as event handlers, while regular functions can be used anywhere.",
+            "C": "Arrow functions are more concise than regular functions.",
+            "D": "Arrow functions can only be used as function expressions, while regular functions can be used as function declarations."
+          },
+          "correct": "C",
+          "explanation": ""
+        },
+        {
+          "id": 9,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Arrays and Loops",
+          "question": "What is the purpose of the `forEach` method in JavaScript?",
+          "options": {
+            "A": "To iterate over an array and perform an action on each element.",
+            "B": "To create a new array by mapping over an existing array.",
+            "C": "To filter an array and return a new array with only the elements that match a condition.",
+            "D": "To sort an array in ascending order."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 10,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Arrays and Loops",
+          "question": "What is the purpose of the `map` method in JavaScript?",
+          "options": {
+            "A": "To iterate over an array and perform an action on each element.",
+            "B": "To create a new array by mapping over an existing array.",
+            "C": "To filter an array and return a new array with only the elements that match a condition.",
+            "D": "To sort an array in ascending order."
+          },
+          "correct": "B",
+          "explanation": ""
+        },
+        {
+          "id": 11,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Variables and Data Types",
+          "question": "What is the difference between `int` and `float` in Python?",
+          "options": {
+            "A": "Int is used to store whole numbers, while float is used to store decimal numbers.",
+            "B": "Int is used to store decimal numbers, while float is used to store whole numbers.",
+            "C": "Int is used to store strings, while float is used to store numbers.",
+            "D": "Int is used to store numbers, while float is used to store strings."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 12,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Variables and Data Types",
+          "question": "What is the purpose of the `type` function in Python?",
+          "options": {
+            "A": "To check the data type of a variable.",
+            "B": "To check the value of a variable.",
+            "C": "To declare a variable.",
+            "D": "To assign a value to a variable."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 13,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the difference between a function and a method in Python?",
+          "options": {
+            "A": "A function is a block of code that can be executed multiple times, while a method is a function that is part of a class.",
+            "B": "A function is a block of code that is part of a class, while a method is a function that can be executed multiple times.",
+            "C": "A function is a block of code that can be executed multiple times, while a method is a block of code that is part of a class.",
+            "D": "A function is a block of code that is part of a class, while a method is a block of code that can be executed multiple times."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 14,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Arrays and Loops",
+          "question": "What is the purpose of the `for` loop in Python?",
+          "options": {
+            "A": "To iterate over a list and perform an action on each element.",
+            "B": "To create a new list by mapping over an existing list.",
+            "C": "To filter a list and return a new list with only the elements that match a condition.",
+            "D": "To sort a list in ascending order."
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 15,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Arrays and Loops",
+          "question": "What is the purpose of the `enumerate` function in Python?",
+          "options": {
+            "A": "To iterate over a list and return both the index and value of each element.",
+            "B": "To create a new list by mapping over an existing list.",
+            "C": "To filter a list and return a new list with only the elements that match a condition.",
+            "D": "To sort a list in ascending order."
+          },
+          "correct": "A",
+          "explanation": ""
+        }
+      ],
+      "quiz_id": "e3b7f8c5-9c8b-4f4d-8b8f-1d3c6a7b8cde",
+      "per_skill_scores": [
+        {
+          "skill": "React",
+          "score": 40,
+          "correct": 2,
+          "total": 5,
+          "proficiency": "Beginner"
+        },
+        {
+          "skill": "JavaScript",
+          "score": 40,
+          "correct": 2,
+          "total": 5,
+          "proficiency": "Beginner"
+        },
+        {
+          "skill": "Python",
+          "score": 20,
+          "correct": 1,
+          "total": 5,
+          "proficiency": "Needs Work"
+        }
+      ],
+      "overall_score": 33,
+      "review": [
+        {
+          "id": 1,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the main difference between a functional and a class component in React?",
+          "options": {
+            "A": "Functional components are more efficient than class components.",
+            "B": "Functional components can only contain JSX, while class components can contain both JSX and JavaScript logic.",
+            "C": "Class components are more efficient than functional components.",
+            "D": "Functional components can only be used for rendering lists, while class components can be used for rendering individual elements."
+          },
+          "correct": "B",
+          "explanation": "",
+          "user_selected": "D",
+          "is_correct": false
+        },
+        {
+          "id": 2,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `key` prop in a list of components in React?",
+          "options": {
+            "A": "To specify the order of the components in the list.",
+            "B": "To specify the color of the components in the list.",
+            "C": "To help React keep track of the components in the list and optimize rendering.",
+            "D": "To specify the font size of the components in the list."
+          },
+          "correct": "C",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 3,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the difference between `state` and `props` in a React component?",
+          "options": {
+            "A": "State is used to store data that changes over time, while props are used to store data that does not change.",
+            "B": "State is used to store data that does not change over time, while props are used to store data that changes.",
+            "C": "State is used to store data that is passed from a parent component, while props are used to store data that is stored locally.",
+            "D": "State is used to store data that is stored locally, while props are used to store data that is passed from a parent component."
+          },
+          "correct": "D",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 4,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `componentDidMount` lifecycle method in React?",
+          "options": {
+            "A": "To handle user input.",
+            "B": "To render the component for the first time.",
+            "C": "To handle data fetching and API calls.",
+            "D": "To handle component updates."
+          },
+          "correct": "C",
+          "explanation": "",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 5,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `useState` hook in React?",
+          "options": {
+            "A": "To handle user input.",
+            "B": "To render the component for the first time.",
+            "C": "To store and update state in a functional component.",
+            "D": "To handle component updates."
+          },
+          "correct": "C",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 6,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the difference between `let` and `const` in JavaScript?",
+          "options": {
+            "A": "Let is used to declare a variable that can be reassigned, while const is used to declare a variable that cannot be reassigned.",
+            "B": "Let is used to declare a variable that cannot be reassigned, while const is used to declare a variable that can be reassigned.",
+            "C": "Let is used to declare a variable that can be reassigned, while const is used to declare a variable that can be reassigned.",
+            "D": "Let is used to declare a variable that cannot be reassigned, while const is used to declare a variable that cannot be reassigned."
+          },
+          "correct": "D",
+          "explanation": "",
+          "user_selected": "D",
+          "is_correct": true
+        },
+        {
+          "id": 7,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `typeof` operator in JavaScript?",
+          "options": {
+            "A": "To check the data type of a variable.",
+            "B": "To check the value of a variable.",
+            "C": "To declare a variable.",
+            "D": "To assign a value to a variable."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "A",
+          "is_correct": true
+        },
+        {
+          "id": 8,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the difference between an arrow function and a regular function in JavaScript?",
+          "options": {
+            "A": "Arrow functions are more efficient than regular functions.",
+            "B": "Arrow functions can only be used as event handlers, while regular functions can be used anywhere.",
+            "C": "Arrow functions are more concise than regular functions.",
+            "D": "Arrow functions can only be used as function expressions, while regular functions can be used as function declarations."
+          },
+          "correct": "C",
+          "explanation": "",
+          "user_selected": "D",
+          "is_correct": false
+        },
+        {
+          "id": 9,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `forEach` method in JavaScript?",
+          "options": {
+            "A": "To iterate over an array and perform an action on each element.",
+            "B": "To create a new array by mapping over an existing array.",
+            "C": "To filter an array and return a new array with only the elements that match a condition.",
+            "D": "To sort an array in ascending order."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 10,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `map` method in JavaScript?",
+          "options": {
+            "A": "To iterate over an array and perform an action on each element.",
+            "B": "To create a new array by mapping over an existing array.",
+            "C": "To filter an array and return a new array with only the elements that match a condition.",
+            "D": "To sort an array in ascending order."
+          },
+          "correct": "B",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 11,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the difference between `int` and `float` in Python?",
+          "options": {
+            "A": "Int is used to store whole numbers, while float is used to store decimal numbers.",
+            "B": "Int is used to store decimal numbers, while float is used to store whole numbers.",
+            "C": "Int is used to store strings, while float is used to store numbers.",
+            "D": "Int is used to store numbers, while float is used to store strings."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "A",
+          "is_correct": true
+        },
+        {
+          "id": 12,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `type` function in Python?",
+          "options": {
+            "A": "To check the data type of a variable.",
+            "B": "To check the value of a variable.",
+            "C": "To declare a variable.",
+            "D": "To assign a value to a variable."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 13,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the difference between a function and a method in Python?",
+          "options": {
+            "A": "A function is a block of code that can be executed multiple times, while a method is a function that is part of a class.",
+            "B": "A function is a block of code that is part of a class, while a method is a function that can be executed multiple times.",
+            "C": "A function is a block of code that can be executed multiple times, while a method is a block of code that is part of a class.",
+            "D": "A function is a block of code that is part of a class, while a method is a block of code that can be executed multiple times."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 14,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `for` loop in Python?",
+          "options": {
+            "A": "To iterate over a list and perform an action on each element.",
+            "B": "To create a new list by mapping over an existing list.",
+            "C": "To filter a list and return a new list with only the elements that match a condition.",
+            "D": "To sort a list in ascending order."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 15,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the `enumerate` function in Python?",
+          "options": {
+            "A": "To iterate over a list and return both the index and value of each element.",
+            "B": "To create a new list by mapping over an existing list.",
+            "C": "To filter a list and return a new list with only the elements that match a condition.",
+            "D": "To sort a list in ascending order."
+          },
+          "correct": "A",
+          "explanation": "",
+          "user_selected": "C",
+          "is_correct": false
+        }
+      ]
+    },
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, welcome to the frontend developer interview. My name is SkillSync AI, and I'll be conducting this session today. Let's get started with a question. Suppose you're building a simple e-commerce website using React.js. How would you implement a responsive layout for a product card component using CSS, considering different screen sizes and devices?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Aggressive upskilling to become a proficient Frontend Developer in 6-12 months",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Upskill in TypeScript, Next.js, and Redux within 3 months",
+            "Develop a personal project showcasing skills in React, JavaScript, and Python within 6 months",
+            "Get hired as a Frontend Developer within 9-12 months"
+          ],
+          "immediate_actions": [
+            "Focus on learning TypeScript, Next.js, and Redux through online courses and projects",
+            "Network with experienced Frontend Developers to gain insights and advice"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "Full Stack Developer"
+          ],
+          "skills_to_acquire": [
+            "TypeScript",
+            "Next.js",
+            "Redux",
+            "Webpack"
+          ],
+          "salary_range": {
+            "india_lpa": "8-12",
+            "global_usd": "10,000 - 15,000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth to become a proficient Frontend Developer in 1-2 years",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Gain 6-12 months of experience as a Junior Developer in a related field",
+            "Upskill in React, JavaScript, and Python within 1 year",
+            "Get hired as a Frontend Developer within 1.5-2 years"
+          ],
+          "immediate_actions": [
+            "Look for entry-level positions in related fields such as Junior Developer or QA Engineer",
+            "Continuously learn and improve skills in React, JavaScript, and Python"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "Full Stack Developer"
+          ],
+          "skills_to_acquire": [
+            "TypeScript",
+            "Next.js",
+            "Redux",
+            "Webpack"
+          ],
+          "salary_range": {
+            "india_lpa": "6-10",
+            "global_usd": "8,000 - 12,000"
+          },
+          "interview_readiness_score": 40,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leverage existing strengths to become a Backend Developer in 1-2 years",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Upskill in Python and REST APIs within 6 months",
+            "Gain 6-12 months of experience as a Junior Developer in a related field",
+            "Get hired as a Backend Developer within 1.5-2 years"
+          ],
+          "immediate_actions": [
+            "Focus on learning Python and REST APIs through online courses and projects",
+            "Network with experienced Backend Developers to gain insights and advice"
+          ],
+          "target_roles": [
+            "Backend Developer",
+            "Full Stack Developer"
+          ],
+          "skills_to_acquire": [
+            "Python",
+            "REST APIs"
+          ],
+          "salary_range": {
+            "india_lpa": "7-11",
+            "global_usd": "9,000 - 13,000"
+          },
+          "interview_readiness_score": 50,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "f51144937116e1a4214874b0f7298ef3",
+      "target_role": "Frontend Developer",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "REST APIs",
+          "goal": "Understand REST API fundamentals and implement basic API calls",
+          "daily_tasks": [
+            "Mon: Learn REST API basics (HTTP methods, status codes, request/response bodies)",
+            "Tue: Implement GET requests using Fetch API and Axios",
+            "Wed: Implement POST requests using Fetch API and Axios",
+            "Thu: Learn about API security (authentication, authorization, CORS)",
+            "Fri: Practice implementing REST API calls in a React application"
+          ],
+          "resources": [
+            {
+              "name": "REST API Design and Implementation",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=REST%20API%20Design%20and%20Implementation%20Pluralsight%20course",
+              "type": "course"
+            },
+            {
+              "name": "MDN Web Docs - Fetch API",
+              "platform": "MDN Web Docs",
+              "url": "https://developer.mozilla.org/en-US/search?q=MDN%20Web%20Docs%20-%20Fetch%20API",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Weather App",
+            "description": "Build a simple weather app that fetches data from a public weather API",
+            "tech_used": [
+              "React",
+              "Fetch API"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "TypeScript",
+          "goal": "Understand TypeScript basics and integrate it with React",
+          "daily_tasks": [
+            "Mon: Learn TypeScript basics (types, interfaces, classes)",
+            "Tue: Set up a new React project with TypeScript",
+            "Wed: Learn about type inference and type checking",
+            "Thu: Implement type checking for React components",
+            "Fri: Practice using TypeScript with React Hooks"
+          ],
+          "resources": [
+            {
+              "name": "TypeScript Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=TypeScript%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            },
+            {
+              "name": "TypeScript Documentation",
+              "platform": "TypeScript",
+              "url": "https://www.google.com/search?q=TypeScript%20Documentation%20TypeScript%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Todo List App",
+            "description": "Build a todo list app using React and TypeScript",
+            "tech_used": [
+              "React",
+              "TypeScript"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "Next.js",
+          "goal": "Understand Next.js basics and build a simple blog",
+          "daily_tasks": [
+            "Mon: Learn Next.js basics (pages, routing, getStaticProps)",
+            "Tue: Set up a new Next.js project",
+            "Wed: Learn about server-side rendering and static site generation",
+            "Thu: Implement routing and navigation",
+            "Fri: Practice building a simple blog using Next.js"
+          ],
+          "resources": [
+            {
+              "name": "Next.js Official Tutorial",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20Official%20Tutorial%20Next.js%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Next.js Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=Next.js%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Personal Blog",
+            "description": "Build a simple personal blog using Next.js",
+            "tech_used": [
+              "Next.js",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "Redux",
+          "goal": "Understand Redux basics and integrate it with React",
+          "daily_tasks": [
+            "Mon: Learn Redux basics (actions, reducers, store)",
+            "Tue: Set up a new React project with Redux",
+            "Wed: Learn about Redux middleware and async actions",
+            "Thu: Implement Redux in a React application",
+            "Fri: Practice using Redux with React Hooks"
+          ],
+          "resources": [
+            {
+              "name": "Redux Official Documentation",
+              "platform": "Redux",
+              "url": "https://www.google.com/search?q=Redux%20Official%20Documentation%20Redux%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Redux Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=Redux%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Shopping Cart App",
+            "description": "Build a simple shopping cart app using React and Redux",
+            "tech_used": [
+              "React",
+              "Redux"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Webpack",
+          "goal": "Understand Webpack basics and optimize a React application",
+          "daily_tasks": [
+            "Mon: Learn Webpack basics (modules, chunks, loaders)",
+            "Tue: Set up a new React project with Webpack",
+            "Wed: Learn about code splitting and lazy loading",
+            "Thu: Implement Webpack optimization techniques",
+            "Fri: Practice using Webpack with React"
+          ],
+          "resources": [
+            {
+              "name": "Webpack Official Documentation",
+              "platform": "Webpack",
+              "url": "https://www.google.com/search?q=Webpack%20Official%20Documentation%20Webpack%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Webpack Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=Webpack%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Optimized React App",
+            "description": "Optimize a React application using Webpack",
+            "tech_used": [
+              "React",
+              "Webpack"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "Next.js and Redux Integration",
+          "goal": "Integrate Next.js and Redux in a single application",
+          "daily_tasks": [
+            "Mon: Learn about Next.js and Redux integration",
+            "Tue: Set up a new Next.js project with Redux",
+            "Wed: Learn about server-side rendering with Redux",
+            "Thu: Implement Redux in a Next.js application",
+            "Fri: Practice using Next.js and Redux together"
+          ],
+          "resources": [
+            {
+              "name": "Next.js and Redux Integration",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20and%20Redux%20Integration%20Next.js%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Next.js and Redux Tutorial",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=Next.js%20and%20Redux%20Tutorial%20FreeCodeCamp%20course",
+              "type": "article"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "E-commerce Website",
+            "description": "Build an e-commerce website using Next.js and Redux",
+            "tech_used": [
+              "Next.js",
+              "Redux",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "TypeScript and Redux Integration",
+          "goal": "Integrate TypeScript and Redux in a single application",
+          "daily_tasks": [
+            "Mon: Learn about TypeScript and Redux integration",
+            "Tue: Set up a new React project with TypeScript and Redux",
+            "Wed: Learn about type checking for Redux actions and reducers",
+            "Thu: Implement TypeScript in a Redux application",
+            "Fri: Practice using TypeScript and Redux together"
+          ],
+          "resources": [
+            {
+              "name": "TypeScript and Redux Integration",
+              "platform": "Redux",
+              "url": "https://www.google.com/search?q=TypeScript%20and%20Redux%20Integration%20Redux%20course",
+              "type": "doc"
+            },
+            {
+              "name": "TypeScript and Redux Tutorial",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=TypeScript%20and%20Redux%20Tutorial%20FreeCodeCamp%20course",
+              "type": "article"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Todo List App with TypeScript and Redux",
+            "description": "Build a todo list app using React, TypeScript, and Redux",
+            "tech_used": [
+              "React",
+              "TypeScript",
+              "Redux"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "Final Project",
+          "goal": "Build a comprehensive application using all learned skills",
+          "daily_tasks": [
+            "Mon: Plan the final project",
+            "Tue: Set up the project structure",
+            "Wed: Implement the frontend using React, Next.js, and TypeScript",
+            "Thu: Implement the state management using Redux",
+            "Fri: Deploy the application"
+          ],
+          "resources": [
+            {
+              "name": "Create a new React project",
+              "platform": "Create React App",
+              "url": "https://www.google.com/search?q=Create%20a%20new%20React%20project%20Create%20React%20App%20course",
+              "type": "tool"
+            },
+            {
+              "name": "Deploy to Vercel",
+              "platform": "Vercel",
+              "url": "https://www.google.com/search?q=Deploy%20to%20Vercel%20Vercel%20course",
+              "type": "platform"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Personal Portfolio Website",
+            "description": "Build a personal portfolio website using React, Next.js, TypeScript, and Redux",
+            "tech_used": [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Redux"
+            ]
+          }
+        }
+      ]
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Engineered a machine learning-based stock prediction system",
+          "optimized_bullet_suggestion": "Integrated RESTful APIs to fetch and manipulate data, enhancing data-driven decision-making and improving system scalability by 30%",
+          "impact_metric": "30% system scalability improvement"
+        },
+        {
+          "skill": "TypeScript",
+          "original_bullet_suggestion": "Designed and developed a responsive, user-centric interface",
+          "optimized_bullet_suggestion": "Utilized TypeScript to implement robust, maintainable front-end code, reducing bugs by 40% and improving overall code quality",
+          "impact_metric": "40% bug reduction"
+        },
+        {
+          "skill": "Next.js",
+          "original_bullet_suggestion": "Designed and developed a responsive, user-centric interface",
+          "optimized_bullet_suggestion": "Deployed Next.js to streamline front-end development, reducing build times by 50% and improving SEO through optimized routing and server-side rendering",
+          "impact_metric": "50% build time reduction"
+        },
+        {
+          "skill": "Redux",
+          "original_bullet_suggestion": "Engineered a machine learning-based stock prediction system",
+          "optimized_bullet_suggestion": "Implemented Redux to manage global state, improving application performance by 25% and enhancing code maintainability through predictable state management",
+          "impact_metric": "25% application performance improvement"
+        },
+        {
+          "skill": "Webpack",
+          "original_bullet_suggestion": "Designed and developed a responsive, user-centric interface",
+          "optimized_bullet_suggestion": "Configured Webpack to optimize front-end build processes, reducing bundle sizes by 30% and improving application load times",
+          "impact_metric": "30% bundle size reduction"
+        }
+      ]
+    },
+    "courses": {
+      "recommendations": [
+        {
+          "skill": "REST APIs",
+          "reason": "missing",
+          "course_title": "RESTful API Design and Implementation",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=RESTful%20API%20Design%20and%20Implementation",
+          "duration": "4-6 months",
+          "level": "Intermediate",
+          "description": "Learn how to design and implement RESTful APIs using industry-standard tools and techniques."
+        },
+        {
+          "skill": "TypeScript",
+          "reason": "missing | weak",
+          "course_title": "TypeScript Complete Guide",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=TypeScript%20Complete%20Guide",
+          "duration": "15 hours",
+          "level": "Beginner to Intermediate",
+          "description": "Master TypeScript, including compiler options, interfaces, classes, and how to use it with React."
+        },
+        {
+          "skill": "Next.js",
+          "reason": "missing",
+          "course_title": "Building Server-Rendered React Applications with Next.js",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=Building%20Server-Rendered%20React%20Applications%20with%20Next.js",
+          "duration": "4 weeks",
+          "level": "Intermediate",
+          "description": "Learn how to build server-rendered React applications using Next.js, a popular framework for building server-side rendered React applications."
+        },
+        {
+          "skill": "Redux",
+          "reason": "missing",
+          "course_title": "Redux Fundamentals",
+          "platform": "MDN",
+          "url": "https://developer.mozilla.org/en-US/search?q=Redux",
+          "duration": "Self-paced",
+          "level": "Beginner",
+          "description": "Learn the fundamentals of Redux, including how to manage global state and handle side effects in your React applications."
+        },
+        {
+          "skill": "Webpack",
+          "reason": "missing",
+          "course_title": "Webpack: The Complete Guide",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Webpack%3A%20The%20Complete%20Guide",
+          "duration": "12 hours",
+          "level": "Intermediate",
+          "description": "Master Webpack, including how to configure it for your React applications and optimize your bundle size."
+        },
+        {
+          "skill": "React",
+          "reason": "weak",
+          "course_title": "React - The Complete Guide (incl Hooks, React Router, and Redux)",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=React%20-%20The%20Complete%20Guide%20(incl%20Hooks%2C%20React%20Router%2C%20and%20Redux)",
+          "duration": "30 hours",
+          "level": "Beginner to Intermediate",
+          "description": "Master React, including how to use Hooks, React Router, and Redux in your applications."
+        },
+        {
+          "skill": "JavaScript",
+          "reason": "weak",
+          "course_title": "JavaScript: The Advanced Concepts",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=JavaScript%3A%20The%20Advanced%20Concepts",
+          "duration": "12 hours",
+          "level": "Intermediate",
+          "description": "Master advanced JavaScript concepts, including async/await, promises, and the event loop."
+        },
+        {
+          "skill": "Python",
+          "reason": "weak",
+          "course_title": "Python for Everybody",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=Python%20for%20Everybody",
+          "duration": "4-6 months",
+          "level": "Beginner",
+          "description": "Learn the basics of Python programming, including data types, functions, and file input/output."
+        }
+      ]
+    }
+  },
+  "3ccc532b-7de7-4a2d-b35c-b006e5723dcf": {
+    "session_id": "3ccc532b-7de7-4a2d-b35c-b006e5723dcf",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        "Deloitte - Data Analytics Job Simulation",
+        "Infosys Springboard Data Structure and Algorithms Using Java Certificate",
+        "MERN Stack Development and DSA - Sheryians Coding School",
+        "Introduction to Modern AI - Cisco Networking Academy",
+        "Google Cloud Generative AI Certificate"
+      ],
+      "domains": [
+        "Artificial Intelligence",
+        "Machine learning",
+        "MERN stack development"
+      ]
+    },
+    "target_role": "Frontend Developer",
+    "gap_analysis": {
+      "target_role": "Frontend Developer",
+      "match_score": 50,
+      "ats_score": 38,
+      "matched_skills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "missing_skills": [
+        "REST APIs",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Webpack"
+      ],
+      "nice_to_have_gaps": [
+        "GraphQL",
+        "Jest",
+        "Cypress",
+        "Storybook",
+        "Docker",
+        "CI/CD",
+        "Figma",
+        "Vue.js",
+        "Angular"
+      ],
+      "nice_to_have_matched": [
+        "Tailwind CSS"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+        "top_companies": [
+          "Google",
+          "Microsoft",
+          "Flipkart",
+          "Swiggy",
+          "Razorpay",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "JavaScript fundamentals",
+          "React lifecycle",
+          "CSS layout",
+          "Performance optimization",
+          "Browser APIs"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "4-8",
+          "junior": "8-15",
+          "mid": "15-30",
+          "senior": "30-60"
+        },
+        "avg_salary_usd": {
+          "fresher": "50k-75k",
+          "junior": "75k-100k",
+          "mid": "100k-140k",
+          "senior": "140k-200k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T05:36:49.700Z",
+    "quiz_result": {
+      "questions": [
+        {
+          "id": 1,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Components",
+          "question": "What is the purpose of the render method in a React component?",
+          "options": {
+            "A": "To handle user input",
+            "B": "To update the component's state",
+            "C": "To return the JSX that makes up the component",
+            "D": "To handle errors"
+          },
+          "correct": "C",
+          "explanation": "The render method is a required method in React components that returns the JSX that makes up the component."
+        },
+        {
+          "id": 2,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "State",
+          "question": "What is the difference between state and props in React?",
+          "options": {
+            "A": "State is immutable, while props are mutable",
+            "B": "State is used for local component data, while props are used for data passed from a parent component",
+            "C": "State is used for data passed from a parent component, while props are used for local component data",
+            "D": "State is mutable, while props are immutable"
+          },
+          "correct": "B",
+          "explanation": "State is used for local component data, while props are used for data passed from a parent component."
+        },
+        {
+          "id": 3,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Lifecycle Methods",
+          "question": "What is the purpose of the componentDidMount method in a React component?",
+          "options": {
+            "A": "To handle user input",
+            "B": "To update the component's state",
+            "C": "To perform any necessary setup after the component has been rendered",
+            "D": "To handle errors"
+          },
+          "correct": "C",
+          "explanation": "The componentDidMount method is called after the component has been rendered and is used to perform any necessary setup."
+        },
+        {
+          "id": 4,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "JSX",
+          "question": "What is JSX in React?",
+          "options": {
+            "A": "A templating language",
+            "B": "A JavaScript syntax extension for creating React components",
+            "C": "A CSS preprocessor",
+            "D": "A JavaScript framework"
+          },
+          "correct": "B",
+          "explanation": "JSX is a JavaScript syntax extension for creating React components."
+        },
+        {
+          "id": 5,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Components",
+          "question": "What is a functional component in React?",
+          "options": {
+            "A": "A component that uses a class to define its behavior",
+            "B": "A component that uses a function to define its behavior",
+            "C": "A component that uses a template to define its behavior",
+            "D": "A component that uses a mixin to define its behavior"
+          },
+          "correct": "B",
+          "explanation": "A functional component is a component that uses a function to define its behavior."
+        },
+        {
+          "id": 6,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Variables",
+          "question": "What is the difference between let and var in JavaScript?",
+          "options": {
+            "A": "Let is used for global variables, while var is used for local variables",
+            "B": "Var is used for global variables, while let is used for local variables",
+            "C": "Let is block-scoped, while var is function-scoped",
+            "D": "Var is block-scoped, while let is function-scoped"
+          },
+          "correct": "C",
+          "explanation": "Let is block-scoped, while var is function-scoped."
+        },
+        {
+          "id": 7,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Data Types",
+          "question": "What is the difference between null and undefined in JavaScript?",
+          "options": {
+            "A": "Null is a primitive value, while undefined is an object",
+            "B": "Undefined is a primitive value, while null is an object",
+            "C": "Null is a value that represents the absence of any object value, while undefined is a value that represents an uninitialized variable",
+            "D": "Undefined is a value that represents the absence of any object value, while null is a value that represents an uninitialized variable"
+          },
+          "correct": "C",
+          "explanation": "Null is a value that represents the absence of any object value, while undefined is a value that represents an uninitialized variable."
+        },
+        {
+          "id": 8,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is an arrow function in JavaScript?",
+          "options": {
+            "A": "A function that uses the function keyword to define its behavior",
+            "B": "A function that uses an arrow (=>) to define its behavior",
+            "C": "A function that uses a template to define its behavior",
+            "D": "A function that uses a mixin to define its behavior"
+          },
+          "correct": "B",
+          "explanation": "An arrow function is a function that uses an arrow (=>) to define its behavior."
+        },
+        {
+          "id": 9,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the purpose of the map method in JavaScript?",
+          "options": {
+            "A": "To create a new array with the results of applying a provided function to every element in the original array",
+            "B": "To create a new array with the results of applying a provided function to every element in the original array, and then flatten the result",
+            "C": "To create a new array with the results of applying a provided function to every element in the original array, and then sort the result",
+            "D": "To create a new array with the results of applying a provided function to every element in the original array, and then filter the result"
+          },
+          "correct": "A",
+          "explanation": "The map method creates a new array with the results of applying a provided function to every element in the original array."
+        },
+        {
+          "id": 10,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Objects",
+          "question": "What is the purpose of the Object.assign method in JavaScript?",
+          "options": {
+            "A": "To create a new object with the properties of the provided objects",
+            "B": "To create a new object with the properties of the provided objects, and then sort the result",
+            "C": "To create a new object with the properties of the provided objects, and then filter the result",
+            "D": "To create a new object with the properties of the provided objects, and then merge the result"
+          },
+          "correct": "A",
+          "explanation": "The Object.assign method creates a new object with the properties of the provided objects."
+        },
+        {
+          "id": 11,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Variables",
+          "question": "What is the difference between the = and == operators in Python?",
+          "options": {
+            "A": "The = operator is used for assignment, while the == operator is used for comparison",
+            "B": "The == operator is used for assignment, while the = operator is used for comparison",
+            "C": "The = operator is used for comparison, while the == operator is used for assignment",
+            "D": "The = operator is used for both assignment and comparison"
+          },
+          "correct": "A",
+          "explanation": "The = operator is used for assignment, while the == operator is used for comparison."
+        },
+        {
+          "id": 12,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Data Types",
+          "question": "What is the difference between a list and a tuple in Python?",
+          "options": {
+            "A": "A list is mutable, while a tuple is immutable",
+            "B": "A tuple is mutable, while a list is immutable",
+            "C": "A list is immutable, while a tuple is mutable",
+            "D": "A list and a tuple are the same thing"
+          },
+          "correct": "A",
+          "explanation": "A list is mutable, while a tuple is immutable."
+        },
+        {
+          "id": 13,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the purpose of the def keyword in Python?",
+          "options": {
+            "A": "To define a variable",
+            "B": "To define a function",
+            "C": "To define a class",
+            "D": "To define a module"
+          },
+          "correct": "B",
+          "explanation": "The def keyword is used to define a function."
+        },
+        {
+          "id": 14,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Control Structures",
+          "question": "What is the purpose of the if statement in Python?",
+          "options": {
+            "A": "To repeat a block of code",
+            "B": "To skip a block of code",
+            "C": "To execute a block of code if a condition is true",
+            "D": "To execute a block of code if a condition is false"
+          },
+          "correct": "C",
+          "explanation": "The if statement is used to execute a block of code if a condition is true."
+        },
+        {
+          "id": 15,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Modules",
+          "question": "What is the purpose of the import statement in Python?",
+          "options": {
+            "A": "To define a variable",
+            "B": "To define a function",
+            "C": "To import a module",
+            "D": "To export a module"
+          },
+          "correct": "C",
+          "explanation": "The import statement is used to import a module."
+        }
+      ],
+      "quiz_id": "fdd6f5a5-b33d-47f2-9305-cb344f12dc40",
+      "per_skill_scores": [
+        {
+          "skill": "React",
+          "score": 80,
+          "correct": 4,
+          "total": 5,
+          "proficiency": "Expert"
+        },
+        {
+          "skill": "JavaScript",
+          "score": 20,
+          "correct": 1,
+          "total": 5,
+          "proficiency": "Needs Work"
+        },
+        {
+          "skill": "Python",
+          "score": 20,
+          "correct": 1,
+          "total": 5,
+          "proficiency": "Needs Work"
+        }
+      ],
+      "overall_score": 40,
+      "review": [
+        {
+          "id": 1,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the purpose of the render method in a React component?",
+          "options": {
+            "A": "To handle user input",
+            "B": "To update the component's state",
+            "C": "To return the JSX that makes up the component",
+            "D": "To handle errors"
+          },
+          "correct": "C",
+          "explanation": "The render method is a required method in React components that returns the JSX that makes up the component.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 2,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the difference between state and props in React?",
+          "options": {
+            "A": "State is immutable, while props are mutable",
+            "B": "State is used for local component data, while props are used for data passed from a parent component",
+            "C": "State is used for data passed from a parent component, while props are used for local component data",
+            "D": "State is mutable, while props are immutable"
+          },
+          "correct": "B",
+          "explanation": "State is used for local component data, while props are used for data passed from a parent component.",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 3,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is the purpose of the componentDidMount method in a React component?",
+          "options": {
+            "A": "To handle user input",
+            "B": "To update the component's state",
+            "C": "To perform any necessary setup after the component has been rendered",
+            "D": "To handle errors"
+          },
+          "correct": "C",
+          "explanation": "The componentDidMount method is called after the component has been rendered and is used to perform any necessary setup.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 4,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is JSX in React?",
+          "options": {
+            "A": "A templating language",
+            "B": "A JavaScript syntax extension for creating React components",
+            "C": "A CSS preprocessor",
+            "D": "A JavaScript framework"
+          },
+          "correct": "B",
+          "explanation": "JSX is a JavaScript syntax extension for creating React components.",
+          "user_selected": "B",
+          "is_correct": true
+        },
+        {
+          "id": 5,
+          "skill": "React",
+          "difficulty": "easy",
+          "question": "What is a functional component in React?",
+          "options": {
+            "A": "A component that uses a class to define its behavior",
+            "B": "A component that uses a function to define its behavior",
+            "C": "A component that uses a template to define its behavior",
+            "D": "A component that uses a mixin to define its behavior"
+          },
+          "correct": "B",
+          "explanation": "A functional component is a component that uses a function to define its behavior.",
+          "user_selected": "B",
+          "is_correct": true
+        },
+        {
+          "id": 6,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the difference between let and var in JavaScript?",
+          "options": {
+            "A": "Let is used for global variables, while var is used for local variables",
+            "B": "Var is used for global variables, while let is used for local variables",
+            "C": "Let is block-scoped, while var is function-scoped",
+            "D": "Var is block-scoped, while let is function-scoped"
+          },
+          "correct": "C",
+          "explanation": "Let is block-scoped, while var is function-scoped.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 7,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the difference between null and undefined in JavaScript?",
+          "options": {
+            "A": "Null is a primitive value, while undefined is an object",
+            "B": "Undefined is a primitive value, while null is an object",
+            "C": "Null is a value that represents the absence of any object value, while undefined is a value that represents an uninitialized variable",
+            "D": "Undefined is a value that represents the absence of any object value, while null is a value that represents an uninitialized variable"
+          },
+          "correct": "C",
+          "explanation": "Null is a value that represents the absence of any object value, while undefined is a value that represents an uninitialized variable.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 8,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is an arrow function in JavaScript?",
+          "options": {
+            "A": "A function that uses the function keyword to define its behavior",
+            "B": "A function that uses an arrow (=>) to define its behavior",
+            "C": "A function that uses a template to define its behavior",
+            "D": "A function that uses a mixin to define its behavior"
+          },
+          "correct": "B",
+          "explanation": "An arrow function is a function that uses an arrow (=>) to define its behavior.",
+          "user_selected": "A",
+          "is_correct": false
+        },
+        {
+          "id": 9,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the purpose of the map method in JavaScript?",
+          "options": {
+            "A": "To create a new array with the results of applying a provided function to every element in the original array",
+            "B": "To create a new array with the results of applying a provided function to every element in the original array, and then flatten the result",
+            "C": "To create a new array with the results of applying a provided function to every element in the original array, and then sort the result",
+            "D": "To create a new array with the results of applying a provided function to every element in the original array, and then filter the result"
+          },
+          "correct": "A",
+          "explanation": "The map method creates a new array with the results of applying a provided function to every element in the original array.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 10,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "question": "What is the purpose of the Object.assign method in JavaScript?",
+          "options": {
+            "A": "To create a new object with the properties of the provided objects",
+            "B": "To create a new object with the properties of the provided objects, and then sort the result",
+            "C": "To create a new object with the properties of the provided objects, and then filter the result",
+            "D": "To create a new object with the properties of the provided objects, and then merge the result"
+          },
+          "correct": "A",
+          "explanation": "The Object.assign method creates a new object with the properties of the provided objects.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 11,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the difference between the = and == operators in Python?",
+          "options": {
+            "A": "The = operator is used for assignment, while the == operator is used for comparison",
+            "B": "The == operator is used for assignment, while the = operator is used for comparison",
+            "C": "The = operator is used for comparison, while the == operator is used for assignment",
+            "D": "The = operator is used for both assignment and comparison"
+          },
+          "correct": "A",
+          "explanation": "The = operator is used for assignment, while the == operator is used for comparison.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 12,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the difference between a list and a tuple in Python?",
+          "options": {
+            "A": "A list is mutable, while a tuple is immutable",
+            "B": "A tuple is mutable, while a list is immutable",
+            "C": "A list is immutable, while a tuple is mutable",
+            "D": "A list and a tuple are the same thing"
+          },
+          "correct": "A",
+          "explanation": "A list is mutable, while a tuple is immutable.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 13,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the def keyword in Python?",
+          "options": {
+            "A": "To define a variable",
+            "B": "To define a function",
+            "C": "To define a class",
+            "D": "To define a module"
+          },
+          "correct": "B",
+          "explanation": "The def keyword is used to define a function.",
+          "user_selected": "A",
+          "is_correct": false
+        },
+        {
+          "id": 14,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the if statement in Python?",
+          "options": {
+            "A": "To repeat a block of code",
+            "B": "To skip a block of code",
+            "C": "To execute a block of code if a condition is true",
+            "D": "To execute a block of code if a condition is false"
+          },
+          "correct": "C",
+          "explanation": "The if statement is used to execute a block of code if a condition is true.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 15,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the import statement in Python?",
+          "options": {
+            "A": "To define a variable",
+            "B": "To define a function",
+            "C": "To import a module",
+            "D": "To export a module"
+          },
+          "correct": "C",
+          "explanation": "The import statement is used to import a module.",
+          "user_selected": "B",
+          "is_correct": false
+        }
+      ]
+    },
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, I'm SkillSync AI, your technical interviewer today. I see you have a strong foundation in frontend development with skills in CSS, HTML, JavaScript, and React.js. Let's start with a question: How would you optimize the performance of a React.js application, considering factors like component rendering, state management, and network requests?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Intensive upskilling in React ecosystem and JavaScript fundamentals",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete online courses in TypeScript, Next.js, and Redux within 3 months",
+            "Build 2-3 personal projects showcasing expertise in React and JavaScript within 6 months",
+            "Prepare for technical interviews and apply for frontend developer roles within 9 months"
+          ],
+          "immediate_actions": [
+            "Enroll in online courses for TypeScript, Next.js, and Redux",
+            "Start building personal projects to demonstrate React and JavaScript skills"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "React Developer"
+          ],
+          "skills_to_acquire": [
+            "TypeScript",
+            "Next.js",
+            "Redux",
+            "REST APIs"
+          ],
+          "salary_range": {
+            "india_lpa": "6-10",
+            "global_usd": "10,000-15,000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth through continuous learning and project experience",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Complete online courses in JavaScript and Python within 6 months",
+            "Contribute to open-source projects and build a personal portfolio within 1 year",
+            "Apply for frontend developer roles and prepare for technical interviews within 1.5 years"
+          ],
+          "immediate_actions": [
+            "Start learning JavaScript and Python through online resources",
+            "Explore open-source projects to contribute to and build a personal portfolio"
+          ],
+          "target_roles": [
+            "Frontend Developer",
+            "Junior Software Engineer"
+          ],
+          "skills_to_acquire": [
+            "JavaScript",
+            "Python",
+            "REST APIs"
+          ],
+          "salary_range": {
+            "india_lpa": "4-8",
+            "global_usd": "8,000-12,000"
+          },
+          "interview_readiness_score": 40,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leverage existing React expertise to transition into a related role",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Explore adjacent roles such as UI/UX Designer or Technical Writer within 3 months",
+            "Develop skills in design tools like Figma or writing technical documentation within 6 months",
+            "Apply for UI/UX Designer or Technical Writer roles within 9 months"
+          ],
+          "immediate_actions": [
+            "Research and explore adjacent roles like UI/UX Designer or Technical Writer",
+            "Start developing skills in design tools or technical writing"
+          ],
+          "target_roles": [
+            "UI/UX Designer",
+            "Technical Writer"
+          ],
+          "skills_to_acquire": [
+            "Design tools like Figma",
+            "Technical writing",
+            "Communication skills"
+          ],
+          "salary_range": {
+            "india_lpa": "5-9",
+            "global_usd": "9,000-14,000"
+          },
+          "interview_readiness_score": 50,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Designed and developed a responsive interface",
+          "optimized_bullet_suggestion": "Developed and integrated REST APIs to fetch and manipulate data, enhancing data exchange and synchronization across the application by 30%",
+          "impact_metric": "30% improvement in data exchange"
+        },
+        {
+          "skill": "TypeScript",
+          "original_bullet_suggestion": "Engineered a machine learning-based system",
+          "optimized_bullet_suggestion": "Utilized TypeScript to implement type safety and scalability in a machine learning-based application, resulting in a 20% reduction in runtime errors",
+          "impact_metric": "20% reduction in runtime errors"
+        },
+        {
+          "skill": "Next.js",
+          "original_bullet_suggestion": "Focused on seamless navigation and performance optimization",
+          "optimized_bullet_suggestion": "Leveraged Next.js to create server-side rendered and statically generated pages, improving page load times by 40% and enhancing overall user experience",
+          "impact_metric": "40% improvement in page load times"
+        },
+        {
+          "skill": "Redux",
+          "original_bullet_suggestion": "Performed data preprocessing and feature engineering",
+          "optimized_bullet_suggestion": "Implemented Redux to manage global state and side effects in a complex application, reducing bugs by 25% and improving code maintainability",
+          "impact_metric": "25% reduction in bugs"
+        },
+        {
+          "skill": "Webpack",
+          "original_bullet_suggestion": "Optimized application performance",
+          "optimized_bullet_suggestion": "Configured and optimized Webpack to improve bundle sizes and reduce build times by 30%, resulting in faster deployment and improved development efficiency",
+          "impact_metric": "30% reduction in build times"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "f51144937116e1a4214874b0f7298ef3",
+      "target_role": "Frontend Developer",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "REST APIs",
+          "goal": "Understand REST API fundamentals and implement basic API calls",
+          "daily_tasks": [
+            "Mon: Learn REST API basics (HTTP methods, API endpoints) - 2 hours",
+            "Tue: Implement GET requests using Axios - 2 hours",
+            "Wed: Implement POST requests using Axios - 2 hours",
+            "Thu: Implement PUT and DELETE requests using Axios - 2 hours",
+            "Fri: Review and practice API calls - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "REST API Design and Implementation",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=REST%20API%20Design%20and%20Implementation%20Pluralsight%20course",
+              "type": "course"
+            },
+            {
+              "name": "Axios Documentation",
+              "platform": "Axios",
+              "url": "https://www.google.com/search?q=Axios%20Documentation%20Axios%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Weather API",
+            "description": "Build a simple weather app that fetches data from a public weather API",
+            "tech_used": [
+              "React",
+              "Axios",
+              "REST API"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "TypeScript",
+          "goal": "Understand TypeScript basics and integrate it with React",
+          "daily_tasks": [
+            "Mon: Learn TypeScript basics (types, interfaces) - 2 hours",
+            "Tue: Set up a new React project with TypeScript - 2 hours",
+            "Wed: Implement type checking for React components - 2 hours",
+            "Thu: Learn about TypeScript generics and interfaces - 2 hours",
+            "Fri: Review and practice TypeScript with React - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "TypeScript Fundamentals",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=TypeScript%20Fundamentals",
+              "type": "course"
+            },
+            {
+              "name": "TypeScript Documentation",
+              "platform": "TypeScript",
+              "url": "https://www.google.com/search?q=TypeScript%20Documentation%20TypeScript%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Todo List App",
+            "description": "Build a todo list app using React and TypeScript",
+            "tech_used": [
+              "React",
+              "TypeScript"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "Next.js",
+          "goal": "Understand Next.js basics and build a simple blog",
+          "daily_tasks": [
+            "Mon: Learn Next.js basics (pages, routing) - 2 hours",
+            "Tue: Set up a new Next.js project - 2 hours",
+            "Wed: Implement server-side rendering - 2 hours",
+            "Thu: Learn about Next.js API routes - 2 hours",
+            "Fri: Review and practice Next.js - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Next.js Fundamentals",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=Next.js%20Fundamentals%20FreeCodeCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Next.js Documentation",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20Documentation%20Next.js%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Personal Blog",
+            "description": "Build a simple personal blog using Next.js",
+            "tech_used": [
+              "Next.js",
+              "React"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "Redux",
+          "goal": "Understand Redux basics and integrate it with React",
+          "daily_tasks": [
+            "Mon: Learn Redux basics (store, actions, reducers) - 2 hours",
+            "Tue: Set up a new Redux project with React - 2 hours",
+            "Wed: Implement state management using Redux - 2 hours",
+            "Thu: Learn about Redux middleware - 2 hours",
+            "Fri: Review and practice Redux with React - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Redux Fundamentals",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=Redux%20Fundamentals",
+              "type": "course"
+            },
+            {
+              "name": "Redux Documentation",
+              "platform": "Redux",
+              "url": "https://www.google.com/search?q=Redux%20Documentation%20Redux%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Counter App",
+            "description": "Build a simple counter app using React and Redux",
+            "tech_used": [
+              "React",
+              "Redux"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Webpack",
+          "goal": "Understand Webpack basics and optimize a React app",
+          "daily_tasks": [
+            "Mon: Learn Webpack basics (bundles, loaders) - 2 hours",
+            "Tue: Set up a new Webpack project with React - 2 hours",
+            "Wed: Implement code splitting and optimization - 2 hours",
+            "Thu: Learn about Webpack plugins - 2 hours",
+            "Fri: Review and practice Webpack with React - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Webpack Fundamentals",
+              "platform": "Pluralsight",
+              "url": "https://www.google.com/search?q=Webpack%20Fundamentals%20Pluralsight%20course",
+              "type": "course"
+            },
+            {
+              "name": "Webpack Documentation",
+              "platform": "Webpack",
+              "url": "https://www.google.com/search?q=Webpack%20Documentation%20Webpack%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Optimized Todo List App",
+            "description": "Optimize a todo list app using Webpack and React",
+            "tech_used": [
+              "React",
+              "Webpack"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "Integrating Next.js and Redux",
+          "goal": "Integrate Next.js and Redux in a single app",
+          "daily_tasks": [
+            "Mon: Learn about Next.js and Redux integration - 2 hours",
+            "Tue: Set up a new Next.js project with Redux - 2 hours",
+            "Wed: Implement server-side rendering with Redux - 2 hours",
+            "Thu: Learn about Next.js API routes with Redux - 2 hours",
+            "Fri: Review and practice Next.js and Redux integration - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Next.js and Redux Integration",
+              "platform": "FreeCodeCamp",
+              "url": "https://www.google.com/search?q=Next.js%20and%20Redux%20Integration%20FreeCodeCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Next.js and Redux Documentation",
+              "platform": "Next.js and Redux",
+              "url": "https://www.google.com/search?q=Next.js%20and%20Redux%20Documentation%20Next.js%20and%20Redux%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Personal Blog with Redux",
+            "description": "Build a personal blog using Next.js and Redux",
+            "tech_used": [
+              "Next.js",
+              "React",
+              "Redux"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "Advanced Next.js",
+          "goal": "Learn about advanced Next.js features",
+          "daily_tasks": [
+            "Mon: Learn about Next.js internationalization - 2 hours",
+            "Tue: Implement Next.js internationalization - 2 hours",
+            "Wed: Learn about Next.js authentication - 2 hours",
+            "Thu: Implement Next.js authentication - 2 hours",
+            "Fri: Review and practice advanced Next.js features - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Advanced Next.js",
+              "platform": "Udemy",
+              "url": "https://www.udemy.com/courses/search/?q=Advanced%20Next.js",
+              "type": "course"
+            },
+            {
+              "name": "Next.js Documentation",
+              "platform": "Next.js",
+              "url": "https://www.google.com/search?q=Next.js%20Documentation%20Next.js%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "E-commerce Website",
+            "description": "Build an e-commerce website using Next.js and advanced features",
+            "tech_used": [
+              "Next.js",
+              "React",
+              "Redux"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "Final Project",
+          "goal": "Build a comprehensive final project using all learned skills",
+          "daily_tasks": [
+            "Mon: Plan the final project - 2 hours",
+            "Tue: Implement the final project - 4 hours",
+            "Wed: Implement the final project - 4 hours",
+            "Thu: Review and test the final project - 4 hours",
+            "Fri: Deploy the final project - 2 hours"
+          ],
+          "resources": [
+            {
+              "name": "Final Project Guidelines",
+              "platform": "GitHub",
+              "url": "https://www.google.com/search?q=Final%20Project%20Guidelines%20GitHub%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Comprehensive Final Project",
+            "description": "Build a comprehensive final project using all learned skills",
+            "tech_used": [
+              "Next.js",
+              "React",
+              "Redux",
+              "TypeScript",
+              "REST API",
+              "Webpack"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "f2b8c716-f8a2-475b-aa3f-962418319531": {
+    "session_id": "f2b8c716-f8a2-475b-aa3f-962418319531",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        "Deloitte - Data Analytics Job Simulation",
+        "Infosys Springboard Data Structure and Algorithms Using Java Certificate",
+        "MERN Stack Development and DSA - Sheryians Coding School",
+        "Introduction to Modern AI - Cisco Networking Academy",
+        "Google Cloud Generative AI Certificate"
+      ],
+      "domains": [
+        "Artificial Intelligence",
+        "Machine learning",
+        "MERN stack development"
+      ]
+    },
+    "target_role": "Frontend Developer",
+    "gap_analysis": {
+      "target_role": "Frontend Developer",
+      "match_score": 50,
+      "ats_score": 38,
+      "matched_skills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "missing_skills": [
+        "REST APIs",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Webpack"
+      ],
+      "nice_to_have_gaps": [
+        "GraphQL",
+        "Jest",
+        "Cypress",
+        "Storybook",
+        "Docker",
+        "CI/CD",
+        "Figma",
+        "Vue.js",
+        "Angular"
+      ],
+      "nice_to_have_matched": [
+        "Tailwind CSS"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+        "top_companies": [
+          "Google",
+          "Microsoft",
+          "Flipkart",
+          "Swiggy",
+          "Razorpay",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "JavaScript fundamentals",
+          "React lifecycle",
+          "CSS layout",
+          "Performance optimization",
+          "Browser APIs"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "4-8",
+          "junior": "8-15",
+          "mid": "15-30",
+          "senior": "30-60"
+        },
+        "avg_salary_usd": {
+          "fresher": "50k-75k",
+          "junior": "75k-100k",
+          "mid": "100k-140k",
+          "senior": "140k-200k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T05:40:28.877Z",
+    "quiz_result": {
+      "questions": [
+        {
+          "id": 1,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "JSX",
+          "question": "What is the purpose of JSX in React?",
+          "options": {
+            "A": "To create a new DOM element",
+            "B": "To convert JavaScript code into HTML",
+            "C": "To simplify the creation of React components",
+            "D": "To handle state changes in a React application"
+          },
+          "correct": "C",
+          "explanation": "JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files, making it easier to create React components."
+        },
+        {
+          "id": 2,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Components",
+          "question": "What is a React component?",
+          "options": {
+            "A": "A function that returns a JSX element",
+            "B": "A class that extends the React.Component class",
+            "C": "A HTML element",
+            "D": "Both A and B"
+          },
+          "correct": "D",
+          "explanation": "A React component can be either a function that returns a JSX element or a class that extends the React.Component class."
+        },
+        {
+          "id": 3,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "State",
+          "question": "What is the purpose of the useState hook in React?",
+          "options": {
+            "A": "To handle side effects in a React component",
+            "B": "To manage state in a functional component",
+            "C": "To create a new DOM element",
+            "D": "To handle props in a React component"
+          },
+          "correct": "B",
+          "explanation": "The useState hook is used to manage state in a functional component, allowing you to add state to functional components."
+        },
+        {
+          "id": 4,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Props",
+          "question": "What are props in React?",
+          "options": {
+            "A": "Short for 'properties', used to pass data from a parent component to a child component",
+            "B": "Short for 'parameters', used to pass data from a child component to a parent component",
+            "C": "Short for 'prototypes', used to create a new DOM element",
+            "D": "Short for 'proxies', used to handle state changes in a React application"
+          },
+          "correct": "A",
+          "explanation": "Props, short for 'properties', are used to pass data from a parent component to a child component."
+        },
+        {
+          "id": 5,
+          "skill": "React",
+          "difficulty": "easy",
+          "topic": "Lifecycle Methods",
+          "question": "What is the purpose of the componentDidMount lifecycle method in React?",
+          "options": {
+            "A": "To handle the rendering of a component",
+            "B": "To handle the unmounting of a component",
+            "C": "To handle the mounting of a component",
+            "D": "To handle state changes in a React application"
+          },
+          "correct": "C",
+          "explanation": "The componentDidMount lifecycle method is called after a component has been rendered to the DOM, allowing you to perform any necessary setup or initialization."
+        },
+        {
+          "id": 6,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Variables",
+          "question": "What is the difference between let and const in JavaScript?",
+          "options": {
+            "A": "Let is used for constant variables, while const is used for variable variables",
+            "B": "Let is used for variable variables, while const is used for constant variables",
+            "C": "Let and const are interchangeable",
+            "D": "Let is used for global variables, while const is used for local variables"
+          },
+          "correct": "B",
+          "explanation": "Let is used for variable variables, while const is used for constant variables, meaning that the value of a const variable cannot be changed once it is declared."
+        },
+        {
+          "id": 7,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Data Types",
+          "question": "What are the primitive data types in JavaScript?",
+          "options": {
+            "A": "Number, String, Boolean, Null, Undefined, Object",
+            "B": "Number, String, Boolean, Null, Undefined",
+            "C": "Number, String, Boolean, Object",
+            "D": "Number, String, Boolean"
+          },
+          "correct": "B",
+          "explanation": "The primitive data types in JavaScript are Number, String, Boolean, Null, and Undefined."
+        },
+        {
+          "id": 8,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the purpose of the return statement in a JavaScript function?",
+          "options": {
+            "A": "To exit the function and return a value",
+            "B": "To enter the function and return a value",
+            "C": "To create a new function",
+            "D": "To call a function"
+          },
+          "correct": "A",
+          "explanation": "The return statement is used to exit the function and return a value to the caller."
+        },
+        {
+          "id": 9,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the purpose of the push method in a JavaScript array?",
+          "options": {
+            "A": "To remove the last element from the array",
+            "B": "To add a new element to the end of the array",
+            "C": "To remove the first element from the array",
+            "D": "To add a new element to the beginning of the array"
+          },
+          "correct": "B",
+          "explanation": "The push method is used to add a new element to the end of the array."
+        },
+        {
+          "id": 10,
+          "skill": "JavaScript",
+          "difficulty": "easy",
+          "topic": "Objects",
+          "question": "What is the purpose of the dot notation in a JavaScript object?",
+          "options": {
+            "A": "To access a property of the object",
+            "B": "To create a new property of the object",
+            "C": "To delete a property of the object",
+            "D": "To update a property of the object"
+          },
+          "correct": "A",
+          "explanation": "The dot notation is used to access a property of the object."
+        },
+        {
+          "id": 11,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Variables",
+          "question": "What is the purpose of the assignment operator (=) in Python?",
+          "options": {
+            "A": "To compare two values",
+            "B": "To assign a value to a variable",
+            "C": "To create a new variable",
+            "D": "To delete a variable"
+          },
+          "correct": "B",
+          "explanation": "The assignment operator (=) is used to assign a value to a variable."
+        },
+        {
+          "id": 12,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Data Types",
+          "question": "What are the basic data types in Python?",
+          "options": {
+            "A": "Int, Float, String, List, Tuple, Dictionary",
+            "B": "Int, Float, String, List, Tuple",
+            "C": "Int, Float, String, Dictionary",
+            "D": "Int, Float, String"
+          },
+          "correct": "A",
+          "explanation": "The basic data types in Python are Int, Float, String, List, Tuple, and Dictionary."
+        },
+        {
+          "id": 13,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the purpose of the def keyword in Python?",
+          "options": {
+            "A": "To create a new variable",
+            "B": "To create a new function",
+            "C": "To call a function",
+            "D": "To delete a function"
+          },
+          "correct": "B",
+          "explanation": "The def keyword is used to create a new function."
+        },
+        {
+          "id": 14,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Control Structures",
+          "question": "What is the purpose of the if statement in Python?",
+          "options": {
+            "A": "To repeat a block of code",
+            "B": "To skip a block of code",
+            "C": "To execute a block of code if a condition is true",
+            "D": "To execute a block of code if a condition is false"
+          },
+          "correct": "C",
+          "explanation": "The if statement is used to execute a block of code if a condition is true."
+        },
+        {
+          "id": 15,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Lists",
+          "question": "What is the purpose of the append method in a Python list?",
+          "options": {
+            "A": "To remove the last element from the list",
+            "B": "To add a new element to the end of the list",
+            "C": "To remove the first element from the list",
+            "D": "To add a new element to the beginning of the list"
+          },
+          "correct": "B",
+          "explanation": "The append method is used to add a new element to the end of the list."
+        }
+      ],
+      "quiz_id": "48beb342-dfca-4ef2-8639-87eb5177fb5f"
+    }
+  },
+  "a88a698f-029e-4493-a35d-e272c789a70a": {
+    "session_id": "a88a698f-029e-4493-a35d-e272c789a70a",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        "Deloitte - Data Analytics Job Simulation",
+        "Infosys Springboard Data Structure and Algorithms Using Java Certificate",
+        "MERN Stack Development and DSA - Sheryians Coding School",
+        "Introduction to Modern AI - Cisco Networking Academy",
+        "Google Cloud Generative AI Certificate"
+      ],
+      "domains": [
+        "Artificial Intelligence",
+        "Machine learning"
+      ]
+    },
+    "target_role": "Data Analyst",
+    "gap_analysis": {
+      "target_role": "Data Analyst",
+      "match_score": 40,
+      "ats_score": 34,
+      "matched_skills": [
+        "SQL",
+        "Python",
+        "Pandas",
+        "NumPy"
+      ],
+      "missing_skills": [
+        "Statistics",
+        "Excel",
+        "Tableau",
+        "Power BI",
+        "Data Visualization",
+        "ETL"
+      ],
+      "nice_to_have_gaps": [
+        "Apache Spark",
+        "BigQuery",
+        "Snowflake",
+        "dbt",
+        "Airflow",
+        "Looker",
+        "Seaborn",
+        "A/B Testing"
+      ],
+      "nice_to_have_matched": [
+        "R",
+        "Matplotlib"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Extracts insights from data to drive business decisions using SQL, Python, and BI tools",
+        "top_companies": [
+          "Amazon",
+          "Walmart",
+          "Razorpay",
+          "PhonePe",
+          "Zomato",
+          "HDFC Bank"
+        ],
+        "interview_topics": [
+          "SQL queries",
+          "Statistical analysis",
+          "Dashboard design",
+          "Data cleaning",
+          "Business metrics"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "3-7",
+          "junior": "7-14",
+          "mid": "14-25",
+          "senior": "25-50"
+        },
+        "avg_salary_usd": {
+          "fresher": "45k-65k",
+          "junior": "65k-90k",
+          "mid": "90k-120k",
+          "senior": "120k-170k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T06:02:18.519Z",
+    "quiz_result": {
+      "questions": [
+        {
+          "id": 1,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "topic": "Data Retrieval",
+          "question": "What is the purpose of the SELECT statement in SQL?",
+          "options": {
+            "A": "To insert new data into a table",
+            "B": "To update existing data in a table",
+            "C": "To retrieve specific data from a table",
+            "D": "To delete data from a table"
+          },
+          "correct": "C",
+          "explanation": "The SELECT statement is used to retrieve specific data from a database table."
+        },
+        {
+          "id": 2,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "topic": "Data Manipulation",
+          "question": "What is the purpose of the INSERT INTO statement in SQL?",
+          "options": {
+            "A": "To delete data from a table",
+            "B": "To update existing data in a table",
+            "C": "To retrieve specific data from a table",
+            "D": "To add new data to a table"
+          },
+          "correct": "D",
+          "explanation": "The INSERT INTO statement is used to add new data to a database table."
+        },
+        {
+          "id": 3,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "topic": "Data Definition",
+          "question": "What is the purpose of the CREATE TABLE statement in SQL?",
+          "options": {
+            "A": "To delete a table",
+            "B": "To update a table",
+            "C": "To retrieve data from a table",
+            "D": "To create a new table"
+          },
+          "correct": "D",
+          "explanation": "The CREATE TABLE statement is used to create a new database table."
+        },
+        {
+          "id": 4,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "topic": "Data Filtering",
+          "question": "What is the purpose of the WHERE clause in SQL?",
+          "options": {
+            "A": "To sort data in ascending order",
+            "B": "To filter specific data from a table",
+            "C": "To group data by a common column",
+            "D": "To retrieve all data from a table"
+          },
+          "correct": "B",
+          "explanation": "The WHERE clause is used to filter specific data from a database table."
+        },
+        {
+          "id": 5,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "topic": "Data Sorting",
+          "question": "What is the purpose of the ORDER BY clause in SQL?",
+          "options": {
+            "A": "To filter specific data from a table",
+            "B": "To group data by a common column",
+            "C": "To retrieve all data from a table",
+            "D": "To sort data in ascending or descending order"
+          },
+          "correct": "D",
+          "explanation": "The ORDER BY clause is used to sort data in ascending or descending order."
+        },
+        {
+          "id": 6,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Data Structures",
+          "question": "What is the purpose of a list in Python?",
+          "options": {
+            "A": "To store a single value",
+            "B": "To store a collection of values",
+            "C": "To perform mathematical operations",
+            "D": "To handle exceptions"
+          },
+          "correct": "B",
+          "explanation": "A list in Python is used to store a collection of values."
+        },
+        {
+          "id": 7,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Control Structures",
+          "question": "What is the purpose of the IF statement in Python?",
+          "options": {
+            "A": "To repeat a block of code",
+            "B": "To skip a block of code",
+            "C": "To execute a block of code based on a condition",
+            "D": "To exit a program"
+          },
+          "correct": "C",
+          "explanation": "The IF statement in Python is used to execute a block of code based on a condition."
+        },
+        {
+          "id": 8,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Functions",
+          "question": "What is the purpose of a function in Python?",
+          "options": {
+            "A": "To store a value",
+            "B": "To perform a specific task",
+            "C": "To handle exceptions",
+            "D": "To exit a program"
+          },
+          "correct": "B",
+          "explanation": "A function in Python is used to perform a specific task."
+        },
+        {
+          "id": 9,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Data Analysis",
+          "question": "What is the purpose of the Pandas library in Python?",
+          "options": {
+            "A": "To perform mathematical operations",
+            "B": "To handle exceptions",
+            "C": "To analyze and manipulate data",
+            "D": "To create visualizations"
+          },
+          "correct": "C",
+          "explanation": "The Pandas library in Python is used to analyze and manipulate data."
+        },
+        {
+          "id": 10,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Data Visualization",
+          "question": "What is the purpose of the Matplotlib library in Python?",
+          "options": {
+            "A": "To analyze and manipulate data",
+            "B": "To handle exceptions",
+            "C": "To create visualizations",
+            "D": "To perform mathematical operations"
+          },
+          "correct": "C",
+          "explanation": "The Matplotlib library in Python is used to create visualizations."
+        },
+        {
+          "id": 11,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Styling",
+          "question": "What is the purpose of the font-size property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the border of an element"
+          },
+          "correct": "C",
+          "explanation": "The font-size property in CSS is used to set the size of the font."
+        },
+        {
+          "id": 12,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Layout",
+          "question": "What is the purpose of the display property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the layout of an element",
+            "D": "To set the border of an element"
+          },
+          "correct": "C",
+          "explanation": "The display property in CSS is used to set the layout of an element."
+        },
+        {
+          "id": 13,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Color",
+          "question": "What is the purpose of the color property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the text color of an element"
+          },
+          "correct": "D",
+          "explanation": "The color property in CSS is used to set the text color of an element."
+        },
+        {
+          "id": 14,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Background",
+          "question": "What is the purpose of the background-color property in CSS?",
+          "options": {
+            "A": "To set the text color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the background color of an element"
+          },
+          "correct": "D",
+          "explanation": "The background-color property in CSS is used to set the background color of an element."
+        },
+        {
+          "id": 15,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Border",
+          "question": "What is the purpose of the border property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the border of an element"
+          },
+          "correct": "D",
+          "explanation": "The border property in CSS is used to set the border of an element."
+        }
+      ],
+      "quiz_id": "935784d9-e0f5-4148-9824-926ab19a65f4",
+      "per_skill_scores": [
+        {
+          "skill": "SQL",
+          "score": 40,
+          "correct": 2,
+          "total": 5,
+          "proficiency": "Beginner"
+        },
+        {
+          "skill": "Python",
+          "score": 80,
+          "correct": 4,
+          "total": 5,
+          "proficiency": "Expert"
+        },
+        {
+          "skill": "CSS",
+          "score": 0,
+          "correct": 0,
+          "total": 5,
+          "proficiency": "Needs Work"
+        }
+      ],
+      "overall_score": 40,
+      "review": [
+        {
+          "id": 1,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "question": "What is the purpose of the SELECT statement in SQL?",
+          "options": {
+            "A": "To insert new data into a table",
+            "B": "To update existing data in a table",
+            "C": "To retrieve specific data from a table",
+            "D": "To delete data from a table"
+          },
+          "correct": "C",
+          "explanation": "The SELECT statement is used to retrieve specific data from a database table.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 2,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "question": "What is the purpose of the INSERT INTO statement in SQL?",
+          "options": {
+            "A": "To delete data from a table",
+            "B": "To update existing data in a table",
+            "C": "To retrieve specific data from a table",
+            "D": "To add new data to a table"
+          },
+          "correct": "D",
+          "explanation": "The INSERT INTO statement is used to add new data to a database table.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 3,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "question": "What is the purpose of the CREATE TABLE statement in SQL?",
+          "options": {
+            "A": "To delete a table",
+            "B": "To update a table",
+            "C": "To retrieve data from a table",
+            "D": "To create a new table"
+          },
+          "correct": "D",
+          "explanation": "The CREATE TABLE statement is used to create a new database table.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 4,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "question": "What is the purpose of the WHERE clause in SQL?",
+          "options": {
+            "A": "To sort data in ascending order",
+            "B": "To filter specific data from a table",
+            "C": "To group data by a common column",
+            "D": "To retrieve all data from a table"
+          },
+          "correct": "B",
+          "explanation": "The WHERE clause is used to filter specific data from a database table.",
+          "user_selected": "B",
+          "is_correct": true
+        },
+        {
+          "id": 5,
+          "skill": "SQL",
+          "difficulty": "easy",
+          "question": "What is the purpose of the ORDER BY clause in SQL?",
+          "options": {
+            "A": "To filter specific data from a table",
+            "B": "To group data by a common column",
+            "C": "To retrieve all data from a table",
+            "D": "To sort data in ascending or descending order"
+          },
+          "correct": "D",
+          "explanation": "The ORDER BY clause is used to sort data in ascending or descending order.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 6,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of a list in Python?",
+          "options": {
+            "A": "To store a single value",
+            "B": "To store a collection of values",
+            "C": "To perform mathematical operations",
+            "D": "To handle exceptions"
+          },
+          "correct": "B",
+          "explanation": "A list in Python is used to store a collection of values.",
+          "user_selected": "C",
+          "is_correct": false
+        },
+        {
+          "id": 7,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the IF statement in Python?",
+          "options": {
+            "A": "To repeat a block of code",
+            "B": "To skip a block of code",
+            "C": "To execute a block of code based on a condition",
+            "D": "To exit a program"
+          },
+          "correct": "C",
+          "explanation": "The IF statement in Python is used to execute a block of code based on a condition.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 8,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of a function in Python?",
+          "options": {
+            "A": "To store a value",
+            "B": "To perform a specific task",
+            "C": "To handle exceptions",
+            "D": "To exit a program"
+          },
+          "correct": "B",
+          "explanation": "A function in Python is used to perform a specific task.",
+          "user_selected": "B",
+          "is_correct": true
+        },
+        {
+          "id": 9,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the Pandas library in Python?",
+          "options": {
+            "A": "To perform mathematical operations",
+            "B": "To handle exceptions",
+            "C": "To analyze and manipulate data",
+            "D": "To create visualizations"
+          },
+          "correct": "C",
+          "explanation": "The Pandas library in Python is used to analyze and manipulate data.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 10,
+          "skill": "Python",
+          "difficulty": "easy",
+          "question": "What is the purpose of the Matplotlib library in Python?",
+          "options": {
+            "A": "To analyze and manipulate data",
+            "B": "To handle exceptions",
+            "C": "To create visualizations",
+            "D": "To perform mathematical operations"
+          },
+          "correct": "C",
+          "explanation": "The Matplotlib library in Python is used to create visualizations.",
+          "user_selected": "C",
+          "is_correct": true
+        },
+        {
+          "id": 11,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "question": "What is the purpose of the font-size property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the border of an element"
+          },
+          "correct": "C",
+          "explanation": "The font-size property in CSS is used to set the size of the font.",
+          "user_selected": "D",
+          "is_correct": false
+        },
+        {
+          "id": 12,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "question": "What is the purpose of the display property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the layout of an element",
+            "D": "To set the border of an element"
+          },
+          "correct": "C",
+          "explanation": "The display property in CSS is used to set the layout of an element.",
+          "user_selected": "A",
+          "is_correct": false
+        },
+        {
+          "id": 13,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "question": "What is the purpose of the color property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the text color of an element"
+          },
+          "correct": "D",
+          "explanation": "The color property in CSS is used to set the text color of an element.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 14,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "question": "What is the purpose of the background-color property in CSS?",
+          "options": {
+            "A": "To set the text color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the background color of an element"
+          },
+          "correct": "D",
+          "explanation": "The background-color property in CSS is used to set the background color of an element.",
+          "user_selected": "B",
+          "is_correct": false
+        },
+        {
+          "id": 15,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "question": "What is the purpose of the border property in CSS?",
+          "options": {
+            "A": "To set the background color of an element",
+            "B": "To set the font style of an element",
+            "C": "To set the size of the font",
+            "D": "To set the border of an element"
+          },
+          "correct": "D",
+          "explanation": "The border property in CSS is used to set the border of an element.",
+          "user_selected": "A",
+          "is_correct": false
+        }
+      ]
+    },
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, I'm SkillSync AI, your technical interviewer for the Data Analyst role today. I see you have a diverse set of skills, including programming languages like Python, Java, and JavaScript, as well as data analysis libraries like Pandas, NumPy, and Matplotlib. Let's start with a question: How would you use Pandas to handle missing data in a dataset, and what strategies would you employ to impute missing values?"
+        },
+        {
+          "role": "user",
+          "content": "write a c++ program to calculate sum of 2 numbers"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a bit surprised by the sudden shift to C++. While we're discussing Data Analyst skills, let's get back on track. For the Data Analyst role, we're more focused on Python and its libraries. Can you tell me how you would approach data cleaning and handling missing values using Pandas in Python?"
+        },
+        {
+          "role": "user",
+          "content": "can u take my interview on java"
+        },
+        {
+          "role": "assistant",
+          "content": "I understand you'd like to focus on Java, but let's clarify that Data Analyst roles often require expertise in Python. However, I can accommodate your request. Please note that your answers will be evaluated based on their relevance to the Data Analyst role. Let's proceed with a Java-related question: Can you explain the concept of garbage collection in Java and how it differs from manual memory management in languages like C++?"
+        },
+        {
+          "role": "user",
+          "content": "butter chicken recipe? i want it to fuel me to answer you da quiz"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "Statistics",
+          "original_bullet_suggestion": "Analyzed data using Python",
+          "optimized_bullet_suggestion": "Applied statistical techniques to drive data-driven insights, performing hypothesis testing and confidence interval analysis to inform business decisions",
+          "impact_metric": "10% increase in data-driven decision making"
+        },
+        {
+          "skill": "Excel",
+          "original_bullet_suggestion": "Used Python for data analysis",
+          "optimized_bullet_suggestion": "Utilized Excel to create interactive dashboards, streamlining data visualization and reporting processes, resulting in a 30% reduction in manual data analysis time",
+          "impact_metric": "30% reduction in manual data analysis time"
+        },
+        {
+          "skill": "Tableau",
+          "original_bullet_suggestion": "Visualized data using Matplotlib",
+          "optimized_bullet_suggestion": "Developed interactive, web-based data visualizations using Tableau, enhancing stakeholder engagement and facilitating data-driven decision making, with a 25% increase in user adoption",
+          "impact_metric": "25% increase in user adoption"
+        },
+        {
+          "skill": "Power BI",
+          "original_bullet_suggestion": "Created reports using Python",
+          "optimized_bullet_suggestion": "Designed and implemented scalable, cloud-based business intelligence solutions using Power BI, resulting in a 40% increase in report automation and a 20% reduction in manual reporting time",
+          "impact_metric": "40% increase in report automation"
+        },
+        {
+          "skill": "Data Visualization",
+          "original_bullet_suggestion": "Used Matplotlib for data visualization",
+          "optimized_bullet_suggestion": "Crafted compelling, insights-driven data visualizations to communicate complex data insights to stakeholders, resulting in a 35% increase in data-informed decision making",
+          "impact_metric": "35% increase in data-informed decision making"
+        },
+        {
+          "skill": "ETL",
+          "original_bullet_suggestion": "Processed data using Pandas",
+          "optimized_bullet_suggestion": "Designed and implemented efficient ETL pipelines to integrate disparate data sources, ensuring data quality and reducing data processing time by 50%",
+          "impact_metric": "50% reduction in data processing time"
+        }
+      ]
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Aggressive upskilling to become a Data Analyst within 6-12 months",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete Data Analysis course with Python (3 months)",
+            "Gain experience with SQL and data visualization tools (3 months)",
+            "Build a personal project showcasing data analysis skills (3-6 months)"
+          ],
+          "immediate_actions": [
+            "Enroll in a Data Analysis course",
+            "Practice SQL and data visualization tools"
+          ],
+          "target_roles": [
+            "Junior Data Analyst",
+            "Data Analyst"
+          ],
+          "skills_to_acquire": [
+            "Statistics",
+            "Excel",
+            "Tableau"
+          ],
+          "salary_range": {
+            "india_lpa": "6-10",
+            "global_usd": "8000-14000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Organic growth to become a Data Analyst within 1-2 years",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Complete a certification course in Data Analysis (6 months)",
+            "Participate in data analysis projects and build a portfolio (6-12 months)",
+            "Network with professionals in the field and attend industry events (1 year)"
+          ],
+          "immediate_actions": [
+            "Research and enroll in a certification course",
+            "Join online communities and forums related to Data Analysis"
+          ],
+          "target_roles": [
+            "Data Analyst",
+            "Senior Data Analyst"
+          ],
+          "skills_to_acquire": [
+            "Power BI",
+            "Data Visualization",
+            "ETL"
+          ],
+          "salary_range": {
+            "india_lpa": "8-15",
+            "global_usd": "11000-20000"
+          },
+          "interview_readiness_score": 70,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leveraging existing Python skills to become a Business Intelligence Developer",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Learn Business Intelligence concepts and tools (3 months)",
+            "Gain experience with data visualization and reporting (3 months)",
+            "Build a personal project showcasing Business Intelligence skills (3-6 months)"
+          ],
+          "immediate_actions": [
+            "Research Business Intelligence tools and technologies",
+            "Practice building reports and dashboards"
+          ],
+          "target_roles": [
+            "Business Intelligence Developer",
+            "Data Visualization Specialist"
+          ],
+          "skills_to_acquire": [
+            "Power BI",
+            "Tableau",
+            "Data Visualization"
+          ],
+          "salary_range": {
+            "india_lpa": "9-18",
+            "global_usd": "12000-25000"
+          },
+          "interview_readiness_score": 80,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    },
+    "roadmap": {
+      "roadmap_id": "54cd20a12800f0a78ecc455d310af606",
+      "target_role": "Data Analyst",
+      "total_weeks": 8,
+      "weekly_hours": 10,
+      "weeks": [
+        {
+          "week": 1,
+          "focus_skill": "Statistics",
+          "goal": "Understand descriptive and inferential statistics",
+          "daily_tasks": [
+            "Mon: Introduction to statistics, types of data, and measures of central tendency",
+            "Tue: Measures of variability, probability, and Bayes' theorem",
+            "Wed: Practice problems on statistics using Python",
+            "Thu: Watch video lectures on hypothesis testing and confidence intervals",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Statistics with Python",
+              "platform": "DataCamp",
+              "url": "https://www.google.com/search?q=Statistics%20with%20Python%20DataCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Python Data Science Handbook",
+              "platform": "GitHub",
+              "url": "https://www.google.com/search?q=Python%20Data%20Science%20Handbook%20GitHub%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Descriptive Statistics Project",
+            "description": "Calculate and visualize descriptive statistics for a given dataset",
+            "tech_used": [
+              "Python",
+              "Pandas",
+              "Matplotlib"
+            ]
+          }
+        },
+        {
+          "week": 2,
+          "focus_skill": "Excel",
+          "goal": "Learn data manipulation and visualization in Excel",
+          "daily_tasks": [
+            "Mon: Introduction to Excel, basic formulas, and functions",
+            "Tue: Data manipulation using pivot tables and vlookup",
+            "Wed: Practice creating charts and visualizations in Excel",
+            "Thu: Learn about data analysis tools like solver and scenario manager",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Excel Skills for Business",
+              "platform": "Coursera",
+              "url": "https://www.coursera.org/search?query=Excel%20Skills%20for%20Business",
+              "type": "course"
+            },
+            {
+              "name": "Excel Tutorial",
+              "platform": "Microsoft",
+              "url": "https://www.google.com/search?q=Excel%20Tutorial%20Microsoft%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Excel Dashboard Project",
+            "description": "Create a dashboard to visualize sales data using Excel",
+            "tech_used": [
+              "Excel"
+            ]
+          }
+        },
+        {
+          "week": 3,
+          "focus_skill": "Data Visualization",
+          "goal": "Learn principles of data visualization and best practices",
+          "daily_tasks": [
+            "Mon: Introduction to data visualization, types of charts, and best practices",
+            "Tue: Learn about color theory and visual hierarchy",
+            "Wed: Practice creating visualizations using Python and Matplotlib",
+            "Thu: Watch video lectures on data storytelling and presentation",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Data Visualization with Python",
+              "platform": "DataCamp",
+              "url": "https://www.google.com/search?q=Data%20Visualization%20with%20Python%20DataCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Data Visualization: A Handbook for Data Driven Design",
+              "platform": "Google Books",
+              "url": "https://www.google.com/search?q=Data%20Visualization%3A%20A%20Handbook%20for%20Data%20Driven%20Design%20Google%20Books%20course",
+              "type": "book"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Visualization Project",
+            "description": "Create a visualization to tell a story with data",
+            "tech_used": [
+              "Python",
+              "Matplotlib",
+              "Seaborn"
+            ]
+          }
+        },
+        {
+          "week": 4,
+          "focus_skill": "Tableau",
+          "goal": "Learn data visualization and business intelligence using Tableau",
+          "daily_tasks": [
+            "Mon: Introduction to Tableau, connecting to data sources, and creating visualizations",
+            "Tue: Learn about data manipulation and filtering in Tableau",
+            "Wed: Practice creating dashboards and stories in Tableau",
+            "Thu: Watch video lectures on advanced Tableau topics like data blending and level of detail",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Tableau Desktop Specialist",
+              "platform": "Tableau",
+              "url": "https://www.google.com/search?q=Tableau%20Desktop%20Specialist%20Tableau%20course",
+              "type": "course"
+            },
+            {
+              "name": "Tableau Tutorial",
+              "platform": "Tableau",
+              "url": "https://www.google.com/search?q=Tableau%20Tutorial%20Tableau%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Tableau Dashboard Project",
+            "description": "Create a dashboard to visualize sales data using Tableau",
+            "tech_used": [
+              "Tableau"
+            ]
+          }
+        },
+        {
+          "week": 5,
+          "focus_skill": "Power BI",
+          "goal": "Learn data visualization and business intelligence using Power BI",
+          "daily_tasks": [
+            "Mon: Introduction to Power BI, connecting to data sources, and creating visualizations",
+            "Tue: Learn about data manipulation and filtering in Power BI",
+            "Wed: Practice creating reports and dashboards in Power BI",
+            "Thu: Watch video lectures on advanced Power BI topics like DAX and data modeling",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Power BI Desktop",
+              "platform": "Microsoft",
+              "url": "https://www.google.com/search?q=Power%20BI%20Desktop%20Microsoft%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Power BI Tutorial",
+              "platform": "Microsoft",
+              "url": "https://www.google.com/search?q=Power%20BI%20Tutorial%20Microsoft%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Power BI Report Project",
+            "description": "Create a report to visualize sales data using Power BI",
+            "tech_used": [
+              "Power BI"
+            ]
+          }
+        },
+        {
+          "week": 6,
+          "focus_skill": "ETL",
+          "goal": "Learn data extraction, transformation, and loading",
+          "daily_tasks": [
+            "Mon: Introduction to ETL, data sources, and destinations",
+            "Tue: Learn about data transformation and data quality",
+            "Wed: Practice creating ETL workflows using Python and Pandas",
+            "Thu: Watch video lectures on advanced ETL topics like data warehousing and big data",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Data Engineering with Python",
+              "platform": "DataCamp",
+              "url": "https://www.google.com/search?q=Data%20Engineering%20with%20Python%20DataCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Python ETL Tutorial",
+              "platform": "Towards Data Science",
+              "url": "https://www.google.com/search?q=Python%20ETL%20Tutorial%20Towards%20Data%20Science%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "ETL Project",
+            "description": "Create an ETL workflow to extract, transform, and load data",
+            "tech_used": [
+              "Python",
+              "Pandas",
+              "SQL"
+            ]
+          }
+        },
+        {
+          "week": 7,
+          "focus_skill": "Data Analysis",
+          "goal": "Apply data analysis skills to real-world problems",
+          "daily_tasks": [
+            "Mon: Review data analysis concepts and best practices",
+            "Tue: Practice creating data visualizations and reports",
+            "Wed: Work on case studies and real-world problems",
+            "Thu: Watch video lectures on advanced data analysis topics like machine learning and deep learning",
+            "Fri: Work on practice problems and review notes"
+          ],
+          "resources": [
+            {
+              "name": "Data Analysis with Python",
+              "platform": "DataCamp",
+              "url": "https://www.google.com/search?q=Data%20Analysis%20with%20Python%20DataCamp%20course",
+              "type": "course"
+            },
+            {
+              "name": "Data Analysis Tutorial",
+              "platform": "Kaggle",
+              "url": "https://www.google.com/search?q=Data%20Analysis%20Tutorial%20Kaggle%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Data Analysis Project",
+            "description": "Apply data analysis skills to a real-world problem",
+            "tech_used": [
+              "Python",
+              "Pandas",
+              "Matplotlib",
+              "Scikit-learn"
+            ]
+          }
+        },
+        {
+          "week": 8,
+          "focus_skill": "Final Project",
+          "goal": "Create a comprehensive data analysis project",
+          "daily_tasks": [
+            "Mon: Review project requirements and plan the project",
+            "Tue: Work on data extraction, transformation, and loading",
+            "Wed: Create data visualizations and reports",
+            "Thu: Apply machine learning and deep learning techniques",
+            "Fri: Finalize the project and prepare for presentation"
+          ],
+          "resources": [
+            {
+              "name": "Data Science Handbook",
+              "platform": "GitHub",
+              "url": "https://www.google.com/search?q=Data%20Science%20Handbook%20GitHub%20course",
+              "type": "doc"
+            },
+            {
+              "name": "Data Science Tutorial",
+              "platform": "Kaggle",
+              "url": "https://www.google.com/search?q=Data%20Science%20Tutorial%20Kaggle%20course",
+              "type": "doc"
+            }
+          ],
+          "checkpoint_project": {
+            "name": "Comprehensive Data Analysis Project",
+            "description": "Create a comprehensive data analysis project that applies all skills learned",
+            "tech_used": [
+              "Python",
+              "Pandas",
+              "Matplotlib",
+              "Scikit-learn",
+              "Tableau",
+              "Power BI"
+            ]
+          }
+        }
+      ]
+    },
+    "courses": {
+      "recommendations": [
+        {
+          "skill": "Statistics",
+          "reason": "missing",
+          "course_title": "Statistics 101: Descriptive and Inferential Statistics",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=Statistics%20101%3A%20Descriptive%20and%20Inferential%20Statistics",
+          "duration": "10 weeks",
+          "level": "Beginner",
+          "description": "Learn the fundamentals of statistics, including descriptive and inferential statistics."
+        },
+        {
+          "skill": "Excel",
+          "reason": "missing",
+          "course_title": "Microsoft Excel - Advanced Formulas and Functions",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Microsoft%20Excel%20-%20Advanced%20Formulas%20and%20Functions",
+          "duration": "4 hours",
+          "level": "Intermediate",
+          "description": "Master advanced Excel formulas and functions, including pivot tables and data analysis."
+        },
+        {
+          "skill": "Tableau",
+          "reason": "missing",
+          "course_title": "Tableau Desktop Essentials",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=Tableau%20Desktop%20Essentials",
+          "duration": "4 weeks",
+          "level": "Beginner",
+          "description": "Learn the basics of Tableau, including data visualization and dashboard creation."
+        },
+        {
+          "skill": "Power BI",
+          "reason": "missing",
+          "course_title": "Power BI: Data Visualization and Business Intelligence",
+          "platform": "Coursera",
+          "url": "https://www.coursera.org/search?query=Power%20BI%3A%20Data%20Visualization%20and%20Business%20Intelligence",
+          "duration": "8 weeks",
+          "level": "Intermediate",
+          "description": "Master Power BI, including data visualization and business intelligence."
+        },
+        {
+          "skill": "Data Visualization",
+          "reason": "missing",
+          "course_title": "Data Visualization with Tableau",
+          "platform": "Udemy",
+          "url": "https://www.udemy.com/courses/search/?q=Data%20Visualization%20with%20Tableau",
+          "duration": "8 hours",
+          "level": "Intermediate",
+          "description": "Learn data visualization techniques using Tableau."
+        },
+        {
+          "skill": "ETL",
+          "reason": "missing",
+          "course_title": "ETL Process with SQL Server Integration Services",
+          "platform": "edX",
+          "url": "https://www.edx.org/search?q=ETL%20Process%20with%20SQL%20Server%20Integration%20Services",
+          "duration": "4 weeks",
+          "level": "Intermediate",
+          "description": "Learn ETL process using SQL Server Integration Services."
+        },
+        {
+          "skill": "SQL",
+          "reason": "weak",
+          "course_title": "SQL Basics for Beginners",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=SQL%20Basics%20for%20Beginners%20course",
+          "duration": "2 hours",
+          "level": "Beginner",
+          "description": "Learn the basics of SQL, including queries and database management."
+        },
+        {
+          "skill": "CSS",
+          "reason": "weak",
+          "course_title": "CSS Fundamentals",
+          "platform": "MDN",
+          "url": "https://developer.mozilla.org/en-US/search?q=CSS",
+          "duration": "2 hours",
+          "level": "Beginner",
+          "description": "Learn the basics of CSS, including selectors, properties, and values."
+        }
+      ]
+    }
   }
 }

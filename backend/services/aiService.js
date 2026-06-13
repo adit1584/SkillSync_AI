@@ -352,7 +352,20 @@ Return ONLY this JSON:
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  const response = await callGroq(systemPrompt, userPrompt);
+  if (!response) {
+    throw new Error('AI service returned an empty response');
+  }
+  const sanitized = {
+    message: response.message || response.response || response.content || response.text || "Welcome to your technical interview. Let's start with a question about your skills.",
+    history: Array.isArray(response.history) ? response.history : []
+  };
+  if (sanitized.history.length === 0) {
+    sanitized.history = [
+      { role: 'assistant', content: sanitized.message }
+    ];
+  }
+  return sanitized;
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -394,14 +407,23 @@ Return ONLY this JSON:
     history: formattedHistory
   }));
 
-  // Ensure history is properly set in response
-  if (response && !response.history) {
-    response.history = [
+  if (!response) {
+    throw new Error('AI service returned an empty response');
+  }
+
+  const sanitized = {
+    message: response.message || response.response || response.content || response.text || "Let's proceed with the interview.",
+    history: Array.isArray(response.history) ? response.history : [],
+    concluded: response.concluded !== undefined ? !!response.concluded : false
+  };
+
+  if (sanitized.history.length === 0) {
+    sanitized.history = [
       ...formattedHistory,
-      { role: 'assistant', content: response.message }
+      { role: 'assistant', content: sanitized.message }
     ];
   }
-  return response;
+  return sanitized;
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -426,7 +448,19 @@ Return ONLY this JSON:
   "feedback_summary": "Overall constructive review of the candidate's performance."
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  const response = await callGroq(systemPrompt, userPrompt);
+  if (!response) {
+    throw new Error('AI service returned an empty scorecard response');
+  }
+
+  return {
+    overall_score: response.overall_score !== undefined ? Number(response.overall_score) : 70,
+    technical_depth_score: response.technical_depth_score !== undefined ? Number(response.technical_depth_score) : 70,
+    communication_score: response.communication_score !== undefined ? Number(response.communication_score) : 70,
+    strengths: Array.isArray(response.strengths) ? response.strengths : [],
+    improvements: Array.isArray(response.improvements) ? response.improvements : [],
+    feedback_summary: response.feedback_summary || response.feedback || "Thank you for completing the interview."
+  };
 }
 
 // ─────────────────────────────────────────────────────────────────

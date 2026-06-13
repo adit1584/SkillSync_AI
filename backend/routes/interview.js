@@ -68,26 +68,32 @@ async function handleInterviewChat(req, res) {
 
     const result = await chatInterview(history, message, targetRole, experienceLevel);
 
+    const resultMessage = result && result.message ? String(result.message) : '';
+    const resultHistory = result && Array.isArray(result.history) ? result.history : history;
+    const resultConcluded = !!(result && result.concluded);
+
     // Conclude conditions: AI concludes or history reaches 10 entries (5 exchanges)
-    const isAiConcluded = !!result.concluded || result.message.toLowerCase().includes('conclude') || result.message.toLowerCase().includes('thank you for your time');
-    const isLengthConcluded = result.history.length >= 10;
+    const isAiConcluded = resultConcluded || 
+                          resultMessage.toLowerCase().includes('conclude') || 
+                          resultMessage.toLowerCase().includes('thank you for your time');
+    const isLengthConcluded = resultHistory.length >= 10;
     const shouldConclude = isAiConcluded || isLengthConcluded;
 
     let scorecard = null;
     if (shouldConclude) {
-      scorecard = await evaluateInterview(result.history, targetRole);
+      scorecard = await evaluateInterview(resultHistory, targetRole);
     }
 
     await updateSession(session_id, {
-      'interview.history': result.history,
+      'interview.history': resultHistory,
       'interview.concluded': shouldConclude,
       'interview.scorecard': scorecard
     });
 
     res.json({
       success: true,
-      message: result.message,
-      history: result.history,
+      message: resultMessage,
+      history: resultHistory,
       concluded: shouldConclude,
       scorecard
     });
