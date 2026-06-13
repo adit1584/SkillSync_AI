@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   BarChart3, Rocket, BookOpen, CheckCircle, XCircle,
   Loader2, RefreshCw, Target, TrendingUp, Award,
-  Home, AlertCircle, Terminal, Sparkles, Download, Zap, GraduationCap
+  Home, AlertCircle, Terminal, Sparkles, Download, Zap, GraduationCap,
+  Calendar, FileText, UserCheck
 } from 'lucide-react';
 import SkillRadarChart from '../components/SkillRadarChart';
 import CareerDashboard from '../components/CareerDashboard';
@@ -12,6 +13,7 @@ import RoadmapTimeline from '../components/RoadmapTimeline';
 import InterviewSimulator from '../components/InterviewSimulator';
 import ATSResumeOptimizer from '../components/ATSResumeOptimizer';
 import CourseRecommendations from '../components/CourseRecommendations';
+import ATSJobMatcher from '../components/ATSJobMatcher';
 import { simulateCareer, generateRoadmap, recommendCourses } from '../lib/api';
 import { useApp } from '../context/AppContext';
 import { useTheme } from '../context/ThemeContext';
@@ -19,6 +21,7 @@ import gsap from 'gsap';
 
 const TABS = [
   { id: 'overview', label: 'Overview', icon: BarChart3 },
+  { id: 'jobmatch', label: 'Job Match Scanner', icon: Target },
   { id: 'simulation', label: 'Career Paths', icon: Rocket },
   { id: 'roadmap', label: 'Learning Roadmap', icon: BookOpen },
   { id: 'courses', label: 'Recommended Courses', icon: GraduationCap },
@@ -33,6 +36,8 @@ export default function ResultsPage() {
     sessionId, resumeData, gapAnalysis, quizResults,
     targetRole, simulations, setSimulations,
     roadmap, setRoadmap, courses, setCourses,
+    quizSkipped, setQuizSkipped, interviewSkipped, setInterviewSkipped,
+    interviewScore, setInterviewScore, saveActiveState
   } = useApp();
 
   const [activeTab, setActiveTab] = useState('overview');
@@ -129,12 +134,35 @@ export default function ResultsPage() {
     }
   }
 
+  // Calculate scores locally
   const matchScore = gapAnalysis?.match_score || 0;
   const atsScore = gapAnalysis?.ats_score || 0;
   const overallQuiz = quizResults?.overall_score || 0;
   const matched = gapAnalysis?.matched_skills || [];
   const missing = gapAnalysis?.missing_skills || [];
   const perSkillScores = quizResults?.per_skill_scores || [];
+
+  const hasQuiz = quizResults && quizResults.overall_score !== undefined;
+  const hasInterview = interviewScore !== null && interviewScore !== undefined;
+
+  let overallReadiness = 0;
+  let readinessModeLabel = 'Skipped Mode';
+
+  if (hasQuiz && hasInterview) {
+    overallReadiness = Math.round((matchScore * 0.4) + (overallQuiz * 0.3) + (interviewScore * 0.3));
+    readinessModeLabel = 'Fully Assessed';
+  } else if (hasQuiz) {
+    overallReadiness = Math.round((matchScore * 0.6) + (overallQuiz * 0.4));
+    readinessModeLabel = 'Interview Skipped';
+  } else if (hasInterview) {
+    overallReadiness = Math.round((matchScore * 0.6) + (interviewScore * 0.4));
+    readinessModeLabel = 'Quiz Skipped';
+  } else {
+    // Both skipped: 70% Skill Match + 30% Resume Strength
+    const resumeStrength = Math.round(atsScore || 75);
+    overallReadiness = Math.round((matchScore * 0.7) + (resumeStrength * 0.3));
+    readinessModeLabel = 'Skipped Mode';
+  }
 
   const scoreColor = (s) => {
     if (s >= 70) return 'var(--emerald)';
@@ -215,26 +243,27 @@ export default function ResultsPage() {
                 <Download size={14} />
                 Download PDF
               </button>
-              <Link to="/" className="btn btn-secondary" style={{ gap: 8, fontSize: '0.85rem', padding: '10px 20px', boxShadow: 'var(--shadow-sm)' }}>
+              <Link to="/upload" className="btn btn-secondary" style={{ gap: 8, fontSize: '0.85rem', padding: '10px 20px', boxShadow: 'var(--shadow-sm)' }}>
                 <Home size={14} />
-                Reset Engine
+                Select Another Journey
               </Link>
             </div>
           </div>
         </motion.div>
-
+ 
         {/* ── Score Cards Row ───────────────────────────────── */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))',
           gap: 16,
           marginBottom: 32,
         }}>
           {[
-            { label: 'ATS Match Score', value: `${atsScore}%`, sub: `${matched.length}/${matched.length + missing.length} skills matched`, color: scoreColor(atsScore), bg: getScoreBg(atsScore), border: getScoreBorder(atsScore), icon: Target },
-            { label: 'Verified Skills', value: `${matchScore}%`, sub: `${missing.length} gap skills to learn`, color: scoreColor(matchScore), bg: getScoreBg(matchScore), border: getScoreBorder(matchScore), icon: CheckCircle },
-            { label: 'Diagnostic Quiz', value: `${overallQuiz}%`, sub: `${perSkillScores.length} topics evaluated`, color: scoreColor(overallQuiz), bg: getScoreBg(overallQuiz), border: getScoreBorder(overallQuiz), icon: Award },
-            { label: 'Target Path', value: resumeData?.experience_level || 'N/A', sub: targetRole, color: 'var(--indigo)', bg: 'rgba(163, 82, 0, 0.04)', border: 'rgba(163, 82, 0, 0.15)', icon: TrendingUp, capitalize: true },
+            { label: 'Overall Readiness', value: `${overallReadiness}%`, sub: readinessModeLabel, color: scoreColor(overallReadiness), bg: getScoreBg(overallReadiness), border: getScoreBorder(overallReadiness), icon: UserCheck },
+            { label: 'ATS Match Score', value: `${atsScore}%`, sub: `${matched.length}/${matched.length + missing.length} matched`, color: scoreColor(atsScore), bg: getScoreBg(atsScore), border: getScoreBorder(atsScore), icon: Target },
+            { label: 'Skill Gap Score', value: `${matchScore}%`, sub: `${missing.length} missing skills`, color: scoreColor(matchScore), bg: getScoreBg(matchScore), border: getScoreBorder(matchScore), icon: CheckCircle },
+            { label: 'Diagnostic Quiz', value: hasQuiz ? `${overallQuiz}%` : (quizSkipped ? 'Skipped' : 'Not Taken'), sub: 'Verification MCQ', color: hasQuiz ? scoreColor(overallQuiz) : 'var(--text-muted)', bg: hasQuiz ? getScoreBg(overallQuiz) : 'rgba(0,0,0,0.02)', border: hasQuiz ? getScoreBorder(overallQuiz) : 'var(--border)', icon: Award },
+            { label: 'Mock Interview', value: hasInterview ? `${interviewScore}%` : (interviewSkipped ? 'Skipped' : 'Not Taken'), sub: 'Technical & Behavioral', color: hasInterview ? scoreColor(interviewScore) : 'var(--text-muted)', bg: hasInterview ? getScoreBg(interviewScore) : 'rgba(0,0,0,0.02)', border: hasInterview ? getScoreBorder(interviewScore) : 'var(--border)', icon: Terminal },
           ].map((card, i) => (
             <motion.div
               key={card.label}
@@ -243,14 +272,14 @@ export default function ResultsPage() {
               transition={{ delay: i * 0.06 }}
               className="card"
               style={{
-                padding: '22px 20px',
+                padding: '20px 18px',
                 background: 'var(--bg-secondary)',
                 border: `1.5px solid ${card.border}`,
                 boxShadow: 'var(--shadow-sm)',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-                <p style={{ fontSize: '0.74rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', margin: 0, fontFamily: 'Space Grotesk' }}>
+                <p style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', margin: 0, fontFamily: 'Space Grotesk' }}>
                   {card.label}
                 </p>
                 <div style={{
@@ -265,16 +294,15 @@ export default function ResultsPage() {
               <p style={{
                 fontFamily: 'Space Grotesk, sans-serif',
                 fontWeight: 800,
-                fontSize: '1.9rem',
+                fontSize: '1.7rem',
                 color: card.color,
                 lineHeight: 1,
-                textTransform: card.capitalize ? 'capitalize' : 'none',
                 marginBottom: 6,
                 margin: 0
               }}>
                 {card.value}
               </p>
-              <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: card.capitalize ? 'capitalize' : 'none', margin: 0, fontWeight: 500 }}>
+              <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', margin: 0, fontWeight: 500 }}>
                 {card.sub}
               </p>
             </motion.div>
@@ -347,6 +375,74 @@ export default function ResultsPage() {
             className="print-show-block"
             style={{ display: activeTab === 'overview' ? 'grid' : 'none', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}
           >
+            {/* Assessment Center Prompt Cards */}
+            {(!hasQuiz || !hasInterview) && (
+              <div className="card results-card-anim" style={{ gridColumn: '1 / -1', padding: '24px', background: 'var(--bg-secondary)', border: '1.5px solid var(--border)' }}>
+                <h3 style={{ fontFamily: 'Syne', fontSize: '1.15rem', color: 'var(--text-primary)', margin: '0 0 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <Zap size={18} color="var(--indigo)" />
+                  Assessment Verification Center
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: 16 }}>
+                  Complete assessments to verify your skills and unlock your final Career Readiness Score.
+                </p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+                  {/* Quiz Prompt */}
+                  <div style={{ padding: 16, background: 'var(--bg-primary)', borderRadius: 8, border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <h4 style={{ fontSize: '0.92rem', color: 'var(--text-primary)', margin: '0 0 6px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <Award size={16} /> Skill Verification Quiz
+                      </h4>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', margin: '0 0 12px' }}>
+                        {hasQuiz ? `Completed with score: ${overallQuiz}%` : (quizSkipped ? 'Quiz was skipped. Your readiness score is estimated.' : 'Test your skills in target domain topics.')}
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', gap: 10 }}>
+                      {!hasQuiz ? (
+                        <>
+                          <button onClick={() => navigate('/quiz')} className="btn btn-primary" style={{ padding: '6px 14px', fontSize: '0.78rem' }}>Start Quiz</button>
+                          {!quizSkipped && (
+                            <button onClick={() => { setQuizSkipped(true); setTimeout(() => saveActiveState(true), 100); }} className="btn" style={{ padding: '6px 14px', fontSize: '0.78rem', border: '1px solid var(--border)' }}>Skip</button>
+                          )}
+                        </>
+                      ) : (
+                        <span style={{ fontSize: '0.78rem', color: 'var(--emerald)', fontWeight: 700 }}>Verified</span>
+                      )}
+                      {quizSkipped && !hasQuiz && (
+                        <button onClick={() => { setQuizSkipped(false); navigate('/quiz'); }} className="btn" style={{ padding: '6px 14px', fontSize: '0.78rem', background: 'none', border: '1px underline' }}>Take Quiz</button>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Interview Prompt */}
+                  <div style={{ padding: 16, background: 'var(--bg-primary)', borderRadius: 8, border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <h4 style={{ fontSize: '0.92rem', color: 'var(--text-primary)', margin: '0 0 6px', display: 'flex', alignItems: 'center', gap: 6 }}>
+                        <Terminal size={16} /> AI Mock Interview
+                      </h4>
+                      <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', margin: '0 0 12px' }}>
+                        {hasInterview ? `Completed with score: ${interviewScore}%` : (interviewSkipped ? 'Interview was skipped. Your readiness score is estimated.' : 'Practice technical, behavioral, and scenario questions.')}
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', gap: 10 }}>
+                      {!hasInterview ? (
+                        <>
+                          <button onClick={() => handleTabClick('interview')} className="btn btn-primary" style={{ padding: '6px 14px', fontSize: '0.78rem' }}>Start Interview</button>
+                          {!interviewSkipped && (
+                            <button onClick={() => { setInterviewSkipped(true); setTimeout(() => saveActiveState(true), 100); }} className="btn" style={{ padding: '6px 14px', fontSize: '0.78rem', border: '1px solid var(--border)' }}>Skip</button>
+                          )}
+                        </>
+                      ) : (
+                        <span style={{ fontSize: '0.78rem', color: 'var(--emerald)', fontWeight: 700 }}>Concluded</span>
+                      )}
+                      {interviewSkipped && !hasInterview && (
+                        <button onClick={() => { setInterviewSkipped(false); handleTabClick('interview'); }} className="btn" style={{ padding: '6px 14px', fontSize: '0.78rem', background: 'none', border: '1px underline' }}>Take Interview</button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Radar Chart */}
             <div className="card results-card-anim" style={{ padding: '24px', background: 'var(--bg-secondary)', border: '1.5px solid var(--border)' }}>
               <h4 style={{ fontSize: '1.05rem', marginBottom: 18, display: 'flex', alignItems: 'center', gap: 8, margin: 0, paddingBottom: 12, borderBottom: '1px solid var(--border)' }}>
@@ -357,7 +453,7 @@ export default function ResultsPage() {
                 {perSkillScores.length > 0
                   ? <SkillRadarChart perSkillScores={perSkillScores} />
                   : <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', textAlign: 'center', padding: '40px 0' }}>
-                      No verification parameters generated
+                      Complete the Skill Verification Quiz to build your skill topology radar.
                     </p>
                 }
               </div>
@@ -413,6 +509,11 @@ export default function ResultsPage() {
             </div>
           </div>
 
+          {/* JOB MATCH SCANNER */}
+          {activeTab === 'jobmatch' && (
+            <ATSJobMatcher />
+          )}
+
           {/* SIMULATION TAB */}
           {activeTab === 'simulation' && loadingSimulation && (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '80px 20px', gap: 18 }}>
@@ -428,9 +529,6 @@ export default function ResultsPage() {
               />
               <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
                 AI is simulating your career growth trajectories...
-              </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
-                Modeling Accelerated, Steady, and Pivot paths in Indian LPA
               </p>
             </div>
           )}
@@ -462,9 +560,6 @@ export default function ResultsPage() {
               <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
                 AI is constructing your personalized learning roadmap...
               </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
-                Creating week-by-week focus modules, daily tasks, and mini projects
-              </p>
             </div>
           )}
           {roadmap && (
@@ -494,9 +589,6 @@ export default function ResultsPage() {
               />
               <p style={{ color: 'var(--text-primary)', fontSize: '1.02rem', fontWeight: 700, fontFamily: 'Space Grotesk' }}>
                 AI is curating target course recommendations...
-              </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.84rem', margin: 0 }}>
-                Finding platforms, durations, and skill alignments for your gaps
               </p>
             </div>
           )}

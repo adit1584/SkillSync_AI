@@ -11,9 +11,13 @@ const { handleResumeOptimize } = require('./routes/optimize');
 const { handleCourses } = require('./routes/courses');
 const { handleRecommend } = require('./routes/recommend');
 const { handleSelectRole } = require('./routes/selectRole');
+const { handleSignup, handleLogin, handleRefresh, handleLogout, handleForgotPassword, handleMe } = require('./routes/auth');
+const { handleGetState, handleSaveState } = require('./routes/sessionState');
+const { handleJobMatch } = require('./routes/jobscan');
+const { handleGetHistory } = require('./routes/history');
 
 const PORT = process.env.PORT || 5000;
-
+require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 // Helper to parse JSON body
 function parseJsonBody(req) {
   return new Promise((resolve) => {
@@ -158,6 +162,26 @@ const server = http.createServer(async (req, res) => {
     // Read and parse request body (JSON or multipart)
     await parseRequest(req);
 
+    // Global session_id injection from JWT token for authenticated requests
+    const authHeader = req.headers['authorization'];
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+      const token = authHeader.split(' ')[1];
+      try {
+        const jwt = require('jsonwebtoken');
+        const { JWT_SECRET } = require('./middleware/authMiddleware');
+        const decoded = jwt.verify(token, JWT_SECRET);
+        req.user_id = decoded.userId;
+        if (!req.body) {
+          req.body = {};
+        }
+        if (!req.body.session_id) {
+          req.body.session_id = decoded.userId;
+        }
+      } catch (err) {
+        console.warn('[server] Global token validation warning:', err.message);
+      }
+    }
+
     // Manual Routing
     if (path === '/api/health' && method === 'GET') {
       res.json({
@@ -189,6 +213,26 @@ const server = http.createServer(async (req, res) => {
       await handleResumeOptimize(req, res);
     } else if (path === '/api/courses' && method === 'POST') {
       await handleCourses(req, res);
+    } else if (path === '/api/auth/signup' && method === 'POST') {
+      await handleSignup(req, res);
+    } else if (path === '/api/auth/login' && method === 'POST') {
+      await handleLogin(req, res);
+    } else if (path === '/api/auth/refresh' && method === 'POST') {
+      await handleRefresh(req, res);
+    } else if (path === '/api/auth/logout' && method === 'POST') {
+      await handleLogout(req, res);
+    } else if (path === '/api/auth/forgot-password' && method === 'POST') {
+      await handleForgotPassword(req, res);
+    } else if (path === '/api/auth/me' && method === 'GET') {
+      await handleMe(req, res);
+    } else if (path === '/api/session/state' && method === 'GET') {
+      await handleGetState(req, res);
+    } else if (path === '/api/session/save' && method === 'POST') {
+      await handleSaveState(req, res);
+    } else if (path === '/api/jobmatch' && method === 'POST') {
+      await handleJobMatch(req, res);
+    } else if (path === '/api/history' && method === 'GET') {
+      await handleGetHistory(req, res);
     } else {
       res.status(404).json({ error: 'Route not found' });
     }

@@ -81,7 +81,7 @@ export default function LandingPage() {
     if (particleContainerRef.current) {
       const container = particleContainerRef.current;
       container.innerHTML = ''; // Clear existing
-      
+
       const numParticles = 16;
       const elements = [];
 
@@ -136,8 +136,8 @@ export default function LandingPage() {
       .fromTo('.hero-stat-box', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, stagger: 0.08 }, '-=0.35');
 
     // 3. Scroll trigger-like entry for target roles section
-    gsap.fromTo('.role-badge-anim', 
-      { opacity: 0, y: 15 }, 
+    gsap.fromTo('.role-badge-anim',
+      { opacity: 0, y: 15 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.08, delay: 1.2 }
     );
   }, []);
@@ -177,7 +177,7 @@ export default function LandingPage() {
           <div style={{ maxWidth: 840, margin: '0 auto', textAlign: 'center' }}>
             {/* Badge */}
             <div className="hero-badge" style={{ marginBottom: 26, opacity: 0 }}>
-              <span style={{
+              {/* <span style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 padding: '8px 22px',
                 borderRadius: 'var(--radius-full)',
@@ -191,7 +191,7 @@ export default function LandingPage() {
               }}>
                 <Zap size={13} fill="var(--indigo)" />
                 AI-Powered Career Intelligence
-              </span>
+              </span> */}
             </div>
 
             {/* Headline */}

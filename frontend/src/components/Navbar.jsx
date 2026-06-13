@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Sun, Moon, Zap, Menu, X } from 'lucide-react';
+import { Sun, Moon, Zap, Menu, X, LogOut } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { useApp } from '../context/AppContext';
 import gsap from 'gsap';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const { user, logoutUser, saveStatus } = useApp();
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -63,7 +65,13 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Home', to: '/' },
-    { label: 'Analyze', to: '/upload' },
+    ...(user ? [
+      { label: 'Analyze', to: '/upload' },
+      { label: 'History', to: '/history' },
+    ] : [
+      { label: 'Login', to: '/login' },
+      { label: 'Signup', to: '/signup' },
+    ])
   ];
 
   const activeColor = 'var(--indigo)';
@@ -194,19 +202,65 @@ export default function Navbar() {
             }
           </button>
 
-          <Link
-            to="/upload"
-            className="btn btn-primary"
-            style={{
-              padding: '9px 22px',
-              fontSize: '0.85rem',
-              marginLeft: 8,
-              boxShadow: 'var(--shadow-sm)'
-            }}
-          >
-            <Zap size={14} />
-            Get Started
-          </Link>
+          {user && (
+            <span style={{
+              fontSize: '0.75rem',
+              color: saveStatus === 'Saving...' ? 'var(--cyan)' : 'var(--text-muted)',
+              fontWeight: 500,
+              fontFamily: 'Space Grotesk, sans-serif',
+              marginRight: 8,
+              transition: 'var(--transition)'
+            }}>
+              {saveStatus}
+            </span>
+          )}
+
+          {user ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{
+                background: 'var(--bg-accent-light)',
+                color: 'var(--text-accent)',
+                padding: '6px 14px',
+                borderRadius: 'var(--radius-full)',
+                fontSize: '0.85rem',
+                fontWeight: 700,
+                fontFamily: 'Space Grotesk, sans-serif',
+                border: '1.5px solid var(--border)'
+              }}>
+                {user.name.split(' ')[0]}
+              </div>
+              <button
+                onClick={logoutUser}
+                className="btn"
+                style={{
+                  padding: '9px 18px',
+                  fontSize: '0.85rem',
+                  background: 'transparent',
+                  border: '1.5px solid var(--border)',
+                  color: 'var(--text-secondary)',
+                  cursor: 'pointer',
+                  borderRadius: 'var(--radius-full)',
+                  transition: 'var(--transition)'
+                }}
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="btn btn-primary"
+              style={{
+                padding: '9px 22px',
+                fontSize: '0.85rem',
+                marginLeft: 8,
+                boxShadow: 'var(--shadow-sm)'
+              }}
+            >
+              <Zap size={14} />
+              Get Started
+            </Link>
+          )}
         </div>
 
         {/* Mobile Menu Button */}

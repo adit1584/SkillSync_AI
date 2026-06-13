@@ -7,7 +7,101 @@ const api = axios.create({
   timeout: 60000, // 60s for AI calls
 });
 
-// ── Upload resume (no role needed) ───────────────────────────────────
+// Request interceptor: attach token
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('skillsync_token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
+
+// Response interceptor: auto-refresh token on 401
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      const refreshToken = localStorage.getItem('skillsync_refresh_token');
+      if (refreshToken) {
+        try {
+          // Use plain axios instance to avoid infinite loop
+          const res = await axios.post(`${BASE_URL}/auth/refresh`, { refresh_token: refreshToken });
+          if (res.data && res.data.success) {
+            localStorage.setItem('skillsync_token', res.data.token);
+            if (res.data.refreshToken) {
+              localStorage.setItem('skillsync_refresh_token', res.data.refreshToken);
+            }
+            originalRequest.headers['Authorization'] = `Bearer ${res.data.token}`;
+            return api(originalRequest);
+          }
+        } catch (refreshError) {
+          console.error('[api] Refresh token expired/failed:', refreshError.message);
+          localStorage.removeItem('skillsync_token');
+          localStorage.removeItem('skillsync_refresh_token');
+          window.dispatchEvent(new Event('auth_session_expired'));
+        }
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
+// ── Auth Endpoints ──────────────────────────────────────────────────
+export async function signup(userData) {
+  const res = await api.post('/auth/signup', userData);
+  if (res.data.success) {
+    localStorage.setItem('skillsync_token', res.data.token);
+    localStorage.setItem('skillsync_refresh_token', res.data.refreshToken);
+  }
+  return res.data;
+}
+
+export async function login(credentials) {
+  const res = await api.post('/auth/login', credentials);
+  if (res.data.success) {
+    localStorage.setItem('skillsync_token', res.data.token);
+    localStorage.setItem('skillsync_refresh_token', res.data.refreshToken);
+  }
+  return res.data;
+}
+
+export async function logout() {
+  const refreshToken = localStorage.getItem('skillsync_refresh_token');
+  try {
+    await api.post('/auth/logout', { refresh_token: refreshToken });
+  } catch (err) {
+    console.warn('Logout server notification failed:', err.message);
+  }
+  localStorage.removeItem('skillsync_token');
+  localStorage.removeItem('skillsync_refresh_token');
+}
+
+export async function forgotPassword(email) {
+  const res = await api.post('/auth/forgot-password', { email });
+  return res.data;
+}
+
+export async function getMe() {
+  const res = await api.get('/auth/me');
+  return res.data;
+}
+
+// ── Session State Persistence ─────────────────────────────────────────
+export async function getSessionState() {
+  const res = await api.get('/session/state');
+  return res.data;
+}
+
+export async function saveSessionState(stateData) {
+  const res = await api.post('/session/save', stateData);
+  return res.data;
+}
+
+// ── Upload resume ───────────────────────────────────────────────
 export async function uploadResume(file) {
   const form = new FormData();
   form.append('resume', file);
@@ -82,6 +176,21 @@ export async function optimizeResume(sessionId) {
 // ── Course Recommendations ────────────────────────────────────────
 export async function recommendCourses(sessionId) {
   const res = await api.post('/courses', { session_id: sessionId });
+  return res.data;
+}
+
+// ── Job Description Scan (ATS Match) ──────────────────────────────────
+export async function scanJobDescription(jobDescText, manualReqs = null) {
+  const res = await api.post('/jobmatch', {
+    job_description: jobDescText,
+    manual_requirements: manualReqs
+  });
+  return res.data;
+}
+
+// ── History Retrieval ─────────────────────────────────────────────
+export async function getHistory() {
+  const res = await api.get('/history');
   return res.data;
 }
 

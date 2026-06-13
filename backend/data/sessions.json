@@ -18714,5 +18714,938 @@
       "concluded": false,
       "scorecard": null
     }
+  },
+  "e864f15e-8fcd-4dfd-9b04-65213a14e911": {
+    "session_id": "e864f15e-8fcd-4dfd-9b04-65213a14e911",
+    "resume_data": {
+      "name": "Shlok Naidu",
+      "email": "shlok16naidu@gmail.com",
+      "phone": "+91 6268642098",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "B.Tech in Computer Science",
+          "institution": "Medicaps University, Indore",
+          "year": "Expected 2027"
+        }
+      ],
+      "experience": [
+        {
+          "role": "SOFTWARE ENGINEERING INTERN | BACKEND / FULL-STACK (NODE.JS, REACT)",
+          "company": "",
+          "duration": "",
+          "description": "Backend-focused software engineering student with experience building scalable APIs, real-time systems, and AI-powered applications using Node.js, Express, React, and MongoDB."
+        }
+      ],
+      "technical_skills": [
+        "JavaScript (ES6+)",
+        "Node.js",
+        "Express.js",
+        "REST API Development",
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "React.js (Hooks, Context API)",
+        "HTML5",
+        "Tailwind CSS",
+        "MongoDB Atlas",
+        "Atlas Vector Search",
+        "Microservices Architecture",
+        "Real-Time Systems",
+        "WebSockets",
+        "Rule Engines",
+        "RAG",
+        "Docker (Basics)",
+        "AWS (EC2, S3 basics)",
+        "Vercel",
+        "Render",
+        "Git",
+        "GitHub",
+        "Postman"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Helix — Pharmacogenomic Decision Engine",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query. Designed a reproducible pipeline with confidence scoring + validated fallback logic (eliminating inconsistent outputs). Implemented audit logging across decision nodes for full traceability. Developed backend APIs using Node.js + Express for rule execution and data handling."
+        },
+        {
+          "name": "EyeOnSite — Real-Time Safety Monitoring System",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Real-Time Systems",
+            "WebSockets",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Developed a 15 FPS computer vision pipeline (YOLO + ByteTrack) for PPE violation + intrusion detection. Reduced false positives using debouncing, time thresholds, and motion filtering. Built microservices architecture (FastAPI + Node.js + React) with WebSocket-based real-time alerts. Implemented WebSocket-based real-time alerting system and live MJPEG streaming."
+        },
+        {
+          "name": "GyaanSetu – AI-powered personalized learning platform with RAG",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Rule Engines",
+            "RAG",
+            "Hugging Face embeddings"
+          ],
+          "description": "Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive quizzes. Developed a RAG-based tutoring system using Hugging Face embeddings and MongoDB Atlas Vector Search. Implemented offline-first support using IndexedDB with automatic synchronization. Added multilingual support, gamification, and career guidance features."
+        }
+      ],
+      "certifications": [],
+      "domains": []
+    },
+    "target_role": "Frontend Developer",
+    "selected_role": "Frontend Developer",
+    "recommended_roles": [
+      {
+        "role": "Frontend Developer",
+        "match_score": 92,
+        "confidence_score": 94,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "React.js (Hooks, Context API)",
+          "HTML5",
+          "Tailwind CSS"
+        ],
+        "missing_skills": [
+          "Vue.js",
+          "Angular"
+        ]
+      },
+      {
+        "role": "Backend Engineer",
+        "match_score": 88,
+        "confidence_score": 90,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "REST API Development",
+          "JWT Authentication"
+        ],
+        "missing_skills": [
+          "Django",
+          "Flask"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "match_score": 86,
+        "confidence_score": 88,
+        "strengths": [
+          "JavaScript (ES6+)",
+          "Node.js",
+          "Express.js",
+          "React.js (Hooks, Context API)",
+          "HTML5"
+        ],
+        "missing_skills": [
+          "Django",
+          "Flask"
+        ]
+      },
+      {
+        "role": "Cloud Engineer",
+        "match_score": 82,
+        "confidence_score": 84,
+        "strengths": [
+          "Node.js",
+          "MongoDB Atlas",
+          "Atlas Vector Search"
+        ],
+        "missing_skills": [
+          "AWS",
+          "Azure",
+          "GCP"
+        ]
+      },
+      {
+        "role": "DevOps Engineer",
+        "match_score": 78,
+        "confidence_score": 80,
+        "strengths": [
+          "Node.js",
+          "MongoDB Atlas"
+        ],
+        "missing_skills": [
+          "Kubernetes",
+          "Docker"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "Frontend Developer",
+      "match_score": 50,
+      "ats_score": 41,
+      "matched_skills": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Git"
+      ],
+      "missing_skills": [
+        "REST APIs",
+        "TypeScript",
+        "Next.js",
+        "Redux",
+        "Webpack"
+      ],
+      "nice_to_have_gaps": [
+        "GraphQL",
+        "Jest",
+        "Cypress",
+        "Storybook",
+        "CI/CD",
+        "Figma",
+        "Vue.js",
+        "Angular"
+      ],
+      "nice_to_have_matched": [
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Builds user interfaces and web experiences using modern JavaScript frameworks",
+        "top_companies": [
+          "Google",
+          "Microsoft",
+          "Flipkart",
+          "Swiggy",
+          "Razorpay",
+          "Atlassian"
+        ],
+        "interview_topics": [
+          "JavaScript fundamentals",
+          "React lifecycle",
+          "CSS layout",
+          "Performance optimization",
+          "Browser APIs"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "4-8",
+          "junior": "8-15",
+          "mid": "15-30",
+          "senior": "30-60"
+        },
+        "avg_salary_usd": {
+          "fresher": "50k-75k",
+          "junior": "75k-100k",
+          "mid": "100k-140k",
+          "senior": "140k-200k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T07:46:38.098Z",
+    "career_simulation": null,
+    "roadmap": null,
+    "courses": null,
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Developed backend APIs using Node.js + Express",
+          "optimized_bullet_suggestion": "Designed and implemented scalable REST APIs using Node.js, Express, and MongoDB, resulting in 30% reduction in API latency",
+          "impact_metric": "30% API latency reduction"
+        },
+        {
+          "skill": "TypeScript",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Migrated legacy codebase to TypeScript, improving code maintainability by 40% and reducing errors by 25%",
+          "impact_metric": "40% code maintainability improvement"
+        },
+        {
+          "skill": "Next.js",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Developed and deployed high-performance web applications using Next.js, resulting in 50% improvement in page load times",
+          "impact_metric": "50% page load time improvement"
+        },
+        {
+          "skill": "Redux",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Implemented state management using Redux, improving application scalability by 25% and reducing bugs by 30%",
+          "impact_metric": "25% application scalability improvement"
+        },
+        {
+          "skill": "Webpack",
+          "original_bullet_suggestion": "Built features using JavaScript",
+          "optimized_bullet_suggestion": "Configured and optimized Webpack for efficient code bundling, resulting in 20% reduction in build times",
+          "impact_metric": "20% build time reduction"
+        }
+      ]
+    },
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "State Management",
+        "question": "What is the primary purpose of the useState hook in React?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To manage side effects in functional components",
+          "B": "To handle user input and store it in a component's state",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useState hook is used to add state to functional components, allowing them to store and update their own state. This is useful for handling user input, among other things."
+      },
+      {
+        "id": 2,
+        "skill": "React",
+        "difficulty": "hard",
+        "topic": "Optimization",
+        "question": "What is the purpose of the React.memo function?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To memoize the results of a function so it's not called multiple times with the same arguments",
+          "B": "To optimize the rendering of a component by preventing unnecessary re-renders",
+          "C": "To create a new React context",
+          "D": "To handle errors in a React application"
+        },
+        "correct": "B",
+        "explanation": "React.memo is a higher-order component that memoizes a component so that it's not re-rendered unless its props change. This can be used to optimize the performance of a React application."
+      },
+      {
+        "id": 3,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "Components",
+        "question": "What is the difference between a controlled component and an uncontrolled component in React?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A controlled component is one that is controlled by its parent component, while an uncontrolled component is one that is not controlled by its parent",
+          "B": "A controlled component is one that has its value controlled by the component itself, while an uncontrolled component is one that has its value controlled by the user",
+          "C": "A controlled component is one that uses the useState hook, while an uncontrolled component is one that uses the useEffect hook",
+          "D": "A controlled component is one that is rendered on the server, while an uncontrolled component is one that is rendered on the client"
+        },
+        "correct": "B",
+        "explanation": "A controlled component is one that has its value controlled by the component itself, typically using the useState hook. An uncontrolled component, on the other hand, is one that has its value controlled by the user, typically using a ref."
+      },
+      {
+        "id": 4,
+        "skill": "React",
+        "difficulty": "hard",
+        "topic": "Context API",
+        "question": "What is the purpose of the useContext hook in React?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new React context",
+          "B": "To subscribe to a React context",
+          "C": "To update a React context",
+          "D": "To optimize the rendering of a component"
+        },
+        "correct": "B",
+        "explanation": "The useContext hook is used to subscribe to a React context, allowing a component to access the context's values and re-render when the context changes."
+      },
+      {
+        "id": 5,
+        "skill": "React",
+        "difficulty": "medium",
+        "topic": "Hooks",
+        "question": "What is the purpose of the useEffect hook in React?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To handle user input and store it in a component's state",
+          "B": "To manage side effects in functional components",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useEffect hook is used to handle side effects in functional components, such as fetching data from an API or setting up event listeners."
+      },
+      {
+        "id": 6,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Closures",
+        "question": "What is a closure in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A function that has access to its own scope",
+          "B": "A function that has access to the scope of its outer functions",
+          "C": "A variable that is defined inside a function",
+          "D": "A block of code that is executed repeatedly"
+        },
+        "correct": "B",
+        "explanation": "A closure is a function that has access to the scope of its outer functions, even when the outer functions have returned. This allows the closure to use variables from the outer functions, even if they are no longer in scope."
+      },
+      {
+        "id": 7,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Async/Await",
+        "question": "What is the purpose of the async/await syntax in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new promise",
+          "B": "To handle errors in a promise chain",
+          "C": "To simplify the syntax of working with promises",
+          "D": "To optimize the performance of a JavaScript application"
+        },
+        "correct": "C",
+        "explanation": "The async/await syntax is used to simplify the syntax of working with promises, making it easier to write asynchronous code that is easier to read and maintain."
+      },
+      {
+        "id": 8,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "This Keyword",
+        "question": "What is the purpose of the this keyword in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To refer to the global object",
+          "B": "To refer to the current function",
+          "C": "To refer to the object that a function is called on",
+          "D": "To refer to a variable that is defined inside a function"
+        },
+        "correct": "C",
+        "explanation": "The this keyword is used to refer to the object that a function is called on, allowing the function to access the object's properties and methods."
+      },
+      {
+        "id": 9,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "topic": "Prototypal Inheritance",
+        "question": "What is prototypal inheritance in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "A type of inheritance where a child object inherits properties from a parent object",
+          "B": "A type of inheritance where a child object inherits methods from a parent object",
+          "C": "A type of inheritance where a child object inherits properties and methods from a parent object",
+          "D": "A type of inheritance where a child object does not inherit anything from a parent object"
+        },
+        "correct": "C",
+        "explanation": "Prototypal inheritance is a type of inheritance where a child object inherits properties and methods from a parent object, allowing the child object to access and override the parent object's properties and methods."
+      },
+      {
+        "id": 10,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "topic": "Functions",
+        "question": "What is the purpose of the bind method in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new function that has the same behavior as an existing function",
+          "B": "To change the this keyword of a function to refer to a specific object",
+          "C": "To optimize the performance of a function",
+          "D": "To handle errors in a function"
+        },
+        "correct": "B",
+        "explanation": "The bind method is used to change the this keyword of a function to refer to a specific object, allowing the function to be called with a specific context."
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "topic": "Destructuring",
+        "question": "What is the purpose of destructuring in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new object from an existing object",
+          "B": "To extract specific properties from an object or array",
+          "C": "To optimize the performance of a JavaScript application",
+          "D": "To handle errors in a JavaScript application"
+        },
+        "correct": "B",
+        "explanation": "Destructuring is a syntax feature in JavaScript that allows you to extract specific properties from an object or array and assign them to variables."
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "topic": "Generators",
+        "question": "What is the purpose of generators in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new promise",
+          "B": "To handle errors in a promise chain",
+          "C": "To simplify the syntax of working with iterators",
+          "D": "To optimize the performance of a JavaScript application"
+        },
+        "correct": "C",
+        "explanation": "Generators are a type of function in JavaScript that can be used to simplify the syntax of working with iterators, allowing you to write asynchronous code that is easier to read and maintain."
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "topic": "Classes",
+        "question": "What is the purpose of classes in JavaScript?",
+        "has_code": false,
+        "code_snippet": "",
+        "options": {
+          "A": "To create a new object from an existing object",
+          "B": "To define a blueprint for creating objects",
+          "C": "To optimize the performance of a JavaScript application",
+          "D": "To handle errors in a JavaScript application"
+        },
+        "correct": "B",
+        "explanation": "Classes are a syntax feature in JavaScript that allows you to define a blueprint for creating objects, making it easier to create and manage complex data structures."
+      },
+      {
+        "id": 14,
+        "skill": "React",
+        "difficulty": "hard",
+        "topic": "Error Boundaries",
+        "question": "What will happen if an error occurs in the following code snippet?",
+        "has_code": true,
+        "code_snippet": "class ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false };\n  }\n\n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n\n  render() {\n    if (this.state.hasError) {\n      return <h1>Something went wrong.</h1>;\n    }\n\n    return this.props.children;\n  }\n}",
+        "options": {
+          "A": "The error will be caught and the component will render the error message",
+          "B": "The error will not be caught and the component will crash",
+          "C": "The error will be caught but the component will not render the error message",
+          "D": "The error will be ignored and the component will continue to render normally"
+        },
+        "correct": "A",
+        "explanation": "The error will be caught by the ErrorBoundary component and it will render the error message."
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "topic": "Async/Await",
+        "question": "What will be the output of the following code snippet?",
+        "has_code": true,
+        "code_snippet": "async function test() {\n  try {\n    let result = await Promise.resolve('Hello');\n    console.log(result);\n  } catch (error) {\n    console.error(error);\n  }\n}\ntest();",
+        "options": {
+          "A": "Hello",
+          "B": "Error: Promise was rejected",
+          "C": "undefined",
+          "D": "null"
+        },
+        "correct": "A",
+        "explanation": "The output will be 'Hello' because the promise is resolved with the value 'Hello'."
+      }
+    ],
+    "quiz_id": "888633d1-9164-4b65-96b5-9ff5a9c3e1fc",
+    "quiz_score": 30,
+    "quiz_overall_score": 30,
+    "quiz_review": [
+      {
+        "id": 1,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the primary purpose of the useState hook in React?",
+        "options": {
+          "A": "To manage side effects in functional components",
+          "B": "To handle user input and store it in a component's state",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useState hook is used to add state to functional components, allowing them to store and update their own state. This is useful for handling user input, among other things.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 2,
+        "skill": "React",
+        "difficulty": "hard",
+        "question": "What is the purpose of the React.memo function?",
+        "options": {
+          "A": "To memoize the results of a function so it's not called multiple times with the same arguments",
+          "B": "To optimize the rendering of a component by preventing unnecessary re-renders",
+          "C": "To create a new React context",
+          "D": "To handle errors in a React application"
+        },
+        "correct": "B",
+        "explanation": "React.memo is a higher-order component that memoizes a component so that it's not re-rendered unless its props change. This can be used to optimize the performance of a React application.",
+        "user_selected": "A",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 3,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the difference between a controlled component and an uncontrolled component in React?",
+        "options": {
+          "A": "A controlled component is one that is controlled by its parent component, while an uncontrolled component is one that is not controlled by its parent",
+          "B": "A controlled component is one that has its value controlled by the component itself, while an uncontrolled component is one that has its value controlled by the user",
+          "C": "A controlled component is one that uses the useState hook, while an uncontrolled component is one that uses the useEffect hook",
+          "D": "A controlled component is one that is rendered on the server, while an uncontrolled component is one that is rendered on the client"
+        },
+        "correct": "B",
+        "explanation": "A controlled component is one that has its value controlled by the component itself, typically using the useState hook. An uncontrolled component, on the other hand, is one that has its value controlled by the user, typically using a ref.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 4,
+        "skill": "React",
+        "difficulty": "hard",
+        "question": "What is the purpose of the useContext hook in React?",
+        "options": {
+          "A": "To create a new React context",
+          "B": "To subscribe to a React context",
+          "C": "To update a React context",
+          "D": "To optimize the rendering of a component"
+        },
+        "correct": "B",
+        "explanation": "The useContext hook is used to subscribe to a React context, allowing a component to access the context's values and re-render when the context changes.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 5,
+        "skill": "React",
+        "difficulty": "medium",
+        "question": "What is the purpose of the useEffect hook in React?",
+        "options": {
+          "A": "To handle user input and store it in a component's state",
+          "B": "To manage side effects in functional components",
+          "C": "To optimize the rendering of a component",
+          "D": "To create a new React component"
+        },
+        "correct": "B",
+        "explanation": "The useEffect hook is used to handle side effects in functional components, such as fetching data from an API or setting up event listeners.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 6,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is a closure in JavaScript?",
+        "options": {
+          "A": "A function that has access to its own scope",
+          "B": "A function that has access to the scope of its outer functions",
+          "C": "A variable that is defined inside a function",
+          "D": "A block of code that is executed repeatedly"
+        },
+        "correct": "B",
+        "explanation": "A closure is a function that has access to the scope of its outer functions, even when the outer functions have returned. This allows the closure to use variables from the outer functions, even if they are no longer in scope.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 7,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is the purpose of the async/await syntax in JavaScript?",
+        "options": {
+          "A": "To create a new promise",
+          "B": "To handle errors in a promise chain",
+          "C": "To simplify the syntax of working with promises",
+          "D": "To optimize the performance of a JavaScript application"
+        },
+        "correct": "C",
+        "explanation": "The async/await syntax is used to simplify the syntax of working with promises, making it easier to write asynchronous code that is easier to read and maintain.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 8,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of the this keyword in JavaScript?",
+        "options": {
+          "A": "To refer to the global object",
+          "B": "To refer to the current function",
+          "C": "To refer to the object that a function is called on",
+          "D": "To refer to a variable that is defined inside a function"
+        },
+        "correct": "C",
+        "explanation": "The this keyword is used to refer to the object that a function is called on, allowing the function to access the object's properties and methods.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 9,
+        "skill": "JavaScript",
+        "difficulty": "hard",
+        "question": "What is prototypal inheritance in JavaScript?",
+        "options": {
+          "A": "A type of inheritance where a child object inherits properties from a parent object",
+          "B": "A type of inheritance where a child object inherits methods from a parent object",
+          "C": "A type of inheritance where a child object inherits properties and methods from a parent object",
+          "D": "A type of inheritance where a child object does not inherit anything from a parent object"
+        },
+        "correct": "C",
+        "explanation": "Prototypal inheritance is a type of inheritance where a child object inherits properties and methods from a parent object, allowing the child object to access and override the parent object's properties and methods.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 10,
+        "skill": "JavaScript",
+        "difficulty": "medium",
+        "question": "What is the purpose of the bind method in JavaScript?",
+        "options": {
+          "A": "To create a new function that has the same behavior as an existing function",
+          "B": "To change the this keyword of a function to refer to a specific object",
+          "C": "To optimize the performance of a function",
+          "D": "To handle errors in a function"
+        },
+        "correct": "B",
+        "explanation": "The bind method is used to change the this keyword of a function to refer to a specific object, allowing the function to be called with a specific context.",
+        "user_selected": "B",
+        "is_correct": true,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 11,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "question": "What is the purpose of destructuring in JavaScript?",
+        "options": {
+          "A": "To create a new object from an existing object",
+          "B": "To extract specific properties from an object or array",
+          "C": "To optimize the performance of a JavaScript application",
+          "D": "To handle errors in a JavaScript application"
+        },
+        "correct": "B",
+        "explanation": "Destructuring is a syntax feature in JavaScript that allows you to extract specific properties from an object or array and assign them to variables.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 12,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "question": "What is the purpose of generators in JavaScript?",
+        "options": {
+          "A": "To create a new promise",
+          "B": "To handle errors in a promise chain",
+          "C": "To simplify the syntax of working with iterators",
+          "D": "To optimize the performance of a JavaScript application"
+        },
+        "correct": "C",
+        "explanation": "Generators are a type of function in JavaScript that can be used to simplify the syntax of working with iterators, allowing you to write asynchronous code that is easier to read and maintain.",
+        "user_selected": "D",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 13,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "medium",
+        "question": "What is the purpose of classes in JavaScript?",
+        "options": {
+          "A": "To create a new object from an existing object",
+          "B": "To define a blueprint for creating objects",
+          "C": "To optimize the performance of a JavaScript application",
+          "D": "To handle errors in a JavaScript application"
+        },
+        "correct": "B",
+        "explanation": "Classes are a syntax feature in JavaScript that allows you to define a blueprint for creating objects, making it easier to create and manage complex data structures.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": false,
+        "code_snippet": ""
+      },
+      {
+        "id": 14,
+        "skill": "React",
+        "difficulty": "hard",
+        "question": "What will happen if an error occurs in the following code snippet?",
+        "options": {
+          "A": "The error will be caught and the component will render the error message",
+          "B": "The error will not be caught and the component will crash",
+          "C": "The error will be caught but the component will not render the error message",
+          "D": "The error will be ignored and the component will continue to render normally"
+        },
+        "correct": "A",
+        "explanation": "The error will be caught by the ErrorBoundary component and it will render the error message.",
+        "user_selected": "C",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "class ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false };\n  }\n\n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n\n  render() {\n    if (this.state.hasError) {\n      return <h1>Something went wrong.</h1>;\n    }\n\n    return this.props.children;\n  }\n}"
+      },
+      {
+        "id": 15,
+        "skill": "JavaScript (ES6+)",
+        "difficulty": "hard",
+        "question": "What will be the output of the following code snippet?",
+        "options": {
+          "A": "Hello",
+          "B": "Error: Promise was rejected",
+          "C": "undefined",
+          "D": "null"
+        },
+        "correct": "A",
+        "explanation": "The output will be 'Hello' because the promise is resolved with the value 'Hello'.",
+        "user_selected": "B",
+        "is_correct": false,
+        "has_code": true,
+        "code_snippet": "async function test() {\n  try {\n    let result = await Promise.resolve('Hello');\n    console.log(result);\n  } catch (error) {\n    console.error(error);\n  }\n}\ntest();"
+      }
+    ],
+    "quiz_per_skill_scores": [
+      {
+        "skill": "React",
+        "score": 50,
+        "correct": 3,
+        "total": 6,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "JavaScript",
+        "score": 40,
+        "correct": 2,
+        "total": 5,
+        "proficiency": "Beginner"
+      },
+      {
+        "skill": "JavaScript (ES6+)",
+        "score": 0,
+        "correct": 0,
+        "total": 4,
+        "proficiency": "Needs Work"
+      }
+    ],
+    "interview_score": null,
+    "career_readiness_score": null,
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, my name is SkillSync AI, and I'll be conducting your technical interview for the Frontend Developer position today. Let's get started with a question: Can you explain the difference between using React Context API and React Hooks for state management in a React application, and provide an example of when you would use each?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    }
+  },
+  "mem_1781338816674_84qz2psqq": {
+    "session_id": "mem_1781338816674_84qz2psqq",
+    "resume_data": {
+      "name": "Shlok Naidu",
+      "email": "shlok16naidu@gmail.com",
+      "phone": "+91 6268642098",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "B.Tech in Computer Science",
+          "institution": "Medicaps University, Indore",
+          "year": "Expected 2027"
+        }
+      ],
+      "experience": [
+        {
+          "role": "SOFTWARE ENGINEERING INTERN | BACKEND / FULL-STACK (NODE.JS, REACT)",
+          "company": "",
+          "duration": "",
+          "description": "Backend-focused software engineering student with experience building scalable APIs, real-time systems, and AI-powered applications using Node.js, Express, React, and MongoDB."
+        }
+      ],
+      "technical_skills": [
+        "JavaScript (ES6+)",
+        "Node.js",
+        "Express.js",
+        "REST API Development",
+        "JWT Authentication",
+        "Role-Based Access Control (RBAC)",
+        "React.js (Hooks, Context API)",
+        "HTML5",
+        "Tailwind CSS",
+        "MongoDB Atlas",
+        "Atlas Vector Search",
+        "Microservices Architecture",
+        "Real-Time Systems",
+        "WebSockets",
+        "Rule Engines",
+        "RAG",
+        "Docker (Basics)",
+        "AWS (EC2, S3 basics)",
+        "Vercel",
+        "Render",
+        "Git",
+        "GitHub",
+        "Postman"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Helix — Pharmacogenomic Decision Engine",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB Atlas",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query Designed a reproducible pipeline with confidence scoring + validated fallback logic (eliminating inconsistent outputs) Implemented audit logging across decision nodes for full traceability Developed backend APIs using Node.js + Express for rule execution and data handling"
+        },
+        {
+          "name": "EyeOnSite — Real-Time Safety Monitoring System",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB Atlas",
+            "WebSockets",
+            "Rule Engines",
+            "RAG"
+          ],
+          "description": "Developed a 15 FPS computer vision pipeline (YOLO + ByteTrack) for PPE violation + intrusion detection Reduced false positives using debouncing, time thresholds, and motion filtering Built microservices architecture (FastAPI + Node.js + React) with WebSocket-based real-time alerts Implemented WebSocket-based real-time alerting system and live MJPEG streaming"
+        },
+        {
+          "name": "GyaanSetu – AI-powered personalized learning platform with RAG",
+          "tech_stack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB Atlas",
+            "Rule Engines",
+            "RAG",
+            "Hugging Face embeddings"
+          ],
+          "description": "Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive quizzes Developed a RAG-based tutoring system using Hugging Face embeddings and MongoDB Atlas Vector Search Implemented offline-first support using IndexedDB with automatic synchronization Added multilingual support, gamification, and career guidance features"
+        }
+      ],
+      "certifications": [],
+      "domains": []
+    },
+    "cloudinary_url": "https://res.cloudinary.com/demo/raw/upload/mock_resume_1781338843057/Shlok%20Naidu%20Resume.pdf",
+    "parsed_text": "Shlok Naidu\nBhopal / Indore, India\n+91 6268642098 |shlok16naidu@gmail.com | LinkedIn | GitHub | Portfolio\nSOFTWARE ENGINEERING INTERN | BACKEND / FULL-STACK (NODE.JS, REACT)\nBackend-focused software engineering student with experience building scalable APIs, real-time systems, and AI-powered\napplications using Node.js, Express, React, and MongoDB.\nExperience with microservices, REST APIs, authentication systems, and WebSocket-based architectures.\nBuilt projects involving computer vision, rule engines, and retrieval-augmented generation (RAG).\nInterested in building reliable and scalable software that solves real-world problems.\nTECHNICAL SKILLS\nLanguages: JavaScript (ES6+)\nBackend: Node.js, Express.js, REST API Development, JWT Authentication, Role-Based Access Control (RBAC)\nFrontend: React.js (Hooks, Context API), HTML5, Tailwind CSS\nDatabases: MongoDB Atlas, Atlas Vector Search\nSystems: Microservices Architecture, Real-Time Systems, WebSockets, Rule Engines, RAG\nCloud/DevOps: Docker (Basics), AWS (EC2, S3 basics), Vercel, Render\nTools: Git, GitHub, Postman\nPROJECTS\nHelix — Pharmacogenomic Decision Engine (GitHub | Live)\n● Built a deterministic rule engine to process genomic (VCF) data, reducing analysis time from hours to <1s/query\n● Designed a reproducible pipeline with confidence scoring + validated fallback logic (eliminating inconsistent\noutputs)\n● Implemented audit logging across decision nodes for full traceability\n● Developed backend APIs using Node.js + Express for rule execution and data handling\nEyeOnSite — Real-Time Safety Monitoring System (GitHub)\n● Developed a 15 FPS computer vision pipeline (YOLO + ByteTrack) for PPE violation + intrusion detection\n● Reduced false positives using debouncing, time thresholds, and motion filtering\n● Built microservices architecture (FastAPI + Node.js + React) with WebSocket-based real-time alerts\n● Implemented WebSocket-based real-time alerting system and live MJPEG streaming\nGyaanSetu – AI-powered personalized learning platform with RAG (GitHub | Live)\n● Built an AI-powered learning platform that converts uploaded syllabi into personalized study plans and adaptive\nquizzes.\n● Developed a RAG-based tutoring system using Hugging Face embeddings and MongoDB Atlas Vector Search.\n● Implemented offline-first support using IndexedDB with automatic synchronization.\n● Added multilingual support, gamification, and career guidance features.\nACHIEVEMENTS\n● 1st Runner up — HackSprint (GDG Medicaps), UDBHAV’26\n● Finalist — Prayatna 3.0, MediVerse Hackathon, Advitiya × JPD Hub\n● Semi-Finalist — RIFT '26 (Physics Wallah)\nEDUCATION\nB.Tech in Computer Science\nMedicaps University, Indore (Expected 2027)",
+    "created_at": "2026-06-13T08:20:44.305Z"
   }
 }
