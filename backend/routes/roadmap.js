@@ -52,7 +52,8 @@ async function handleRoadmap(req, res) {
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
     const gapAnalysis = user.gap_analysis || {};
-    const quizScores = user.quiz_result?.per_skill_scores || [];
+    // Support both new flat keys and legacy nested keys
+    const quizScores = user.quiz_per_skill_scores || user.quiz_result?.per_skill_scores || [];
 
     const gapSkills = gapAnalysis.missing_skills || [];
     const strongSkills = quizScores

@@ -7,15 +7,26 @@ const api = axios.create({
   timeout: 60000, // 60s for AI calls
 });
 
-// ── Upload resume + analyze ───────────────────────────────────────
-export async function uploadResume(file, targetRole) {
+// ── Upload resume (no role needed) ───────────────────────────────────
+export async function uploadResume(file) {
   const form = new FormData();
   form.append('resume', file);
-  form.append('target_role', targetRole);
 
   const res = await api.post('/upload', form, {
     headers: { 'Content-Type': 'multipart/form-data' },
   });
+  return res.data;
+}
+
+// ── Career Role Recommendation ─────────────────────────────────
+export async function recommendRoles(sessionId) {
+  const res = await api.post('/recommend', { session_id: sessionId });
+  return res.data;
+}
+
+// ── Select Role (triggers local skill gap) ────────────────────────
+export async function selectRole(sessionId, selectedRole) {
+  const res = await api.post('/select-role', { session_id: sessionId, selected_role: selectedRole });
   return res.data;
 }
 

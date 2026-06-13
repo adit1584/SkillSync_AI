@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Terminal, Cpu, User, AlertCircle, RefreshCw, Award, CheckCircle, ChevronRight, BarChart3, HelpCircle } from 'lucide-react';
 import { startInterview, chatInterview } from '../lib/api';
 import { useTheme } from '../context/ThemeContext';
+import { useApp } from '../context/AppContext';
 
 export default function InterviewSimulator({ sessionId, targetRole }) {
   const { theme } = useTheme();
+  const { setCareerReadinessScore, setInterviewScore } = useApp();
   const [loading, setLoading] = useState(true);
   const [chatting, setChatting] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -64,6 +66,13 @@ export default function InterviewSimulator({ sessionId, targetRole }) {
         setMessages(res.history);
         setConcluded(res.concluded);
         setScorecard(res.scorecard);
+        // Capture career readiness into global context
+        if (res.career_readiness_score !== null && res.career_readiness_score !== undefined) {
+          setCareerReadinessScore(res.career_readiness_score);
+        }
+        if (res.interview_score !== null && res.interview_score !== undefined) {
+          setInterviewScore(res.interview_score);
+        }
       }
     } catch (err) {
       setError(err.response?.data?.error || err.message || 'Failed to send message');

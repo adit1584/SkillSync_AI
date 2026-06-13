@@ -1,12 +1,12 @@
 const { parsePDF, cleanResumeText } = require('../services/pdfParser');
 const { extractSkillsFromResume } = require('../services/aiService');
-const { analyzeSkillGap } = require('../services/skillMatcher');
-const { compressForAI } = require('../services/tokenCompressor');
 const { createSession } = require('../services/dbHelper');
 const { v4: uuidv4 } = require('uuid');
 
 /**
  * Handle POST /api/upload
+ * Step 1: Parse PDF + Extract skills. Does NOT require a target role.
+ * Role selection happens after AI recommendations are shown.
  */
 async function handleUpload(req, res) {
   try {
@@ -16,12 +16,6 @@ async function handleUpload(req, res) {
 
     console.log(`[upload] File: ${req.file.originalname} | Size: ${req.file.size} bytes | MIME: ${req.file.mimetype}`);
 
-    const targetRole = req.body.target_role;
-    const validRoles = ['Frontend Developer', 'AI Engineer', 'Data Analyst', 'Cloud Engineer'];
-    if (!targetRole || !validRoles.includes(targetRole)) {
-      return res.status(400).json({ error: 'Invalid target role. Choose from: ' + validRoles.join(', ') });
-    }
-
     // Step 1: Parse PDF → raw text
     const fileBuffer = Buffer.isBuffer(req.file.buffer)
       ? req.file.buffer
@@ -30,37 +24,24 @@ async function handleUpload(req, res) {
     const rawText = await parsePDF(fileBuffer);
     const cleanText = cleanResumeText(rawText);
 
-    // Step 2: AI Prompt 1 — Extract structured skills from resume
+    // Step 2: AI — Extract structured skills from resume
     const resumeData = await extractSkillsFromResume(cleanText);
 
-    // Collect all skills for matching
-    const allUserSkills = [
-      ...(resumeData.technical_skills || []),
-      ...(resumeData.tools_and_frameworks || []),
-    ];
-
-    // Step 3: Local skill gap analysis — zero tokens
-    const gapAnalysis = analyzeSkillGap(allUserSkills, targetRole);
-
-    // Step 4: Compress for future AI calls
-    const compressed = compressForAI(resumeData, targetRole);
-
-    // Generate session ID
+    // Generate session ID and save session (no role yet)
     const sessionId = uuidv4();
 
-    // Save session (MongoDB or in-memory fallback)
     await createSession(sessionId, {
       resume_data: resumeData,
-      target_role: targetRole,
-      gap_analysis: gapAnalysis,
+      target_role: null,
+      selected_role: null,
+      recommended_roles: null,
+      gap_analysis: null,
     });
 
     res.json({
       success: true,
       session_id: sessionId,
       resume: resumeData,
-      gap_analysis: gapAnalysis,
-      compressed_profile: compressed,
     });
 
   } catch (err) {

@@ -9,6 +9,8 @@ const { handleRoadmap } = require('./routes/roadmap');
 const { handleInterviewStart, handleInterviewChat } = require('./routes/interview');
 const { handleResumeOptimize } = require('./routes/optimize');
 const { handleCourses } = require('./routes/courses');
+const { handleRecommend } = require('./routes/recommend');
+const { handleSelectRole } = require('./routes/selectRole');
 
 const PORT = process.env.PORT || 5000;
 
@@ -167,6 +169,10 @@ const server = http.createServer(async (req, res) => {
       });
     } else if (path === '/api/upload' && method === 'POST') {
       await handleUpload(req, res);
+    } else if (path === '/api/recommend' && method === 'POST') {
+      await handleRecommend(req, res);
+    } else if (path === '/api/select-role' && method === 'POST') {
+      await handleSelectRole(req, res);
     } else if (path === '/api/quiz/generate' && method === 'POST') {
       await handleQuizGenerate(req, res);
     } else if (path === '/api/quiz/submit' && method === 'POST') {

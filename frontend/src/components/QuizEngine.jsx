@@ -134,11 +134,65 @@ export default function QuizEngine({ quiz, onComplete }) {
             fontWeight: 800,
             color: 'var(--text-primary)',
             lineHeight: 1.45,
-            marginBottom: 26,
+            marginBottom: question?.has_code ? 16 : 26,
             fontFamily: 'Plus Jakarta Sans, sans-serif',
           }}>
             {question?.question}
           </h3>
+
+          {/* Optional Code Snippet */}
+          {question?.has_code && question?.code_snippet && (
+            <div style={{
+              position: 'relative',
+              borderRadius: 'var(--radius-md)',
+              border: '1.5px solid var(--border)',
+              background: '#0e1117',
+              overflow: 'hidden',
+              marginBottom: 26,
+              boxShadow: 'var(--shadow-sm)',
+            }}>
+              {/* Code header bar */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '8px 16px',
+                background: '#161b22',
+                borderBottom: '1.5px solid var(--border)',
+              }}>
+                <span style={{
+                  fontSize: '0.72rem',
+                  fontFamily: 'Space Grotesk, sans-serif',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                  color: 'rgba(255, 255, 255, 0.5)',
+                }}>
+                  {question?.skill || 'Code'} Snippet
+                </span>
+                {/* Dots mimicking editor */}
+                <div style={{ display: 'flex', gap: 6 }}>
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', opacity: 0.8 }} />
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#fbbf24', opacity: 0.8 }} />
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', opacity: 0.8 }} />
+                </div>
+              </div>
+              {/* Code area */}
+              <pre style={{
+                margin: 0,
+                padding: '16px 20px',
+                color: '#e6edf3',
+                overflowX: 'auto',
+                fontSize: '0.86rem',
+                fontFamily: 'Fira Code, Source Code Pro, Consolas, Monaco, monospace',
+                lineHeight: 1.6,
+                whiteSpace: 'pre',
+                textAlign: 'left',
+              }}>
+                <code>{question.code_snippet}</code>
+              </pre>
+            </div>
+          )}
 
           {/* Options */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

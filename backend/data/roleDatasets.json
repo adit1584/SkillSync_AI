@@ -89,5 +89,135 @@
     "description": "Automates infrastructure, deployments, and operations for continuous integration and delivery",
     "top_companies": ["Amazon", "Google", "Red Hat", "HashiCorp", "Netflix", "Atlassian"],
     "interview_topics": ["CI/CD pipelines", "Infrastructure as Code", "Container orchestration", "Monitoring & Logging", "Linux internals"]
+  },
+  "Data Scientist": {
+    "required_skills": [
+      "Python", "Machine Learning", "Statistics", "Pandas", "NumPy", "Scikit-learn", "SQL", "Data Visualization", "Feature Engineering", "Jupyter"
+    ],
+    "nice_to_have": [
+      "PyTorch", "TensorFlow", "Deep Learning", "Spark", "R", "BigQuery", "MLflow", "Bayesian Statistics", "NLP", "Computer Vision"
+    ],
+    "avg_salary_lpa": { "fresher": "5-10", "junior": "10-18", "mid": "18-35", "senior": "35-70" },
+    "avg_salary_usd": { "fresher": "65k-95k", "junior": "95k-130k", "mid": "130k-170k", "senior": "170k-250k" },
+    "description": "Builds predictive models, uncovers patterns in data, and drives data-informed decisions",
+    "top_companies": ["Google", "Meta", "Netflix", "Flipkart", "Mu Sigma", "Fractal Analytics"],
+    "interview_topics": ["Statistical modelling", "Feature selection", "Model evaluation", "Experiment design", "Data storytelling"]
+  },
+  "Machine Learning Engineer": {
+    "required_skills": [
+      "Python", "PyTorch", "TensorFlow", "Machine Learning", "Deep Learning", "MLOps", "Docker", "NumPy", "Scikit-learn", "REST APIs"
+    ],
+    "nice_to_have": [
+      "CUDA", "Kubernetes", "Spark", "MLflow", "Kubeflow", "Triton", "ONNX", "Hugging Face", "AWS SageMaker", "Feature Stores"
+    ],
+    "avg_salary_lpa": { "fresher": "7-12", "junior": "12-22", "mid": "22-45", "senior": "45-90" },
+    "avg_salary_usd": { "fresher": "75k-110k", "junior": "110k-150k", "mid": "150k-190k", "senior": "190k-300k" },
+    "description": "Productionizes ML models, builds training pipelines, and optimizes inference systems at scale",
+    "top_companies": ["Google DeepMind", "Meta AI", "Amazon", "NVIDIA", "Cohere", "Scale AI"],
+    "interview_topics": ["Model optimization", "Distributed training", "Inference latency", "Feature pipelines", "System design for ML"]
+  },
+  "Site Reliability Engineer": {
+    "required_skills": [
+      "Linux", "Python", "Kubernetes", "Docker", "Monitoring", "Prometheus", "Grafana", "AWS", "Incident Management", "SLOs/SLAs"
+    ],
+    "nice_to_have": [
+      "Go", "Terraform", "CI/CD", "Chaos Engineering", "ELK Stack", "Distributed Systems", "Networking", "PostgreSQL", "Redis", "Helm"
+    ],
+    "avg_salary_lpa": { "fresher": "6-12", "junior": "12-22", "mid": "22-45", "senior": "45-90" },
+    "avg_salary_usd": { "fresher": "70k-100k", "junior": "100k-140k", "mid": "140k-180k", "senior": "180k-270k" },
+    "description": "Ensures reliability, scalability, and performance of production systems using software engineering principles",
+    "top_companies": ["Google", "Netflix", "LinkedIn", "Uber", "Shopify", "Atlassian"],
+    "interview_topics": ["Reliability engineering", "Incident response", "SLOs & error budgets", "Capacity planning", "Distributed systems"]
+  },
+  "Security Engineer": {
+    "required_skills": [
+      "Network Security", "Python", "Linux", "Penetration Testing", "OWASP", "SIEM", "Cryptography", "Identity & Access Management", "Vulnerability Assessment", "Security Protocols"
+    ],
+    "nice_to_have": [
+      "AWS Security", "Kubernetes Security", "Threat Modeling", "Burp Suite", "Metasploit", "DevSecOps", "Compliance (SOC2/ISO27001)", "Zero Trust", "SOAR", "EDR"
+    ],
+    "avg_salary_lpa": { "fresher": "5-10", "junior": "10-20", "mid": "20-40", "senior": "40-80" },
+    "avg_salary_usd": { "fresher": "65k-95k", "junior": "95k-135k", "mid": "135k-175k", "senior": "175k-260k" },
+    "description": "Protects systems, networks, and applications from cyber threats through security engineering and offensive/defensive practices",
+    "top_companies": ["Palo Alto Networks", "CrowdStrike", "Microsoft", "Google", "Razorpay", "PayPal"],
+    "interview_topics": ["Threat modelling", "Incident response", "Secure SDLC", "Cryptography fundamentals", "Red vs Blue team"]
+  },
+  "QA Engineer": {
+    "required_skills": [
+      "Manual Testing", "Selenium", "Test Automation", "JavaScript", "Python", "API Testing", "Postman", "SQL", "Bug Tracking", "CI/CD"
+    ],
+    "nice_to_have": [
+      "Cypress", "Playwright", "Performance Testing", "JMeter", "Appium", "TestNG", "BDD", "Docker", "REST Assured", "Load Testing"
+    ],
+    "avg_salary_lpa": { "fresher": "3-6", "junior": "6-12", "mid": "12-22", "senior": "22-40" },
+    "avg_salary_usd": { "fresher": "40k-65k", "junior": "65k-90k", "mid": "90k-120k", "senior": "120k-160k" },
+    "description": "Ensures software quality through manual and automated testing, performance validation, and defect management",
+    "top_companies": ["Microsoft", "Amazon", "Infosys", "Wipro", "Thoughtworks", "BrowserStack"],
+    "interview_topics": ["Test case design", "Automation frameworks", "API testing", "Performance testing", "Defect lifecycle"]
+  },
+  "Mobile Developer": {
+    "required_skills": [
+      "React Native", "JavaScript", "TypeScript", "iOS", "Android", "REST APIs", "Git", "Redux", "Expo", "Mobile UI/UX"
+    ],
+    "nice_to_have": [
+      "Swift", "Kotlin", "Firebase", "GraphQL", "Push Notifications", "App Store Deployment", "Performance Optimization", "Native Modules", "Testing", "CI/CD"
+    ],
+    "avg_salary_lpa": { "fresher": "4-8", "junior": "8-16", "mid": "16-30", "senior": "30-60" },
+    "avg_salary_usd": { "fresher": "55k-80k", "junior": "80k-110k", "mid": "110k-150k", "senior": "150k-220k" },
+    "description": "Develops cross-platform or native mobile applications for iOS and Android platforms",
+    "top_companies": ["Swiggy", "Zomato", "PhonePe", "Google", "Apple", "Flipkart"],
+    "interview_topics": ["Component lifecycle", "State management", "Native bridge", "Performance optimization", "App deployment"]
+  },
+  "Blockchain Developer": {
+    "required_skills": [
+      "Solidity", "Ethereum", "Web3.js", "Smart Contracts", "JavaScript", "Python", "Cryptography", "DeFi", "NFTs", "Hardhat"
+    ],
+    "nice_to_have": [
+      "Rust", "Solana", "IPFS", "Layer 2 Solutions", "zkProofs", "Chainlink", "OpenZeppelin", "TypeScript", "React", "Security Auditing"
+    ],
+    "avg_salary_lpa": { "fresher": "6-12", "junior": "12-22", "mid": "22-45", "senior": "45-90" },
+    "avg_salary_usd": { "fresher": "70k-100k", "junior": "100k-140k", "mid": "140k-190k", "senior": "190k-300k" },
+    "description": "Develops decentralized applications, smart contracts, and blockchain-based systems",
+    "top_companies": ["Polygon", "Coinbase", "Binance", "ConsenSys", "WazirX", "CoinDCX"],
+    "interview_topics": ["Smart contract security", "Gas optimization", "DeFi protocols", "Consensus mechanisms", "Web3 architecture"]
+  },
+  "Platform Engineer": {
+    "required_skills": [
+      "Kubernetes", "Docker", "Terraform", "Python", "Go", "CI/CD", "AWS", "Internal Developer Platforms", "Linux", "Helm"
+    ],
+    "nice_to_have": [
+      "Backstage", "ArgoCD", "Crossplane", "GitOps", "Service Mesh", "Observability", "API Gateways", "Multi-cloud", "FinOps", "Security"
+    ],
+    "avg_salary_lpa": { "fresher": "6-12", "junior": "12-22", "mid": "22-45", "senior": "45-90" },
+    "avg_salary_usd": { "fresher": "70k-100k", "junior": "100k-140k", "mid": "140k-180k", "senior": "180k-270k" },
+    "description": "Builds and maintains internal developer platforms and infrastructure tooling to accelerate engineering teams",
+    "top_companies": ["Spotify", "Netflix", "Airbnb", "Zalando", "HashiCorp", "Thoughtworks"],
+    "interview_topics": ["Platform design", "Developer experience", "GitOps", "Container orchestration", "Infrastructure automation"]
+  },
+  "Embedded Systems Engineer": {
+    "required_skills": [
+      "C", "C++", "Microcontrollers", "RTOS", "Embedded Linux", "Hardware Protocols (I2C/SPI/UART)", "Debugging", "Firmware Development", "Python", "Git"
+    ],
+    "nice_to_have": [
+      "ARM Architecture", "FPGA", "Device Drivers", "Power Optimization", "Rust", "IoT Protocols (MQTT)", "PCB Design", "FreeRTOS", "Yocto", "CMake"
+    ],
+    "avg_salary_lpa": { "fresher": "4-8", "junior": "8-15", "mid": "15-30", "senior": "30-60" },
+    "avg_salary_usd": { "fresher": "55k-80k", "junior": "80k-110k", "mid": "110k-150k", "senior": "150k-210k" },
+    "description": "Develops firmware and software for embedded systems, microcontrollers, and IoT devices",
+    "top_companies": ["Texas Instruments", "Qualcomm", "Bosch", "Intel", "Tata Elxsi", "Honeywell"],
+    "interview_topics": ["Memory management", "Interrupt handling", "Real-time constraints", "Communication protocols", "Power optimization"]
+  },
+  "Product Engineer": {
+    "required_skills": [
+      "JavaScript", "React", "Python", "SQL", "REST APIs", "Git", "System Design", "Product Thinking", "Agile", "TypeScript"
+    ],
+    "nice_to_have": [
+      "Node.js", "Next.js", "Docker", "A/B Testing", "Analytics", "User Research", "PostgreSQL", "Redis", "GraphQL", "Feature Flags"
+    ],
+    "avg_salary_lpa": { "fresher": "6-12", "junior": "12-20", "mid": "20-40", "senior": "40-80" },
+    "avg_salary_usd": { "fresher": "70k-100k", "junior": "100k-140k", "mid": "140k-185k", "senior": "185k-280k" },
+    "description": "Works at the intersection of product and engineering to build user-centric features with deep business impact",
+    "top_companies": ["Stripe", "Notion", "Linear", "Figma", "Zepto", "CRED"],
+    "interview_topics": ["System design", "Product sense", "Data-driven decisions", "Full-stack architecture", "User empathy"]
   }
 }

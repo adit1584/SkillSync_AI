@@ -80,22 +80,46 @@ async function handleInterviewChat(req, res) {
     const shouldConclude = isAiConcluded || isLengthConcluded;
 
     let scorecard = null;
+    let interviewScore = null;
+    let careerReadinessScore = null;
+
     if (shouldConclude) {
       scorecard = await evaluateInterview(resultHistory, targetRole);
+
+      // Compute composite interview score
+      interviewScore = Math.round(
+        ((scorecard.overall_score || 0) + (scorecard.technical_depth_score || 0) + (scorecard.communication_score || 0)) / 3
+      );
+
+      // Career Readiness Score: 40% skill match + 30% quiz + 30% interview
+      const skillMatchScore = user.gap_analysis?.match_score || 0;
+      const quizScore = user.quiz_score || 0;
+      careerReadinessScore = Math.round(
+        0.4 * skillMatchScore + 0.3 * quizScore + 0.3 * interviewScore
+      );
     }
 
-    await updateSession(session_id, {
+    const sessionUpdates = {
       'interview.history': resultHistory,
       'interview.concluded': shouldConclude,
-      'interview.scorecard': scorecard
-    });
+      'interview.scorecard': scorecard,
+    };
+
+    if (shouldConclude) {
+      sessionUpdates['interview_score'] = interviewScore;
+      sessionUpdates['career_readiness_score'] = careerReadinessScore;
+    }
+
+    await updateSession(session_id, sessionUpdates);
 
     res.json({
       success: true,
       message: resultMessage,
       history: resultHistory,
       concluded: shouldConclude,
-      scorecard
+      scorecard,
+      interview_score: interviewScore,
+      career_readiness_score: careerReadinessScore,
     });
   } catch (err) {
     console.error('[interview/chat] Error:', err.message);

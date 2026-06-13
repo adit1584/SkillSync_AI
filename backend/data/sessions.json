@@ -12935,5 +12935,2068 @@
         }
       ]
     }
+  },
+  "1f9445b0-2ab0-4eaf-9909-ce0fd86bac53": {
+    "session_id": "1f9445b0-2ab0-4eaf-9909-ce0fd86bac53",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Front-end Developer & Designer",
+          "company": "Metrops (Smart India Hackathon 2025)",
+          "duration": "",
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "role": "",
+          "company": "Stock Market Prediction Application",
+          "duration": "",
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java",
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Deloitte - Data Analytics Job Simulation"
+        },
+        {
+          "name": "Infosys Springboard Data Structure and Algorithms Using Java Certificate"
+        },
+        {
+          "name": "MERN Stack Development and DSA - Sheryians Coding School."
+        },
+        {
+          "name": "Introduction to Modern AI - Cisco Networking Academy"
+        },
+        {
+          "name": "Google Cloud Generative AI Certificate"
+        }
+      ],
+      "domains": [
+        "Exploring new programming languages and frameworks",
+        "MERN stack development",
+        "Artificial Intelligence and Machine learning"
+      ]
+    },
+    "target_role": "AI Engineer",
+    "selected_role": "AI Engineer",
+    "recommended_roles": [
+      {
+        "role": "AI Engineer",
+        "match_score": 89,
+        "confidence_score": 91,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "PyTorch"
+        ],
+        "missing_skills": [
+          "LangChain",
+          "FastAPI",
+          "Vector Databases"
+        ]
+      },
+      {
+        "role": "Data Scientist",
+        "match_score": 84,
+        "confidence_score": 86,
+        "strengths": [
+          "Python",
+          "Statistics",
+          "Pandas"
+        ],
+        "missing_skills": [
+          "Spark",
+          "BigQuery"
+        ]
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "match_score": 82,
+        "confidence_score": 85,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "NumPy"
+        ],
+        "missing_skills": [
+          "TensorFlow",
+          "Keras",
+          "Docker"
+        ]
+      },
+      {
+        "role": "Data Analyst",
+        "match_score": 78,
+        "confidence_score": 80,
+        "strengths": [
+          "Python",
+          "Pandas",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "SQL",
+          "Tableau",
+          "Power BI"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "match_score": 75,
+        "confidence_score": 78,
+        "strengths": [
+          "JavaScript",
+          "React.js",
+          "CSS"
+        ],
+        "missing_skills": [
+          "Node.js",
+          "Express.js",
+          "MongoDB"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "AI Engineer",
+      "match_score": 30,
+      "ats_score": 21,
+      "matched_skills": [
+        "Python",
+        "NumPy",
+        "Pandas"
+      ],
+      "missing_skills": [
+        "Machine Learning",
+        "PyTorch",
+        "TensorFlow",
+        "LLMs",
+        "LangChain",
+        "Transformers",
+        "FastAPI"
+      ],
+      "nice_to_have_gaps": [
+        "Docker",
+        "Kubernetes",
+        "MLflow",
+        "Hugging Face",
+        "RAG",
+        "Vector Databases",
+        "CUDA",
+        "OpenCV",
+        "Spark",
+        "AWS SageMaker"
+      ],
+      "nice_to_have_matched": [],
+      "total_required": 10,
+      "readiness_level": "Very Low",
+      "role_info": {
+        "description": "Builds and deploys AI/ML systems, fine-tunes LLMs, and creates intelligent applications",
+        "top_companies": [
+          "OpenAI",
+          "Google DeepMind",
+          "Microsoft",
+          "Anthropic",
+          "Cohere",
+          "Sarvam AI"
+        ],
+        "interview_topics": [
+          "Model architecture",
+          "Training pipelines",
+          "Prompt engineering",
+          "RAG systems",
+          "MLOps"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "6-12",
+          "junior": "12-20",
+          "mid": "20-40",
+          "senior": "40-80"
+        },
+        "avg_salary_usd": {
+          "fresher": "70k-100k",
+          "junior": "100k-140k",
+          "mid": "140k-180k",
+          "senior": "180k-280k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T06:43:20.575Z",
+    "quiz_result": {
+      "questions": [
+        {
+          "id": 1,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Basic Syntax",
+          "question": "What is the output of the following Python code: print(5 + 3)?",
+          "options": {
+            "A": "8",
+            "B": "5",
+            "C": "3",
+            "D": "10"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 2,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Basic Syntax",
+          "question": "What is the output of the following Python code: print('Hello ' + 'World')?",
+          "options": {
+            "A": "Hello World",
+            "B": "Hello",
+            "C": "World",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 3,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Basic Syntax",
+          "question": "What is the output of the following Python code: print(5 % 2)?",
+          "options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 4,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Basic Syntax",
+          "question": "What is the output of the following Python code: print(5 // 2)?",
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 5,
+          "skill": "Python",
+          "difficulty": "easy",
+          "topic": "Basic Syntax",
+          "question": "What is the output of the following Python code: print(5 ** 2)?",
+          "options": {
+            "A": "25",
+            "B": "10",
+            "C": "1",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 6,
+          "skill": "NumPy",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the output of the following NumPy code: import numpy as np; arr = np.array([1, 2, 3]); print(arr)?",
+          "options": {
+            "A": "[1, 2, 3]",
+            "B": "1",
+            "C": "[1, 2]",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 7,
+          "skill": "NumPy",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the output of the following NumPy code: import numpy as np; arr = np.array([1, 2, 3]); print(arr[0])?",
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 8,
+          "skill": "NumPy",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the output of the following NumPy code: import numpy as np; arr = np.array([1, 2, 3]); print(arr[1:3])?",
+          "options": {
+            "A": "[2, 3]",
+            "B": "[1, 2]",
+            "C": "[1, 3]",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 9,
+          "skill": "NumPy",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the output of the following NumPy code: import numpy as np; arr = np.array([1, 2, 3]); print(np.sum(arr))?",
+          "options": {
+            "A": "6",
+            "B": "3",
+            "C": "1",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 10,
+          "skill": "NumPy",
+          "difficulty": "easy",
+          "topic": "Arrays",
+          "question": "What is the output of the following NumPy code: import numpy as np; arr = np.array([1, 2, 3]); print(np.mean(arr))?",
+          "options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 11,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Selectors",
+          "question": "What is the output of the following CSS code: p { color: red; } <p>Hello World!</p>?",
+          "options": {
+            "A": "<p style='color: red;'>Hello World!</p>",
+            "B": "<p>Hello World!</p>",
+            "C": "<p style='color: blue;'>Hello World!</p>",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 12,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Selectors",
+          "question": "What is the output of the following CSS code: p.red { color: red; } <p class='red'>Hello World!</p>?",
+          "options": {
+            "A": "<p class='red' style='color: red;'>Hello World!</p>",
+            "B": "<p class='red'>Hello World!</p>",
+            "C": "<p style='color: red;'>Hello World!</p>",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 13,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Selectors",
+          "question": "What is the output of the following CSS code: p.red { color: red; } <p class='blue'>Hello World!</p>?",
+          "options": {
+            "A": "<p class='blue'>Hello World!</p>",
+            "B": "<p class='blue' style='color: red;'>Hello World!</p>",
+            "C": "<p style='color: red;'>Hello World!</p>",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 14,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Selectors",
+          "question": "What is the output of the following CSS code: p.red { color: red; } <p>Hello World!</p>?",
+          "options": {
+            "A": "<p>Hello World!</p>",
+            "B": "<p style='color: red;'>Hello World!</p>",
+            "C": "<p class='red'>Hello World!</p>",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        },
+        {
+          "id": 15,
+          "skill": "CSS",
+          "difficulty": "easy",
+          "topic": "Selectors",
+          "question": "What is the output of the following CSS code: p { color: red; } <p class='red'>Hello World!</p>?",
+          "options": {
+            "A": "<p class='red'>Hello World!</p>",
+            "B": "<p style='color: red;'>Hello World!</p>",
+            "C": "<p>Hello World!</p>",
+            "D": "Error: Invalid syntax"
+          },
+          "correct": "A",
+          "explanation": ""
+        }
+      ],
+      "quiz_id": "611b41a2-163a-4d6e-8f5c-bd32ac9f4f72"
+    }
+  },
+  "f9470194-ad44-413d-8c25-2f623a97912d": {
+    "session_id": "f9470194-ad44-413d-8c25-2f623a97912d",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Front-end Developer & Designer",
+          "company": "Metrops (Smart India Hackathon 2025)",
+          "duration": "",
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "role": "",
+          "company": "Stock Market Prediction Application",
+          "duration": "",
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java",
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Deloitte - Data Analytics Job Simulation"
+        },
+        {
+          "name": "Infosys Springboard Data Structure and Algorithms Using Java Certificate"
+        },
+        {
+          "name": "MERN Stack Development and DSA - Sheryians Coding School."
+        },
+        {
+          "name": "Introduction to Modern AI - Cisco Networking Academy"
+        },
+        {
+          "name": "Google Cloud Generative AI Certificate"
+        }
+      ],
+      "domains": [
+        "Artificial Intelligence and Machine learning",
+        "MERN stack development"
+      ]
+    },
+    "target_role": "AI Engineer",
+    "selected_role": "AI Engineer",
+    "recommended_roles": [
+      {
+        "role": "AI Engineer",
+        "match_score": 89,
+        "confidence_score": 91,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "PyTorch"
+        ],
+        "missing_skills": [
+          "LangChain",
+          "FastAPI",
+          "Vector Databases"
+        ]
+      },
+      {
+        "role": "Data Scientist",
+        "match_score": 84,
+        "confidence_score": 86,
+        "strengths": [
+          "Python",
+          "Statistics",
+          "Pandas"
+        ],
+        "missing_skills": [
+          "Spark",
+          "BigQuery"
+        ]
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "match_score": 82,
+        "confidence_score": 85,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "NumPy"
+        ],
+        "missing_skills": [
+          "TensorFlow",
+          "Keras",
+          "Docker"
+        ]
+      },
+      {
+        "role": "Data Analyst",
+        "match_score": 78,
+        "confidence_score": 81,
+        "strengths": [
+          "Python",
+          "Pandas",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "SQL",
+          "Tableau",
+          "Power BI"
+        ]
+      },
+      {
+        "role": "Frontend Developer",
+        "match_score": 76,
+        "confidence_score": 80,
+        "strengths": [
+          "JavaScript",
+          "React.js",
+          "CSS"
+        ],
+        "missing_skills": [
+          "Angular",
+          "Vue.js",
+          "Redux"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "AI Engineer",
+      "match_score": 30,
+      "ats_score": 21,
+      "matched_skills": [
+        "Python",
+        "NumPy",
+        "Pandas"
+      ],
+      "missing_skills": [
+        "Machine Learning",
+        "PyTorch",
+        "TensorFlow",
+        "LLMs",
+        "LangChain",
+        "Transformers",
+        "FastAPI"
+      ],
+      "nice_to_have_gaps": [
+        "Docker",
+        "Kubernetes",
+        "MLflow",
+        "Hugging Face",
+        "RAG",
+        "Vector Databases",
+        "CUDA",
+        "OpenCV",
+        "Spark",
+        "AWS SageMaker"
+      ],
+      "nice_to_have_matched": [],
+      "total_required": 10,
+      "readiness_level": "Very Low",
+      "role_info": {
+        "description": "Builds and deploys AI/ML systems, fine-tunes LLMs, and creates intelligent applications",
+        "top_companies": [
+          "OpenAI",
+          "Google DeepMind",
+          "Microsoft",
+          "Anthropic",
+          "Cohere",
+          "Sarvam AI"
+        ],
+        "interview_topics": [
+          "Model architecture",
+          "Training pipelines",
+          "Prompt engineering",
+          "RAG systems",
+          "MLOps"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "6-12",
+          "junior": "12-20",
+          "mid": "20-40",
+          "senior": "40-80"
+        },
+        "avg_salary_usd": {
+          "fresher": "70k-100k",
+          "junior": "100k-140k",
+          "mid": "140k-180k",
+          "senior": "180k-280k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T06:44:43.796Z"
+  },
+  "5216bdd9-aaf0-4a48-ac91-6cdb40e66a13": {
+    "session_id": "5216bdd9-aaf0-4a48-ac91-6cdb40e66a13",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        "Deloitte - Data Analytics Job Simulation",
+        "Infosys Springboard Data Structure and Algorithms Using Java Certificate",
+        "MERN Stack Development and DSA - Sheryians Coding School",
+        "Introduction to Modern AI - Cisco Networking Academy",
+        "Google Cloud Generative AI Certificate"
+      ],
+      "domains": [
+        "Artificial Intelligence",
+        "Machine learning",
+        "MERN stack development"
+      ]
+    },
+    "target_role": "Machine Learning Engineer",
+    "selected_role": "Machine Learning Engineer",
+    "recommended_roles": [
+      {
+        "role": "AI Engineer",
+        "match_score": 89,
+        "confidence_score": 91,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "PyTorch"
+        ],
+        "missing_skills": [
+          "LangChain",
+          "FastAPI",
+          "Vector Databases"
+        ]
+      },
+      {
+        "role": "Data Scientist",
+        "match_score": 84,
+        "confidence_score": 86,
+        "strengths": [
+          "Python",
+          "Statistics",
+          "Pandas"
+        ],
+        "missing_skills": [
+          "Spark",
+          "BigQuery"
+        ]
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "match_score": 82,
+        "confidence_score": 85,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "NumPy"
+        ],
+        "missing_skills": [
+          "TensorFlow",
+          "Keras",
+          "Scikit-Learn"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "match_score": 78,
+        "confidence_score": 82,
+        "strengths": [
+          "JavaScript",
+          "React.js",
+          "HTML"
+        ],
+        "missing_skills": [
+          "Node.js",
+          "Express.js"
+        ]
+      },
+      {
+        "role": "Data Analyst",
+        "match_score": 76,
+        "confidence_score": 80,
+        "strengths": [
+          "Python",
+          "Pandas",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "SQL",
+          "Tableau"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "Machine Learning Engineer",
+      "match_score": 20,
+      "ats_score": 14,
+      "matched_skills": [
+        "Python",
+        "NumPy"
+      ],
+      "missing_skills": [
+        "PyTorch",
+        "TensorFlow",
+        "Machine Learning",
+        "Deep Learning",
+        "MLOps",
+        "Docker",
+        "Scikit-learn",
+        "REST APIs"
+      ],
+      "nice_to_have_gaps": [
+        "CUDA",
+        "Kubernetes",
+        "Spark",
+        "MLflow",
+        "Kubeflow",
+        "Triton",
+        "ONNX",
+        "Hugging Face",
+        "AWS SageMaker",
+        "Feature Stores"
+      ],
+      "nice_to_have_matched": [],
+      "total_required": 10,
+      "readiness_level": "Very Low",
+      "role_info": {
+        "description": "Productionizes ML models, builds training pipelines, and optimizes inference systems at scale",
+        "top_companies": [
+          "Google DeepMind",
+          "Meta AI",
+          "Amazon",
+          "NVIDIA",
+          "Cohere",
+          "Scale AI"
+        ],
+        "interview_topics": [
+          "Model optimization",
+          "Distributed training",
+          "Inference latency",
+          "Feature pipelines",
+          "System design for ML"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "7-12",
+          "junior": "12-22",
+          "mid": "22-45",
+          "senior": "45-90"
+        },
+        "avg_salary_usd": {
+          "fresher": "75k-110k",
+          "junior": "110k-150k",
+          "mid": "150k-190k",
+          "senior": "190k-300k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T06:52:04.430Z",
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Memory Management",
+        "question": "What will be the output of the following Python code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = a.view()",
+        "options": {
+          "A": "MemoryError",
+          "B": "TypeError",
+          "C": "np.array([1, 2, 3])",
+          "D": "np.ndarray object of shape (3,) and dtype object"
+        },
+        "correct": "C",
+        "explanation": "The view() method returns a new array object that looks at the same data as the original array. It does not create a new copy of the data. Therefore, the output will be the same as the original array."
+      },
+      {
+        "id": 2,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Async Programming",
+        "question": "What will be the output of the following Python code snippet?\n\nimport asyncio\nasync def foo():\n    await asyncio.sleep(1)\n    print('Hello')\n\nasync def main():\n    await asyncio.gather(foo(), foo())",
+        "options": {
+          "A": "HelloHello",
+          "B": "Hello\nHello",
+          "C": "RuntimeError",
+          "D": "asyncio.exceptions.TimeoutError"
+        },
+        "correct": "B",
+        "explanation": "The asyncio.gather() function runs the given coroutines concurrently. The output will be 'Hello' followed by 'Hello' after 1 second, because the two coroutines are run concurrently."
+      },
+      {
+        "id": 3,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Regular Expressions",
+        "question": "What will be the output of the following Python code snippet?\n\nimport re\ns = 'Hello, World!'\nm = re.search(r'Hello, (World!)', s)",
+        "options": {
+          "A": "None",
+          "B": "re.Match object at 0x7f8d3c5d2d40",
+          "C": "re.Match object at 0x7f8d3c5d2d40, group 1: 'World!'",
+          "D": "TypeError"
+        },
+        "correct": "C",
+        "explanation": "The re.search() function returns a match object if the pattern is found anywhere in the string. The group 1 of the match object is the part of the pattern enclosed in parentheses, which is 'World!' in this case."
+      },
+      {
+        "id": 4,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Decorators",
+        "question": "What will be the output of the following Python code snippet?\n\ndef my_decorator(func):\n    def wrapper():\n        print('Before calling the function')\n        func()\n        print('After calling the function')\n    return wrapper\n\ndef hello():\n    print('Hello')\n\nhello = my_decorator(hello)\nhello()",
+        "options": {
+          "A": "Before calling the function\nHello\nAfter calling the function",
+          "B": "Hello\nBefore calling the function\nAfter calling the function",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The decorator my_decorator() returns a new function wrapper() that calls the original function func() and prints the messages before and after calling the function."
+      },
+      {
+        "id": 5,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Context Managers",
+        "question": "What will be the output of the following Python code snippet?\n\nwith open('file.txt', 'w') as f:\n    f.write('Hello')",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "FileNotFoundError",
+          "D": "PermissionError"
+        },
+        "correct": "A",
+        "explanation": "The with statement ensures that the file is properly closed after it is no longer needed. The output will be 'Hello' written to the file 'file.txt'."
+      },
+      {
+        "id": 6,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "topic": "Array Operations",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nc = np.dot(a, b)",
+        "options": {
+          "A": "[4 10 18]",
+          "B": "[1 2 3]\n[4 5 6]",
+          "C": "TypeError",
+          "D": "ValueError"
+        },
+        "correct": "A",
+        "explanation": "The np.dot() function computes the dot product of two arrays. The output will be the dot product of the two arrays, which is [4, 10, 18]."
+      },
+      {
+        "id": 7,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "topic": "Array Operations",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([[4], [5], [6]])\nc = np.dot(a, b)",
+        "options": {
+          "A": "[4 5 6]",
+          "B": "[1 2 3]\n[[4]\n[5]\n[6]]",
+          "C": "TypeError",
+          "D": "ValueError"
+        },
+        "correct": "A",
+        "explanation": "The np.dot() function computes the dot product of two arrays. The output will be the dot product of the two arrays, which is [4, 5, 6]."
+      },
+      {
+        "id": 8,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "topic": "Array Operations",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nc = np.linalg.solve(a, b)",
+        "options": {
+          "A": "[1. 2. 3.]\n[4. 5. 6.]",
+          "B": "TypeError",
+          "C": "ValueError",
+          "D": "LinAlgError"
+        },
+        "correct": "B",
+        "explanation": "The np.linalg.solve() function solves a system of linear scalar equations. However, the input arrays a and b are not in the correct format for solving a system of linear equations. Therefore, the output will be TypeError."
+      },
+      {
+        "id": 9,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Selectors",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container > .child {\n    background-color: red;\n  }\n</style>\n<div class='container'>\n  <div class='child'>Hello</div>\n  <div class='grandchild'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello",
+          "B": "World!",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The CSS selector .container > .child selects only the direct child elements of the container element. Therefore, the output will be 'Hello' because it is the direct child of the container element."
+      },
+      {
+        "id": 10,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Selectors",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container .child {\n    background-color: red;\n  }\n</style>\n<div class='container'>\n  <div class='child'>Hello</div>\n  <div class='grandchild'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello",
+          "B": "World!",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The CSS selector .container .child selects all elements with the class 'child' that are descendants of an element with the class 'container'. Therefore, the output will be 'Hello' because it is a descendant of the container element."
+      },
+      {
+        "id": 11,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Transitions",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    transition: background-color 2s;\n  }\n</style>\n<div class='container' style='background-color: red;'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS transition property specifies the transition effect when changing from one state to another. In this case, the background color will change smoothly over a period of 2 seconds."
+      },
+      {
+        "id": 12,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Animations",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    animation: animate 2s;\n  }\n  @keyframes animate {\n    from {\n      background-color: red;\n    }\n    to {\n      background-color: blue;\n    }\n  }\n</style>\n<div class='container'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS animation property specifies the animation effect when changing from one state to another. In this case, the background color will change smoothly over a period of 2 seconds."
+      },
+      {
+        "id": 13,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Grid",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    display: grid;\n    grid-template-columns: 1fr 2fr;\n  }\n</style>\n<div class='container'>\n  <div class='item'>Hello</div>\n  <div class='item'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello World!",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The items will be displayed horizontally"
+        },
+        "correct": "A",
+        "explanation": "The CSS grid-template-columns property specifies the grid template columns. In this case, the grid will have two columns with a ratio of 1:2. Therefore, the output will be 'Hello' and 'World!' displayed vertically."
+      },
+      {
+        "id": 14,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Flexbox",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    display: flex;\n    justify-content: space-between;\n  }\n</style>\n<div class='container'>\n  <div class='item'>Hello</div>\n  <div class='item'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello World!",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The items will be displayed horizontally"
+        },
+        "correct": "A",
+        "explanation": "The CSS justify-content property specifies how to justify the flex items. In this case, the items will be displayed horizontally with equal space between them."
+      },
+      {
+        "id": 15,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "CSS Media Queries",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  @media (max-width: 600px) {\n    .container {\n      background-color: red;\n    }\n  }\n</style>\n<div class='container'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS media query @media (max-width: 600px) applies the styles inside the block only when the screen width is less than or equal to 600px. Therefore, the output will be 'Hello' with a red background color when the screen width is less than or equal to 600px."
+      }
+    ],
+    "quiz_id": "a6e0f8ee-728d-4c0d-94b9-2ece842bd192",
+    "quiz_per_skill_scores": [
+      {
+        "skill": "Python",
+        "score": 0,
+        "correct": 0,
+        "total": 5,
+        "proficiency": "Needs Work"
+      },
+      {
+        "skill": "NumPy",
+        "score": 67,
+        "correct": 2,
+        "total": 3,
+        "proficiency": "Proficient"
+      },
+      {
+        "skill": "CSS",
+        "score": 14,
+        "correct": 1,
+        "total": 7,
+        "proficiency": "Needs Work"
+      }
+    ],
+    "quiz_overall_score": 27,
+    "quiz_review": [
+      {
+        "id": 1,
+        "skill": "Python",
+        "difficulty": "hard",
+        "question": "What will be the output of the following Python code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = a.view()",
+        "options": {
+          "A": "MemoryError",
+          "B": "TypeError",
+          "C": "np.array([1, 2, 3])",
+          "D": "np.ndarray object of shape (3,) and dtype object"
+        },
+        "correct": "C",
+        "explanation": "The view() method returns a new array object that looks at the same data as the original array. It does not create a new copy of the data. Therefore, the output will be the same as the original array.",
+        "user_selected": "B",
+        "is_correct": false
+      },
+      {
+        "id": 2,
+        "skill": "Python",
+        "difficulty": "hard",
+        "question": "What will be the output of the following Python code snippet?\n\nimport asyncio\nasync def foo():\n    await asyncio.sleep(1)\n    print('Hello')\n\nasync def main():\n    await asyncio.gather(foo(), foo())",
+        "options": {
+          "A": "HelloHello",
+          "B": "Hello\nHello",
+          "C": "RuntimeError",
+          "D": "asyncio.exceptions.TimeoutError"
+        },
+        "correct": "B",
+        "explanation": "The asyncio.gather() function runs the given coroutines concurrently. The output will be 'Hello' followed by 'Hello' after 1 second, because the two coroutines are run concurrently.",
+        "user_selected": "A",
+        "is_correct": false
+      },
+      {
+        "id": 3,
+        "skill": "Python",
+        "difficulty": "hard",
+        "question": "What will be the output of the following Python code snippet?\n\nimport re\ns = 'Hello, World!'\nm = re.search(r'Hello, (World!)', s)",
+        "options": {
+          "A": "None",
+          "B": "re.Match object at 0x7f8d3c5d2d40",
+          "C": "re.Match object at 0x7f8d3c5d2d40, group 1: 'World!'",
+          "D": "TypeError"
+        },
+        "correct": "C",
+        "explanation": "The re.search() function returns a match object if the pattern is found anywhere in the string. The group 1 of the match object is the part of the pattern enclosed in parentheses, which is 'World!' in this case.",
+        "user_selected": "A",
+        "is_correct": false
+      },
+      {
+        "id": 4,
+        "skill": "Python",
+        "difficulty": "hard",
+        "question": "What will be the output of the following Python code snippet?\n\ndef my_decorator(func):\n    def wrapper():\n        print('Before calling the function')\n        func()\n        print('After calling the function')\n    return wrapper\n\ndef hello():\n    print('Hello')\n\nhello = my_decorator(hello)\nhello()",
+        "options": {
+          "A": "Before calling the function\nHello\nAfter calling the function",
+          "B": "Hello\nBefore calling the function\nAfter calling the function",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The decorator my_decorator() returns a new function wrapper() that calls the original function func() and prints the messages before and after calling the function.",
+        "user_selected": "B",
+        "is_correct": false
+      },
+      {
+        "id": 5,
+        "skill": "Python",
+        "difficulty": "hard",
+        "question": "What will be the output of the following Python code snippet?\n\nwith open('file.txt', 'w') as f:\n    f.write('Hello')",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "FileNotFoundError",
+          "D": "PermissionError"
+        },
+        "correct": "A",
+        "explanation": "The with statement ensures that the file is properly closed after it is no longer needed. The output will be 'Hello' written to the file 'file.txt'.",
+        "user_selected": "D",
+        "is_correct": false
+      },
+      {
+        "id": 6,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nc = np.dot(a, b)",
+        "options": {
+          "A": "[4 10 18]",
+          "B": "[1 2 3]\n[4 5 6]",
+          "C": "TypeError",
+          "D": "ValueError"
+        },
+        "correct": "A",
+        "explanation": "The np.dot() function computes the dot product of two arrays. The output will be the dot product of the two arrays, which is [4, 10, 18].",
+        "user_selected": "A",
+        "is_correct": true
+      },
+      {
+        "id": 7,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([[4], [5], [6]])\nc = np.dot(a, b)",
+        "options": {
+          "A": "[4 5 6]",
+          "B": "[1 2 3]\n[[4]\n[5]\n[6]]",
+          "C": "TypeError",
+          "D": "ValueError"
+        },
+        "correct": "A",
+        "explanation": "The np.dot() function computes the dot product of two arrays. The output will be the dot product of the two arrays, which is [4, 5, 6].",
+        "user_selected": "C",
+        "is_correct": false
+      },
+      {
+        "id": 8,
+        "skill": "NumPy",
+        "difficulty": "hard",
+        "question": "What will be the output of the following NumPy code snippet?\n\nimport numpy as np\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nc = np.linalg.solve(a, b)",
+        "options": {
+          "A": "[1. 2. 3.]\n[4. 5. 6.]",
+          "B": "TypeError",
+          "C": "ValueError",
+          "D": "LinAlgError"
+        },
+        "correct": "B",
+        "explanation": "The np.linalg.solve() function solves a system of linear scalar equations. However, the input arrays a and b are not in the correct format for solving a system of linear equations. Therefore, the output will be TypeError.",
+        "user_selected": "B",
+        "is_correct": true
+      },
+      {
+        "id": 9,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container > .child {\n    background-color: red;\n  }\n</style>\n<div class='container'>\n  <div class='child'>Hello</div>\n  <div class='grandchild'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello",
+          "B": "World!",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The CSS selector .container > .child selects only the direct child elements of the container element. Therefore, the output will be 'Hello' because it is the direct child of the container element.",
+        "user_selected": "D",
+        "is_correct": false
+      },
+      {
+        "id": 10,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container .child {\n    background-color: red;\n  }\n</style>\n<div class='container'>\n  <div class='child'>Hello</div>\n  <div class='grandchild'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello",
+          "B": "World!",
+          "C": "TypeError",
+          "D": "SyntaxError"
+        },
+        "correct": "A",
+        "explanation": "The CSS selector .container .child selects all elements with the class 'child' that are descendants of an element with the class 'container'. Therefore, the output will be 'Hello' because it is a descendant of the container element.",
+        "user_selected": "A",
+        "is_correct": true
+      },
+      {
+        "id": 11,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    transition: background-color 2s;\n  }\n</style>\n<div class='container' style='background-color: red;'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS transition property specifies the transition effect when changing from one state to another. In this case, the background color will change smoothly over a period of 2 seconds.",
+        "user_selected": "B",
+        "is_correct": false
+      },
+      {
+        "id": 12,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    animation: animate 2s;\n  }\n  @keyframes animate {\n    from {\n      background-color: red;\n    }\n    to {\n      background-color: blue;\n    }\n  }\n</style>\n<div class='container'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS animation property specifies the animation effect when changing from one state to another. In this case, the background color will change smoothly over a period of 2 seconds.",
+        "user_selected": "B",
+        "is_correct": false
+      },
+      {
+        "id": 13,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    display: grid;\n    grid-template-columns: 1fr 2fr;\n  }\n</style>\n<div class='container'>\n  <div class='item'>Hello</div>\n  <div class='item'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello World!",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The items will be displayed horizontally"
+        },
+        "correct": "A",
+        "explanation": "The CSS grid-template-columns property specifies the grid template columns. In this case, the grid will have two columns with a ratio of 1:2. Therefore, the output will be 'Hello' and 'World!' displayed vertically.",
+        "user_selected": "C",
+        "is_correct": false
+      },
+      {
+        "id": 14,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  .container {\n    display: flex;\n    justify-content: space-between;\n  }\n</style>\n<div class='container'>\n  <div class='item'>Hello</div>\n  <div class='item'>World!</div>\n</div>",
+        "options": {
+          "A": "Hello World!",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The items will be displayed horizontally"
+        },
+        "correct": "A",
+        "explanation": "The CSS justify-content property specifies how to justify the flex items. In this case, the items will be displayed horizontally with equal space between them.",
+        "user_selected": "B",
+        "is_correct": false
+      },
+      {
+        "id": 15,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "question": "What will be the output of the following CSS code snippet?\n\n<style>\n  @media (max-width: 600px) {\n    .container {\n      background-color: red;\n    }\n  }\n</style>\n<div class='container'>Hello</div>",
+        "options": {
+          "A": "Hello",
+          "B": "TypeError",
+          "C": "SyntaxError",
+          "D": "The background color will change instantly"
+        },
+        "correct": "A",
+        "explanation": "The CSS media query @media (max-width: 600px) applies the styles inside the block only when the screen width is less than or equal to 600px. Therefore, the output will be 'Hello' with a red background color when the screen width is less than or equal to 600px.",
+        "user_selected": "B",
+        "is_correct": false
+      }
+    ],
+    "quiz_score": 27,
+    "interview": {
+      "history": [
+        {
+          "role": "assistant",
+          "content": "Hello, my name is Alex, I'm a Senior Machine Learning Engineer here at SkillSync. I'll be conducting your technical interview today. Let's get started! Can you explain the concept of overfitting in machine learning and how you would approach it using regularization techniques in Python, specifically with the help of the Pandas and NumPy libraries?"
+        }
+      ],
+      "concluded": false,
+      "scorecard": null
+    },
+    "resume_optimization": {
+      "suggestions": [
+        {
+          "skill": "PyTorch",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Developed and trained deep learning models using PyTorch, achieving 90% accuracy in image classification tasks",
+          "impact_metric": "90% accuracy"
+        },
+        {
+          "skill": "TensorFlow",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Designed and implemented neural networks using TensorFlow, reducing model training time by 30%",
+          "impact_metric": "30% training time reduction"
+        },
+        {
+          "skill": "Machine Learning",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Developed and deployed machine learning models using Scikit-learn, resulting in a 92% accuracy in stock market prediction",
+          "impact_metric": "92% accuracy"
+        },
+        {
+          "skill": "Deep Learning",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Trained and fine-tuned deep learning models using PyTorch, achieving state-of-the-art results in image classification tasks",
+          "impact_metric": "state-of-the-art results"
+        },
+        {
+          "skill": "MLOps",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Designed and implemented MLOps pipelines using Docker, ensuring seamless model deployment and monitoring",
+          "impact_metric": "seamless model deployment and monitoring"
+        },
+        {
+          "skill": "Docker",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Containerized machine learning applications using Docker, improving deployment efficiency by 40%",
+          "impact_metric": "40% deployment efficiency improvement"
+        },
+        {
+          "skill": "Scikit-learn",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Developed and deployed machine learning models using Scikit-learn, resulting in a 92% accuracy in stock market prediction",
+          "impact_metric": "92% accuracy"
+        },
+        {
+          "skill": "REST APIs",
+          "original_bullet_suggestion": "Built features using Python",
+          "optimized_bullet_suggestion": "Designed and implemented RESTful APIs using Python, improving API response times by 20%",
+          "impact_metric": "20% API response time improvement"
+        }
+      ]
+    },
+    "career_simulation": {
+      "simulations": [
+        {
+          "path": "accelerated",
+          "summary": "Upskill aggressively in Machine Learning, Deep Learning, and MLOps to become a Machine Learning Engineer in 6-12 months.",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Complete online courses in PyTorch, TensorFlow, and Scikit-learn within 3 months.",
+            "Build personal projects leveraging Machine Learning and Deep Learning within 6 months.",
+            "Get certified in MLOps and Docker within 9 months."
+          ],
+          "immediate_actions": [
+            "Enroll in online courses to upskill in PyTorch, TensorFlow, and Scikit-learn.",
+            "Network with professionals in the Machine Learning field to learn about industry trends and best practices."
+          ],
+          "target_roles": [
+            "Junior Machine Learning Engineer",
+            "Machine Learning Engineer"
+          ],
+          "skills_to_acquire": [
+            "PyTorch",
+            "TensorFlow",
+            "Machine Learning",
+            "Deep Learning",
+            "MLOps",
+            "Docker",
+            "Scikit-learn"
+          ],
+          "salary_range": {
+            "india_lpa": "8-12",
+            "global_usd": "6000-9000"
+          },
+          "interview_readiness_score": 60,
+          "growth_trajectory": "high"
+        },
+        {
+          "path": "steady",
+          "summary": "Grow organically into a Machine Learning Engineer role over 1-2 years, leveraging existing skills and gaining experience.",
+          "timeline": "1-2 years",
+          "milestones": [
+            "Gain 1-2 years of experience as a Junior Software Engineer within 6-12 months.",
+            "Take on additional responsibilities and contribute to Machine Learning projects within 12-18 months.",
+            "Get promoted to a Machine Learning Engineer role within 18-24 months."
+          ],
+          "immediate_actions": [
+            "Seek out opportunities to work on Machine Learning projects and contribute to open-source initiatives.",
+            "Network with professionals in the Machine Learning field to learn about industry trends and best practices."
+          ],
+          "target_roles": [
+            "Junior Software Engineer",
+            "Machine Learning Engineer"
+          ],
+          "skills_to_acquire": [
+            "Machine Learning",
+            "Deep Learning",
+            "MLOps"
+          ],
+          "salary_range": {
+            "india_lpa": "6-10",
+            "global_usd": "5000-8000"
+          },
+          "interview_readiness_score": 40,
+          "growth_trajectory": "medium"
+        },
+        {
+          "path": "pivot",
+          "summary": "Leverage existing strengths in CSS and NumPy to pivot into a Data Analyst role, which can serve as a stepping stone to Machine Learning Engineer.",
+          "timeline": "6-12 months",
+          "milestones": [
+            "Gain experience in data analysis and visualization within 3-6 months.",
+            "Get certified in data science tools and technologies within 6-9 months.",
+            "Pivot into a Data Analyst role within 9-12 months."
+          ],
+          "immediate_actions": [
+            "Enroll in online courses to upskill in data analysis and visualization.",
+            "Network with professionals in the data science field to learn about industry trends and best practices."
+          ],
+          "target_roles": [
+            "Data Analyst",
+            "Junior Data Scientist"
+          ],
+          "skills_to_acquire": [
+            "Data Analysis",
+            "Data Visualization",
+            "Data Science"
+          ],
+          "salary_range": {
+            "india_lpa": "5-8",
+            "global_usd": "4000-6000"
+          },
+          "interview_readiness_score": 30,
+          "growth_trajectory": "moderate"
+        }
+      ]
+    }
+  },
+  "41a54b1b-9802-4716-b7c4-af649e695122": {
+    "session_id": "41a54b1b-9802-4716-b7c4-af649e695122",
+    "resume_data": {
+      "name": "ADIT KOLHE",
+      "email": "aditkolhe4@gmail.com",
+      "phone": "",
+      "experience_level": "fresher",
+      "education": [
+        {
+          "degree": "Bachelor of Technology",
+          "institution": "Lakshmi Narain College of Technology",
+          "year": "Jul 2027"
+        },
+        {
+          "degree": "Higher Secondary",
+          "institution": "St. Joseph Co-Ed Senior Secondary School",
+          "year": "Apr 2023"
+        }
+      ],
+      "experience": [
+        {
+          "role": "Front-end Developer & Designer",
+          "company": "Metrops (Smart India Hackathon 2025)",
+          "duration": "",
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "role": "",
+          "company": "Stock Market Prediction Application",
+          "duration": "",
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "technical_skills": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Java",
+        "React.js",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "MySQL",
+        "Git/Github",
+        "Jupyter Notebook"
+      ],
+      "soft_skills": [],
+      "tools_and_frameworks": [],
+      "projects": [
+        {
+          "name": "Metrops (Smart India Hackathon 2025)",
+          "tech_stack": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React.js"
+          ],
+          "description": "Designed and developed a responsive, user-centric interface for an AI-based train management system, focusing on seamless navigation, real-time interaction, and performance optimization, resulting in a 40% increase in user engagement."
+        },
+        {
+          "name": "Stock Market Prediction Application",
+          "tech_stack": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+          ],
+          "description": "Engineered a machine learning-based stock prediction system by performing data preprocessing, feature engineering, and model training on historical data, achieving 92% accuracy in forecasting market trends"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Deloitte - Data Analytics Job Simulation"
+        },
+        {
+          "name": "Infosys Springboard Data Structure and Algorithms Using Java Certificate"
+        },
+        {
+          "name": "MERN Stack Development and DSA - Sheryians Coding School."
+        },
+        {
+          "name": "Introduction to Modern AI - Cisco Networking Academy"
+        },
+        {
+          "name": "Google Cloud Generative AI Certificate"
+        }
+      ],
+      "domains": [
+        "Exploring new programming languages and frameworks",
+        "MERN stack development",
+        "Artificial Intelligence and Machine learning"
+      ]
+    },
+    "target_role": "Data Analyst",
+    "selected_role": "Data Analyst",
+    "recommended_roles": [
+      {
+        "role": "AI Engineer",
+        "match_score": 89,
+        "confidence_score": 91,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "LangChain",
+          "FastAPI",
+          "Vector Databases"
+        ]
+      },
+      {
+        "role": "Data Scientist",
+        "match_score": 84,
+        "confidence_score": 86,
+        "strengths": [
+          "Python",
+          "Statistics",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "Spark",
+          "BigQuery"
+        ]
+      },
+      {
+        "role": "Machine Learning Engineer",
+        "match_score": 82,
+        "confidence_score": 85,
+        "strengths": [
+          "Python",
+          "Machine Learning",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "TensorFlow",
+          "Keras"
+        ]
+      },
+      {
+        "role": "Data Analyst",
+        "match_score": 78,
+        "confidence_score": 82,
+        "strengths": [
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Matplotlib"
+        ],
+        "missing_skills": [
+          "SQL",
+          "Data Visualization Tools"
+        ]
+      },
+      {
+        "role": "Backend Engineer",
+        "match_score": 75,
+        "confidence_score": 80,
+        "strengths": [
+          "Java",
+          "Python",
+          "MySQL"
+        ],
+        "missing_skills": [
+          "Spring",
+          "Docker"
+        ]
+      }
+    ],
+    "gap_analysis": {
+      "target_role": "Data Analyst",
+      "match_score": 40,
+      "ats_score": 34,
+      "matched_skills": [
+        "SQL",
+        "Python",
+        "Pandas",
+        "NumPy"
+      ],
+      "missing_skills": [
+        "Statistics",
+        "Excel",
+        "Tableau",
+        "Power BI",
+        "Data Visualization",
+        "ETL"
+      ],
+      "nice_to_have_gaps": [
+        "Apache Spark",
+        "BigQuery",
+        "Snowflake",
+        "dbt",
+        "Airflow",
+        "Looker",
+        "Seaborn",
+        "A/B Testing"
+      ],
+      "nice_to_have_matched": [
+        "R",
+        "Matplotlib"
+      ],
+      "total_required": 10,
+      "readiness_level": "Low",
+      "role_info": {
+        "description": "Extracts insights from data to drive business decisions using SQL, Python, and BI tools",
+        "top_companies": [
+          "Amazon",
+          "Walmart",
+          "Razorpay",
+          "PhonePe",
+          "Zomato",
+          "HDFC Bank"
+        ],
+        "interview_topics": [
+          "SQL queries",
+          "Statistical analysis",
+          "Dashboard design",
+          "Data cleaning",
+          "Business metrics"
+        ],
+        "avg_salary_lpa": {
+          "fresher": "3-7",
+          "junior": "7-14",
+          "mid": "14-25",
+          "senior": "25-50"
+        },
+        "avg_salary_usd": {
+          "fresher": "45k-65k",
+          "junior": "65k-90k",
+          "mid": "90k-120k",
+          "senior": "120k-170k"
+        }
+      }
+    },
+    "created_at": "2026-06-13T06:58:32.704Z",
+    "quiz_questions": [
+      {
+        "id": 1,
+        "skill": "SQL",
+        "difficulty": "medium",
+        "topic": "Filtering Data",
+        "question": "Write a SQL query to select all employees with a salary greater than $100,000 from the employees table.",
+        "has_code": true,
+        "code_snippet": "SELECT * FROM employees WHERE salary > 100000;",
+        "options": {
+          "A": "SELECT * FROM employees WHERE salary > 100000;",
+          "B": "SELECT * FROM employees WHERE salary < 100000;",
+          "C": "SELECT * FROM employees WHERE salary = 100000;",
+          "D": "SELECT * FROM employees WHERE salary IS NULL;"
+        },
+        "correct": "A",
+        "explanation": "This query selects all employees with a salary greater than $100,000."
+      },
+      {
+        "id": 2,
+        "skill": "SQL",
+        "difficulty": "hard",
+        "topic": "Subqueries",
+        "question": "Write a SQL query to select all employees who have a manager with a salary greater than $150,000.",
+        "has_code": true,
+        "code_snippet": "SELECT * FROM employees WHERE manager_id IN (SELECT id FROM employees WHERE salary > 150000);",
+        "options": {
+          "A": "SELECT * FROM employees WHERE manager_id IN (SELECT id FROM employees WHERE salary > 150000);",
+          "B": "SELECT * FROM employees WHERE manager_id IN (SELECT id FROM employees WHERE salary < 150000);",
+          "C": "SELECT * FROM employees WHERE manager_id IN (SELECT id FROM employees WHERE salary = 150000);",
+          "D": "SELECT * FROM employees WHERE manager_id IN (SELECT id FROM employees WHERE salary IS NULL);"
+        },
+        "correct": "A",
+        "explanation": "This query selects all employees who have a manager with a salary greater than $150,000."
+      },
+      {
+        "id": 3,
+        "skill": "SQL",
+        "difficulty": "medium",
+        "topic": "Joining Tables",
+        "question": "Write a SQL query to select all employees and their corresponding department names.",
+        "has_code": true,
+        "code_snippet": "SELECT employees.name, departments.name AS department_name FROM employees JOIN departments ON employees.department_id = departments.id;",
+        "options": {
+          "A": "SELECT employees.name, departments.name AS department_name FROM employees JOIN departments ON employees.department_id = departments.id;",
+          "B": "SELECT employees.name, departments.name AS department_name FROM employees JOIN departments ON employees.department_id != departments.id;",
+          "C": "SELECT employees.name, departments.name AS department_name FROM employees JOIN departments ON employees.department_id = departments.name;",
+          "D": "SELECT employees.name, departments.name AS department_name FROM employees JOIN departments ON employees.department_id IS NULL;"
+        },
+        "correct": "A",
+        "explanation": "This query selects all employees and their corresponding department names."
+      },
+      {
+        "id": 4,
+        "skill": "SQL",
+        "difficulty": "hard",
+        "topic": "Indexing",
+        "question": "Write a SQL query to create an index on the salary column of the employees table.",
+        "has_code": true,
+        "code_snippet": "CREATE INDEX idx_salary ON employees (salary);",
+        "options": {
+          "A": "CREATE INDEX idx_salary ON employees (salary);",
+          "B": "CREATE INDEX idx_salary ON employees (id);",
+          "C": "CREATE INDEX idx_salary ON employees (name);",
+          "D": "CREATE INDEX idx_salary ON employees (department_id);"
+        },
+        "correct": "A",
+        "explanation": "This query creates an index on the salary column of the employees table."
+      },
+      {
+        "id": 5,
+        "skill": "SQL",
+        "difficulty": "medium",
+        "topic": "Grouping Data",
+        "question": "Write a SQL query to select the average salary of each department.",
+        "has_code": true,
+        "code_snippet": "SELECT department_id, AVG(salary) AS average_salary FROM employees GROUP BY department_id;",
+        "options": {
+          "A": "SELECT department_id, AVG(salary) AS average_salary FROM employees GROUP BY department_id;",
+          "B": "SELECT department_id, SUM(salary) AS average_salary FROM employees GROUP BY department_id;",
+          "C": "SELECT department_id, MAX(salary) AS average_salary FROM employees GROUP BY department_id;",
+          "D": "SELECT department_id, MIN(salary) AS average_salary FROM employees GROUP BY department_id;"
+        },
+        "correct": "A",
+        "explanation": "This query selects the average salary of each department."
+      },
+      {
+        "id": 6,
+        "skill": "Python",
+        "difficulty": "medium",
+        "topic": "Data Cleaning",
+        "question": "Write a Python function to remove duplicate rows from a pandas DataFrame.",
+        "has_code": true,
+        "code_snippet": "import pandas as pd\ndef remove_duplicates(df):\n    return df.drop_duplicates()\n",
+        "options": {
+          "A": "import pandas as pd\ndef remove_duplicates(df):\n    return df.drop_duplicates()\n",
+          "B": "import pandas as pd\ndef remove_duplicates(df):\n    return df.drop_duplicates(ignore_index=True)\n",
+          "C": "import pandas as pd\ndef remove_duplicates(df):\n    return df.drop_duplicates(subset='id')\n",
+          "D": "import pandas as pd\ndef remove_duplicates(df):\n    return df.drop_duplicates(subset=['id', 'name'])\n"
+        },
+        "correct": "A",
+        "explanation": "This function removes duplicate rows from a pandas DataFrame."
+      },
+      {
+        "id": 7,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Data Visualization",
+        "question": "Write a Python function to create a bar chart using matplotlib to display the average salary of each department.",
+        "has_code": true,
+        "code_snippet": "import matplotlib.pyplot as plt\ndef plot_average_salary(df):\n    plt.bar(df['department_id'], df['average_salary'])\n    plt.xlabel('Department ID')\n    plt.ylabel('Average Salary')\n    plt.title('Average Salary by Department')\n    plt.show()\n",
+        "options": {
+          "A": "import matplotlib.pyplot as plt\ndef plot_average_salary(df):\n    plt.bar(df['department_id'], df['average_salary'])\n    plt.xlabel('Department ID')\n    plt.ylabel('Average Salary')\n    plt.title('Average Salary by Department')\n    plt.show()\n",
+          "B": "import matplotlib.pyplot as plt\ndef plot_average_salary(df):\n    plt.bar(df['department_id'], df['average_salary'])\n    plt.xlabel('Department Name')\n    plt.ylabel('Average Salary')\n    plt.title('Average Salary by Department')\n    plt.show()\n",
+          "C": "import matplotlib.pyplot as plt\ndef plot_average_salary(df):\n    plt.bar(df['department_id'], df['average_salary'])\n    plt.xlabel('Department ID')\n    plt.ylabel('Average Salary')\n    plt.title('Average Salary by Department')\n    plt.show()\n",
+          "D": "import matplotlib.pyplot as plt\ndef plot_average_salary(df):\n    plt.bar(df['department_id'], df['average_salary'])\n    plt.xlabel('Department ID')\n    plt.ylabel('Average Salary')\n    plt.title('Average Salary by Department')\n    plt.show()\n"
+        },
+        "correct": "A",
+        "explanation": "This function creates a bar chart using matplotlib to display the average salary of each department."
+      },
+      {
+        "id": 8,
+        "skill": "Python",
+        "difficulty": "medium",
+        "topic": "Data Manipulation",
+        "question": "Write a Python function to pivot a pandas DataFrame from wide format to long format.",
+        "has_code": true,
+        "code_snippet": "import pandas as pd\ndef pivot_wide_to_long(df):\n    return pd.melt(df, id_vars=['id'], value_vars=['salary', 'bonus'])\n",
+        "options": {
+          "A": "import pandas as pd\ndef pivot_wide_to_long(df):\n    return pd.melt(df, id_vars=['id'], value_vars=['salary', 'bonus'])\n",
+          "B": "import pandas as pd\ndef pivot_wide_to_long(df):\n    return pd.melt(df, id_vars=['id'], value_vars=['salary', 'bonus', 'department'])\n",
+          "C": "import pandas as pd\ndef pivot_wide_to_long(df):\n    return pd.melt(df, id_vars=['id'], value_vars=['salary', 'bonus', 'department_id'])\n",
+          "D": "import pandas as pd\ndef pivot_wide_to_long(df):\n    return pd.melt(df, id_vars=['id'], value_vars=['salary', 'bonus', 'department_name'])\n"
+        },
+        "correct": "A",
+        "explanation": "This function pivots a pandas DataFrame from wide format to long format."
+      },
+      {
+        "id": 9,
+        "skill": "Python",
+        "difficulty": "hard",
+        "topic": "Data Analysis",
+        "question": "Write a Python function to perform a linear regression analysis on a pandas DataFrame using scikit-learn.",
+        "has_code": true,
+        "code_snippet": "from sklearn.linear_model import LinearRegression\ndef linear_regression(df):\n    X = df[['salary']]\n    y = df['bonus']\n    model = LinearRegression()\n    model.fit(X, y)\n    return model.coef_[0]\n",
+        "options": {
+          "A": "from sklearn.linear_model import LinearRegression\ndef linear_regression(df):\n    X = df[['salary']]\n    y = df['bonus']\n    model = LinearRegression()\n    model.fit(X, y)\n    return model.coef_[0]\n",
+          "B": "from sklearn.linear_model import LinearRegression\ndef linear_regression(df):\n    X = df[['salary', 'bonus']]\n    y = df['bonus']\n    model = LinearRegression()\n    model.fit(X, y)\n    return model.coef_[0]\n",
+          "C": "from sklearn.linear_model import LinearRegression\ndef linear_regression(df):\n    X = df[['salary', 'bonus']]\n    y = df['bonus']\n    model = LinearRegression()\n    model.fit(X, y)\n    return model.coef_[1]\n",
+          "D": "from sklearn.linear_model import LinearRegression\ndef linear_regression(df):\n    X = df[['salary', 'bonus']]\n    y = df['bonus']\n    model = LinearRegression()\n    model.fit(X, y)\n    return model.coef_[2]\n"
+        },
+        "correct": "A",
+        "explanation": "This function performs a linear regression analysis on a pandas DataFrame using scikit-learn."
+      },
+      {
+        "id": 10,
+        "skill": "CSS",
+        "difficulty": "medium",
+        "topic": "Layout",
+        "question": "Write a CSS rule to center a div element horizontally and vertically within its parent container.",
+        "has_code": true,
+        "code_snippet": "div {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n",
+        "options": {
+          "A": "div {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n",
+          "B": "div {\n  position: relative;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n",
+          "C": "div {\n  position: absolute;\n  top: 25%;\n  left: 25%;\n  transform: translate(-25%, -25%);\n}\n",
+          "D": "div {\n  position: relative;\n  top: 25%;\n  left: 25%;\n  transform: translate(-25%, -25%);\n}\n"
+        },
+        "correct": "A",
+        "explanation": "This CSS rule centers a div element horizontally and vertically within its parent container."
+      },
+      {
+        "id": 11,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "Responsive Design",
+        "question": "Write a CSS media query to apply different styles to a div element based on the screen width.",
+        "has_code": true,
+        "code_snippet": "@media (max-width: 768px) {\n  div {\n    width: 100%;\n  }\n}\n@media (min-width: 769px) {\n  div {\n    width: 50%;\n  }\n}\n",
+        "options": {
+          "A": "@media (max-width: 768px) {\n  div {\n    width: 100%;\n  }\n}\n@media (min-width: 769px) {\n  div {\n    width: 50%;\n  }\n}\n",
+          "B": "@media (max-width: 768px) {\n  div {\n    width: 50%;\n  }\n}\n@media (min-width: 769px) {\n  div {\n    width: 100%;\n  }\n}\n",
+          "C": "@media (max-width: 768px) {\n  div {\n    width: 25%;\n  }\n}\n@media (min-width: 769px) {\n  div {\n    width: 50%;\n  }\n}\n",
+          "D": "@media (max-width: 768px) {\n  div {\n    width: 75%;\n  }\n}\n@media (min-width: 769px) {\n  div {\n    width: 25%;\n  }\n}\n"
+        },
+        "correct": "A",
+        "explanation": "This CSS media query applies different styles to a div element based on the screen width."
+      },
+      {
+        "id": 12,
+        "skill": "CSS",
+        "difficulty": "medium",
+        "topic": "Typography",
+        "question": "Write a CSS rule to apply a font family, size, and color to all h1 elements.",
+        "has_code": true,
+        "code_snippet": "h1 {\n  font-family: Arial, sans-serif;\n  font-size: 36px;\n  color: #333;\n}\n",
+        "options": {
+          "A": "h1 {\n  font-family: Arial, sans-serif;\n  font-size: 36px;\n  color: #333;\n}\n",
+          "B": "h1 {\n  font-family: Arial, sans-serif;\n  font-size: 24px;\n  color: #666;\n}\n",
+          "C": "h1 {\n  font-family: Times New Roman, serif;\n  font-size: 48px;\n  color: #999;\n}\n",
+          "D": "h1 {\n  font-family: Helvetica, sans-serif;\n  font-size: 18px;\n  color: #444;\n}\n"
+        },
+        "correct": "A",
+        "explanation": "This CSS rule applies a font family, size, and color to all h1 elements."
+      },
+      {
+        "id": 13,
+        "skill": "CSS",
+        "difficulty": "hard",
+        "topic": "Transitions and Animations",
+        "question": "Write a CSS rule to apply a transition effect to a button element when it is hovered.",
+        "has_code": true,
+        "code_snippet": "button {\n  background-color: #333;\n  transition: background-color 0.5s ease-in-out;\n}\nbutton:hover {\n  background-color: #666;\n}\n",
+        "options": {
+          "A": "button {\n  background-color: #333;\n  transition: background-color 0.5s ease-in-out;\n}\nbutton:hover {\n  background-color: #666;\n}\n",
+          "B": "button {\n  background-color: #333;\n  transition: background-color 1s ease-in-out;\n}\nbutton:hover {\n  background-color: #666;\n}\n",
+          "C": "button {\n  background-color: #333;\n  transition: background-color 0.5s ease-in-out;\n}\nbutton:hover {\n  background-color: #999;\n}\n",
+          "D": "button {\n  background-color: #333;\n  transition: background-color 0.5s ease-in-out;\n}\nbutton:hover {\n  background-color: #444;\n}\n"
+        },
+        "correct": "A",
+        "explanation": "This CSS rule applies a transition effect to a button element when it is hovered."
+      },
+      {
+        "id": 14,
+        "skill": "CSS",
+        "difficulty": "medium",
+        "topic": "Flexbox",
+        "question": "Write a CSS rule to apply a flexbox layout to a container element and its child elements.",
+        "has_code": true,
+        "code_snippet": "container {\n  display: flex;\n  flex-direction: row;\n}\ncontainer > div {\n  flex: 1;\n}\n",
+        "options": {
+          "A": "container {\n  display: flex;\n  flex-direction: row;\n}\ncontainer > div {\n  flex: 1;\n}\n",
+          "B": "container {\n  display: flex;\n  flex-direction: column;\n}\ncontainer > div {\n  flex: 1;\n}\n",
+          "C": "container"
+        }
+      },
+      {
+        "n  display": "flex;\n  flex-direction: row;\n"
+      },
+      "ncontainer > div",
+      {
+        "n  flex": "2;\n"
+      }
+    ],
+    "quiz_id": "e1562f1f-f0a0-43e3-aa4e-683c808f5f62"
   }
 }

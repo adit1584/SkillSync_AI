@@ -197,45 +197,67 @@ Extract and return ONLY this JSON structure — no explanation, no markdown:
 // ─────────────────────────────────────────────────────────────────
 async function generateQuiz(compressedProfile, topSkills) {
   const { v4: uuidv4 } = require('uuid');
+  const quizId = uuidv4();
 
-  const systemPrompt = `You are SkillSync AI — an expert technical interviewer. Generate adaptive multiple-choice quizzes to verify practical knowledge of resume-listed skills.
-Rules:
-- Questions must test PRACTICAL understanding, not just definitions
-- Scale difficulty to experience_level:
-    fresher  → conceptual + basic application
-    junior   → implementation + common errors
-    mid      → debugging + architecture trade-offs
-    senior   → system design + performance optimization
-- 1 correct answer + 3 plausible wrong answers per question
-- Tag every question with skill, difficulty, and topic
-- Output ONLY valid JSON — no explanation, no markdown fences`;
+  const systemPrompt = `You are SkillSync AI — a senior technical interviewer at a FAANG-level company generating interview questions.
+Your goal is to CHALLENGE experienced engineers but provide a balanced assessment.
+
+STRICT RULES:
+- Produce a balanced mix of MEDIUM (approximately 50%) and HARD/EXPERT (approximately 50%) difficulty questions. No easy questions.
+- Include an actual code snippet in the "code_snippet" field (with "has_code" set to true) ONLY when the question specifically requires analyzing, debugging, or predicting the output of that code.
+- The code snippet must NOT reveal the correct answer. For example, do NOT put a SQL query or solution code snippet as the code block if the question is asking to write that query/code. Instead, the code snippet should be a buggy function, a schema definition, or a snippet that needs to be analyzed.
+- For coding, database, or API-related skills, approximately 5 out of the 15 total questions should be code-analysis questions that use the "code_snippet" field.
+- If a question has a code snippet, put it inside the "code_snippet" field. Use standard indentation and newlines ("\\n") in the string value. Do NOT wrap it in markdown backticks inside the JSON value. The "question" field should contain ONLY the text question, NOT the code.
+- If a question does not have a code snippet, set "has_code" to false and "code_snippet" to "".
+- Test deep implementation knowledge, edge cases, and production-level trade-offs.
+- Questions must have plausible, clever wrong answers that a junior engineer would pick.
+- Avoid definitional or terminology-only questions — test actual code behavior and system-level understanding.
+- Include questions about: race conditions, memory leaks, async pitfalls, performance traps, security vulnerabilities, subtle API misuse.
+- 1 definitively correct answer and 3 distractors per question.
+- Every wrong option should be something a developer who partially understands the topic would pick.
+- Output ONLY valid JSON — no markdown fences, no explanation.`;
 
   const userPrompt = `Skills to test: ${topSkills.slice(0, 3).join(', ')}
 Target Role: ${compressedProfile.role}
 Experience Level: ${compressedProfile.level}
 
 Generate 5 questions per skill (15 questions total).
+Provide a balanced mix of medium (approx. 50%) and hard/expert (approx. 50%) difficulty questions.
+Ensure approximately 5 out of the 15 questions contain code snippets in "code_snippet" with "has_code": true, using them ONLY when the question requires the user to analyze, debug, or predict the behavior of that specific code. The code block must never reveal the answer (e.g., do not show a SQL query that is the answer to the question itself).
 
-Return ONLY this JSON:
+Return ONLY this JSON structure:
 {
-  "quiz_id": "${uuidv4()}",
+  "quiz_id": "${quizId}",
   "target_role": "${compressedProfile.role}",
   "experience_level": "${compressedProfile.level}",
   "questions": [
     {
       "id": 1,
-      "skill": "",
-      "difficulty": "easy | medium | hard",
-      "topic": "",
-      "question": "",
-      "options": { "A": "", "B": "", "C": "", "D": "" },
+      "skill": "skill_name",
+      "difficulty": "medium | hard",
+      "topic": "topic_name",
+      "question": "Text question here (exclude the code snippet from this field)",
+      "has_code": true,
+      "code_snippet": "Optional code snippet with standard indentation and \\n characters, or empty string",
+      "options": { "A": "...", "B": "...", "C": "...", "D": "..." },
       "correct": "A | B | C | D",
-      "explanation": ""
+      "explanation": "Detailed explanation of WHY this is correct and why the distractors are wrong"
     }
   ]
 }`;
 
-  return callGroq(systemPrompt, userPrompt);
+  const result = await callGroq(systemPrompt, userPrompt);
+
+  // Validate the response has actual questions
+  if (!result || !Array.isArray(result.questions) || result.questions.length === 0) {
+    throw new Error('AI returned no quiz questions. Please try again.');
+  }
+
+  // Ensure quiz_id is always set
+  return {
+    ...result,
+    quiz_id: result.quiz_id || quizId,
+  };
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -524,8 +546,67 @@ Return ONLY this JSON structure:
   return callGroq(systemPrompt, userPrompt);
 }
 
+// ─────────────────────────────────────────────────────────────────
+// NEW — AI Career Role Recommender
+// ─────────────────────────────────────────────────────────────────
+async function recommendCareerRoles(compressedProfile) {
+  const systemPrompt = `You are SkillSync AI — an expert career counselor and talent advisor.
+Analyze the candidate's skills and profile, and recommend the top 5 most suitable engineering/tech career roles for them.
+Base your recommendations on their actual technical skills, experience level, domains, and project count.
+Return roles ordered by best match first. Be specific and data-driven.
+Output ONLY a JSON object. Do not wrap in markdown fences or backticks.`;
+
+  const userPrompt = `Candidate Profile:
+${JSON.stringify(compressedProfile, null, 2)}
+
+Available roles to recommend from (choose top 5 that best fit this profile):
+Frontend Developer, Backend Engineer, Fullstack Developer, AI Engineer, Data Analyst,
+Data Scientist, Machine Learning Engineer, Cloud Engineer, DevOps Engineer,
+Site Reliability Engineer, Security Engineer, QA Engineer, Mobile Developer,
+Blockchain Developer, Platform Engineer, Embedded Systems Engineer, Product Engineer
+
+Return ONLY this JSON:
+{
+  "recommendations": [
+    {
+      "role": "AI Engineer",
+      "match_score": 89,
+      "confidence_score": 91,
+      "strengths": ["Python", "Machine Learning", "PyTorch"],
+      "missing_skills": ["LangChain", "FastAPI", "Vector Databases"]
+    },
+    {
+      "role": "Data Scientist",
+      "match_score": 84,
+      "confidence_score": 86,
+      "strengths": ["Python", "Statistics", "Pandas"],
+      "missing_skills": ["Spark", "BigQuery"]
+    }
+  ]
+}
+
+IMPORTANT: Return exactly 5 recommendations ordered by match_score descending.`;
+
+  const response = await callGroq(systemPrompt, userPrompt);
+  if (!response || !Array.isArray(response.recommendations)) {
+    throw new Error('AI failed to return valid career recommendations');
+  }
+
+  // Sanitize each recommendation
+  const sanitized = response.recommendations.slice(0, 5).map(rec => ({
+    role: rec.role || 'Unknown',
+    match_score: Number(rec.match_score) || 70,
+    confidence_score: Number(rec.confidence_score) || 70,
+    strengths: Array.isArray(rec.strengths) ? rec.strengths : [],
+    missing_skills: Array.isArray(rec.missing_skills) ? rec.missing_skills : []
+  }));
+
+  return { recommendations: sanitized };
+}
+
 module.exports = {
   extractSkillsFromResume,
+  recommendCareerRoles,
   generateQuiz,
   simulateCareer,
   generateRoadmap,

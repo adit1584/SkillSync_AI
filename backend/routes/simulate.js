@@ -15,7 +15,8 @@ async function handleSimulate(req, res) {
 
     const resumeData = user.resume_data;
     const gapAnalysis = user.gap_analysis || {};
-    const quizScores = user.quiz_result?.per_skill_scores || [];
+    // Support both new flat keys and legacy nested keys
+    const quizScores = user.quiz_per_skill_scores || user.quiz_result?.per_skill_scores || [];
 
     const simulationInput = compressGapForSimulation(
       gapAnalysis,

@@ -15,30 +15,48 @@ async function handleQuizGenerate(req, res) {
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
     const resumeData = user.resume_data;
-    const targetRole = user.target_role;
+    const targetRole = user.target_role || user.selected_role;
+
+    if (!targetRole) {
+      return res.status(400).json({ error: 'No target role found. Please select a career role first.' });
+    }
 
     const compressed = compressForAI(resumeData, targetRole);
 
     const gapAnalysis = user.gap_analysis || {};
     const matchedSkills = gapAnalysis.matched_skills || [];
-    const allSkills = resumeData.technical_skills || [];
+    const allSkills = [
+      ...(resumeData.technical_skills || []),
+      ...(resumeData.tools_and_frameworks || []),
+    ];
 
+    // Pick skills to quiz: prioritize matched skills (user already has them → verify depth)
     const topSkills = [
       ...matchedSkills.slice(0, 2),
       ...allSkills.filter(s => !matchedSkills.includes(s)).slice(0, 1)
     ].slice(0, 3);
 
+    // Fallback: use any available skill if none matched
     if (topSkills.length === 0) {
-      return res.status(400).json({ error: 'No skills found in resume to quiz' });
+      const fallback = allSkills.slice(0, 3);
+      if (fallback.length === 0) {
+        return res.status(400).json({ error: 'No skills found in resume to quiz' });
+      }
+      topSkills.push(...fallback);
     }
 
-    // AI Prompt 3
+    // AI quiz generation
     const quiz = await generateQuiz(compressed, topSkills);
 
+    if (!quiz || !Array.isArray(quiz.questions) || quiz.questions.length === 0) {
+      return res.status(500).json({ error: 'AI failed to generate quiz questions. Please try again.' });
+    }
+
     // Store quiz questions server-side (correct answers hidden from client)
+    // Use a FLAT structure to avoid dot-notation issues with session store
     await updateSession(session_id, {
-      'quiz_result.questions': quiz.questions,
-      'quiz_result.quiz_id': quiz.quiz_id,
+      quiz_questions: quiz.questions,    // flat key — avoids nested dot-notation bugs
+      quiz_id: quiz.quiz_id,
     });
 
     // Return quiz WITHOUT correct answers
@@ -53,6 +71,8 @@ async function handleQuizGenerate(req, res) {
         topic: q.topic,
         question: q.question,
         options: q.options,
+        has_code: q.has_code || false,
+        code_snippet: q.code_snippet || "",
       }))
     };
 
@@ -78,8 +98,8 @@ async function handleQuizSubmit(req, res) {
     const user = await getSession(session_id);
     if (!user) return res.status(404).json({ error: 'Session not found. Please re-upload your resume.' });
 
-    // Get stored questions (with correct answers)
-    const questions = user.quiz_result?.questions;
+    // Check flat key first (new flow), then legacy nested key (old flow)
+    const questions = user.quiz_questions || user.quiz_result?.questions;
     if (!questions || questions.length === 0) {
       return res.status(404).json({ error: 'Quiz questions not found. Please generate quiz first.' });
     }
@@ -102,15 +122,17 @@ async function handleQuizSubmit(req, res) {
         correct: q.correct,
         explanation: q.explanation,
         user_selected: userAnswer?.selectedOption || null,
-        is_correct: userAnswer?.selectedOption === q.correct
+        is_correct: userAnswer?.selectedOption === q.correct,
+        has_code: q.has_code || false,
+        code_snippet: q.code_snippet || "",
       };
     });
 
-    // Persist results
+    // Persist results (flat keys)
     await saveQuizResult({
       session_id,
-      quiz_id: quiz_id || user.quiz_result?.quiz_id,
-      target_role: user.target_role,
+      quiz_id: quiz_id || user.quiz_id,
+      target_role: user.target_role || user.selected_role,
       experience_level: user.resume_data?.experience_level,
       per_skill_scores: perSkillScores,
       overall_score: overallScore,
@@ -118,9 +140,10 @@ async function handleQuizSubmit(req, res) {
     });
 
     await updateSession(session_id, {
-      'quiz_result.per_skill_scores': perSkillScores,
-      'quiz_result.overall_score': overallScore,
-      'quiz_result.review': review,
+      quiz_per_skill_scores: perSkillScores,
+      quiz_overall_score: overallScore,
+      quiz_review: review,
+      quiz_score: overallScore,
     });
 
     res.json({
